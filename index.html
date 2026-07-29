@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi" class="dark">
+<html lang="vi" class="dark bg-slate-950">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,17 +27,11 @@
                     animation: {
                         'fade-in': 'fadeIn 0.5s ease-out',
                         'slide-up': 'slideUp 0.5s ease-out',
-                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'pulse-slow': 'pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite',
                     },
                     keyframes: {
-                        fadeIn: {
-                            '0%': { opacity: '0' },
-                            '100%': { opacity: '1' },
-                        },
-                        slideUp: {
-                            '0%': { transform: 'translateY(20px)', opacity: '0' },
-                            '100%': { transform: 'translateY(0)', opacity: '1' },
-                        }
+                        fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+                        slideUp: { '0%': { transform: 'translateY(20px)', opacity: '0' }, '100%': { transform: 'translateY(0)', opacity: '1' } }
                     }
                 }
             }
@@ -47,29 +41,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        body {
-            background-color: theme('colors.brand.darker');
+        html, body {
+            background-color: #020617 !important; /* Fix chói mắt - Ép màu nền tối cho toàn bộ trang */
             color: #e2e8f0;
-            overflow-x: hidden;
+            min-height: 100vh;
         }
         
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: theme('colors.brand.darker');
-        }
-        ::-webkit-scrollbar-thumb {
-            background: theme('colors.brand.card');
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #334155;
-        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #020617; }
+        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #334155; }
 
         .glass-header {
-            background: rgba(15, 23, 42, 0.8);
+            background: rgba(15, 23, 42, 0.85);
             backdrop-filter: blur(12px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
@@ -77,6 +61,7 @@
         .news-card {
             transition: all 0.3s ease;
             border: 1px solid rgba(255, 255, 255, 0.05);
+            background-color: #1e293b;
         }
         .news-card:hover {
             transform: translateY(-4px);
@@ -86,33 +71,19 @@
         
         .tag-finance {
             background: rgba(16, 185, 129, 0.1);
-            color: theme('colors.brand.finance');
+            color: #10b981;
             border: 1px solid rgba(16, 185, 129, 0.2);
         }
         
         .tag-ai {
             background: rgba(139, 92, 246, 0.1);
-            color: theme('colors.brand.ai');
+            color: #8b5cf6;
             border: 1px solid rgba(139, 92, 246, 0.2);
-        }
-        
-        .gradient-text-finance {
-            background: linear-gradient(to right, #10b981, #34d399);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .gradient-text-ai {
-            background: linear-gradient(to right, #8b5cf6, #c084fc);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
         }
 
         .hero-bg {
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
+            top: 0; left: 0; right: 0;
             height: 60vh;
             background: radial-gradient(circle at 50% 0%, rgba(30, 41, 59, 0.5) 0%, rgba(2, 6, 23, 1) 100%);
             z-index: -1;
@@ -128,11 +99,11 @@
         }
     </style>
 </head>
-<body class="antialiased selection:bg-brand-finance selection:text-white">
+<body class="antialiased selection:bg-emerald-500 selection:text-white bg-slate-950 min-h-screen flex flex-col justify-between">
 
     <div class="hero-bg">
-        <div class="blob bg-brand-finance w-96 h-96 -top-20 -left-20"></div>
-        <div class="blob bg-brand-ai w-96 h-96 top-20 -right-20" style="animation-delay: 2s;"></div>
+        <div class="blob bg-emerald-500 w-96 h-96 -top-20 -left-20"></div>
+        <div class="blob bg-purple-500 w-96 h-96 top-20 -right-20" style="animation-delay: 2s;"></div>
     </div>
 
     <!-- Navigation -->
@@ -140,33 +111,30 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-brand-finance to-brand-ai flex items-center justify-center shadow-lg">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-purple-500 flex items-center justify-center shadow-lg">
                         <i class="fa-solid fa-bolt text-white text-xl"></i>
                     </div>
                     <div>
                         <h1 class="font-serif text-2xl font-bold tracking-tight text-white">The Daily Edge</h1>
-                        <p class="text-xs text-slate-400 font-mono" id="current-date">July 22, 2026</p>
+                        <!-- Ngày hiển thị động -->
+                        <p class="text-xs text-slate-400 font-mono" id="current-date">Đang tải ngày...</p>
                     </div>
                 </div>
                 <div class="flex items-center gap-6 hidden md:flex">
                     <a href="#macro" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Vĩ mô & FED</a>
                     <a href="#vietnam" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Thị trường VN</a>
                     <a href="#ai" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">AI Frontiers</a>
-                    <button id="refresh-btn" class="px-4 py-2 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-sm font-medium transition-all flex items-center gap-2">
-                        <i class="fa-solid fa-rotate-right text-xs"></i> Cập nhật
-                    </button>
-                </div>
-                <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center">
-                    <button class="text-slate-300 hover:text-white">
-                        <i class="fa-solid fa-bars text-xl"></i>
+                    
+                    <!-- Nút Refresh Cập nhật thật -->
+                    <button id="refresh-btn" onclick="fetchLatestNews(true)" class="px-4 py-2 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-sm font-medium transition-all flex items-center gap-2 text-slate-200">
+                        <i class="fa-solid fa-rotate-right text-xs" id="refresh-icon"></i> <span id="refresh-text">Cập nhật</span>
                     </button>
                 </div>
             </div>
         </div>
     </nav>
 
-    <main class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-screen-2xl mx-auto">
+    <main class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-screen-2xl mx-auto w-full flex-grow">
         
         <!-- Hero Header -->
         <div class="text-center max-w-3xl mx-auto mb-12 animate-fade-in">
@@ -174,61 +142,49 @@
                 Tri thức tinh gọn <br/> cho ngày mới.
             </h2>
             <p class="text-slate-400 text-lg">
-                Điểm tin chuyên sâu về quyết định của FED, lạm phát, dòng tiền thị trường Việt Nam và những đột phá AI mới nhất.
+                Điểm tin chuyên sâu về FED, lạm phát, dòng tiền Việt Nam và những đột phá AI mới nhất.
             </p>
         </div>
 
-        <!-- Market Tickers (Added VN Market indicators) -->
-        <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12 animate-slide-up" style="animation-delay: 0.1s;">
-            <div class="bg-brand-card rounded-2xl p-4 flex items-center gap-3 border border-white/5">
+        <!-- Market Tickers -->
+        <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12 animate-slide-up">
+            <div class="bg-slate-800/80 rounded-2xl p-4 flex items-center gap-3 border border-white/5">
                 <div class="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-400 flex-shrink-0">
                     <i class="fa-solid fa-building-columns"></i>
                 </div>
                 <div>
                     <p class="text-[11px] text-slate-400 font-medium uppercase tracking-wider">FED Funds Rate</p>
-                    <div class="flex items-end gap-2">
-                        <p class="text-lg font-bold text-white">3.75%</p>
-                        <p class="text-xs text-slate-500 mb-0.5">Giữ nguyên</p>
-                    </div>
+                    <p class="text-lg font-bold text-white" id="fed-rate-val">3.75%</p>
                 </div>
             </div>
             
-            <div class="bg-brand-card rounded-2xl p-4 flex items-center gap-3 border border-white/5">
+            <div class="bg-slate-800/80 rounded-2xl p-4 flex items-center gap-3 border border-white/5">
                 <div class="w-10 h-10 rounded-full bg-red-500/10 flex items-center justify-center text-red-400 flex-shrink-0">
                     <i class="fa-solid fa-arrow-trend-down"></i>
                 </div>
                 <div>
-                    <p class="text-[11px] text-slate-400 font-medium uppercase tracking-wider">US CPI (June)</p>
-                    <div class="flex items-end gap-2">
-                        <p class="text-lg font-bold text-white">3.5%</p>
-                        <p class="text-xs text-red-400 mb-0.5 font-medium">↓ 0.7%</p>
-                    </div>
+                    <p class="text-[11px] text-slate-400 font-medium uppercase tracking-wider">US CPI</p>
+                    <p class="text-lg font-bold text-white" id="cpi-val">3.5%</p>
                 </div>
             </div>
 
-            <div class="bg-brand-card rounded-2xl p-4 flex items-center gap-3 border border-white/5">
+            <div class="bg-slate-800/80 rounded-2xl p-4 flex items-center gap-3 border border-white/5">
                 <div class="w-10 h-10 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-400 flex-shrink-0">
                     <i class="fa-solid fa-chart-line"></i>
                 </div>
                 <div>
                     <p class="text-[11px] text-slate-400 font-medium uppercase tracking-wider">VN-Index</p>
-                    <div class="flex items-end gap-2">
-                        <p class="text-lg font-bold text-white">1,285.5</p>
-                        <p class="text-xs text-emerald-400 mb-0.5 font-medium">+0.8%</p>
-                    </div>
+                    <p class="text-lg font-bold text-white" id="vnindex-val">1,285.5</p>
                 </div>
             </div>
 
-            <div class="bg-brand-card rounded-2xl p-4 flex items-center gap-3 border border-white/5">
+            <div class="bg-slate-800/80 rounded-2xl p-4 flex items-center gap-3 border border-white/5">
                 <div class="w-10 h-10 rounded-full bg-amber-500/10 flex items-center justify-center text-amber-400 flex-shrink-0">
                     <i class="fa-solid fa-money-bill-transfer"></i>
                 </div>
                 <div>
                     <p class="text-[11px] text-slate-400 font-medium uppercase tracking-wider">USD/VND</p>
-                    <div class="flex items-end gap-2">
-                        <p class="text-lg font-bold text-white">25,420</p>
-                        <p class="text-xs text-amber-400 mb-0.5 font-medium">Ổn định</p>
-                    </div>
+                    <p class="text-lg font-bold text-white" id="usdvnd-val">25,420</p>
                 </div>
             </div>
         </div>
@@ -237,168 +193,143 @@
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
             
             <!-- 1. GLOBAL MACRO & FED -->
-            <section id="macro" class="animate-slide-up" style="animation-delay: 0.2s;">
+            <section id="macro">
                 <div class="flex items-center gap-3 mb-6">
-                    <div class="h-7 w-1 bg-brand-finance rounded-full"></div>
-                    <h2 class="text-xl font-serif font-bold text-white">Vĩ mô & <span class="gradient-text-finance">FED</span></h2>
+                    <div class="h-7 w-1 bg-emerald-500 rounded-full"></div>
+                    <h2 class="text-xl font-serif font-bold text-white">Vĩ mô & <span class="text-emerald-400">FED</span></h2>
                 </div>
-
-                <div class="space-y-5">
-                    <article class="bg-brand-card rounded-2xl p-6 news-card relative overflow-hidden group">
-                        <div class="flex items-center gap-2 mb-3">
-                            <span class="px-2.5 py-0.5 text-xs font-semibold rounded-full tag-finance">Lạm Phát Mỹ</span>
-                            <span class="text-xs text-slate-400"><i class="fa-regular fa-clock mr-1"></i>2h trước</span>
-                        </div>
-                        <h3 class="text-lg font-bold text-white mb-2 leading-snug group-hover:text-brand-finance transition-colors">
-                            Lạm phát Mỹ giảm xuống 3.5%, củng cố kỳ vọng cắt giảm lãi suất
-                        </h3>
-                        <p class="text-xs text-slate-400 mb-4 line-clamp-3">
-                            CPI tháng 6 giảm giúp hạ áp lực chi phí. FED Warsh tái khẳng định định hướng ổn định giá cả nhưng nhận định kinh tế Mỹ vẫn mở rộng tốt nhờ làn sóng đầu tư hạ tầng AI.
-                        </p>
-                        <div class="flex items-center justify-between text-xs text-slate-400">
-                            <span>Trading Economics</span>
-                            <a href="#" class="text-brand-finance hover:text-white transition-colors">Đọc tiếp <i class="fa-solid fa-arrow-right ml-0.5"></i></a>
-                        </div>
-                    </article>
-
-                    <article class="bg-[#151f32] rounded-xl p-4 news-card">
-                        <span class="px-2 py-0.5 text-[10px] font-semibold rounded tag-finance uppercase mb-2 inline-block">Chính sách Tiền tệ</span>
-                        <h4 class="text-sm font-bold text-white mb-1 leading-snug hover:text-brand-finance cursor-pointer">
-                            Lợi suất Trái phiếu Kho bạc Mỹ giảm nhẹ khi dòng tiền dịch chuyển sang tài sản rủi ro
-                        </h4>
-                        <p class="text-xs text-slate-400 line-clamp-2">Lợi suất kỳ hạn 10 năm giảm về 4.15%, phản ánh tâm lý lạc quan của giới đầu tư toàn cầu.</p>
-                        <p class="text-[10px] text-slate-500 mt-2">14 Tháng 7, 2026</p>
+                <div class="space-y-5" id="macro-news-container">
+                    <article class="bg-slate-800/80 rounded-2xl p-6 news-card">
+                        <span class="px-2.5 py-0.5 text-xs font-semibold rounded-full tag-finance mb-3 inline-block">Lạm Phát Mỹ</span>
+                        <h3 class="text-lg font-bold text-white mb-2 leading-snug">Lạm phát Mỹ giảm xuống 3.5%, củng cố kỳ vọng cắt giảm lãi suất</h3>
+                        <p class="text-xs text-slate-400 mb-3">CPI giảm giúp hạ áp lực chi phí. FED nhận định kinh tế Mỹ vẫn mở rộng tốt nhờ đầu tư hạ tầng AI.</p>
+                        <span class="text-[10px] text-slate-500"><i class="fa-regular fa-newspaper mr-1"></i> Trading Economics</span>
                     </article>
                 </div>
             </section>
 
-            <!-- 2. VIETNAM MARKET & ECONOMY (NEW SECTION) -->
-            <section id="vietnam" class="animate-slide-up" style="animation-delay: 0.25s;">
+            <!-- 2. VIETNAM MARKET -->
+            <section id="vietnam">
                 <div class="flex items-center gap-3 mb-6">
                     <div class="h-7 w-1 bg-emerald-400 rounded-full"></div>
                     <h2 class="text-xl font-serif font-bold text-white">Kinh tế <span class="text-emerald-400">Việt Nam</span></h2>
                 </div>
-
-                <div class="space-y-5">
-                    <article class="bg-brand-card rounded-2xl p-6 news-card relative overflow-hidden group border-emerald-500/20">
-                        <div class="flex items-center gap-2 mb-3">
-                            <span class="px-2.5 py-0.5 text-xs font-semibold rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">VN-Index & Dòng Tiền</span>
-                            <span class="text-xs text-slate-400"><i class="fa-regular fa-clock mr-1"></i>3h trước</span>
-                        </div>
-                        <h3 class="text-lg font-bold text-white mb-2 leading-snug group-hover:text-emerald-400 transition-colors">
-                            VN-Index áp sát mốc 1,290 điểm nhờ lực cầu khối ngoại ở nhóm Ngân hàng & Công nghệ
-                        </h3>
-                        <p class="text-xs text-slate-400 mb-4 line-clamp-3">
-                            Khối ngoại quay lại mua ròng mạnh sau tín hiệu FED có thể hạ lãi suất. Tăng trưởng tín dụng Việt Nam trong 6 tháng đầu năm đạt mức khả quan, tập trung vào sản xuất và xuất khẩu.
-                        </p>
-                        <div class="flex items-center justify-between text-xs text-slate-400">
-                            <span>Kinh tế & Đầu tư</span>
-                            <a href="#" class="text-emerald-400 hover:text-white transition-colors">Đọc tiếp <i class="fa-solid fa-arrow-right ml-0.5"></i></a>
-                        </div>
-                    </article>
-
-                    <article class="bg-[#151f32] rounded-xl p-4 news-card">
-                        <span class="px-2 py-0.5 text-[10px] font-semibold rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 uppercase mb-2 inline-block">NHNN & Tỷ Giá</span>
-                        <h4 class="text-sm font-bold text-white mb-1 leading-snug hover:text-emerald-400 cursor-pointer">
-                            Ngân hàng Nhà nước chủ động điều tiết thanh khoản, áp lực tỷ giá USD/VND hạ nhiệt
-                        </h4>
-                        <p class="text-xs text-slate-400 line-clamp-2">Sự ổn định của chỉ số DXY trên thị trường quốc tế giúp NHNN có thêm dư địa điều hành lãi suất linh hoạt.</p>
-                        <p class="text-[10px] text-slate-500 mt-2">Hôm nay, 07:30 AM</p>
-                    </article>
-
-                    <article class="bg-[#151f32] rounded-xl p-4 news-card">
-                        <span class="px-2 py-0.5 text-[10px] font-semibold rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 uppercase mb-2 inline-block">FDI & Công Nghệ</span>
-                        <h4 class="text-sm font-bold text-white mb-1 leading-snug hover:text-emerald-400 cursor-pointer">
-                            Dòng vốn FDI vào trung tâm dữ liệu và bán dẫn tại Việt Nam đạt kỷ lục mới
-                        </h4>
-                        <p class="text-xs text-slate-400 line-clamp-2">Các tập đoàn công nghệ toàn cầu gia tăng mở rộng chuỗi cung ứng phần cứng AI tại Bắc Ninh và TP.HCM.</p>
-                        <p class="text-[10px] text-slate-500 mt-2">21 Tháng 7, 2026</p>
+                <div class="space-y-5" id="vietnam-news-container">
+                    <article class="bg-slate-800/80 rounded-2xl p-6 news-card">
+                        <span class="px-2.5 py-0.5 text-xs font-semibold rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 mb-3 inline-block">VN-Index</span>
+                        <h3 class="text-lg font-bold text-white mb-2 leading-snug">VN-Index áp sát mốc 1,290 điểm nhờ lực cầu khối ngoại</h3>
+                        <p class="text-xs text-slate-400 mb-3">Khối ngoại quay lại mua ròng ở nhóm Ngân hàng & Công nghệ khi áp lực tỷ giá giảm nhiệt.</p>
+                        <span class="text-[10px] text-slate-500"><i class="fa-regular fa-newspaper mr-1"></i> Báo Tài Chính</span>
                     </article>
                 </div>
             </section>
 
             <!-- 3. AI FRONTIERS -->
-            <section id="ai" class="animate-slide-up" style="animation-delay: 0.3s;">
+            <section id="ai">
                 <div class="flex items-center gap-3 mb-6">
-                    <div class="h-7 w-1 bg-brand-ai rounded-full"></div>
-                    <h2 class="text-xl font-serif font-bold text-white">Frontiers of <span class="gradient-text-ai">AI</span></h2>
+                    <div class="h-7 w-1 bg-purple-500 rounded-full"></div>
+                    <h2 class="text-xl font-serif font-bold text-white">Frontiers of <span class="text-purple-400">AI</span></h2>
                 </div>
-
-                <div class="space-y-5">
-                    <article class="bg-brand-card rounded-2xl p-6 news-card relative overflow-hidden group border-brand-ai/20">
-                        <div class="flex items-center gap-2 mb-3">
-                            <span class="px-2.5 py-0.5 text-xs font-semibold rounded-full tag-ai">OpenAI / Microsoft</span>
-                            <span class="text-xs text-slate-400"><i class="fa-regular fa-clock mr-1"></i>5h trước</span>
-                        </div>
-                        <h3 class="text-lg font-bold text-white mb-2 leading-snug group-hover:text-brand-ai transition-colors">
-                            GPT-5.6 được tích hợp mặc định vào Copilot, tối ưu cho suy luận dài hạn
-                        </h3>
-                        <p class="text-xs text-slate-400 mb-4 line-clamp-3">
-                            Mô hình GPT-5.6 tập trung vào khả năng lập kế hoạch nhiều bước (long-horizon reasoning) và giảm tỷ lệ ảo giác đáng kể cho các tác vụ doanh nghiệp.
-                        </p>
-                        <div class="flex items-center justify-between text-xs text-slate-400">
-                            <span>AI Technology Update</span>
-                            <a href="#" class="text-brand-ai hover:text-white transition-colors">Đọc tiếp <i class="fa-solid fa-arrow-right ml-0.5"></i></a>
-                        </div>
-                    </article>
-
-                    <article class="bg-[#151f32] rounded-xl p-4 news-card">
-                        <span class="px-2 py-0.5 text-[10px] font-semibold rounded tag-ai uppercase mb-2 inline-block">Google AI</span>
-                        <h4 class="text-sm font-bold text-white mb-1 leading-snug hover:text-brand-ai cursor-pointer">
-                            Gemini 3.6 Flash ra mắt: Giảm 40% chi phí vận hành cho Agentic AI
-                        </h4>
-                        <p class="text-xs text-slate-400 line-clamp-2">Tối ưu hóa token giúp các doanh nghiệp dễ dàng triển khai hàng ngàn AI Agents tự động hóa quy trình làm việc.</p>
-                        <p class="text-[10px] text-slate-500 mt-2">21 Tháng 7, 2026</p>
+                <div class="space-y-5" id="ai-news-container">
+                    <article class="bg-slate-800/80 rounded-2xl p-6 news-card">
+                        <span class="px-2.5 py-0.5 text-xs font-semibold rounded-full tag-ai mb-3 inline-block">AI Tech</span>
+                        <h3 class="text-lg font-bold text-white mb-2 leading-snug">GPT-5.6 & Gemini 3.6 Flash bùng nổ tính năng Agentic AI</h3>
+                        <p class="text-xs text-slate-400 mb-3">Các mô hình AI mới tập trung khả năng suy luận dài hạn và giúp giảm mạnh chi phí vận hành.</p>
+                        <span class="text-[10px] text-slate-500"><i class="fa-regular fa-newspaper mr-1"></i> AI Tech Updates</span>
                     </article>
                 </div>
             </section>
         </div>
 
-        <!-- Daily Brief Summary -->
-        <section class="mt-16 bg-gradient-to-r from-[#1e293b] via-[#0f172a] to-[#151f32] rounded-3xl p-6 md:p-8 border border-white/10 relative overflow-hidden shadow-2xl">
-            <div class="flex items-center gap-3 mb-4">
-                <i class="fa-solid fa-compass text-amber-400 text-xl"></i>
-                <h3 class="text-lg font-bold text-white font-serif">Tổng quan Dòng tiền & Xu hướng hôm nay</h3>
-            </div>
-            <p class="text-slate-300 leading-relaxed text-sm md:text-base">
-                Lạm phát Mỹ hạ nhiệt xuống 3.5% đang kích hoạt làn sóng dịch chuyển dòng tiền toàn cầu vào các thị trường mới nổi như Việt Nam. Chỉ số VN-Index hưởng lợi khi tỷ giá USD/VND bớt căng thẳng. Trong khi đó, lĩnh vực công nghệ tiếp tục được bơm vốn nhờ hạ tầng bán dẫn và các mô hình AI thế hệ mới (GPT-5.6, Gemini 3.6 Flash) chuyển dịch mạnh sang ứng dụng thương mại thực tế.
-            </p>
-        </section>
-
     </main>
 
-    <footer class="border-t border-white/5 py-8 text-center bg-brand-darker">
+    <!-- Footer đồng màu tối dính chặt ở đáy màn hình -->
+    <footer class="border-t border-white/5 py-8 text-center bg-slate-950 w-full mt-auto">
         <p class="text-slate-500 text-sm font-mono">
-            &copy; 2026 The Daily Edge. Cập nhật dữ liệu lúc 7:00 AM & 10:00 PM.
+            &copy; The Daily Edge. Cập nhật tự động lúc 07:00 AM & 10:00 PM.
         </p>
     </footer>
 
     <script>
-        // Update current date to match simulation time (July 22, 2026)
-        document.addEventListener('DOMContentLoaded', () => {
-            const dateElement = document.getElementById('current-date');
-            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-            // Hardcoding to simulated date for consistency with news
-            dateElement.textContent = "Thứ Tư, 22 Tháng 7, 2026";
+        // Hàm tự động cập nhật ngày giờ hiện tại
+        function updateDisplayDate(customDateStr) {
+            const dateElem = document.getElementById('current-date');
+            if (customDateStr) {
+                dateElem.textContent = 'Cập nhật: ' + customDateStr;
+            } else {
+                const now = new Date();
+                const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                const formattedDate = now.toLocaleDateString('vi-VN', options);
+                dateElem.textContent = formattedDate;
+            }
+        }
 
-            // Add simple refresh animation
-            const refreshBtn = document.getElementById('refresh-btn');
-            const refreshIcon = refreshBtn.querySelector('i');
+        // Hàm tải dữ liệu tin tức từ file data.json
+        async function fetchLatestNews(isManualClick = false) {
+            const icon = document.getElementById('refresh-icon');
+            const text = document.getElementById('refresh-text');
             
-            refreshBtn.addEventListener('click', () => {
-                refreshIcon.classList.add('animate-spin');
-                refreshBtn.innerHTML = `<i class="fa-solid fa-spinner animate-spin text-xs"></i> Đang tải...`;
+            if (isManualClick) {
+                icon.classList.add('animate-spin');
+                text.textContent = 'Đang tải...';
+            }
+
+            try {
+                // Thêm parameter ngẫu nhiên để xóa bộ nhớ đệm (cache-busting)
+                const cacheBuster = '?t=' + new Date().getTime();
+                const response = await fetch('data.json' + cacheBuster);
                 
-                // Simulate network request
-                setTimeout(() => {
-                    refreshIcon.classList.remove('animate-spin');
-                    refreshBtn.innerHTML = `<i class="fa-solid fa-check text-xs text-brand-finance"></i> Đã cập nhật`;
-                    
+                if (response.ok) {
+                    const data = await response.json();
+
+                    if (data.updated_at) {
+                        updateDisplayDate(data.updated_at);
+                    } else {
+                        updateDisplayDate();
+                    }
+
+                    if (data.tickers) {
+                        if(data.tickers.fed_rate) document.getElementById('fed-rate-val').textContent = data.tickers.fed_rate;
+                        if(data.tickers.cpi) document.getElementById('cpi-val').textContent = data.tickers.cpi;
+                        if(data.tickers.vnindex) document.getElementById('vnindex-val').textContent = data.tickers.vnindex;
+                        if(data.tickers.usd_vnd) document.getElementById('usdvnd-val').textContent = data.tickers.usd_vnd;
+                    }
+
+                    renderSection('macro-news-container', data.macro, 'tag-finance');
+                    renderSection('vietnam-news-container', data.vietnam, 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20');
+                    renderSection('ai-news-container', data.ai, 'tag-ai');
+                } else {
+                    updateDisplayDate();
+                }
+            } catch (e) {
+                console.log('Sử dụng dữ liệu mặc định');
+                updateDisplayDate();
+            } finally {
+                if (isManualClick) {
                     setTimeout(() => {
-                        refreshBtn.innerHTML = `<i class="fa-solid fa-rotate-right text-xs"></i> Cập nhật`;
-                    }, 2000);
-                }, 1500);
-            });
+                        icon.classList.remove('animate-spin');
+                        text.textContent = 'Đã cập nhật';
+                        setTimeout(() => { text.textContent = 'Cập nhật'; }, 2000);
+                    }, 600);
+                }
+            }
+        }
+
+        function renderSection(containerId, newsList, tagClass) {
+            if (!newsList || !newsList.length) return;
+            const container = document.getElementById(containerId);
+            container.innerHTML = newsList.map(item => `
+                <article class="bg-slate-800/80 rounded-2xl p-6 news-card">
+                    <span class="px-2.5 py-0.5 text-xs font-semibold rounded-full ${tagClass} mb-3 inline-block">${item.tag || 'Hot'}</span>
+                    <h3 class="text-lg font-bold text-white mb-2 leading-snug">${item.title}</h3>
+                    <p class="text-xs text-slate-400 mb-3">${item.summary}</p>
+                    <span class="text-[10px] text-slate-500"><i class="fa-regular fa-newspaper mr-1"></i> ${item.source || 'Tin tức'}</span>
+                </article>
+            `).join('');
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            fetchLatestNews(false);
         });
     </script>
 </body>
