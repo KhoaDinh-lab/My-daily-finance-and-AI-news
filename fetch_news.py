@@ -1,41 +1,29 @@
 import os
 import json
 import re
+import traceback
 from google import genai
 from google.genai import types
 
-# 1. Kiểm tra chìa khóa API
+# 1. Lấy chìa khóa API từ Secret
 api_key = os.environ.get("GEMINI_API_KEY")
 if not api_key:
-    print("❌ LỖI: Chưa tìm thấy GEMINI_API_KEY trong GitHub Secrets!")
+    print("❌ LỖI RẤT QUAN TRỌNG: Bạn chưa dán GEMINI_API_KEY vào Secrets của GitHub!")
     exit(1)
 
 client = genai.Client(api_key=api_key)
 
-# 2. System Prompt nâng cấp chế độ "DEEP RESEARCH"
+# 2. Prompt Deep Research
 deep_research_prompt = """
 Bạn là một Chuyên gia Nghiên cứu Chuyên sâu (Senior Deep Researcher) về Tài chính Vĩ mô và Công nghệ AI.
 
-Nhiệm vụ của bạn là thực hiện quy trình NGHIÊN CỨU ĐA NGUỒN (Deep Research) trên Internet trong 24-48 giờ qua:
+Nhiệm vụ của bạn là thực hiện NGHIÊN CỨU ĐA NGUỒN (Deep Research) trên Internet trong 24-48 giờ qua:
 
-1. VĨ MÔ & FED:
-   - Nghiên cứu từ các nguồn quốc tế uy tín: Bloomberg, Reuters, Financial Times, Wall Street Journal, CNBC.
-   - Tập trung: Quyết định lãi suất FED, chỉ số Lạm phát (CPI, PCE), Báo cáo việc làm Mỹ, Dòng tiền toàn cầu.
+1. VĨ MÔ & FED: Bloomberg, Reuters, Financial Times, Wall Street Journal. (Lạm phát CPI, Lãi suất FED, Kinh tế Mỹ).
+2. THỊ TRƯỜNG VIỆT NAM: CafeF, Vietstock, VnEconomy, Báo Đầu Tư. (VN-Index, Tỷ giá USD/VND, NHNN, FDI).
+3. FRONTIERS OF AI: TechCrunch, VentureBeat, OpenAI Blog, Google DeepMind, Anthropic. (Mô hình AI mới, Agentic AI, Chip AI).
 
-2. KINH TẾ & THỊ TRƯỜNG VIỆT NAM:
-   - Nghiên cứu từ các trang tài chính Việt Nam hàng đầu: CafeF, Vietstock, VnEconomy, Báo Đầu Tư, VTV Money.
-   - Tập trung: Diễn biến VN-Index, động thái mua/bán ròng của Khối ngoại, Tỷ giá USD/VND, Lãi suất/Điều hành của Ngân hàng Nhà nước (NHNN), Dòng vốn FDI, Bất động sản & Tín dụng.
-
-3. FRONTIERS OF AI:
-   - Nghiên cứu từ: TechCrunch, VentureBeat, MIT Tech Review, ArXiv, OpenAI Blog, Google DeepMind, Anthropic.
-   - Tập trung: Các mô hình AI mới ra mắt, Agentic AI, Chip bán dẫn/phần cứng AI, các ứng dụng AI thực tế vào doanh nghiệp.
-
-YÊU CẦU NGHIÊN CỨU SÂU:
-- Lọc bỏ tất cả tin rác, tin giật gân clickbait.
-- Chỉ chọn 2-3 tin CÓ GIÁ TRỊ NHẤT cho mỗi lĩnh vực.
-- Tóm tắt súc tích, đi thẳng vào bản chất vấn đề và tác động đến dòng tiền/nền kinh tế.
-
-Trả về kết quả CHUẨN định dạng JSON (không thêm bất kỳ đoạn văn bản nào khác ngoài JSON):
+YÊU CẦU TRẢ VỀ DUY NHẤT ĐỊNH DẠNG JSON (KHÔNG KÈM BẤT KỲ VĂN BẢN NÀO BÊN NGOÀI):
 {
   "updated_at": "Hôm nay",
   "tickers": {
@@ -45,48 +33,68 @@ Trả về kết quả CHUẨN định dạng JSON (không thêm bất kỳ đo�
     "usd_vnd": "25,420"
   },
   "macro": [
-    { "title": "Tiêu đề phân tích sâu 1", "summary": "Tóm tắt phân tích 2-3 câu có số liệu", "source": "Tên nguồn uy tín", "tag": "Lạm Phát / FED" }
+    { "title": "Tiêu đề tin FED", "summary": "Tóm tắt 2-3 câu có số liệu", "source": "Nguồn tin", "tag": "Lạm Phát / FED" }
   ],
   "vietnam": [
-    { "title": "Tiêu đề phân tích sâu 1", "summary": "Tóm tắt phân tích 2-3 câu có số liệu", "source": "Tên nguồn VN", "tag": "VN-Index / Dòng Tiền" }
+    { "title": "Tiêu đề tin VN-Index", "summary": "Tóm tắt 2-3 câu có số liệu", "source": "Nguồn VN", "tag": "VN-Index" }
   ],
   "ai": [
-    { "title": "Tiêu đề đột phá AI 1", "summary": "Tóm tắt đột phá 2-3 câu", "source": "Tên nguồn Tech", "tag": "AI Tech / Agents" }
+    { "title": "Tiêu đề tin AI mới", "summary": "Tóm tắt đột phá 2-3 câu", "source": "Nguồn Tech", "tag": "AI Tech" }
   ]
 }
 """
 
-try:
-    print("🔍 Đang thực hiện Deep Research tin tức mới nhất...")
-    response = client.models.generate_content(
-        model='gemini-2.5-flash',
-        contents='Hãy thực hiện Deep Research tìm kiếm và tổng hợp các thông tin tài chính vĩ mô, VN-Index và AI quan trọng nhất hôm nay.',
-        config=types.GenerateContentConfig(
-            system_instruction=deep_research_prompt,
-            tools=[{"google_search": {}}],  # Bật Google Search Grounding
-            response_mime_type="application/json"
+# Danh sách các tên model để thử lần lượt (chống lỗi tên model)
+models_to_try = [
+    'gemini-3.6-flash',
+    'gemini-3.5-flash-lite',
+    'gemini-3.1-pro',
+    'gemini-2.5-flash',
+    'gemini-2.0-flash'
+]
+response = None
+for model_name in models_to_try:
+    try:
+        print(f"🔍 Đang thử kết nối Gemini với model: {model_name}...")
+        response = client.models.generate_content(
+            model=model_name,
+            contents='Hãy thực hiện Deep Research tìm kiếm thông tin tài chính vĩ mô, VN-Index và AI mới nhất hôm nay.',
+            config=types.GenerateContentConfig(
+                system_instruction=deep_research_prompt,
+                tools=[{"google_search": {}}],
+                response_mime_type="application/json"
+            )
         )
-    )
+        if response and response.text:
+            print(f"✅ Kết nối thành công với {model_name}!")
+            break
+    except Exception as err:
+        print(f"⚠️ Model {model_name} chưa phản hồi, thử model tiếp theo... (Lỗi: {err})")
 
+if not response or not response.text:
+    print("❌ LỖI: Tất cả các model Gemini đều không thể lấy dữ liệu!")
+    exit(1)
+
+try:
     raw_text = response.text.strip()
     
-    # Bộ lọc loại bỏ ký tự 
-```json nếu AI lỡ đính kèm
+    # Làm sạch chuỗi JSON nếu có dính thẻ markdown
     clean_json = re.sub(r'^
 ```json\s*', '', raw_text, flags=re.MULTILINE)
     clean_json = re.sub(r'^
 ```\s*', '', clean_json, flags=re.MULTILINE)
     clean_json = clean_json.strip()
 
-    # Kiểm tra tính hợp lệ của cấu trúc JSON
+    # Kiểm tra JSON hợp lệ
     json_data = json.loads(clean_json)
 
-    # Ghi vào file data.json
+    # Ghi ra tệp data.json
     with open("data.json", "w", encoding="utf-8") as f:
         json.dump(json_data, f, ensure_ascii=False, indent=2)
         
-    print("✅ Đã thực hiện Deep Research và cập nhật tin tức thành công vào data.json!")
+    print("🎉 TẬP TIN DATA.JSON ĐÃ ĐƯỢC TẠO THÀNH CÔNG!")
 
 except Exception as e:
-    print(f"❌ Lỗi xử lý Deep Research: {e}")
+    print("❌ LỖI XỬ LÝ DỮ LIỆU JSON:")
+    print(traceback.format_exc())
     exit(1)
