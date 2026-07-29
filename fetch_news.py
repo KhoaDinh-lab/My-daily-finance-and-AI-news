@@ -1,13 +1,18 @@
 import os
 import json
+import re
 from google import genai
 from google.genai import types
 
-# Khởi tạo API Gemini
+# 1. Kiểm tra chìa khóa API
 api_key = os.environ.get("GEMINI_API_KEY")
+if not api_key:
+    print("❌ LỖI: Chưa tìm thấy GEMINI_API_KEY trong GitHub Secrets!")
+    exit(1)
+
 client = genai.Client(api_key=api_key)
 
-# Prompt nâng cấp chế độ "DEEP RESEARCH"
+# 2. System Prompt nâng cấp chế độ "DEEP RESEARCH"
 deep_research_prompt = """
 Bạn là một Chuyên gia Nghiên cứu Chuyên sâu (Senior Deep Researcher) về Tài chính Vĩ mô và Công nghệ AI.
 
@@ -30,7 +35,7 @@ YÊU CẦU NGHIÊN CỨU SÂU:
 - Chỉ chọn 2-3 tin CÓ GIÁ TRỊ NHẤT cho mỗi lĩnh vực.
 - Tóm tắt súc tích, đi thẳng vào bản chất vấn đề và tác động đến dòng tiền/nền kinh tế.
 
-Trả về kết quả chuẩn định dạng JSON như sau (không thêm bất kỳ đoạn văn bản nào khác ngoài JSON):
+Trả về kết quả CHUẨN định dạng JSON (không thêm bất kỳ đoạn văn bản nào khác ngoài JSON):
 {
   "updated_at": "Hôm nay",
   "tickers": {
@@ -52,20 +57,36 @@ Trả về kết quả chuẩn định dạng JSON như sau (không thêm bất 
 """
 
 try:
+    print("🔍 Đang thực hiện Deep Research tin tức mới nhất...")
     response = client.models.generate_content(
-        model='gemini-2.0-flash',
+        model='gemini-2.5-flash',
         contents='Hãy thực hiện Deep Research tìm kiếm và tổng hợp các thông tin tài chính vĩ mô, VN-Index và AI quan trọng nhất hôm nay.',
         config=types.GenerateContentConfig(
             system_instruction=deep_research_prompt,
-            tools=[{"google_search": {}}], # Kích hoạt Google Search Grounding để Gemini lướt web
+            tools=[{"google_search": {}}],  # Bật Google Search Grounding
             response_mime_type="application/json"
         )
     )
+
+    raw_text = response.text.strip()
     
-    # Lưu dữ liệu vào data.json
+    # Bộ lọc loại bỏ ký tự 
+```json nếu AI lỡ đính kèm
+    clean_json = re.sub(r'^
+```json\s*', '', raw_text, flags=re.MULTILINE)
+    clean_json = re.sub(r'^
+```\s*', '', clean_json, flags=re.MULTILINE)
+    clean_json = clean_json.strip()
+
+    # Kiểm tra tính hợp lệ của cấu trúc JSON
+    json_data = json.loads(clean_json)
+
+    # Ghi vào file data.json
     with open("data.json", "w", encoding="utf-8") as f:
-        f.write(response.text)
-    print("Đã thực hiện Deep Research và cập nhật dữ liệu thành công!")
+        json.dump(json_data, f, ensure_ascii=False, indent=2)
+        
+    print("✅ Đã thực hiện Deep Research và cập nhật tin tức thành công vào data.json!")
+
 except Exception as e:
-    print(f"Lỗi khi Deep Research: {e}")
-    raise e
+    print(f"❌ Lỗi xử lý Deep Research: {e}")
+    exit(1)
