@@ -2,11 +2,14 @@ name: Auto Fetch News
 
 on:
   schedule:
-    # 07:00 giờ Việt Nam, mỗi 2 ngày
-    - cron: "0 0 */2 * *"
+    # 06:00 giờ Việt Nam mỗi ngày (23:00 UTC ngày hôm trước)
+    - cron: "0 23 * * *"
 
-    # 22:00 giờ Việt Nam, mỗi 2 ngày
-    - cron: "0 15 */2 * *"
+    # 15:00 giờ Việt Nam mỗi ngày
+    - cron: "0 8 * * *"
+
+    # 20:30 giờ Việt Nam mỗi ngày
+    - cron: "30 13 * * *"
 
   workflow_dispatch:
 

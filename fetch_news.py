@@ -768,8 +768,22 @@ def make_empty_trend(label, article_count=0):
         "confidence": 0,
         "summary": (
             "Hệ thống đang tích lũy thêm tin trong nhiều ngày để nhận diện "
-            "xu hướng đáng tin cậy hơn."
+            "xu hướng đáng tin cậy hơn. Khi kho lịch sử đủ rộng, phần này "
+            "sẽ giải thích rõ diễn biến hiện tại, các động lực chính và những "
+            "kịch bản cần theo dõi."
         ),
+        "short_term": {
+            "horizon": "1-4 tuần",
+            "outlook": "uncertain",
+            "summary": "Chưa đủ dữ liệu để xác định xu hướng ngắn hạn.",
+        },
+        "long_term": {
+            "horizon": "3-12 tháng",
+            "outlook": "uncertain",
+            "summary": (
+                "Chưa đủ dữ liệu để xây dựng kịch bản dài hạn có căn cứ."
+            ),
+        },
         "drivers": [],
         "watch_next": [],
         "article_count": article_count,
@@ -837,6 +851,17 @@ def validate_trends(trends, valid_article_ids):
         trend.setdefault("drivers", [])
         trend.setdefault("watch_next", [])
 
+        for horizon_name in ("short_term", "long_term"):
+            horizon = trend.get(horizon_name)
+            if not isinstance(horizon, dict):
+                raise ValueError(f"Trend thiếu {horizon_name}.")
+            if horizon.get("outlook") not in {
+                "positive", "negative", "mixed", "stable", "uncertain"
+            }:
+                raise ValueError(f"{horizon_name} có outlook không hợp lệ.")
+            if not isinstance(horizon.get("summary"), str) or not horizon["summary"].strip():
+                raise ValueError(f"{horizon_name} thiếu summary.")
+
         for driver in trend["drivers"]:
             if not isinstance(driver, dict):
                 raise ValueError("Driver của trend không hợp lệ.")
@@ -883,8 +908,14 @@ def fetch_trends_from_groq(client, history):
 Bạn là chuyên gia phân tích xu hướng tin tức của The Daily Edge.
 
 Chỉ được dùng dữ liệu 7 ngày dưới đây. Không thêm sự kiện, số liệu hoặc
-kết luận không được hỗ trợ bởi các bài đã cung cấp. Phân tích bằng tiếng Việt.
-Đây là phân tích thông tin, tuyệt đối không đưa khuyến nghị mua/bán đầu tư.
+kết luận không được hỗ trợ bởi các bài đã cung cấp. Phân tích bằng tiếng Việt,
+rõ ràng, dễ đọc và có mạch lập luận. Đây là phân tích thông tin, tuyệt đối
+không đưa khuyến nghị mua/bán đầu tư.
+
+Quy ước thời gian:
+- Ngắn hạn: 1-4 tuần tiếp theo, bám sát tín hiệu đang xuất hiện trong tin.
+- Dài hạn: 3-12 tháng, chỉ mô tả kịch bản và điều kiện có thể dẫn tới kịch bản;
+  không khẳng định chắc chắn tương lai.
 
 Dữ liệu:
 {json.dumps(recent_by_section, ensure_ascii=False)}
@@ -895,24 +926,39 @@ Trả về duy nhất một JSON object theo cấu trúc:
     "label": "Toàn cảnh",
     "direction": "up|down|mixed|stable|insufficient",
     "confidence": 0,
-    "summary": "2-3 câu",
+    "summary": "4-6 câu giải thích bức tranh chung và mối liên hệ giữa các tín hiệu",
+    "short_term": {{
+      "horizon": "1-4 tuần",
+      "outlook": "positive|negative|mixed|stable|uncertain",
+      "summary": "3-4 câu, nêu hướng đi có khả năng nhất và điều kiện làm thay đổi nó"
+    }},
+    "long_term": {{
+      "horizon": "3-12 tháng",
+      "outlook": "positive|negative|mixed|stable|uncertain",
+      "summary": "3-4 câu, nêu kịch bản cơ sở, cơ hội và rủi ro"
+    }},
     "drivers": [{{"text": "động lực", "article_ids": ["id"]}}],
-    "watch_next": ["điều cần theo dõi"]
+    "watch_next": ["2-3 điều cụ thể cần theo dõi"]
   }},
   "sections": {{
     "macro": {{"label": "Vĩ mô", "direction": "mixed", "confidence": 0,
-      "summary": "2 câu", "drivers": [], "watch_next": []}},
+      "summary": "4-6 câu", "short_term": {{"horizon": "1-4 tuần", "outlook": "mixed", "summary": "3-4 câu"}},
+      "long_term": {{"horizon": "3-12 tháng", "outlook": "mixed", "summary": "3-4 câu"}}, "drivers": [], "watch_next": []}},
     "vietnam": {{"label": "Việt Nam", "direction": "mixed", "confidence": 0,
-      "summary": "2 câu", "drivers": [], "watch_next": []}},
+      "summary": "4-6 câu", "short_term": {{"horizon": "1-4 tuần", "outlook": "mixed", "summary": "3-4 câu"}},
+      "long_term": {{"horizon": "3-12 tháng", "outlook": "mixed", "summary": "3-4 câu"}}, "drivers": [], "watch_next": []}},
     "ai": {{"label": "Trí tuệ nhân tạo", "direction": "mixed", "confidence": 0,
-      "summary": "2 câu", "drivers": [], "watch_next": []}},
+      "summary": "4-6 câu", "short_term": {{"horizon": "1-4 tuần", "outlook": "mixed", "summary": "3-4 câu"}},
+      "long_term": {{"horizon": "3-12 tháng", "outlook": "mixed", "summary": "3-4 câu"}}, "drivers": [], "watch_next": []}},
     "logistics": {{"label": "Logistics", "direction": "mixed", "confidence": 0,
-      "summary": "2 câu", "drivers": [], "watch_next": []}}
+      "summary": "4-6 câu", "short_term": {{"horizon": "1-4 tuần", "outlook": "mixed", "summary": "3-4 câu"}},
+      "long_term": {{"horizon": "3-12 tháng", "outlook": "mixed", "summary": "3-4 câu"}}, "drivers": [], "watch_next": []}}
   }}
 }}
 
 confidence là số nguyên 0-100. Mỗi driver phải dẫn article_ids có thật.
-Nếu dữ liệu chưa đủ, dùng direction "insufficient" và confidence thấp.
+Mỗi summary phải cụ thể, tránh câu chung chung. Nếu dữ liệu chưa đủ, dùng
+direction "insufficient", outlook "uncertain" và nói rõ phần nào còn thiếu.
 """
 
     errors = []
@@ -932,7 +978,7 @@ Nếu dữ liệu chưa đủ, dùng direction "insufficient" và confidence th�
                     {"role": "user", "content": prompt},
                 ],
                 temperature=0.1,
-                max_completion_tokens=1800,
+                max_completion_tokens=3200,
                 response_format={"type": "json_object"},
             )
             content = response.choices[0].message.content
@@ -1038,7 +1084,20 @@ def main():
             data["trends"] = fetch_trends_from_groq(client, history)
         except Exception as trend_error:
             old_trends = previous_data.get("trends")
-            if isinstance(old_trends, dict) and old_trends.get("sections"):
+            old_items = []
+            if isinstance(old_trends, dict) and isinstance(old_trends.get("sections"), dict):
+                old_items = [old_trends.get("overall")]
+                old_items.extend(
+                    old_trends["sections"].get(section)
+                    for section in REQUIRED_SECTIONS
+                )
+            old_trends_have_horizons = bool(old_items) and all(
+                isinstance(item, dict)
+                and isinstance(item.get("short_term"), dict)
+                and isinstance(item.get("long_term"), dict)
+                for item in old_items
+            )
+            if old_trends_have_horizons:
                 data["trends"] = old_trends
                 print(
                     f"CẢNH BÁO: Giữ trend cũ do lỗi: {trend_error}",

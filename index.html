@@ -5,7 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="The Daily Edge — bản tin tài chính, AI và logistics được cập nhật tự động.">
   <meta name="theme-color" content="#07111f">
+  <meta property="og:title" content="The Daily Edge | Financial Intelligence">
+  <meta property="og:description" content="Bản tin tài chính, AI và logistics với phân tích xu hướng ngắn hạn và dài hạn.">
+  <meta property="og:image" content="https://khoadinh-lab.github.io/My-daily-finance-and-AI-news/assets/daily-edge-network.png">
   <title>The Daily Edge | Financial Intelligence</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="assets/daily-edge-network.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
@@ -167,6 +172,8 @@
     .unread-dot { width:8px; height:8px; border-radius:50%; background:var(--green); box-shadow:0 0 0 4px rgba(94,230,181,.09); }
     .card-top { display:flex; align-items:center; justify-content:space-between; gap:18px; }
     .tag { display:inline-flex; width:max-content; max-width:80%; padding:5px 9px; border-radius:999px; color:var(--cyan); background:rgba(110,216,255,.09); font-size:11px; font-weight:700; letter-spacing:.05em; text-transform:uppercase; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .tag-stack { display:flex; align-items:center; gap:7px; min-width:0; }
+    .category-label { display:inline-flex; padding:5px 8px; border-radius:999px; color:var(--green); background:rgba(94,230,181,.1); font-size:10px; font-weight:900; letter-spacing:.07em; text-transform:uppercase; white-space:nowrap; }
     .card-arrow { color:var(--muted); font-size:22px; transition:.25s; }
     .news-card h3 { margin:24px 0 22px; font-size:clamp(19px,2.4vw,25px); line-height:1.28; }
     .card-meta { display:flex; gap:8px; align-items:center; margin-top:auto; color:var(--muted); font-size:12px; }
@@ -191,6 +198,35 @@
     .driver-list li { position:relative; padding:10px 0 10px 18px; border-top:1px solid var(--line); color:#ced7e1; font-size:13px; }
     .driver-list li::before { content:""; position:absolute; left:0; top:18px; width:6px; height:6px; border-radius:50%; background:var(--green); }
     .trend-note { margin-top:24px; color:var(--muted); font-size:12px; }
+    .trend-visual { display:grid; grid-template-columns:1.15fr .85fr; gap:20px; align-items:stretch; margin-bottom:22px; }
+    .trend-visual-copy { display:flex; flex-direction:column; justify-content:center; padding:30px; border:1px solid var(--line); border-radius:24px; background:rgba(255,255,255,.03); }
+    .trend-visual-copy h2 { margin:12px 0 10px; font-size:clamp(27px,4vw,43px); line-height:1.12; }
+    .trend-visual-copy p { margin:0; color:var(--muted); }
+    .trend-image { min-height:320px; margin:0; overflow:hidden; border:1px solid rgba(110,216,255,.18); border-radius:24px; background:#07111f; }
+    .trend-image img { width:100%; height:100%; display:block; object-fit:cover; transition:transform .8s ease; }
+    .trend-image:hover img { transform:scale(1.035); }
+    .horizon-grid { position:relative; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin-top:23px; }
+    .horizon-card { padding:18px; border:1px solid var(--line); border-radius:15px; background:rgba(7,17,31,.42); }
+    .horizon-card span { display:block; color:var(--green); font-size:10px; font-weight:900; letter-spacing:.1em; text-transform:uppercase; }
+    .horizon-card strong { display:block; margin:7px 0 8px; font:700 16px/1.25 "Manrope"; }
+    .horizon-card p { margin:0; color:#b9c6d3; font-size:13px; line-height:1.7; }
+    .watch-list { margin:17px 0 0; padding-left:19px; color:var(--muted); font-size:13px; }
+    .watch-list li { margin-top:6px; }
+
+    .update-dialog { width:min(620px,calc(100% - 28px)); }
+    .update-body { padding-top:4px; }
+    .update-body h2 { margin:8px 0 12px; font-size:32px; }
+    .update-body > p { color:var(--muted); }
+    .schedule-row { display:flex; gap:8px; flex-wrap:wrap; margin:20px 0; }
+    .schedule-chip { padding:7px 10px; border:1px solid var(--line); border-radius:999px; color:#d7e0e9; background:rgba(255,255,255,.035); font-size:12px; }
+    .update-actions { display:flex; gap:10px; flex-wrap:wrap; margin-top:22px; }
+    .primary-btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:11px 15px; border:0; border-radius:11px; color:#07111f; background:linear-gradient(105deg,var(--green),var(--cyan)); text-decoration:none; cursor:pointer; font-weight:900; font-size:13px; }
+    .countdown { margin-top:24px; padding:18px; border:1px solid var(--line); border-radius:15px; background:rgba(255,255,255,.03); }
+    .countdown-head { display:flex; align-items:center; justify-content:space-between; gap:18px; margin-bottom:12px; font-size:13px; }
+    .countdown-head strong { color:var(--green); font-size:19px; }
+    .progress-track { height:7px; overflow:hidden; border-radius:999px; background:rgba(255,255,255,.07); }
+    .progress-fill { width:0; height:100%; border-radius:inherit; background:linear-gradient(90deg,var(--green),var(--cyan)); transition:width 1s linear; }
+    .update-status { margin:11px 0 0; color:var(--muted); font-size:12px; }
 
     footer { position:relative; z-index:1; border-top:1px solid var(--line); }
     .footer-inner { min-height:92px; display:flex; align-items:center; justify-content:space-between; gap:20px; color:var(--muted); font-size:12px; }
@@ -243,13 +279,14 @@
       .ticker-grid { grid-template-columns:repeat(2,1fr); }
       .personal-bar { grid-template-columns:1fr; margin-top:0; }
       .personal-stats { justify-content:flex-start; }
+      .trend-visual { grid-template-columns:1fr; }
     }
     @media (max-width: 680px) {
       .shell { width:min(100% - 24px,1180px); }
       .brand-copy span { display:none; }
       .view { padding:50px 0 70px; }
       .hero { padding-bottom:38px; }
-      .ticker-grid, .news-grid, .trend-grid { grid-template-columns:1fr; }
+      .ticker-grid, .news-grid, .trend-grid, .horizon-grid { grid-template-columns:1fr; }
       .ticker-card { min-height:140px; }
       .section-bar { align-items:start; flex-direction:column; margin-top:54px; }
       .news-card { min-height:180px; }
@@ -301,7 +338,7 @@
         <button class="nav-btn" data-route="trends">Xu hướng</button>
         <button class="nav-btn" data-route="missed">Bỏ lỡ <span class="nav-count" id="missed-nav-count">0</span></button>
       </nav>
-      <button class="icon-btn" id="refresh-btn" aria-label="Làm mới dữ liệu" title="Làm mới dữ liệu">
+      <button class="icon-btn" id="refresh-btn" aria-label="Yêu cầu cập nhật tin mới" title="Yêu cầu cập nhật tin mới">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 11a8.1 8.1 0 0 0-15.5-2M4 4v5h5M4 13a8.1 8.1 0 0 0 15.5 2M20 20v-5h-5"/></svg>
       </button>
       <button class="icon-btn" id="logout-btn" aria-label="Đăng xuất" title="Đăng xuất">
@@ -334,6 +371,7 @@
             <div class="stat-pill"><span>🔥</span><span>Streak <strong id="streak-count">1</strong> ngày</span></div>
             <div class="stat-pill"><span>🏆</span><span>Kỷ lục <strong id="longest-streak">1</strong></span></div>
             <button class="stat-pill action" id="missed-shortcut" type="button"><span>◌</span><span><strong id="missed-count">0</strong> bài chưa xem</span></button>
+            <button class="stat-pill action" id="install-app-btn" type="button"><span>▣</span><span>Cài ứng dụng</span></button>
           </div>
         </section>
 
@@ -356,7 +394,21 @@
     <section class="view" data-view="vietnam"><div class="shell"><header class="topic-header"><span class="eyebrow">Thị trường Việt Nam</span><h1>Nhịp đập<br>kinh tế trong nước.</h1><p>VN-Index, tỷ giá, chính sách điều hành và dòng vốn được chọn lọc trong một không gian dễ đọc.</p></header><div class="section-bar"><div><h2>Bản tin mới</h2></div><span class="topic-count" id="vietnam-count"></span></div><div class="news-grid" id="vietnam-news"></div></div></section>
     <section class="view" data-view="ai"><div class="shell"><header class="topic-header"><span class="eyebrow">Frontiers of AI</span><h1>Công nghệ đang<br>định hình ngày mai.</h1><p>Mô hình mới, AI agent, hạ tầng chip và những thay đổi quan trọng trong hệ sinh thái trí tuệ nhân tạo.</p></header><div class="section-bar"><div><h2>Bản tin mới</h2></div><span class="topic-count" id="ai-count"></span></div><div class="news-grid" id="ai-news"></div></div></section>
     <section class="view" data-view="logistics"><div class="shell"><header class="topic-header"><span class="eyebrow">Logistics & Supply Chain</span><h1>Dòng chảy hàng hóa<br>không ngừng nghỉ.</h1><p>Cảng biển, vận tải, chuỗi cung ứng và thị trường logistics tại Việt Nam lẫn trên thế giới.</p></header><div class="section-bar"><div><h2>Bản tin mới</h2></div><span class="topic-count" id="logistics-count"></span></div><div class="news-grid" id="logistics-news"></div></div></section>
-    <section class="view" data-view="trends"><div class="shell"><header class="topic-header"><span class="eyebrow">AI Trend Intelligence</span><h1>Nhìn qua sự kiện.<br>Thấy được xu hướng.</h1><p>AI đối chiếu kho tin bảy ngày, chỉ ra động lực chính và những tín hiệu cần tiếp tục theo dõi.</p></header><div id="trends-content"><div class="empty-state">Đang tải phân tích xu hướng…</div></div><p class="trend-note" id="trend-disclaimer"></p></div></section>
+    <section class="view" data-view="trends">
+      <div class="shell">
+        <header class="topic-header"><span class="eyebrow">AI Trend Intelligence</span><h1>Nhìn qua sự kiện.<br>Thấy được xu hướng.</h1><p>AI đối chiếu kho tin bảy ngày, chỉ ra động lực chính và phân tách triển vọng trong 1–4 tuần lẫn 3–12 tháng.</p></header>
+        <div class="trend-visual">
+          <div class="trend-visual-copy">
+            <span class="eyebrow">Signal map</span>
+            <h2>Một bức tranh, hai khung thời gian.</h2>
+            <p>Phần phân tích tách riêng nhiễu động ngắn hạn khỏi chuyển dịch cấu trúc dài hạn, để bạn nhìn rõ điều gì đang xảy ra và điều gì cần tiếp tục quan sát.</p>
+          </div>
+          <figure class="trend-image"><img src="assets/daily-edge-network.png" alt="Mạng lưới tài chính, AI và logistics toàn cầu" loading="eager"></figure>
+        </div>
+        <div id="trends-content"><div class="empty-state">Đang tải phân tích xu hướng…</div></div>
+        <p class="trend-note" id="trend-disclaimer"></p>
+      </div>
+    </section>
     <section class="view" data-view="missed"><div class="shell"><header class="topic-header"><span class="eyebrow">Reading Inbox</span><h1>Những bài bạn<br>chưa kịp xem.</h1><p>Tin được lưu trong 30 ngày. Một bài sẽ tự chuyển sang trạng thái đã đọc khi bạn mở phần chi tiết.</p></header><div class="section-bar"><div><h2>Danh sách chưa đọc</h2></div><button class="soft-btn" id="mark-all-read" type="button">✓ Đánh dấu tất cả đã đọc</button></div><div class="news-grid" id="missed-news"></div></div></section>
   </main>
 
@@ -374,6 +426,30 @@
       </article>
     </div>
   </dialog>
+  <dialog id="update-dialog" class="update-dialog">
+    <div class="modal-scroll">
+      <div class="modal-head"><button class="icon-btn" id="update-close" aria-label="Đóng">✕</button></div>
+      <div class="modal-body update-body">
+        <span class="eyebrow">Update Center</span>
+        <h2>Cập nhật tin ngay bây giờ</h2>
+        <p>Website tự cập nhật ba lần mỗi ngày theo giờ Việt Nam. Nếu muốn có thêm một bản tin ngoài lịch, bạn có thể khởi chạy quy trình an toàn bên dưới.</p>
+        <div class="schedule-row" aria-label="Lịch cập nhật"><span class="schedule-chip">06:00</span><span class="schedule-chip">15:00</span><span class="schedule-chip">20:30</span></div>
+        <div id="update-ready">
+          <p>Vì lý do bảo mật, nút này không lưu quyền truy cập GitHub trong website. Hãy mở trang Actions, chọn <strong>Run workflow</strong>, rồi quay lại bấm nút xác nhận.</p>
+          <div class="update-actions">
+            <a class="primary-btn" id="run-workflow-link" href="https://github.com/KhoaDinh-lab/My-daily-finance-and-AI-news/actions/workflows/update.yml" target="_blank" rel="noopener">Mở GitHub Actions ↗</a>
+            <button class="soft-btn" id="start-refresh-watch" type="button">Tôi đã bấm Run workflow</button>
+          </div>
+        </div>
+        <div class="countdown" id="update-countdown" hidden>
+          <div class="countdown-head"><span>Đợi trang web nhận bản tin mới một chút nhé</span><strong id="countdown-value">120s</strong></div>
+          <div class="progress-track"><div class="progress-fill" id="update-progress"></div></div>
+          <p class="update-status" id="update-status">Hệ thống đang kiểm tra dữ liệu mới…</p>
+          <button class="soft-btn" id="check-again" type="button" hidden>Kiểm tra lại</button>
+        </div>
+      </div>
+    </div>
+  </dialog>
   <div class="toast" id="toast" role="status"></div>
 
   <script>
@@ -385,6 +461,9 @@
     let newsData = null;
     let historyData = { articles: [] };
     let progress = loadProgress();
+    let deferredInstallPrompt = null;
+    let refreshCountdownTimer = null;
+    let refreshPollTimer = null;
 
     const $ = selector => document.querySelector(selector);
     const $$ = selector => [...document.querySelectorAll(selector)];
@@ -564,6 +643,12 @@
       const tag = document.createElement("span");
       tag.className = "tag";
       tag.textContent = article.tag || SECTION_LABELS[section];
+      const category = document.createElement("span");
+      category.className = "category-label";
+      category.textContent = SECTION_LABELS[article.section || section] || "Bản tin";
+      const tagStack = document.createElement("span");
+      tagStack.className = "tag-stack";
+      tagStack.append(category, tag);
       const status = document.createElement("span");
       status.style.cssText = "display:flex;align-items:center;gap:12px";
       if (!isRead(article)) {
@@ -575,7 +660,7 @@
       arrow.className = "card-arrow";
       arrow.textContent = "↗";
       status.append(arrow);
-      top.append(tag, status);
+      top.append(tagStack, status);
 
       const title = document.createElement("h3");
       title.textContent = article.title || "Chưa có tiêu đề";
@@ -625,6 +710,10 @@
       return ({ up: "Tăng tốc", down: "Chậm lại", mixed: "Phân hóa", stable: "Ổn định", insufficient: "Đang tích lũy dữ liệu" })[direction] || "Đang theo dõi";
     }
 
+    function outlookText(outlook) {
+      return ({ positive: "Tích cực", negative: "Thận trọng", mixed: "Phân hóa", stable: "Ổn định", uncertain: "Chưa rõ" })[outlook] || "Đang theo dõi";
+    }
+
     function trendBlock(trend, prominent = false) {
       const card = document.createElement("article");
       card.className = prominent ? "trend-overview" : "trend-card";
@@ -643,6 +732,25 @@
       summary.textContent = trend.summary || "Chưa có phân tích.";
       card.append(row, title, summary);
 
+      const horizons = document.createElement("div");
+      horizons.className = "horizon-grid";
+      [
+        ["Ngắn hạn", trend.short_term, "1–4 tuần"],
+        ["Dài hạn", trend.long_term, "3–12 tháng"]
+      ].forEach(([label, horizon, fallback]) => {
+        const item = document.createElement("section");
+        item.className = "horizon-card";
+        const eyebrow = document.createElement("span");
+        eyebrow.textContent = `${label} · ${horizon?.horizon || fallback}`;
+        const outlook = document.createElement("strong");
+        outlook.textContent = outlookText(horizon?.outlook);
+        const detail = document.createElement("p");
+        detail.textContent = horizon?.summary || "Chưa đủ dữ liệu để kết luận; cần tiếp tục theo dõi các bản tin sắp tới.";
+        item.append(eyebrow, outlook, detail);
+        horizons.append(item);
+      });
+      card.append(horizons);
+
       if (Array.isArray(trend.drivers) && trend.drivers.length) {
         const list = document.createElement("ul");
         list.className = "driver-list";
@@ -652,6 +760,17 @@
           list.append(item);
         });
         card.append(list);
+      }
+
+      if (Array.isArray(trend.watch_next) && trend.watch_next.length) {
+        const watch = document.createElement("ul");
+        watch.className = "watch-list";
+        trend.watch_next.slice(0, 3).forEach(signal => {
+          const item = document.createElement("li");
+          item.textContent = signal;
+          watch.append(item);
+        });
+        card.append(watch);
       }
       return card;
     }
@@ -757,7 +876,111 @@
     });
     window.addEventListener("hashchange", () => navigate(location.hash.slice(1)));
     window.addEventListener("scroll", () => $("#topbar").classList.toggle("scrolled", scrollY > 8), { passive: true });
-    $("#refresh-btn").addEventListener("click", () => loadData(true));
+
+    function clearRefreshWatch() {
+      clearInterval(refreshCountdownTimer);
+      clearInterval(refreshPollTimer);
+      refreshCountdownTimer = null;
+      refreshPollTimer = null;
+    }
+
+    function closeUpdateCenter() {
+      clearRefreshWatch();
+      if ($("#update-dialog").open) $("#update-dialog").close();
+      document.body.style.overflow = "";
+    }
+
+    function openUpdateCenter() {
+      $("#update-ready").hidden = false;
+      $("#update-countdown").hidden = true;
+      $("#check-again").hidden = true;
+      $("#update-dialog").showModal();
+      document.body.style.overflow = "hidden";
+    }
+
+    async function checkForFreshData(previousUpdatedAt) {
+      try {
+        const response = await fetch(`data.json?v=${Date.now()}`, { cache: "no-store" });
+        if (!response.ok) return false;
+        const incoming = await response.json();
+        if (incoming.updated_at && incoming.updated_at !== previousUpdatedAt) {
+          newsData = incoming;
+          await loadData();
+          return true;
+        }
+      } catch (error) {
+        console.warn("Chưa thấy dữ liệu mới", error);
+      }
+      return false;
+    }
+
+    function startRefreshWatch() {
+      clearRefreshWatch();
+      const previousUpdatedAt = newsData?.updated_at || "";
+      const totalSeconds = 120;
+      let remaining = totalSeconds;
+      $("#update-ready").hidden = true;
+      $("#update-countdown").hidden = false;
+      $("#check-again").hidden = true;
+      $("#countdown-value").textContent = `${remaining}s`;
+      $("#update-progress").style.width = "0%";
+      $("#update-status").textContent = "Hệ thống đang kiểm tra dữ liệu mới…";
+
+      const poll = async () => {
+        if (await checkForFreshData(previousUpdatedAt)) {
+          clearRefreshWatch();
+          $("#countdown-value").textContent = "Xong";
+          $("#update-progress").style.width = "100%";
+          $("#update-status").textContent = "Bản tin mới đã sẵn sàng. Trang web đã được làm mới.";
+          showToast("Đã nhận bản tin mới nhất.");
+        }
+      };
+      refreshPollTimer = setInterval(poll, 6000);
+      poll();
+      refreshCountdownTimer = setInterval(() => {
+        remaining -= 1;
+        $("#countdown-value").textContent = `${Math.max(remaining, 0)}s`;
+        $("#update-progress").style.width = `${Math.min(100, ((totalSeconds - remaining) / totalSeconds) * 100)}%`;
+        if (remaining <= 0) {
+          clearRefreshWatch();
+          $("#update-status").textContent = "Quy trình có thể vẫn đang chạy. Bạn có thể chờ thêm rồi kiểm tra lại.";
+          $("#check-again").hidden = false;
+        }
+      }, 1000);
+    }
+
+    $("#refresh-btn").addEventListener("click", openUpdateCenter);
+    $("#update-close").addEventListener("click", closeUpdateCenter);
+    $("#update-dialog").addEventListener("click", event => { if (event.target === $("#update-dialog")) closeUpdateCenter(); });
+    $("#update-dialog").addEventListener("close", () => { clearRefreshWatch(); document.body.style.overflow = ""; });
+    $("#start-refresh-watch").addEventListener("click", startRefreshWatch);
+    $("#check-again").addEventListener("click", startRefreshWatch);
+
+    window.addEventListener("beforeinstallprompt", event => {
+      event.preventDefault();
+      deferredInstallPrompt = event;
+    });
+    window.addEventListener("appinstalled", () => {
+      deferredInstallPrompt = null;
+      showToast("Ứng dụng The Daily Edge đã được cài.");
+    });
+    $("#install-app-btn").addEventListener("click", async () => {
+      if (window.matchMedia("(display-mode: standalone)").matches) {
+        showToast("Bạn đang dùng bản ứng dụng rồi.");
+        return;
+      }
+      if (deferredInstallPrompt) {
+        deferredInstallPrompt.prompt();
+        await deferredInstallPrompt.userChoice;
+        deferredInstallPrompt = null;
+        return;
+      }
+      if (/iphone|ipad|ipod/i.test(navigator.userAgent)) {
+        showToast("Trên Safari: bấm Chia sẻ → Thêm vào Màn hình chính.");
+      } else {
+        showToast("Mở menu trình duyệt và chọn Cài đặt ứng dụng.");
+      }
+    });
 
     let toastTimer;
     function showToast(message) {
@@ -769,6 +992,9 @@
     }
 
     $("#year").textContent = new Date().getFullYear();
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => navigator.serviceWorker.register("./sw.js").catch(error => console.warn("Không thể khởi tạo app offline", error)));
+    }
     if (sessionStorage.getItem("daily-edge-auth") === "granted") unlock(); else lock();
     navigate(location.hash.slice(1));
     loadData();

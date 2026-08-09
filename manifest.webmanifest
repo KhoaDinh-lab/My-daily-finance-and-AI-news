@@ -1,0 +1,19 @@
+{
+  "name": "The Daily Edge",
+  "short_name": "Daily Edge",
+  "description": "Bản tin tài chính, AI và logistics cá nhân hóa cho Khoa.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#07111f",
+  "theme_color": "#07111f",
+  "lang": "vi",
+  "icons": [
+    {
+      "src": "assets/daily-edge-network.png",
+      "sizes": "1254x1254",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
