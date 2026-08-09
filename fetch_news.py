@@ -978,7 +978,10 @@ direction "insufficient", outlook "uncertain" và nói rõ phần nào còn thi�
                     {"role": "user", "content": prompt},
                 ],
                 temperature=0.1,
-                max_completion_tokens=3200,
+                # Groq Free tính cả prompt + phần trả lời vào giới hạn
+                # 8.000 TPM của model này. 2.700 token vẫn đủ cho
+                # JSON chi tiết, đồng thời chừa khoảng an toàn cho input.
+                max_completion_tokens=2700,
                 response_format={"type": "json_object"},
             )
             content = response.choices[0].message.content
