@@ -1,69 +1,69 @@
 {
-  "updated_at": "09/08/2026 15:04",
+  "updated_at": "09/08/2026 15:08",
   "tickers": {
     "fed_rate": "Chưa có dữ liệu",
-    "cpi": "Chưa có dữ liệu",
+    "cpi": "3.5%",
     "vnindex": "Chưa có dữ liệu",
     "usd_vnd": "26,161"
   },
   "macro": [
     {
+      "title": "Week Ahead for FX, Bonds: U.S. Inflation Data in Focus - wsj.com",
+      "summary": "Tuần tới, dữ liệu lạm phát của Mỹ sẽ là tâm điểm chú ý của thị trường tài chính. Điều này sẽ ảnh hưởng đến quyết định của Cục Dự trữ Liên bang Mỹ về lãi suất.",
+      "source": "wsj.com",
+      "tag": "Lạm phát Mỹ"
+    },
+    {
       "title": "NY Fed finds little change in inflation expectations in July - Reuters",
-      "summary": "The New York Fed reported that inflation expectations remained largely unchanged in July, indicating persistent inflation pressures. This suggests that the Fed may keep rates steady for the near term.",
+      "summary": "Theo khảo sát của Ngân hàng Dự trữ Liên bang New York, kỳ vọng lạm phát trong tháng 7 không thay đổi nhiều. Điều này cho thấy rằng người tiêu dùng và doanh nghiệp vẫn còn thận trọng về tình hình kinh tế.",
       "source": "Reuters",
-      "tag": "FED"
+      "tag": "Kinh tế Mỹ"
     },
     {
-      "title": "Week Ahead for FX, Bonds: U.S. Inflation Data in Focus - WSJ",
-      "summary": "The Wall Street Journal outlines how upcoming U.S. inflation data will influence currency and bond markets, highlighting expectations for Fed policy. Market participants are closely watching the data for clues on future rate moves.",
-      "source": "WSJ",
-      "tag": "CPI"
-    },
-    {
-      "title": "The Fed was expected to hike interest rates in September. Don't bet on that now, economists say. - CBS News",
-      "summary": "CBS News reports that economists are skeptical about a September rate hike, citing recent data that suggests inflation may be easing. The consensus leans toward maintaining current rates for the time being.",
-      "source": "CBS News",
+      "title": "The Fed was expected to hike interest rates in September. Don't bet on that now, economists say. - cbsnews.com",
+      "summary": "Các nhà kinh tế học cho rằng Cục Dự trữ Liên bang Mỹ có thể sẽ không tăng lãi suất vào tháng 9 như dự kiến trước đó. Điều này sẽ phụ thuộc vào tình hình kinh tế và lạm phát trong thời gian tới.",
+      "source": "cbsnews.com",
       "tag": "FED"
     }
   ],
   "vietnam": [
     {
       "title": "VN-Index được kỳ vọng tìm lại điểm cân bằng quanh vùng 1760 - 1780 điểm - VnEconomy",
-      "summary": "VnEconomy forecasts that the VN-Index could return to a balanced range of 1,760-1,780 points, reflecting market expectations for a rebound after recent volatility.",
+      "summary": "Chỉ số VN-Index được dự đoán sẽ tìm lại điểm cân bằng trong vùng 1760-1780 điểm. Điều này sẽ phụ thuộc vào tình hình kinh tế và các yếu tố khác.",
       "source": "VnEconomy",
       "tag": "VN-Index"
     },
     {
       "title": "Góc nhìn TTCK tuần 10/8 - 14/8: Phép thử với VN-Index ở vùng 1.780 - 1.800 điểm - baodautu",
-      "summary": "Baodautu discusses a trial of the VN-Index within the 1,780-1,800 point band, noting that the index has been hovering near this level amid mixed investor sentiment.",
+      "summary": "Tuần tới, chỉ số VN-Index sẽ đối mặt với thử thách ở vùng 1780-1800 điểm. Điều này sẽ phụ thuộc vào tình hình kinh tế và các yếu tố khác.",
       "source": "baodautu",
-      "tag": "VN-Index"
+      "tag": "Thị trường chứng khoán"
     },
     {
-      "title": "Định giá thấp, VN-Index có thể tiến gần 2.000 điểm đầu năm 2027? - Tạp chí Kinh tế - Tài chính Online",
-      "summary": "The magazine explores the possibility of the VN-Index approaching 2,000 points by early 2027, citing low valuation metrics and potential upside from domestic growth.",
-      "source": "Tạp chí Kinh tế - Tài chính Online",
-      "tag": "VN-Index"
+      "title": "Bổ sung quy định sử dụng tài khoản ngoại tệ, đồng Việt Nam của tổ chức tín dụng nước ngoài - CafeF",
+      "summary": "CafeF đưa tin về việc bổ sung quy định sử dụng tài khoản ngoại tệ và đồng Việt Nam của các tổ chức tín dụng nước ngoài. Điều này sẽ giúp quản lý và giám sát các hoạt động tài chính của các tổ chức này.",
+      "source": "CafeF",
+      "tag": "NHNN"
     }
   ],
   "ai": [
     {
       "title": "Broadcom (AVGO) Pairs AI Chip Boom With A Software Security Push - Yahoo Finance",
-      "summary": "Broadcom is leveraging its AI chip momentum to enhance software security solutions, aiming to protect AI workloads from emerging threats.",
+      "summary": "Broadcom đang kết hợp sự phát triển của chip AI với nỗ lực bảo mật phần mềm. Điều này sẽ giúp công ty tăng cường vị thế trong lĩnh vực công nghệ.",
       "source": "Yahoo Finance",
       "tag": "AI Tech"
     },
     {
-      "title": "Anthropic co-designing custom AI inference chips to bypass costly Nvidia GPUs — Samsung reported as manufacturing partner for Claude maker - Tom's Hardware",
-      "summary": "Tom's Hardware reports that Anthropic is collaborating with Samsung to develop custom AI inference chips, potentially reducing reliance on expensive Nvidia GPUs for its Claude models.",
-      "source": "Tom's Hardware",
-      "tag": "AI Tech"
+      "title": "The impending, inescapable deluge of AI - The Mercury News",
+      "summary": "The Mercury News đưa tin về sự phát triển không thể tránh khỏi của công nghệ AI. Điều này sẽ mang lại nhiều thay đổi và cơ hội cho các ngành công nghiệp và xã hội.",
+      "source": "The Mercury News",
+      "tag": "AI"
     },
     {
-      "title": "Broadcom’s AI Chip Bookings Hit $30 Billion. Here’s What Q3 Earnings Need to Show - TIKR.com",
-      "summary": "TIKR.com highlights Broadcom's record $30 billion AI chip bookings, noting that Q3 earnings will need to demonstrate strong execution to sustain investor confidence.",
-      "source": "TIKR.com",
-      "tag": "AI Tech"
+      "title": "Anthropic co-designing custom AI inference chips to bypass costly Nvidia GPUs — Samsung reported as manufacturing partner for Claude maker - Tom's Hardware",
+      "summary": "Anthropic đang hợp tác với Samsung để thiết kế chip AI tùy chỉnh, nhằm vượt qua giới hạn của card đồ họa Nvidia. Điều này sẽ giúp công ty tăng cường khả năng cạnh tranh trong lĩnh vực AI.",
+      "source": "Tom's Hardware",
+      "tag": "Chip AI"
     }
   ]
 }
