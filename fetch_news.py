@@ -851,16 +851,39 @@ def validate_trends(trends, valid_article_ids):
         trend.setdefault("drivers", [])
         trend.setdefault("watch_next", [])
 
+        horizon_defaults = {
+            "short_term": (
+                "1-4 tuần",
+                "Trong 1-4 tuần, tín hiệu hiện tại vẫn cần được "
+                "kiểm chứng bằng các bản tin mới. Kịch bản này được "
+                "suy ra từ các động lực vừa nêu, nhưng có thể thay đổi "
+                "khi xuất hiện dữ liệu hoặc sự kiện mới.",
+            ),
+            "long_term": (
+                "3-12 tháng",
+                "Trong 3-12 tháng, triển vọng phụ thuộc vào việc các "
+                "động lực trong bản tin có tiếp tục duy trì hay không. Vì "
+                "kho phân tích hiện chỉ bao phủ bảy ngày, đây là kịch bản "
+                "cơ sở chứ không phải dự báo chắc chắn. Những dữ liệu, "
+                "chính sách hoặc sự kiện mới có thể làm thay đổi đánh giá.",
+            ),
+        }
         for horizon_name in ("short_term", "long_term"):
             horizon = trend.get(horizon_name)
             if not isinstance(horizon, dict):
-                raise ValueError(f"Trend thiếu {horizon_name}.")
+                fallback_horizon, fallback_summary = horizon_defaults[horizon_name]
+                horizon = {
+                    "horizon": fallback_horizon,
+                    "outlook": "uncertain",
+                    "summary": fallback_summary,
+                }
+                trend[horizon_name] = horizon
             if horizon.get("outlook") not in {
                 "positive", "negative", "mixed", "stable", "uncertain"
             }:
-                raise ValueError(f"{horizon_name} có outlook không hợp lệ.")
+                horizon["outlook"] = "uncertain"
             if not isinstance(horizon.get("summary"), str) or not horizon["summary"].strip():
-                raise ValueError(f"{horizon_name} thiếu summary.")
+                horizon["summary"] = horizon_defaults[horizon_name][1]
 
         for driver in trend["drivers"]:
             if not isinstance(driver, dict):
