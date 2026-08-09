@@ -350,14 +350,13 @@ def build_area_averages(projects):
 
 
 def fetch_real_estate_market(previous_data):
-    """Làm mới rổ giá một lần mỗi tuần, có fallback từng dự án."""
+    """Làm mới rổ giá một lần mỗi ngày, có fallback từng dự án."""
     now = datetime.now(ZoneInfo("Asia/Ho_Chi_Minh"))
-    iso_year, iso_week, _ = now.isocalendar()
-    week_key = f"{iso_year}-W{iso_week:02d}"
+    refresh_key = now.strftime("%Y-%m-%d")
     old_market = previous_data.get("real_estate_market", {})
     if (
         isinstance(old_market, dict)
-        and old_market.get("week_key") == week_key
+        and old_market.get("refresh_key") == refresh_key
         and old_market.get("apartment_projects")
     ):
         return old_market
@@ -388,15 +387,15 @@ def fetch_real_estate_market(previous_data):
             )
         projects.append(project)
 
-    next_monday = now + timedelta(days=(7 - now.weekday()))
+    next_day = now + timedelta(days=1)
     return {
-        "week_key": week_key,
+        "refresh_key": refresh_key,
         "updated_at": checked_at,
-        "next_update": next_monday.strftime("%d/%m/%Y"),
+        "next_update": next_day.strftime("%d/%m/%Y"),
         "methodology": (
             "Trung bình mẫu được tính từ giá phổ biến của các dự án "
             "đại diện trên OneHousing; không phải giá giao dịch công chứng "
-            "của toàn bộ khu vực. Hệ thống kiểm tra lại mỗi tuần."
+            "của toàn bộ khu vực. Hệ thống kiểm tra lại một lần mỗi ngày."
         ),
         "city_benchmark": {
             "label": "Căn hộ sơ cấp khu trung tâm TP.HCM",

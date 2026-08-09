@@ -1,4 +1,4 @@
-const CACHE_NAME = "daily-edge-v4";
+const CACHE_NAME = "daily-edge-v5";
 const APP_SHELL = [
   "./",
   "./index.html",
