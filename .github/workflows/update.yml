@@ -2,13 +2,14 @@ name: Auto Fetch News
 
 on:
   schedule:
-    # 07:00 giờ Việt Nam (00:00 UTC), mỗi 2 ngày.
+    # 07:00 giờ Việt Nam, mỗi 2 ngày
     - cron: "0 0 */2 * *"
-    # 22:00 giờ Việt Nam (15:00 UTC), mỗi 2 ngày.
+
+    # 22:00 giờ Việt Nam, mỗi 2 ngày
     - cron: "0 15 */2 * *"
+
   workflow_dispatch:
 
-# Cho phép GitHub Actions commit data.json trở lại repository.
 permissions:
   contents: write
 
@@ -28,7 +29,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.10"
+          python-version: "3.11"
           cache: pip
 
       - name: Install dependencies
@@ -39,18 +40,20 @@ jobs:
       - name: Check Python syntax
         run: python -m py_compile fetch_news.py
 
-      - name: Run Gemini News Crawler
+      - name: Run news crawler
         env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: python fetch_news.py
 
       - name: Commit updated news data
         run: |
           git add data.json
+
           if git diff --cached --quiet; then
             echo "data.json không thay đổi; không cần commit."
             exit 0
           fi
+
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git commit -m "Auto update daily news [skip ci]"
