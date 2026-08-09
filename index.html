@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="The Daily Edge — bản tin tài chính, AI và logistics được cập nhật tự động.">
+  <meta name="description" content="The Daily Edge — bản tin tài chính, AI, logistics và bất động sản được cập nhật tự động.">
   <meta name="theme-color" content="#07111f">
   <meta property="og:title" content="The Daily Edge | Financial Intelligence">
-  <meta property="og:description" content="Bản tin tài chính, AI và logistics với phân tích xu hướng ngắn hạn và dài hạn.">
+  <meta property="og:description" content="Bản tin tài chính, AI, logistics và bất động sản với phân tích xu hướng ngắn hạn và dài hạn.">
   <meta property="og:image" content="https://khoadinh-lab.github.io/My-daily-finance-and-AI-news/assets/daily-edge-network.png">
   <title>The Daily Edge | Financial Intelligence</title>
   <link rel="manifest" href="manifest.webmanifest">
@@ -213,6 +213,59 @@
     .watch-list { margin:17px 0 0; padding-left:19px; color:var(--muted); font-size:13px; }
     .watch-list li { margin-top:6px; }
 
+    .market-shell { display:grid; gap:22px; }
+    .market-hero { display:grid; grid-template-columns:1.15fr .85fr; gap:16px; }
+    .market-benchmark, .market-method {
+      position:relative; overflow:hidden; min-height:250px; padding:30px;
+      border:1px solid var(--line); border-radius:24px;
+      background:linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.025));
+    }
+    .market-benchmark { border-color:rgba(94,230,181,.22); background:linear-gradient(135deg,rgba(94,230,181,.13),rgba(110,216,255,.045) 56%,rgba(168,156,255,.08)); }
+    .market-benchmark::after { content:""; position:absolute; width:220px; height:220px; right:-75px; bottom:-105px; border-radius:50%; background:var(--green); opacity:.08; filter:blur(4px); }
+    .market-kicker { color:var(--green); font-size:11px; font-weight:900; letter-spacing:.11em; text-transform:uppercase; }
+    .market-benchmark h2 { position:relative; margin:18px 0 10px; font-size:clamp(36px,6vw,64px); line-height:1; }
+    .market-benchmark h2 span { color:var(--muted); font-size:.38em; letter-spacing:-.01em; }
+    .market-benchmark p, .market-method p { color:#c3cfdb; }
+    .market-change { display:inline-flex; padding:6px 10px; border-radius:999px; color:var(--danger); background:rgba(255,141,155,.1); font-size:12px; font-weight:800; }
+    .market-source { display:inline-flex; margin-top:14px; color:var(--cyan); font-size:12px; text-decoration:none; }
+    .market-method h3 { margin:17px 0 11px; font-size:26px; }
+    .market-meta { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:22px; }
+    .market-meta div { padding:13px; border:1px solid var(--line); border-radius:13px; background:rgba(7,17,31,.38); }
+    .market-meta span { display:block; color:var(--muted); font-size:10px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; }
+    .market-meta strong { display:block; margin-top:5px; font-size:14px; }
+    .market-section { margin-top:34px; }
+    .market-section-head { display:flex; align-items:end; justify-content:space-between; gap:22px; margin-bottom:17px; }
+    .market-section-head h2 { margin:0; font-size:clamp(26px,4vw,38px); }
+    .market-section-head p { max-width:480px; margin:0; color:var(--muted); font-size:13px; }
+    .area-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
+    .area-card { min-height:190px; padding:22px; border:1px solid var(--line); border-radius:19px; background:rgba(255,255,255,.035); }
+    .area-card h3 { margin:9px 0 17px; font-size:22px; }
+    .area-price { color:var(--green); font:800 27px/1 "Manrope"; }
+    .area-price span { color:var(--muted); font:500 12px/1.4 "DM Sans"; }
+    .area-sub { margin-top:10px; color:#cbd5df; font-size:13px; }
+    .area-sample { margin-top:17px; padding-top:12px; border-top:1px solid var(--line); color:var(--muted); font-size:11px; }
+    .property-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
+    .property-card { display:flex; flex-direction:column; min-height:310px; padding:22px; border:1px solid var(--line); border-radius:19px; background:linear-gradient(145deg,rgba(255,255,255,.05),rgba(255,255,255,.025)); }
+    .property-card:hover { border-color:rgba(110,216,255,.26); }
+    .tier-row { display:flex; align-items:center; justify-content:space-between; gap:10px; }
+    .tier-badge { padding:5px 9px; border-radius:999px; color:var(--green); background:rgba(94,230,181,.1); font-size:10px; font-weight:900; letter-spacing:.07em; text-transform:uppercase; }
+    .tier-badge.luxury { color:var(--violet); background:rgba(168,156,255,.11); }
+    .property-area { color:var(--muted); font-size:11px; }
+    .property-card h3 { margin:20px 0 8px; font-size:21px; line-height:1.3; }
+    .property-tier { color:var(--muted); font-size:12px; }
+    .property-price { margin:20px 0 4px; color:var(--text); font:800 30px/1 "Manrope"; }
+    .property-sqm { color:var(--green); font-size:13px; font-weight:700; }
+    .property-details { margin:16px 0 18px; color:var(--muted); font-size:12px; }
+    .property-link { margin-top:auto; color:var(--cyan); text-decoration:none; font-size:12px; font-weight:800; }
+    .range-panel { overflow:hidden; border:1px solid var(--line); border-radius:19px; background:rgba(255,255,255,.028); }
+    .range-row { display:grid; grid-template-columns:1.2fr repeat(3,1fr); align-items:center; min-height:54px; padding:0 20px; border-top:1px solid var(--line); font-size:13px; }
+    .range-row:first-child { border-top:0; }
+    .range-row.range-head { min-height:44px; color:var(--muted); background:rgba(255,255,255,.035); font-size:10px; font-weight:800; letter-spacing:.06em; text-transform:uppercase; }
+    .range-mid { color:var(--green); font-weight:800; }
+    .range-note { margin:12px 3px 0; color:var(--muted); font-size:11px; }
+    .range-note a { color:var(--cyan); text-decoration:none; }
+    .market-disclaimer { margin-top:34px; padding:18px 20px; border:1px solid rgba(255,206,114,.16); border-radius:15px; color:#c6d0da; background:rgba(255,206,114,.045); font-size:12px; }
+
     .update-dialog { width:min(620px,calc(100% - 28px)); }
     .update-body { padding-top:4px; }
     .update-body h2 { margin:8px 0 12px; font-size:32px; }
@@ -280,13 +333,21 @@
       .personal-bar { grid-template-columns:1fr; margin-top:0; }
       .personal-stats { justify-content:flex-start; }
       .trend-visual { grid-template-columns:1fr; }
+      .market-hero { grid-template-columns:1fr; }
+      .area-grid, .property-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
     }
     @media (max-width: 680px) {
       .shell { width:min(100% - 24px,1180px); }
       .brand-copy span { display:none; }
       .view { padding:50px 0 70px; }
       .hero { padding-bottom:38px; }
-      .ticker-grid, .news-grid, .trend-grid, .horizon-grid { grid-template-columns:1fr; }
+      .ticker-grid, .news-grid, .trend-grid, .horizon-grid, .area-grid, .property-grid { grid-template-columns:1fr; }
+      .market-section-head { align-items:start; flex-direction:column; }
+      .range-row { grid-template-columns:1.1fr 1fr; gap:5px 12px; padding:12px 16px; }
+      .range-row.range-head { display:none; }
+      .range-row span:nth-child(2)::before { content:"Thấp: "; color:var(--muted); }
+      .range-row span:nth-child(3)::before { content:"Cao: "; color:var(--muted); }
+      .range-row span:nth-child(4)::before { content:"Giữa khoảng: "; color:var(--muted); }
       .ticker-card { min-height:140px; }
       .section-bar { align-items:start; flex-direction:column; margin-top:54px; }
       .news-card { min-height:180px; }
@@ -335,6 +396,7 @@
         <button class="nav-btn" data-route="vietnam">Việt Nam</button>
         <button class="nav-btn" data-route="ai">AI</button>
         <button class="nav-btn" data-route="logistics">Logistics</button>
+        <button class="nav-btn" data-route="realestate">BĐS</button>
         <button class="nav-btn" data-route="trends">Xu hướng</button>
         <button class="nav-btn" data-route="missed">Bỏ lỡ <span class="nav-count" id="missed-nav-count">0</span></button>
       </nav>
@@ -354,7 +416,7 @@
           <div>
             <span class="eyebrow">Bản tin chọn lọc mỗi ngày</span>
             <h1>Đọc ít hơn.<br><span class="gradient-word">Hiểu sâu hơn.</span></h1>
-            <p class="hero-copy">Một góc nhìn cô đọng về vĩ mô, thị trường Việt Nam, trí tuệ nhân tạo và chuỗi cung ứng toàn cầu.</p>
+            <p class="hero-copy">Một góc nhìn cô đọng về vĩ mô, thị trường Việt Nam, trí tuệ nhân tạo, chuỗi cung ứng và bất động sản.</p>
           </div>
           <aside class="hero-aside">
             <div class="pulse-line"><span class="pulse-dot"></span><span>Hệ thống đang hoạt động</span></div>
@@ -394,6 +456,14 @@
     <section class="view" data-view="vietnam"><div class="shell"><header class="topic-header"><span class="eyebrow">Thị trường Việt Nam</span><h1>Nhịp đập<br>kinh tế trong nước.</h1><p>VN-Index, tỷ giá, chính sách điều hành và dòng vốn được chọn lọc trong một không gian dễ đọc.</p></header><div class="section-bar"><div><h2>Bản tin mới</h2></div><span class="topic-count" id="vietnam-count"></span></div><div class="news-grid" id="vietnam-news"></div></div></section>
     <section class="view" data-view="ai"><div class="shell"><header class="topic-header"><span class="eyebrow">Frontiers of AI</span><h1>Công nghệ đang<br>định hình ngày mai.</h1><p>Mô hình mới, AI agent, hạ tầng chip và những thay đổi quan trọng trong hệ sinh thái trí tuệ nhân tạo.</p></header><div class="section-bar"><div><h2>Bản tin mới</h2></div><span class="topic-count" id="ai-count"></span></div><div class="news-grid" id="ai-news"></div></div></section>
     <section class="view" data-view="logistics"><div class="shell"><header class="topic-header"><span class="eyebrow">Logistics & Supply Chain</span><h1>Dòng chảy hàng hóa<br>không ngừng nghỉ.</h1><p>Cảng biển, vận tải, chuỗi cung ứng và thị trường logistics tại Việt Nam lẫn trên thế giới.</p></header><div class="section-bar"><div><h2>Bản tin mới</h2></div><span class="topic-count" id="logistics-count"></span></div><div class="news-grid" id="logistics-news"></div></div></section>
+    <section class="view" data-view="realestate">
+      <div class="shell">
+        <header class="topic-header"><span class="eyebrow">Real Estate Intelligence</span><h1>Nhà để ở.<br>Tài sản để hiểu.</h1><p>Mặt bằng giá căn hộ, nhà riêng và đất nền tại TP.HCM được trình bày theo khu vực, phân khúc và dự án tham khảo.</p></header>
+        <div id="real-estate-market"><div class="empty-state">Đang tải dữ liệu thị trường bất động sản…</div></div>
+        <div class="section-bar"><div><span class="eyebrow">Tin & chính sách</span><h2>Chuyển động mới</h2></div><span class="topic-count" id="realestate-count"></span></div>
+        <div class="news-grid" id="realestate-news"></div>
+      </div>
+    </section>
     <section class="view" data-view="trends">
       <div class="shell">
         <header class="topic-header"><span class="eyebrow">AI Trend Intelligence</span><h1>Nhìn qua sự kiện.<br>Thấy được xu hướng.</h1><p>AI đối chiếu kho tin bảy ngày, chỉ ra động lực chính và phân tách triển vọng trong 1–4 tuần lẫn 3–12 tháng.</p></header>
@@ -412,7 +482,7 @@
     <section class="view" data-view="missed"><div class="shell"><header class="topic-header"><span class="eyebrow">Reading Inbox</span><h1>Những bài bạn<br>chưa kịp xem.</h1><p>Tin được lưu trong 30 ngày. Một bài sẽ tự chuyển sang trạng thái đã đọc khi bạn mở phần chi tiết.</p></header><div class="section-bar"><div><h2>Danh sách chưa đọc</h2></div><button class="soft-btn" id="mark-all-read" type="button">✓ Đánh dấu tất cả đã đọc</button></div><div class="news-grid" id="missed-news"></div></div></section>
   </main>
 
-  <footer><div class="shell footer-inner"><span>© <span id="year"></span> The Daily Edge · Curated for Khoa</span><span>Dữ liệu: <a href="https://news.google.com/" target="_blank" rel="noopener">Google News RSS</a> · <a href="https://finance.yahoo.com/quote/%5EVNINDEX.VN/" target="_blank" rel="noopener">Yahoo Finance</a> · <a href="https://www.bls.gov/cpi/" target="_blank" rel="noopener">BLS</a></span></div></footer>
+  <footer><div class="shell footer-inner"><span>© <span id="year"></span> The Daily Edge · Curated for Khoa</span><span>Dữ liệu: <a href="https://news.google.com/" target="_blank" rel="noopener">Google News RSS</a> · <a href="https://finance.yahoo.com/quote/%5EVNINDEX.VN/" target="_blank" rel="noopener">Yahoo Finance</a> · <a href="https://www.bls.gov/cpi/" target="_blank" rel="noopener">BLS</a> · <a href="https://onehousing.vn/" target="_blank" rel="noopener">OneHousing</a></span></div></footer>
 
   <dialog id="article-dialog">
     <div class="modal-scroll">
@@ -455,9 +525,10 @@
   <script>
     const CREDENTIAL_HASH = "b6bb5d48a9f5f26bf047764fd4250a2a4c8a232c3e95ce906ce7134174d71c83";
     const PROGRESS_KEY = "daily-edge-progress-v1";
-    const CONTENT_SECTIONS = ["macro", "vietnam", "ai", "logistics"];
+    const CONTENT_SECTIONS = ["macro", "vietnam", "ai", "logistics", "realestate"];
+    const TREND_SECTIONS = ["macro", "vietnam", "ai", "logistics"];
     const ROUTES = ["overview", ...CONTENT_SECTIONS, "trends", "missed"];
-    const SECTION_LABELS = { macro: "Vĩ mô", vietnam: "Việt Nam", ai: "Trí tuệ nhân tạo", logistics: "Logistics", trends: "Xu hướng", missed: "Bài bỏ lỡ" };
+    const SECTION_LABELS = { macro: "Vĩ mô", vietnam: "Việt Nam", ai: "Trí tuệ nhân tạo", logistics: "Logistics", realestate: "Bất động sản", trends: "Xu hướng", missed: "Bài bỏ lỡ" };
     let newsData = null;
     let historyData = { articles: [] };
     let progress = loadProgress();
@@ -775,6 +846,232 @@
       return card;
     }
 
+    function formatMarketNumber(value, maximumFractionDigits = 2) {
+      const number = Number(value);
+      return Number.isFinite(number)
+        ? number.toLocaleString("vi-VN", { maximumFractionDigits })
+        : "—";
+    }
+
+    function appendMarketSource(parent, source, label = "Xem nguồn dữ liệu ↗") {
+      const url = safeUrl(source?.url || source?.source_url);
+      if (!url) return;
+      const link = document.createElement("a");
+      link.className = "market-source";
+      link.href = url;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.textContent = label;
+      parent.append(link);
+    }
+
+    function makeRangePanel(items, source) {
+      const wrap = document.createElement("div");
+      const panel = document.createElement("div");
+      panel.className = "range-panel";
+
+      const head = document.createElement("div");
+      head.className = "range-row range-head";
+      ["Khu vực", "Thấp", "Cao", "Giữa khoảng*"].forEach(text => {
+        const cell = document.createElement("span");
+        cell.textContent = text;
+        head.append(cell);
+      });
+      panel.append(head);
+
+      (items || []).forEach(item => {
+        const row = document.createElement("div");
+        row.className = "range-row";
+        const values = [
+          item.area || "—",
+          `${formatMarketNumber(item.min, 0)} triệu/m²`,
+          `${formatMarketNumber(item.max, 0)} triệu/m²`,
+          `${formatMarketNumber((Number(item.min) + Number(item.max)) / 2, 1)} triệu/m²`
+        ];
+        values.forEach((text, index) => {
+          const cell = document.createElement("span");
+          if (index === 3) cell.className = "range-mid";
+          cell.textContent = text;
+          row.append(cell);
+        });
+        panel.append(row);
+      });
+      wrap.append(panel);
+
+      const note = document.createElement("p");
+      note.className = "range-note";
+      note.textContent = `* ${source?.note || "Giá từ tin rao, chỉ dùng để so sánh nhanh."} Nguồn cập nhật: ${source?.source_updated || "chưa rõ"}. `;
+      appendMarketSource(note, source, "Mở trang khảo sát ↗");
+      wrap.append(note);
+      return wrap;
+    }
+
+    function renderRealEstateMarket(market) {
+      const target = $("#real-estate-market");
+      target.replaceChildren();
+      if (!market?.apartment_projects?.length) {
+        const empty = document.createElement("div");
+        empty.className = "empty-state";
+        empty.textContent = "Bảng giá đầu tiên sẽ xuất hiện sau lần cập nhật dữ liệu tiếp theo.";
+        target.append(empty);
+        return;
+      }
+
+      const shell = document.createElement("div");
+      shell.className = "market-shell";
+      const hero = document.createElement("div");
+      hero.className = "market-hero";
+
+      const benchmark = document.createElement("article");
+      benchmark.className = "market-benchmark";
+      const benchmarkKicker = document.createElement("span");
+      benchmarkKicker.className = "market-kicker";
+      benchmarkKicker.textContent = market.city_benchmark?.label || "Mốc thị trường TP.HCM";
+      const benchmarkValue = document.createElement("h2");
+      benchmarkValue.textContent = `${formatMarketNumber(market.city_benchmark?.value_million_per_sqm, 0)} `;
+      const unit = document.createElement("span");
+      unit.textContent = "triệu/m²";
+      benchmarkValue.append(unit);
+      const benchmarkCopy = document.createElement("p");
+      benchmarkCopy.textContent = `Mốc tham chiếu ${market.city_benchmark?.period || "gần nhất"}; đây là căn hộ sơ cấp khu trung tâm, không đại diện cho mọi quận.`;
+      const benchmarkChange = document.createElement("span");
+      benchmarkChange.className = "market-change";
+      benchmarkChange.textContent = market.city_benchmark?.change || "Chưa có mức thay đổi";
+      benchmark.append(benchmarkKicker, benchmarkValue, benchmarkCopy, benchmarkChange);
+      appendMarketSource(benchmark, { url: market.city_benchmark?.source_url }, `${market.city_benchmark?.source || "Nguồn báo cáo"} ↗`);
+
+      const method = document.createElement("article");
+      method.className = "market-method";
+      const methodKicker = document.createElement("span");
+      methodKicker.className = "market-kicker";
+      methodKicker.textContent = "Lịch cập nhật giá";
+      const methodTitle = document.createElement("h3");
+      methodTitle.textContent = "Một lần mỗi tuần";
+      const methodCopy = document.createElement("p");
+      methodCopy.textContent = market.methodology || "Giá được tổng hợp từ rổ dự án đại diện.";
+      const meta = document.createElement("div");
+      meta.className = "market-meta";
+      [["Đã kiểm tra", market.updated_at], ["Lần kế tiếp", market.next_update]].forEach(([label, value]) => {
+        const item = document.createElement("div");
+        const caption = document.createElement("span");
+        caption.textContent = label;
+        const strong = document.createElement("strong");
+        strong.textContent = value || "—";
+        item.append(caption, strong);
+        meta.append(item);
+      });
+      method.append(methodKicker, methodTitle, methodCopy, meta);
+      hero.append(benchmark, method);
+      shell.append(hero);
+
+      const areaSection = document.createElement("section");
+      areaSection.className = "market-section";
+      const areaHead = document.createElement("div");
+      areaHead.className = "market-section-head";
+      const areaTitle = document.createElement("h2");
+      areaTitle.textContent = "Mặt bằng căn hộ theo khu vực";
+      const areaExplain = document.createElement("p");
+      areaExplain.textContent = "Trung bình số học từ các dự án mẫu bên dưới — giúp so sánh nhanh, không phải giá trung bình của toàn bộ khu vực.";
+      areaHead.append(areaTitle, areaExplain);
+      const areaGrid = document.createElement("div");
+      areaGrid.className = "area-grid";
+      (market.area_averages || []).forEach(area => {
+        const card = document.createElement("article");
+        card.className = "area-card";
+        const kicker = document.createElement("span");
+        kicker.className = "market-kicker";
+        kicker.textContent = `${area.sample_size || 0} dự án mẫu`;
+        const title = document.createElement("h3");
+        title.textContent = area.area || "Khu vực";
+        const price = document.createElement("div");
+        price.className = "area-price";
+        price.textContent = `${formatMarketNumber(area.average_price_per_sqm_million)} `;
+        const priceUnit = document.createElement("span");
+        priceUnit.textContent = "triệu/m²";
+        price.append(priceUnit);
+        const sub = document.createElement("div");
+        sub.className = "area-sub";
+        sub.textContent = `Khoảng ${formatMarketNumber(area.average_price_billion)} tỷ/căn trong rổ mẫu`;
+        const sample = document.createElement("div");
+        sample.className = "area-sample";
+        sample.textContent = (area.projects || []).join(" · ");
+        card.append(kicker, title, price, sub, sample);
+        areaGrid.append(card);
+      });
+      areaSection.append(areaHead, areaGrid);
+      shell.append(areaSection);
+
+      const projectSection = document.createElement("section");
+      projectSection.className = "market-section";
+      const projectHead = document.createElement("div");
+      projectHead.className = "market-section-head";
+      const projectTitle = document.createElement("h2");
+      projectTitle.textContent = "Ví dụ căn hộ theo phân khúc";
+      const projectExplain = document.createElement("p");
+      projectExplain.textContent = "Hạng thường và hạng sang được tách rõ; mỗi thẻ là một dự án cụ thể với mức giá phổ biến trên nguồn.";
+      projectHead.append(projectTitle, projectExplain);
+      const projectGrid = document.createElement("div");
+      projectGrid.className = "property-grid";
+      const preferredProjects = ["Khang Gia Tân Hương", "Q7 Saigon Riverside", "Vinhomes Grand Park", "Cảnh Viên 3", "Masteri Thảo Điền", "Vinhomes Central Park"];
+      const projects = market.apartment_projects.filter(item => preferredProjects.includes(item.project));
+      projects.sort((a, b) => preferredProjects.indexOf(a.project) - preferredProjects.indexOf(b.project));
+      projects.forEach(project => {
+        const card = document.createElement("article");
+        card.className = "property-card";
+        const top = document.createElement("div");
+        top.className = "tier-row";
+        const badge = document.createElement("span");
+        badge.className = `tier-badge${project.group === "Hạng sang" ? " luxury" : ""}`;
+        badge.textContent = project.group || "Căn hộ";
+        const area = document.createElement("span");
+        area.className = "property-area";
+        area.textContent = project.area || "TP.HCM";
+        top.append(badge, area);
+        const title = document.createElement("h3");
+        title.textContent = project.project || "Dự án tham khảo";
+        const tier = document.createElement("div");
+        tier.className = "property-tier";
+        tier.textContent = `Phân khúc: ${project.tier || "Chưa phân loại"}`;
+        const price = document.createElement("div");
+        price.className = "property-price";
+        price.textContent = `${formatMarketNumber(project.typical_price_billion)} tỷ/căn`;
+        const sqm = document.createElement("div");
+        sqm.className = "property-sqm";
+        sqm.textContent = `${formatMarketNumber(project.typical_price_per_sqm_million)} triệu/m²`;
+        const details = document.createElement("div");
+        details.className = "property-details";
+        const priceRange = project.price_range_billion || [];
+        const change = Number(project.change_pct);
+        details.textContent = `Khoảng giá ${formatMarketNumber(priceRange[0])}–${formatMarketNumber(priceRange[1])} tỷ · ${Number.isFinite(change) ? `${change >= 0 ? "+" : ""}${formatMarketNumber(change)}%` : "chưa rõ biến động"} · kỳ ${project.source_period || "gần nhất"}${project.is_fallback ? " · giá tham chiếu gần nhất" : ""}`;
+        card.append(top, title, tier, price, sqm, details);
+        appendMarketSource(card, project, "Xem dự án & nguồn giá ↗");
+        projectGrid.append(card);
+      });
+      projectSection.append(projectHead, projectGrid);
+      shell.append(projectSection);
+
+      [["Nhà riêng theo khu vực", market.house_ranges, market.house_source], ["Đất nền theo khu vực", market.land_ranges, market.land_source]].forEach(([title, items, source]) => {
+        if (!Array.isArray(items) || !items.length) return;
+        const section = document.createElement("section");
+        section.className = "market-section";
+        const head = document.createElement("div");
+        head.className = "market-section-head";
+        const heading = document.createElement("h2");
+        heading.textContent = title;
+        const description = document.createElement("p");
+        description.textContent = "Khoảng giá chào bán trên tin rao; cột giữa khoảng chỉ hỗ trợ so sánh nhanh.";
+        head.append(heading, description);
+        section.append(head, makeRangePanel(items, source));
+        shell.append(section);
+      });
+
+      const disclaimer = document.createElement("p");
+      disclaimer.className = "market-disclaimer";
+      disclaimer.textContent = market.disclaimer || "Dữ liệu chỉ mang tính tham khảo, không phải khuyến nghị đầu tư.";
+      shell.append(disclaimer);
+      target.append(shell);
+    }
+
     function renderTrends(trends) {
       const target = $("#trends-content");
       target.replaceChildren();
@@ -789,7 +1086,7 @@
       target.append(trendBlock(trends.overall, true));
       const grid = document.createElement("div");
       grid.className = "trend-grid";
-      CONTENT_SECTIONS.forEach(section => grid.append(trendBlock(trends.sections[section] || { label: SECTION_LABELS[section] })));
+      TREND_SECTIONS.forEach(section => grid.append(trendBlock(trends.sections[section] || { label: SECTION_LABELS[section] })));
       target.append(grid);
       $("#trend-disclaimer").textContent = `${trends.disclaimer || "Phân tích AI chỉ mang tính tham khảo."} Cập nhật: ${trends.generated_at || "chưa rõ"}.`;
     }
@@ -807,6 +1104,7 @@
       change.className = `change-badge ${direction}`;
       change.textContent = `${symbol} ${tickers.vnindex_change || "—"} · ${tickers.vnindex_change_pct || "—"}`;
       renderNewsCollections();
+      renderRealEstateMarket(data.real_estate_market);
       renderTrends(data.trends);
       renderPersonalization();
     }

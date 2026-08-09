@@ -23,7 +23,8 @@ OUTPUT_FILE = Path(__file__).with_name("data.json")
 HISTORY_FILE = Path(__file__).with_name("history.json")
 HISTORY_RETENTION_DAYS = 30
 
-REQUIRED_SECTIONS = ("macro", "vietnam", "ai", "logistics")
+REQUIRED_SECTIONS = ("macro", "vietnam", "ai", "logistics", "realestate")
+TREND_SECTIONS = ("macro", "vietnam", "ai", "logistics")
 REQUIRED_TICKERS = (
     "fed_rate",
     "cpi",
@@ -65,7 +66,7 @@ Nhiệm vụ:
 - Mọi title, summary và tag PHẢI viết bằng tiếng Việt.
 - Giữ đúng source_index của tin RSS được chọn.
 - Nếu chưa tìm được một số liệu đáng tin cậy, ghi "Chưa có dữ liệu".
-- Mỗi nhóm chọn tối đa 4 tin đáng chú ý, giữ nguyên thứ tự theo source_index.
+- Mỗi nhóm chọn tối đa 3 tin đáng chú ý, giữ nguyên thứ tự theo source_index.
 
 Chỉ trả về một JSON object hợp lệ, không dùng Markdown và không thêm
 lời giải thích bên ngoài JSON.
@@ -111,9 +112,93 @@ Cấu trúc bắt buộc:
       "summary": "tóm tắt 2 câu tiếng Việt",
       "tag": "Logistics Việt Nam hoặc Logistics Thế giới"
     }
+  ],
+  "realestate": [
+    {
+      "source_index": 0,
+      "title": "tiêu đề tiếng Việt",
+      "summary": "tóm tắt 2 câu tiếng Việt",
+      "tag": "Căn hộ / Nhà ở / Pháp lý / Hạ tầng"
+    }
   ]
 }
 """
+
+
+ONEHOUSING_PROJECTS = (
+    {
+        "project": "Khang Gia Tân Hương",
+        "area": "Tân Phú",
+        "tier": "Bình dân",
+        "group": "Hạng thường",
+        "url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Chung-cu-Khang-Gia-Tan-Huong.500",
+        "fallback": (1.69, 21.82, (1.12, 1.99), (20.33, 22.87), 0.0),
+    },
+    {
+        "project": "Melody Residences",
+        "area": "Tân Phú",
+        "tier": "Trung cấp",
+        "group": "Hạng thường",
+        "url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Chung-cu-Melody-Residences.713",
+        "fallback": (2.99, 43.02, (2.80, 20.65), (31.46, 49.88), 0.0),
+    },
+    {
+        "project": "IDICO Tân Phú",
+        "area": "Tân Phú",
+        "tier": "Trung cấp",
+        "group": "Hạng thường",
+        "url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Chung-cu-IDICO-Tan-Phu.493",
+        "fallback": (1.84, 35.13, (1.30, 3.38), (31.65, 38.05), 0.0),
+    },
+    {
+        "project": "Q7 Saigon Riverside",
+        "area": "Quận 7",
+        "tier": "Trung cấp",
+        "group": "Hạng thường",
+        "url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Chung-cu-Q7-Saigon-Riverside.355",
+        "fallback": (2.77, 45.18, (2.06, 3.96), (40.19, 50.22), 0.0),
+    },
+    {
+        "project": "Cảnh Viên 3",
+        "area": "Quận 7",
+        "tier": "Cao cấp",
+        "group": "Hạng sang",
+        "url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Canh-Vien-3.644",
+        "fallback": (7.17, 61.22, (6.69, 14.81), (57.58, 68.13), 0.0),
+    },
+    {
+        "project": "Vinhomes Grand Park",
+        "area": "Thủ Đức · Quận 9 cũ",
+        "tier": "Trung cấp – cao cấp",
+        "group": "Hạng thường",
+        "url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Vinhomes-Grand-Park.1012",
+        "fallback": (3.04, 57.53, (1.40, 32.00), (38.59, 331.19), 0.16),
+    },
+    {
+        "project": "Masteri Thảo Điền",
+        "area": "Thủ Đức · Quận 2 cũ",
+        "tier": "Cao cấp",
+        "group": "Hạng sang",
+        "url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Masteri-Thao-Dien.946",
+        "fallback": (7.96, 120.66, (5.57, 63.11), (100.21, 204.19), -6.99),
+    },
+    {
+        "project": "City Garden",
+        "area": "Bình Thạnh",
+        "tier": "Cao cấp",
+        "group": "Hạng sang",
+        "url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Chung-cu-City-Garden.1075",
+        "fallback": (12.90, 129.56, (7.40, 21.94), (106.80, 150.74), 0.0),
+    },
+    {
+        "project": "Vinhomes Central Park",
+        "area": "Bình Thạnh",
+        "tier": "Cao cấp – hạng sang",
+        "group": "Hạng sang",
+        "url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Vinhomes-Central-Park.813",
+        "fallback": (10.73, 144.94, (4.64, 91.62), (104.16, 445.08), 0.0),
+    },
+)
 
 
 def download_text(url):
@@ -150,6 +235,220 @@ def download_text(url):
 def download_json(url):
     """Tải và đọc JSON từ một API công khai."""
     return json.loads(download_text(url))
+
+
+def download_html(url):
+    """Tải trang HTML công khai phục vụ bản giá BĐS hàng tuần."""
+    request = Request(
+        url,
+        headers={
+            "User-Agent": (
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                "AppleWebKit/537.36 Chrome/124 Safari/537.36"
+            ),
+            "Accept": "text/html,application/xhtml+xml",
+            "Accept-Language": "vi-VN,vi;q=0.9,en;q=0.7",
+        },
+    )
+    with urlopen(request, timeout=45) as response:
+        return response.read().decode("utf-8", errors="replace")
+
+
+def html_to_plain_text(html):
+    """Loại script, style và thẻ HTML trước khi đọc số liệu."""
+    text = re.sub(r"<(script|style)\b[^>]*>.*?</\1>", " ", html, flags=re.I | re.S)
+    text = re.sub(r"<[^>]+>", " ", text)
+    return re.sub(r"\s+", " ", unescape(text)).strip()
+
+
+def parse_number(value):
+    """Chuẩn hóa số thập phân trên trang nguồn."""
+    return float(value.replace(",", "."))
+
+
+def fallback_project_snapshot(config, checked_at, source_period="07/2026"):
+    """Giữ mốc giá đã kiểm chứng nếu nguồn tạm gián đoạn."""
+    price, sqm, price_range, sqm_range, change = config["fallback"]
+    return {
+        "project": config["project"],
+        "area": config["area"],
+        "tier": config["tier"],
+        "group": config["group"],
+        "typical_price_billion": price,
+        "typical_price_per_sqm_million": sqm,
+        "price_range_billion": list(price_range),
+        "sqm_range_million": list(sqm_range),
+        "change_pct": change,
+        "source": "OneHousing",
+        "source_url": config["url"],
+        "source_period": source_period,
+        "checked_at": checked_at,
+        "is_fallback": True,
+    }
+
+
+def fetch_onehousing_project(config, checked_at):
+    """Lấy giá phổ biến và đơn giá/m² của một dự án."""
+    plain = html_to_plain_text(download_html(config["url"]))
+    pattern = re.compile(
+        r"Giá phổ biến.*?Mức giá xuất hiện nhiều nhất trong khoảng giá\s*"
+        r"([0-9.,]+)\s*tỷ\s*([+-]?[0-9.,]+)%\s*Khoảng giá:\s*"
+        r"([0-9.,]+)\s*-\s*([0-9.,]+)\s*tỷ\s*"
+        r"Đơn giá phổ biến.*?Mức giá/\s*mét vuông xuất hiện nhiều nhất trong khoảng giá\s*"
+        r"([0-9.,]+)\s*triệu/m²\s*([+-]?[0-9.,]+)%\s*Khoảng giá:\s*"
+        r"([0-9.,]+)\s*-\s*([0-9.,]+)\s*triệu",
+        flags=re.I | re.S,
+    )
+    match = pattern.search(plain)
+    if not match:
+        raise ValueError(f"Không đọc được giá {config['project']}.")
+
+    values = [parse_number(value) for value in match.groups()]
+    period_match = re.search(r"tháng\s+(\d{1,2}/\d{4})", plain, flags=re.I)
+    return {
+        "project": config["project"],
+        "area": config["area"],
+        "tier": config["tier"],
+        "group": config["group"],
+        "typical_price_billion": values[0],
+        "typical_price_per_sqm_million": values[4],
+        "price_range_billion": [values[2], values[3]],
+        "sqm_range_million": [values[6], values[7]],
+        "change_pct": values[1],
+        "source": "OneHousing",
+        "source_url": config["url"],
+        "source_period": period_match.group(1) if period_match else "Chưa rõ",
+        "checked_at": checked_at,
+        "is_fallback": False,
+    }
+
+
+def build_area_averages(projects):
+    """Tính trung bình minh bạch trên rổ dự án đại diện."""
+    grouped = {}
+    for project in projects:
+        grouped.setdefault(project["area"], []).append(project)
+
+    results = []
+    for area, items in grouped.items():
+        results.append(
+            {
+                "area": area,
+                "sample_size": len(items),
+                "average_price_billion": round(
+                    sum(item["typical_price_billion"] for item in items) / len(items), 2
+                ),
+                "average_price_per_sqm_million": round(
+                    sum(item["typical_price_per_sqm_million"] for item in items)
+                    / len(items),
+                    2,
+                ),
+                "projects": [item["project"] for item in items],
+            }
+        )
+    return results
+
+
+def fetch_real_estate_market(previous_data):
+    """Làm mới rổ giá một lần mỗi tuần, có fallback từng dự án."""
+    now = datetime.now(ZoneInfo("Asia/Ho_Chi_Minh"))
+    iso_year, iso_week, _ = now.isocalendar()
+    week_key = f"{iso_year}-W{iso_week:02d}"
+    old_market = previous_data.get("real_estate_market", {})
+    if (
+        isinstance(old_market, dict)
+        and old_market.get("week_key") == week_key
+        and old_market.get("apartment_projects")
+    ):
+        return old_market
+
+    checked_at = now.strftime("%d/%m/%Y %H:%M")
+    old_projects = {
+        item.get("project"): item
+        for item in old_market.get("apartment_projects", [])
+        if isinstance(item, dict) and item.get("project")
+    }
+    projects = []
+    for config in ONEHOUSING_PROJECTS:
+        try:
+            project = fetch_onehousing_project(config, checked_at)
+            print(f"Đã lấy giá BĐS: {config['project']}", flush=True)
+        except Exception as error:
+            project = old_projects.get(config["project"])
+            if project:
+                project = dict(project)
+                project["checked_at"] = checked_at
+                project["is_fallback"] = True
+            else:
+                project = fallback_project_snapshot(config, checked_at)
+            print(
+                f"CẢNH BÁO: Giữ giá tham chiếu {config['project']}: {error}",
+                file=sys.stderr,
+                flush=True,
+            )
+        projects.append(project)
+
+    next_monday = now + timedelta(days=(7 - now.weekday()))
+    return {
+        "week_key": week_key,
+        "updated_at": checked_at,
+        "next_update": next_monday.strftime("%d/%m/%Y"),
+        "methodology": (
+            "Trung bình mẫu được tính từ giá phổ biến của các dự án "
+            "đại diện trên OneHousing; không phải giá giao dịch công chứng "
+            "của toàn bộ khu vực. Hệ thống kiểm tra lại mỗi tuần."
+        ),
+        "city_benchmark": {
+            "label": "Căn hộ sơ cấp khu trung tâm TP.HCM",
+            "value_million_per_sqm": 102,
+            "change": "-1,2% QoQ",
+            "period": "Q1/2026",
+            "source": "One Mount Group",
+            "source_url": "https://cdn.onehousing.vn/HD/Reports/Reports%20on%20MPI/Bao_cao_Tong_quan_thi_truong_can_ho_TP.HCM_Q1.2026.pdf",
+        },
+        "area_averages": build_area_averages(projects),
+        "apartment_projects": projects,
+        "house_ranges": [
+            {"area": "Bình Thạnh", "min": 54, "max": 345},
+            {"area": "Gò Vấp", "min": 86, "max": 232},
+            {"area": "Tân Bình", "min": 87, "max": 330},
+            {"area": "Phú Nhuận", "min": 72, "max": 422},
+            {"area": "Bình Tân", "min": 47, "max": 227},
+            {"area": "Quận 12", "min": 24, "max": 125},
+            {"area": "Quận 7", "min": 45, "max": 260},
+        ],
+        "house_source": {
+            "source": "Batdongsan.com.vn – khảo sát tin rao",
+            "source_updated": "28/07/2026",
+            "url": "https://batdongsan.com.vn/ban-nha-rieng-tp-ho-chi-minh",
+            "note": (
+                "Khoảng rao bán rất rộng do khác nhau về hẻm/mặt tiền, "
+                "diện tích và pháp lý. Mức giữa khoảng chỉ dùng để so sánh nhanh."
+            ),
+        },
+        "land_ranges": [
+            {"area": "Quận 2 (cũ)", "min": 62, "max": 608},
+            {"area": "Quận 9 (cũ)", "min": 15, "max": 151},
+            {"area": "Quận 12", "min": 30, "max": 114},
+            {"area": "Thủ Đức (cũ)", "min": 14, "max": 625},
+            {"area": "Củ Chi", "min": 2, "max": 33},
+        ],
+        "land_source": {
+            "source": "Batdongsan.com.vn – khảo sát tin rao",
+            "source_updated": "09/08/2026",
+            "url": "https://batdongsan.com.vn/ban-dat-tp-hcm",
+            "note": (
+                "Khoảng giá đất chịu ảnh hưởng lớn bởi vị trí, quy hoạch, "
+                "mặt tiền và tình trạng pháp lý. Mức giữa khoảng không phải "
+                "giá giao dịch trung bình."
+            ),
+        },
+        "disclaimer": (
+            "Dữ liệu chỉ để tham khảo, không phải định giá hay khuyến nghị "
+            "đầu tư. Trước khi đặt cọc cần kiểm tra pháp lý, quy hoạch, "
+            "phí bảo trì, phí quản lý và giá giao dịch thực tế."
+        ),
+    }
 
 
 def load_previous_tickers():
@@ -504,6 +803,15 @@ def fetch_news_sources():
             ),
             limit=8,
         ),
+        "realestate": fetch_google_news(
+            '("bất động sản TP.HCM" OR "giá căn hộ TP.HCM" OR '
+            '"thị trường nhà ở TP.HCM" OR "pháp lý dự án TP.HCM" OR '
+            '"hạ tầng TP.HCM") when:3d',
+            "vi",
+            "VN",
+            "VN:vi",
+            limit=8,
+        ),
     }
 
     for articles in sources.values():
@@ -704,7 +1012,7 @@ Trả về đúng JSON theo cấu trúc được yêu cầu.
                         },
                     ],
                     temperature=0.1,
-                    max_completion_tokens=2200,
+                    max_completion_tokens=2400,
                     response_format={"type": "json_object"},
                 )
 
@@ -798,7 +1106,7 @@ def make_fallback_trends(history):
             for article in history.get("articles", [])
             if article.get("section") == section
         )
-        for section in REQUIRED_SECTIONS
+        for section in TREND_SECTIONS
     }
     labels = {
         "macro": "Vĩ mô",
@@ -814,7 +1122,7 @@ def make_fallback_trends(history):
         ),
         "sections": {
             section: make_empty_trend(labels[section], counts[section])
-            for section in REQUIRED_SECTIONS
+            for section in TREND_SECTIONS
         },
         "disclaimer": (
             "Phân tích do AI tổng hợp từ các bài báo đã lưu, "
@@ -833,7 +1141,7 @@ def validate_trends(trends, valid_article_ids):
         raise ValueError("Trend thiếu mục sections.")
 
     trend_items = [trends.get("overall")]
-    trend_items.extend(sections.get(section) for section in REQUIRED_SECTIONS)
+    trend_items.extend(sections.get(section) for section in TREND_SECTIONS)
 
     for trend in trend_items:
         if not isinstance(trend, dict):
@@ -900,7 +1208,7 @@ def fetch_trends_from_groq(client, history):
     """Phân tích xu hướng bảy ngày từ kho tin đã lưu."""
     now = datetime.now(ZoneInfo("Asia/Ho_Chi_Minh"))
     cutoff = now - timedelta(days=7)
-    recent_by_section = {section: [] for section in REQUIRED_SECTIONS}
+    recent_by_section = {section: [] for section in TREND_SECTIONS}
 
     for article in history.get("articles", []):
         section = article.get("section")
@@ -1024,7 +1332,7 @@ direction "insufficient", outlook "uncertain" và nói rõ phần nào còn thi�
                 for section, articles in recent_by_section.items()
             }
             trends["overall"]["article_count"] = sum(counts.values())
-            for section in REQUIRED_SECTIONS:
+            for section in TREND_SECTIONS:
                 trends["sections"][section]["article_count"] = counts[section]
             return trends
         except Exception as error:
@@ -1104,6 +1412,7 @@ def main():
             vnindex_data,
             news_sources,
         )
+        data["real_estate_market"] = fetch_real_estate_market(previous_data)
         history = update_history(data, previous_data)
 
         try:
@@ -1115,7 +1424,7 @@ def main():
                 old_items = [old_trends.get("overall")]
                 old_items.extend(
                     old_trends["sections"].get(section)
-                    for section in REQUIRED_SECTIONS
+                    for section in TREND_SECTIONS
                 )
             old_trends_have_horizons = bool(old_items) and all(
                 isinstance(item, dict)
