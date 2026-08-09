@@ -1,0 +1,69 @@
+{
+  "updated_at": "09/08/2026 15:04",
+  "tickers": {
+    "fed_rate": "Chưa có dữ liệu",
+    "cpi": "Chưa có dữ liệu",
+    "vnindex": "Chưa có dữ liệu",
+    "usd_vnd": "26,161"
+  },
+  "macro": [
+    {
+      "title": "NY Fed finds little change in inflation expectations in July - Reuters",
+      "summary": "The New York Fed reported that inflation expectations remained largely unchanged in July, indicating persistent inflation pressures. This suggests that the Fed may keep rates steady for the near term.",
+      "source": "Reuters",
+      "tag": "FED"
+    },
+    {
+      "title": "Week Ahead for FX, Bonds: U.S. Inflation Data in Focus - WSJ",
+      "summary": "The Wall Street Journal outlines how upcoming U.S. inflation data will influence currency and bond markets, highlighting expectations for Fed policy. Market participants are closely watching the data for clues on future rate moves.",
+      "source": "WSJ",
+      "tag": "CPI"
+    },
+    {
+      "title": "The Fed was expected to hike interest rates in September. Don't bet on that now, economists say. - CBS News",
+      "summary": "CBS News reports that economists are skeptical about a September rate hike, citing recent data that suggests inflation may be easing. The consensus leans toward maintaining current rates for the time being.",
+      "source": "CBS News",
+      "tag": "FED"
+    }
+  ],
+  "vietnam": [
+    {
+      "title": "VN-Index được kỳ vọng tìm lại điểm cân bằng quanh vùng 1760 - 1780 điểm - VnEconomy",
+      "summary": "VnEconomy forecasts that the VN-Index could return to a balanced range of 1,760-1,780 points, reflecting market expectations for a rebound after recent volatility.",
+      "source": "VnEconomy",
+      "tag": "VN-Index"
+    },
+    {
+      "title": "Góc nhìn TTCK tuần 10/8 - 14/8: Phép thử với VN-Index ở vùng 1.780 - 1.800 điểm - baodautu",
+      "summary": "Baodautu discusses a trial of the VN-Index within the 1,780-1,800 point band, noting that the index has been hovering near this level amid mixed investor sentiment.",
+      "source": "baodautu",
+      "tag": "VN-Index"
+    },
+    {
+      "title": "Định giá thấp, VN-Index có thể tiến gần 2.000 điểm đầu năm 2027? - Tạp chí Kinh tế - Tài chính Online",
+      "summary": "The magazine explores the possibility of the VN-Index approaching 2,000 points by early 2027, citing low valuation metrics and potential upside from domestic growth.",
+      "source": "Tạp chí Kinh tế - Tài chính Online",
+      "tag": "VN-Index"
+    }
+  ],
+  "ai": [
+    {
+      "title": "Broadcom (AVGO) Pairs AI Chip Boom With A Software Security Push - Yahoo Finance",
+      "summary": "Broadcom is leveraging its AI chip momentum to enhance software security solutions, aiming to protect AI workloads from emerging threats.",
+      "source": "Yahoo Finance",
+      "tag": "AI Tech"
+    },
+    {
+      "title": "Anthropic co-designing custom AI inference chips to bypass costly Nvidia GPUs — Samsung reported as manufacturing partner for Claude maker - Tom's Hardware",
+      "summary": "Tom's Hardware reports that Anthropic is collaborating with Samsung to develop custom AI inference chips, potentially reducing reliance on expensive Nvidia GPUs for its Claude models.",
+      "source": "Tom's Hardware",
+      "tag": "AI Tech"
+    },
+    {
+      "title": "Broadcom’s AI Chip Bookings Hit $30 Billion. Here’s What Q3 Earnings Need to Show - TIKR.com",
+      "summary": "TIKR.com highlights Broadcom's record $30 billion AI chip bookings, noting that Q3 earnings will need to demonstrate strong execution to sustain investor confidence.",
+      "source": "TIKR.com",
+      "tag": "AI Tech"
+    }
+  ]
+}
