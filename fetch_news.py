@@ -2,6 +2,7 @@ import json
 import os
 import re
 import sys
+import time
 import traceback
 from datetime import datetime
 from pathlib import Path
@@ -101,8 +102,25 @@ def download_json(url):
         },
     )
 
-    with urlopen(request, timeout=30) as response:
-        return json.loads(response.read().decode("utf-8"))
+    last_error = None
+    for attempt in range(1, 4):
+        try:
+            with urlopen(request, timeout=30) as response:
+                return json.loads(response.read().decode("utf-8"))
+        except Exception as error:
+            last_error = error
+            if attempt == 3:
+                break
+
+            wait_seconds = attempt * 3
+            print(
+                f"API dữ liệu tạm lỗi; chờ {wait_seconds} giây rồi thử lại...",
+                file=sys.stderr,
+                flush=True,
+            )
+            time.sleep(wait_seconds)
+
+    raise last_error
 
 
 def load_previous_tickers():
@@ -274,53 +292,73 @@ Trả về đúng JSON theo cấu trúc được yêu cầu.
     errors = []
 
     for model_name in MODELS_TO_TRY:
-        print(f"Đang gọi Groq model: {model_name}...", flush=True)
-
-        try:
-            response = client.chat.completions.create(
-                model=model_name,
-                messages=[
-                    {
-                        "role": "system",
-                        "content": SYSTEM_PROMPT,
-                    },
-                    {
-                        "role": "user",
-                        "content": user_prompt,
-                    },
-                ],
-                temperature=0.1,
-                max_completion_tokens=5000,
-            )
-
-            content = response.choices[0].message.content
-            if not content:
-                raise ValueError("Groq trả về nội dung rỗng.")
-
-            data = extract_json(content)
-
-            # Luôn dùng dữ liệu trực tiếp từ API cho hai chỉ số này.
-            data.setdefault("tickers", {})
-            data["tickers"]["cpi"] = cpi
-            data["tickers"]["usd_vnd"] = usd_vnd
-            data["updated_at"] = vietnam_time
-
-            validate_news_data(data)
-
+        for attempt in range(1, 4):
             print(
-                f"Groq model {model_name} trả về dữ liệu hợp lệ.",
+                f"Đang gọi Groq model: {model_name} (lần {attempt}/3)...",
                 flush=True,
             )
-            return data
 
-        except Exception as error:
-            detail = f"{type(error).__name__}: {error}"
-            errors.append(f"{model_name}: {detail}")
-            print(
-                f"Model {model_name} thất bại: {detail}",
-                file=sys.stderr,
-                flush=True,
-            )
+            try:
+                response = client.chat.completions.create(
+                    model=model_name,
+                    messages=[
+                        {
+                            "role": "system",
+                            "content": SYSTEM_PROMPT,
+                        },
+                        {
+                            "role": "user",
+                            "content": user_prompt,
+                        },
+                    ],
+                    temperature=0.1,
+                    max_completion_tokens=2500,
+                )
+
+                content = response.choices[0].message.content
+                if not content:
+                    raise ValueError("Groq trả về nội dung rỗng.")
+
+                data = extract_json(content)
+
+                # Luôn dùng dữ liệu trực tiếp từ API cho hai chỉ số này.
+                data.setdefault("tickers", {})
+                data["tickers"]["cpi"] = cpi
+                data["tickers"]["usd_vnd"] = usd_vnd
+                data["updated_at"] = vietnam_time
+
+                validate_news_data(data)
+
+                print(
+                    f"Groq model {model_name} trả về dữ liệu hợp lệ.",
+                    flush=True,
+                )
+                return data
+
+            except Exception as error:
+                detail = f"{type(error).__name__}: {error}"
+
+                # Free tier đôi lúc hết giới hạn token theo phút. Groq thường
+                # yêu cầu chờ vài giây, vì vậy thử lại cùng model trước.
+                is_rate_limit = "429" in detail or "RateLimit" in detail
+                if is_rate_limit and attempt < 3:
+                    wait_seconds = attempt * 10
+                    print(
+                        f"Groq đang giới hạn tạm thời; chờ {wait_seconds} "
+                        "giây rồi thử lại...",
+                        file=sys.stderr,
+                        flush=True,
+                    )
+                    time.sleep(wait_seconds)
+                    continue
+
+                errors.append(f"{model_name}: {detail}")
+                print(
+                    f"Model {model_name} thất bại: {detail}",
+                    file=sys.stderr,
+                    flush=True,
+                )
+                break
 
     raise RuntimeError(
         "Tất cả Groq model đều thất bại:\n- " + "\n- ".join(errors)
