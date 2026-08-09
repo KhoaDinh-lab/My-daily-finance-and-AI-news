@@ -47,7 +47,7 @@ jobs:
 
       - name: Commit updated news data
         run: |
-          git add data.json
+          git add data.json history.json
 
           if git diff --cached --quiet; then
             echo "data.json không thay đổi; không cần commit."

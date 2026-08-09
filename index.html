@@ -86,6 +86,7 @@
     }
     .nav-btn:hover { color: var(--text); background: rgba(255,255,255,.055); transform: translateY(-1px); }
     .nav-btn.active { color: var(--text); background: rgba(94,230,181,.1); box-shadow: inset 0 0 0 1px rgba(94,230,181,.14); }
+    .nav-count { display:inline-grid; place-items:center; min-width:19px; height:19px; margin-left:5px; padding:0 5px; border-radius:999px; color:#07111f; background:var(--green); font-size:10px; font-weight:900; }
     .icon-btn {
       width: 40px; height: 40px; display: grid; place-items: center; flex: 0 0 auto;
       border: 1px solid var(--line); border-radius: 12px; cursor: pointer;
@@ -130,6 +131,17 @@
     .change-badge.down { color: var(--danger); background: rgba(255,141,155,.11); }
     .change-badge.flat { color: var(--muted); background: rgba(255,255,255,.06); }
 
+    .personal-bar { display:grid; grid-template-columns:1fr auto; gap:26px; align-items:center; margin:-30px 0 34px; padding:22px 24px; border:1px solid rgba(94,230,181,.16); border-radius:20px; background:linear-gradient(115deg,rgba(94,230,181,.08),rgba(110,216,255,.035) 50%,rgba(168,156,255,.06)); box-shadow:0 18px 60px rgba(0,0,0,.14); }
+    .welcome-row { display:flex; align-items:center; gap:14px; }
+    .user-avatar { width:46px; height:46px; display:grid; place-items:center; flex:0 0 auto; border-radius:15px; color:#07111f; background:linear-gradient(135deg,var(--green),var(--cyan)); font:800 15px/1 "Manrope"; }
+    .welcome-copy strong { display:block; font:700 18px/1.25 "Manrope"; }
+    .welcome-copy span { display:block; margin-top:4px; color:var(--muted); font-size:13px; }
+    .personal-stats { display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
+    .stat-pill { display:flex; align-items:center; gap:9px; padding:9px 12px; border:1px solid var(--line); border-radius:12px; background:rgba(7,17,31,.45); font-size:12px; }
+    .stat-pill strong { color:var(--green); font-size:15px; }
+    .stat-pill.action { cursor:pointer; transition:.2s; }
+    .stat-pill.action:hover { transform:translateY(-2px); border-color:rgba(94,230,181,.34); }
+
     .section-bar { display:flex; align-items:end; justify-content:space-between; gap:24px; margin: 78px 0 28px; }
     .section-bar h2 { margin: 8px 0 0; font-size: clamp(30px,4vw,46px); line-height:1.1; }
     .section-bar p { margin: 0; max-width: 430px; color:var(--muted); font-size:14px; }
@@ -149,6 +161,10 @@
     @keyframes card-in { from { opacity:0; transform:translateY(16px); } }
     .news-card:hover { transform:translateY(-6px); border-color:rgba(110,216,255,.32); box-shadow:0 24px 60px rgba(0,0,0,.24); }
     .news-card:hover .card-arrow { transform:translate(2px,-2px); color:var(--green); }
+    .news-card.read { opacity:.66; }
+    .news-card.read:hover { opacity:.92; }
+    .news-card.read .tag::before { content:"✓"; margin-right:5px; }
+    .unread-dot { width:8px; height:8px; border-radius:50%; background:var(--green); box-shadow:0 0 0 4px rgba(94,230,181,.09); }
     .card-top { display:flex; align-items:center; justify-content:space-between; gap:18px; }
     .tag { display:inline-flex; width:max-content; max-width:80%; padding:5px 9px; border-radius:999px; color:var(--cyan); background:rgba(110,216,255,.09); font-size:11px; font-weight:700; letter-spacing:.05em; text-transform:uppercase; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
     .card-arrow { color:var(--muted); font-size:22px; transition:.25s; }
@@ -157,6 +173,24 @@
     .card-meta span { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
     .card-meta i { width:3px; height:3px; flex:0 0 auto; border-radius:50%; background:currentColor; }
     .empty-state { grid-column:1/-1; padding:54px; text-align:center; border:1px dashed var(--line); border-radius:20px; color:var(--muted); }
+    .soft-btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:10px 14px; border:1px solid var(--line); border-radius:11px; color:#dce5ee; background:rgba(255,255,255,.04); cursor:pointer; font-weight:700; font-size:13px; transition:.2s; }
+    .soft-btn:hover { transform:translateY(-2px); border-color:rgba(94,230,181,.32); }
+
+    .trend-overview { position:relative; overflow:hidden; padding:34px; border:1px solid rgba(168,156,255,.22); border-radius:24px; background:linear-gradient(135deg,rgba(168,156,255,.12),rgba(110,216,255,.05)); }
+    .trend-overview::after { content:""; position:absolute; width:260px; height:260px; right:-100px; top:-130px; border-radius:50%; background:var(--violet); opacity:.09; filter:blur(10px); }
+    .trend-label-row { display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .trend-direction { display:inline-flex; align-items:center; gap:7px; padding:6px 10px; border-radius:999px; color:var(--cyan); background:rgba(110,216,255,.09); font-size:11px; font-weight:800; text-transform:uppercase; letter-spacing:.05em; }
+    .trend-overview h2 { position:relative; margin:18px 0 13px; max-width:780px; font-size:clamp(28px,4vw,45px); line-height:1.15; }
+    .trend-overview p { position:relative; max-width:850px; margin:0; color:#ccd7e2; font-size:17px; }
+    .trend-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; margin-top:18px; }
+    .trend-card { padding:25px; border:1px solid var(--line); border-radius:20px; background:rgba(255,255,255,.035); }
+    .trend-card h3 { margin:17px 0 10px; font-size:24px; }
+    .trend-card > p { color:var(--muted); }
+    .confidence { color:var(--muted); font-size:12px; }
+    .driver-list { margin:18px 0 0; padding:0; list-style:none; }
+    .driver-list li { position:relative; padding:10px 0 10px 18px; border-top:1px solid var(--line); color:#ced7e1; font-size:13px; }
+    .driver-list li::before { content:""; position:absolute; left:0; top:18px; width:6px; height:6px; border-radius:50%; background:var(--green); }
+    .trend-note { margin-top:24px; color:var(--muted); font-size:12px; }
 
     footer { position:relative; z-index:1; border-top:1px solid var(--line); }
     .footer-inner { min-height:92px; display:flex; align-items:center; justify-content:space-between; gap:20px; color:var(--muted); font-size:12px; }
@@ -207,13 +241,15 @@
       .hero { grid-template-columns:1fr; gap:30px; }
       .hero-aside { border-left:0; border-top:1px solid var(--line); padding:22px 0 0; }
       .ticker-grid { grid-template-columns:repeat(2,1fr); }
+      .personal-bar { grid-template-columns:1fr; margin-top:0; }
+      .personal-stats { justify-content:flex-start; }
     }
     @media (max-width: 680px) {
       .shell { width:min(100% - 24px,1180px); }
       .brand-copy span { display:none; }
       .view { padding:50px 0 70px; }
       .hero { padding-bottom:38px; }
-      .ticker-grid, .news-grid { grid-template-columns:1fr; }
+      .ticker-grid, .news-grid, .trend-grid { grid-template-columns:1fr; }
       .ticker-card { min-height:140px; }
       .section-bar { align-items:start; flex-direction:column; margin-top:54px; }
       .news-card { min-height:180px; }
@@ -262,6 +298,8 @@
         <button class="nav-btn" data-route="vietnam">Việt Nam</button>
         <button class="nav-btn" data-route="ai">AI</button>
         <button class="nav-btn" data-route="logistics">Logistics</button>
+        <button class="nav-btn" data-route="trends">Xu hướng</button>
+        <button class="nav-btn" data-route="missed">Bỏ lỡ <span class="nav-count" id="missed-nav-count">0</span></button>
       </nav>
       <button class="icon-btn" id="refresh-btn" aria-label="Làm mới dữ liệu" title="Làm mới dữ liệu">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 11a8.1 8.1 0 0 0-15.5-2M4 4v5h5M4 13a8.1 8.1 0 0 0 15.5 2M20 20v-5h-5"/></svg>
@@ -287,6 +325,18 @@
           </aside>
         </div>
 
+        <section class="personal-bar" aria-label="Tiến độ đọc tin">
+          <div class="welcome-row">
+            <div class="user-avatar" id="user-avatar">KĐ</div>
+            <div class="welcome-copy"><strong id="welcome-title">Chào bạn.</strong><span id="welcome-tagline">Mỗi lần ghé là một bước gần hơn tới bức tranh toàn cảnh.</span></div>
+          </div>
+          <div class="personal-stats">
+            <div class="stat-pill"><span>🔥</span><span>Streak <strong id="streak-count">1</strong> ngày</span></div>
+            <div class="stat-pill"><span>🏆</span><span>Kỷ lục <strong id="longest-streak">1</strong></span></div>
+            <button class="stat-pill action" id="missed-shortcut" type="button"><span>◌</span><span><strong id="missed-count">0</strong> bài chưa xem</span></button>
+          </div>
+        </section>
+
         <div class="ticker-grid">
           <article class="ticker-card" style="--accent:var(--violet)"><div class="ticker-label">Lãi suất FED</div><div class="ticker-value" id="fed-rate">—</div><div class="ticker-note">Lãi suất mục tiêu</div></article>
           <article class="ticker-card" style="--accent:var(--cyan)"><div class="ticker-label">CPI Mỹ</div><div class="ticker-value" id="cpi">—</div><div class="ticker-note">So với cùng kỳ</div></article>
@@ -306,6 +356,8 @@
     <section class="view" data-view="vietnam"><div class="shell"><header class="topic-header"><span class="eyebrow">Thị trường Việt Nam</span><h1>Nhịp đập<br>kinh tế trong nước.</h1><p>VN-Index, tỷ giá, chính sách điều hành và dòng vốn được chọn lọc trong một không gian dễ đọc.</p></header><div class="section-bar"><div><h2>Bản tin mới</h2></div><span class="topic-count" id="vietnam-count"></span></div><div class="news-grid" id="vietnam-news"></div></div></section>
     <section class="view" data-view="ai"><div class="shell"><header class="topic-header"><span class="eyebrow">Frontiers of AI</span><h1>Công nghệ đang<br>định hình ngày mai.</h1><p>Mô hình mới, AI agent, hạ tầng chip và những thay đổi quan trọng trong hệ sinh thái trí tuệ nhân tạo.</p></header><div class="section-bar"><div><h2>Bản tin mới</h2></div><span class="topic-count" id="ai-count"></span></div><div class="news-grid" id="ai-news"></div></div></section>
     <section class="view" data-view="logistics"><div class="shell"><header class="topic-header"><span class="eyebrow">Logistics & Supply Chain</span><h1>Dòng chảy hàng hóa<br>không ngừng nghỉ.</h1><p>Cảng biển, vận tải, chuỗi cung ứng và thị trường logistics tại Việt Nam lẫn trên thế giới.</p></header><div class="section-bar"><div><h2>Bản tin mới</h2></div><span class="topic-count" id="logistics-count"></span></div><div class="news-grid" id="logistics-news"></div></div></section>
+    <section class="view" data-view="trends"><div class="shell"><header class="topic-header"><span class="eyebrow">AI Trend Intelligence</span><h1>Nhìn qua sự kiện.<br>Thấy được xu hướng.</h1><p>AI đối chiếu kho tin bảy ngày, chỉ ra động lực chính và những tín hiệu cần tiếp tục theo dõi.</p></header><div id="trends-content"><div class="empty-state">Đang tải phân tích xu hướng…</div></div><p class="trend-note" id="trend-disclaimer"></p></div></section>
+    <section class="view" data-view="missed"><div class="shell"><header class="topic-header"><span class="eyebrow">Reading Inbox</span><h1>Những bài bạn<br>chưa kịp xem.</h1><p>Tin được lưu trong 30 ngày. Một bài sẽ tự chuyển sang trạng thái đã đọc khi bạn mở phần chi tiết.</p></header><div class="section-bar"><div><h2>Danh sách chưa đọc</h2></div><button class="soft-btn" id="mark-all-read" type="button">✓ Đánh dấu tất cả đã đọc</button></div><div class="news-grid" id="missed-news"></div></div></section>
   </main>
 
   <footer><div class="shell footer-inner"><span>© <span id="year"></span> The Daily Edge · Curated for Khoa</span><span>Dữ liệu: <a href="https://news.google.com/" target="_blank" rel="noopener">Google News RSS</a> · <a href="https://finance.yahoo.com/quote/%5EVNINDEX.VN/" target="_blank" rel="noopener">Yahoo Finance</a> · <a href="https://www.bls.gov/cpi/" target="_blank" rel="noopener">BLS</a></span></div></footer>
@@ -326,12 +378,16 @@
 
   <script>
     const CREDENTIAL_HASH = "b6bb5d48a9f5f26bf047764fd4250a2a4c8a232c3e95ce906ce7134174d71c83";
-    const ROUTES = ["overview", "macro", "vietnam", "ai", "logistics"];
-    const SECTION_LABELS = { macro: "Vĩ mô", vietnam: "Việt Nam", ai: "Trí tuệ nhân tạo", logistics: "Logistics" };
+    const PROGRESS_KEY = "daily-edge-progress-v1";
+    const CONTENT_SECTIONS = ["macro", "vietnam", "ai", "logistics"];
+    const ROUTES = ["overview", ...CONTENT_SECTIONS, "trends", "missed"];
+    const SECTION_LABELS = { macro: "Vĩ mô", vietnam: "Việt Nam", ai: "Trí tuệ nhân tạo", logistics: "Logistics", trends: "Xu hướng", missed: "Bài bỏ lỡ" };
     let newsData = null;
+    let historyData = { articles: [] };
+    let progress = loadProgress();
 
-    const $ = (selector) => document.querySelector(selector);
-    const $$ = (selector) => [...document.querySelectorAll(selector)];
+    const $ = selector => document.querySelector(selector);
+    const $$ = selector => [...document.querySelectorAll(selector)];
 
     async function sha256(text) {
       const bytes = new TextEncoder().encode(text);
@@ -339,9 +395,107 @@
       return [...new Uint8Array(digest)].map(value => value.toString(16).padStart(2, "0")).join("");
     }
 
+    function loadProgress() {
+      try {
+        const stored = JSON.parse(localStorage.getItem(PROGRESS_KEY) || "{}");
+        return {
+          lastVisitDate: stored.lastVisitDate || "",
+          lastVisitAt: stored.lastVisitAt || "",
+          previousVisitAt: stored.previousVisitAt || "",
+          currentStreak: Number(stored.currentStreak) || 0,
+          longestStreak: Number(stored.longestStreak) || 0,
+          totalVisits: Number(stored.totalVisits) || 0,
+          readArticleIds: Array.isArray(stored.readArticleIds) ? stored.readArticleIds : []
+        };
+      } catch {
+        return { lastVisitDate: "", lastVisitAt: "", previousVisitAt: "", currentStreak: 0, longestStreak: 0, totalVisits: 0, readArticleIds: [] };
+      }
+    }
+
+    function saveProgress() {
+      localStorage.setItem(PROGRESS_KEY, JSON.stringify(progress));
+    }
+
+    function vietnamDate(date = new Date()) {
+      return new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Ho_Chi_Minh", year: "numeric", month: "2-digit", day: "2-digit" }).format(date);
+    }
+
+    function dayDifference(previous, current) {
+      const start = Date.parse(`${previous}T00:00:00Z`);
+      const end = Date.parse(`${current}T00:00:00Z`);
+      return Math.round((end - start) / 86400000);
+    }
+
+    function recordVisit() {
+      const today = vietnamDate();
+      if (progress.lastVisitDate === today) return;
+      const gap = progress.lastVisitDate ? dayDifference(progress.lastVisitDate, today) : null;
+      progress.currentStreak = gap === 1 ? progress.currentStreak + 1 : 1;
+      progress.longestStreak = Math.max(progress.longestStreak, progress.currentStreak);
+      progress.totalVisits += 1;
+      progress.previousVisitAt = progress.lastVisitAt;
+      progress.lastVisitDate = today;
+      progress.lastVisitAt = new Date().toISOString();
+      saveProgress();
+    }
+
+    function articleKey(article) {
+      return article.id || article.url || `${article.section || "news"}|${article.source || ""}|${article.title || ""}`;
+    }
+
+    function isRead(article) {
+      return progress.readArticleIds.includes(articleKey(article));
+    }
+
+    function markArticleRead(article) {
+      const id = articleKey(article);
+      if (!progress.readArticleIds.includes(id)) {
+        progress.readArticleIds.push(id);
+        saveProgress();
+        renderNewsCollections();
+        renderPersonalization();
+      }
+    }
+
+    function currentDisplayName() {
+      return sessionStorage.getItem("daily-edge-display-name") || "Khoa Đinh";
+    }
+
+    function initials(name) {
+      return name.split(/\s+/).filter(Boolean).slice(-2).map(part => part[0]).join("").toUpperCase() || "DE";
+    }
+
+    function getAllArticles() {
+      const source = Array.isArray(historyData.articles) && historyData.articles.length
+        ? historyData.articles
+        : CONTENT_SECTIONS.flatMap(section => (newsData?.[section] || []).map(article => ({ ...article, section })));
+      const unique = new Map();
+      source.forEach(article => unique.set(articleKey(article), article));
+      return [...unique.values()].sort((a, b) => new Date(b.published_at || b.first_seen_at || 0) - new Date(a.published_at || a.first_seen_at || 0));
+    }
+
+    function renderPersonalization() {
+      const name = currentDisplayName();
+      const hour = Number(new Intl.DateTimeFormat("en-US", { timeZone: "Asia/Ho_Chi_Minh", hour: "2-digit", hour12: false }).format(new Date()));
+      const greeting = hour < 11 ? "Chào buổi sáng" : hour < 18 ? "Chào buổi chiều" : "Chào buổi tối";
+      const unread = getAllArticles().filter(article => !isRead(article)).length;
+      $("#user-avatar").textContent = initials(name);
+      $("#welcome-title").textContent = `${greeting}, ${name}.`;
+      $("#welcome-tagline").textContent = progress.currentStreak > 1
+        ? `Bạn đang giữ nhịp đọc tin ${progress.currentStreak} ngày liên tiếp — cứ tiếp tục nhé.`
+        : unread > 0 ? `${unread} góc nhìn mới đang chờ bạn khám phá.` : "Hôm nay bạn đã theo kịp toàn bộ bản tin.";
+      $("#streak-count").textContent = progress.currentStreak || 1;
+      $("#longest-streak").textContent = progress.longestStreak || 1;
+      $("#missed-count").textContent = unread;
+      $("#missed-nav-count").textContent = unread;
+      $("#missed-nav-count").hidden = unread === 0;
+    }
+
     function unlock() {
       $("#login-gate").hidden = true;
       document.body.style.overflow = "";
+      recordVisit();
+      renderPersonalization();
     }
 
     function lock() {
@@ -365,6 +519,7 @@
           return;
         }
         sessionStorage.setItem("daily-edge-auth", "granted");
+        sessionStorage.setItem("daily-edge-display-name", username);
         unlock();
       } finally {
         submit.disabled = false;
@@ -379,6 +534,7 @@
 
     $("#logout-btn").addEventListener("click", () => {
       sessionStorage.removeItem("daily-edge-auth");
+      sessionStorage.removeItem("daily-edge-display-name");
       $("#password").value = "";
       lock();
     });
@@ -400,48 +556,123 @@
     function makeCard(article, section, index) {
       const card = document.createElement("button");
       card.type = "button";
-      card.className = "news-card";
-      card.style.setProperty("--delay", `${Math.min(index * 70, 350)}ms`);
+      card.className = `news-card${isRead(article) ? " read" : ""}`;
+      card.style.setProperty("--delay", `${Math.min(index * 55, 330)}ms`);
 
       const top = document.createElement("div");
       top.className = "card-top";
       const tag = document.createElement("span");
       tag.className = "tag";
       tag.textContent = article.tag || SECTION_LABELS[section];
+      const status = document.createElement("span");
+      status.style.cssText = "display:flex;align-items:center;gap:12px";
+      if (!isRead(article)) {
+        const unreadDot = document.createElement("i");
+        unreadDot.className = "unread-dot";
+        status.append(unreadDot);
+      }
       const arrow = document.createElement("span");
       arrow.className = "card-arrow";
       arrow.textContent = "↗";
-      top.append(tag, arrow);
+      status.append(arrow);
+      top.append(tag, status);
 
       const title = document.createElement("h3");
       title.textContent = article.title || "Chưa có tiêu đề";
-
       const meta = document.createElement("div");
       meta.className = "card-meta";
       const source = document.createElement("span");
       source.textContent = article.source || "Chưa rõ nguồn";
       const dot = document.createElement("i");
       const time = document.createElement("span");
-      time.textContent = formatDate(article.published_at);
+      time.textContent = formatDate(article.published_at || article.first_seen_at);
       meta.append(source, dot, time);
       card.append(top, title, meta);
       card.addEventListener("click", () => openArticle(article, section));
       return card;
     }
 
-    function renderList(targetId, articles, section) {
+    function renderList(targetId, articles, section, emptyMessage) {
       const target = document.getElementById(targetId);
+      if (!target) return;
       target.replaceChildren();
       if (!articles.length) {
         const empty = document.createElement("div");
         empty.className = "empty-state";
-        empty.textContent = "Chuyên mục này sẽ có tin sau lần cập nhật tiếp theo.";
+        empty.textContent = emptyMessage || "Chuyên mục này sẽ có tin sau lần cập nhật tiếp theo.";
         target.append(empty);
       } else {
-        articles.forEach((article, index) => target.append(makeCard(article, section, index)));
+        articles.forEach((article, index) => target.append(makeCard(article, article.section || section, index)));
       }
       const count = document.getElementById(`${section}-count`);
       if (count) count.textContent = `${articles.length} bài viết`;
+    }
+
+    function renderNewsCollections() {
+      if (!newsData) return;
+      CONTENT_SECTIONS.forEach(section => renderList(`${section}-news`, Array.isArray(newsData[section]) ? newsData[section] : [], section));
+      const featured = CONTENT_SECTIONS.flatMap(section => (newsData[section] || []).slice(0, 1).map(article => ({ article, section })));
+      const overview = $("#overview-news");
+      overview.replaceChildren();
+      featured.forEach(({ article, section }, index) => overview.append(makeCard(article, section, index)));
+      if (!featured.length) overview.innerHTML = '<div class="empty-state">Chưa tải được bản tin mới.</div>';
+
+      const missed = getAllArticles().filter(article => !isRead(article));
+      renderList("missed-news", missed, "missed", "Tuyệt vời — bạn đã đọc hết các bài trong hộp tin 30 ngày.");
+    }
+
+    function directionText(direction) {
+      return ({ up: "Tăng tốc", down: "Chậm lại", mixed: "Phân hóa", stable: "Ổn định", insufficient: "Đang tích lũy dữ liệu" })[direction] || "Đang theo dõi";
+    }
+
+    function trendBlock(trend, prominent = false) {
+      const card = document.createElement("article");
+      card.className = prominent ? "trend-overview" : "trend-card";
+      const row = document.createElement("div");
+      row.className = "trend-label-row";
+      const badge = document.createElement("span");
+      badge.className = "trend-direction";
+      badge.textContent = directionText(trend.direction);
+      const confidence = document.createElement("span");
+      confidence.className = "confidence";
+      confidence.textContent = `${trend.article_count || 0} bài · độ tin cậy ${trend.confidence || 0}%`;
+      row.append(badge, confidence);
+      const title = document.createElement(prominent ? "h2" : "h3");
+      title.textContent = trend.label || "Xu hướng";
+      const summary = document.createElement("p");
+      summary.textContent = trend.summary || "Chưa có phân tích.";
+      card.append(row, title, summary);
+
+      if (Array.isArray(trend.drivers) && trend.drivers.length) {
+        const list = document.createElement("ul");
+        list.className = "driver-list";
+        trend.drivers.slice(0, 3).forEach(driver => {
+          const item = document.createElement("li");
+          item.textContent = driver.text || "Tín hiệu đang được theo dõi";
+          list.append(item);
+        });
+        card.append(list);
+      }
+      return card;
+    }
+
+    function renderTrends(trends) {
+      const target = $("#trends-content");
+      target.replaceChildren();
+      if (!trends?.overall || !trends?.sections) {
+        const empty = document.createElement("div");
+        empty.className = "empty-state";
+        empty.textContent = "Phân tích đầu tiên sẽ xuất hiện sau lần cập nhật tin tiếp theo.";
+        target.append(empty);
+        $("#trend-disclaimer").textContent = "";
+        return;
+      }
+      target.append(trendBlock(trends.overall, true));
+      const grid = document.createElement("div");
+      grid.className = "trend-grid";
+      CONTENT_SECTIONS.forEach(section => grid.append(trendBlock(trends.sections[section] || { label: SECTION_LABELS[section] })));
+      target.append(grid);
+      $("#trend-disclaimer").textContent = `${trends.disclaimer || "Phân tích AI chỉ mang tính tham khảo."} Cập nhật: ${trends.generated_at || "chưa rõ"}.`;
     }
 
     function renderData(data) {
@@ -451,40 +682,43 @@
       $("#cpi").textContent = tickers.cpi || "—";
       $("#vnindex").textContent = tickers.vnindex || "—";
       $("#usd-vnd").textContent = tickers.usd_vnd || "—";
-
       const change = $("#vnindex-change");
       const direction = ["up", "down", "flat"].includes(tickers.vnindex_direction) ? tickers.vnindex_direction : "flat";
       const symbol = direction === "up" ? "▲" : direction === "down" ? "▼" : "●";
       change.className = `change-badge ${direction}`;
       change.textContent = `${symbol} ${tickers.vnindex_change || "—"} · ${tickers.vnindex_change_pct || "—"}`;
-
-      ROUTES.slice(1).forEach(section => renderList(`${section}-news`, Array.isArray(data[section]) ? data[section] : [], section));
-      const featured = ROUTES.slice(1).flatMap(section => (Array.isArray(data[section]) ? data[section].slice(0, 1).map(article => ({ article, section })) : []));
-      const overview = $("#overview-news");
-      overview.replaceChildren();
-      featured.forEach(({ article, section }, index) => overview.append(makeCard(article, section, index)));
-      if (!featured.length) overview.innerHTML = '<div class="empty-state">Chưa tải được bản tin mới.</div>';
+      renderNewsCollections();
+      renderTrends(data.trends);
+      renderPersonalization();
     }
 
     async function loadData(showNotice = false) {
       try {
-        const response = await fetch(`data.json?v=${Date.now()}`, { cache: "no-store" });
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
-        newsData = await response.json();
+        const version = Date.now();
+        const dataResponse = await fetch(`data.json?v=${version}`, { cache: "no-store" });
+        if (!dataResponse.ok) throw new Error(`HTTP ${dataResponse.status}`);
+        newsData = await dataResponse.json();
+        try {
+          const historyResponse = await fetch(`history.json?v=${version}`, { cache: "no-store" });
+          if (historyResponse.ok) historyData = await historyResponse.json();
+        } catch (historyError) {
+          console.warn("Chưa tải được lịch sử", historyError);
+        }
         renderData(newsData);
         if (showNotice) showToast("Đã tải dữ liệu mới nhất.");
       } catch (error) {
         console.error(error);
         showToast("Chưa thể tải dữ liệu. Vui lòng thử lại sau.");
-        ROUTES.slice(1).forEach(section => renderList(`${section}-news`, [], section));
+        CONTENT_SECTIONS.forEach(section => renderList(`${section}-news`, [], section));
       }
     }
 
     function openArticle(article, section) {
+      markArticleRead(article);
       $("#modal-tag").textContent = article.tag || SECTION_LABELS[section];
       $("#modal-title").textContent = article.title || "Chưa có tiêu đề";
       $("#modal-source").textContent = `Nguồn: ${article.source || "Chưa rõ"}`;
-      $("#modal-time").textContent = `Công bố: ${formatDate(article.published_at)}`;
+      $("#modal-time").textContent = `Công bố: ${formatDate(article.published_at || article.first_seen_at)}`;
       $("#modal-summary").textContent = article.summary || "Chưa có bản tóm tắt cho bài viết này.";
       const link = $("#modal-link");
       const url = safeUrl(article.url);
@@ -513,6 +747,14 @@
     }
 
     $$(".nav-btn").forEach(button => button.addEventListener("click", () => { location.hash = button.dataset.route; }));
+    $("#missed-shortcut").addEventListener("click", () => { location.hash = "missed"; });
+    $("#mark-all-read").addEventListener("click", () => {
+      progress.readArticleIds = [...new Set([...progress.readArticleIds, ...getAllArticles().map(articleKey)])];
+      saveProgress();
+      renderNewsCollections();
+      renderPersonalization();
+      showToast("Đã đánh dấu tất cả bài là đã đọc.");
+    });
     window.addEventListener("hashchange", () => navigate(location.hash.slice(1)));
     window.addEventListener("scroll", () => $("#topbar").classList.toggle("scrolled", scrollY > 8), { passive: true });
     $("#refresh-btn").addEventListener("click", () => loadData(true));

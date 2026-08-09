@@ -1,4 +1,5 @@
 import csv
+import hashlib
 import io
 import json
 import os
@@ -7,7 +8,8 @@ import sys
 import time
 import traceback
 import xml.etree.ElementTree as ET
-from datetime import datetime
+from datetime import datetime, timedelta
+from email.utils import parsedate_to_datetime
 from html import unescape
 from pathlib import Path
 from urllib.parse import quote_plus
@@ -18,6 +20,8 @@ from groq import Groq
 
 
 OUTPUT_FILE = Path(__file__).with_name("data.json")
+HISTORY_FILE = Path(__file__).with_name("history.json")
+HISTORY_RETENTION_DAYS = 30
 
 REQUIRED_SECTIONS = ("macro", "vietnam", "ai", "logistics")
 REQUIRED_TICKERS = (
@@ -42,6 +46,11 @@ REQUIRED_NEWS_FIELDS = (
 MODELS_TO_TRY = (
     "llama-3.3-70b-versatile",
     "openai/gpt-oss-20b",
+)
+
+TREND_MODELS_TO_TRY = (
+    "openai/gpt-oss-20b",
+    "llama-3.1-8b-instant",
 )
 
 
@@ -156,6 +165,99 @@ def load_previous_tickers():
         return tickers if isinstance(tickers, dict) else {}
     except Exception:
         return {}
+
+
+def load_json_file(path, fallback):
+    """Đọc JSON cũ an toàn để dùng cho lịch sử và dữ liệu dự phòng."""
+    if not path.exists():
+        return fallback
+
+    try:
+        with path.open("r", encoding="utf-8") as file:
+            value = json.load(file)
+        return value if isinstance(value, dict) else fallback
+    except Exception:
+        return fallback
+
+
+def make_article_id(article):
+    """Tạo ID ổn định để trình duyệt ghi nhớ bài đã đọc."""
+    identity = article.get("url") or (
+        f"{article.get('source', '')}|{article.get('title', '')}"
+    )
+    return hashlib.sha256(identity.encode("utf-8")).hexdigest()[:20]
+
+
+def parse_article_time(article):
+    """Đưa thời gian RSS hoặc first_seen_at về datetime để sắp xếp."""
+    published_at = article.get("published_at", "")
+    if published_at:
+        try:
+            value = parsedate_to_datetime(published_at)
+            if value.tzinfo is None:
+                value = value.replace(tzinfo=ZoneInfo("UTC"))
+            return value
+        except (TypeError, ValueError, OverflowError):
+            pass
+
+    first_seen_at = article.get("first_seen_at", "")
+    try:
+        value = datetime.fromisoformat(first_seen_at.replace("Z", "+00:00"))
+        if value.tzinfo is None:
+            value = value.replace(tzinfo=ZoneInfo("UTC"))
+        return value
+    except (TypeError, ValueError):
+        return datetime.now(ZoneInfo("UTC"))
+
+
+def articles_from_news_data(data, first_seen_at):
+    """Chuyển data.json thành danh sách phẳng để lưu lịch sử."""
+    articles = []
+    for section in REQUIRED_SECTIONS:
+        for source_article in data.get(section, []):
+            if not isinstance(source_article, dict):
+                continue
+            article = dict(source_article)
+            article["section"] = section
+            article["first_seen_at"] = article.get(
+                "first_seen_at", first_seen_at
+            )
+            article["id"] = article.get("id") or make_article_id(article)
+            articles.append(article)
+    return articles
+
+
+def update_history(current_data, previous_data):
+    """Gộp tin mới/cũ, loại trùng và chỉ giữ lại 30 ngày."""
+    now = datetime.now(ZoneInfo("Asia/Ho_Chi_Minh"))
+    now_iso = now.isoformat(timespec="seconds")
+    history_data = load_json_file(HISTORY_FILE, {"articles": []})
+    candidates = list(history_data.get("articles", []))
+    candidates.extend(articles_from_news_data(previous_data, now_iso))
+    candidates.extend(articles_from_news_data(current_data, now_iso))
+
+    unique = {}
+    for article in candidates:
+        if not isinstance(article, dict) or not article.get("title"):
+            continue
+        article = dict(article)
+        article["id"] = article.get("id") or make_article_id(article)
+        article["first_seen_at"] = article.get("first_seen_at", now_iso)
+        unique[article["id"]] = article
+
+    cutoff = now - timedelta(days=HISTORY_RETENTION_DAYS)
+    retained = [
+        article
+        for article in unique.values()
+        if parse_article_time(article) >= cutoff
+    ]
+    retained.sort(key=parse_article_time, reverse=True)
+
+    return {
+        "updated_at": now.strftime("%d/%m/%Y %H:%M"),
+        "retention_days": HISTORY_RETENTION_DAYS,
+        "articles": retained,
+    }
 
 
 def fetch_us_cpi_from_bls():
@@ -532,6 +634,7 @@ def attach_source_metadata(data, news_sources):
             article["source"] = original["source"]
             article["url"] = original["url"]
             article["published_at"] = original["published_at"]
+            article["id"] = make_article_id(article)
 
 
 def fetch_news_from_groq(client, cpi, usd_vnd, vnindex_data, news_sources):
@@ -657,9 +760,215 @@ Trả về đúng JSON theo cấu trúc được yêu cầu.
     )
 
 
-def write_json_atomically(data):
-    """Chỉ thay data.json sau khi dữ liệu mới đã hoàn chỉnh."""
-    temporary_file = OUTPUT_FILE.with_suffix(".json.tmp")
+def make_empty_trend(label, article_count=0):
+    """Tạo trạng thái an toàn khi chưa đủ dữ liệu phân tích."""
+    return {
+        "label": label,
+        "direction": "insufficient",
+        "confidence": 0,
+        "summary": (
+            "Hệ thống đang tích lũy thêm tin trong nhiều ngày để nhận diện "
+            "xu hướng đáng tin cậy hơn."
+        ),
+        "drivers": [],
+        "watch_next": [],
+        "article_count": article_count,
+    }
+
+
+def make_fallback_trends(history):
+    """Không để lỗi AI làm gián đoạn cập nhật tin chính."""
+    counts = {
+        section: sum(
+            1
+            for article in history.get("articles", [])
+            if article.get("section") == section
+        )
+        for section in REQUIRED_SECTIONS
+    }
+    labels = {
+        "macro": "Vĩ mô",
+        "vietnam": "Việt Nam",
+        "ai": "Trí tuệ nhân tạo",
+        "logistics": "Logistics",
+    }
+    return {
+        "generated_at": history.get("updated_at", ""),
+        "window_days": 7,
+        "overall": make_empty_trend(
+            "Toàn cảnh", sum(counts.values())
+        ),
+        "sections": {
+            section: make_empty_trend(labels[section], counts[section])
+            for section in REQUIRED_SECTIONS
+        },
+        "disclaimer": (
+            "Phân tích do AI tổng hợp từ các bài báo đã lưu, "
+            "không phải tư vấn đầu tư."
+        ),
+    }
+
+
+def validate_trends(trends, valid_article_ids):
+    """Kiểm tra trend có đủ cấu trúc và chỉ dẫn chứng bài tồn tại."""
+    if not isinstance(trends, dict):
+        raise ValueError("Trend không phải JSON object.")
+
+    sections = trends.get("sections")
+    if not isinstance(sections, dict):
+        raise ValueError("Trend thiếu mục sections.")
+
+    trend_items = [trends.get("overall")]
+    trend_items.extend(sections.get(section) for section in REQUIRED_SECTIONS)
+
+    for trend in trend_items:
+        if not isinstance(trend, dict):
+            raise ValueError("Một mục trend không hợp lệ.")
+        if not isinstance(trend.get("summary"), str) or not trend["summary"].strip():
+            raise ValueError("Trend thiếu summary.")
+        if trend.get("direction") not in {
+            "up", "down", "mixed", "stable", "insufficient"
+        }:
+            raise ValueError("Trend có direction không hợp lệ.")
+        confidence = trend.get("confidence")
+        if not isinstance(confidence, (int, float)):
+            raise ValueError("Trend thiếu confidence.")
+        trend["confidence"] = max(0, min(100, round(confidence)))
+        trend.setdefault("drivers", [])
+        trend.setdefault("watch_next", [])
+
+        for driver in trend["drivers"]:
+            if not isinstance(driver, dict):
+                raise ValueError("Driver của trend không hợp lệ.")
+            references = driver.get("article_ids", [])
+            driver["article_ids"] = [
+                article_id
+                for article_id in references
+                if article_id in valid_article_ids
+            ]
+
+
+def fetch_trends_from_groq(client, history):
+    """Phân tích xu hướng bảy ngày từ kho tin đã lưu."""
+    now = datetime.now(ZoneInfo("Asia/Ho_Chi_Minh"))
+    cutoff = now - timedelta(days=7)
+    recent_by_section = {section: [] for section in REQUIRED_SECTIONS}
+
+    for article in history.get("articles", []):
+        section = article.get("section")
+        if section not in recent_by_section or parse_article_time(article) < cutoff:
+            continue
+        if len(recent_by_section[section]) >= 12:
+            continue
+        recent_by_section[section].append(
+            {
+                "id": article.get("id"),
+                "title": article.get("title"),
+                "summary": article.get("summary"),
+                "source": article.get("source"),
+                "published_at": article.get("published_at"),
+            }
+        )
+
+    valid_article_ids = {
+        article["id"]
+        for articles in recent_by_section.values()
+        for article in articles
+        if article.get("id")
+    }
+    if len(valid_article_ids) < 8:
+        return make_fallback_trends(history)
+
+    prompt = f"""
+Bạn là chuyên gia phân tích xu hướng tin tức của The Daily Edge.
+
+Chỉ được dùng dữ liệu 7 ngày dưới đây. Không thêm sự kiện, số liệu hoặc
+kết luận không được hỗ trợ bởi các bài đã cung cấp. Phân tích bằng tiếng Việt.
+Đây là phân tích thông tin, tuyệt đối không đưa khuyến nghị mua/bán đầu tư.
+
+Dữ liệu:
+{json.dumps(recent_by_section, ensure_ascii=False)}
+
+Trả về duy nhất một JSON object theo cấu trúc:
+{{
+  "overall": {{
+    "label": "Toàn cảnh",
+    "direction": "up|down|mixed|stable|insufficient",
+    "confidence": 0,
+    "summary": "2-3 câu",
+    "drivers": [{{"text": "động lực", "article_ids": ["id"]}}],
+    "watch_next": ["điều cần theo dõi"]
+  }},
+  "sections": {{
+    "macro": {{"label": "Vĩ mô", "direction": "mixed", "confidence": 0,
+      "summary": "2 câu", "drivers": [], "watch_next": []}},
+    "vietnam": {{"label": "Việt Nam", "direction": "mixed", "confidence": 0,
+      "summary": "2 câu", "drivers": [], "watch_next": []}},
+    "ai": {{"label": "Trí tuệ nhân tạo", "direction": "mixed", "confidence": 0,
+      "summary": "2 câu", "drivers": [], "watch_next": []}},
+    "logistics": {{"label": "Logistics", "direction": "mixed", "confidence": 0,
+      "summary": "2 câu", "drivers": [], "watch_next": []}}
+  }}
+}}
+
+confidence là số nguyên 0-100. Mỗi driver phải dẫn article_ids có thật.
+Nếu dữ liệu chưa đủ, dùng direction "insufficient" và confidence thấp.
+"""
+
+    errors = []
+    for model_name in TREND_MODELS_TO_TRY:
+        try:
+            print(f"Đang phân tích trend với {model_name}...", flush=True)
+            response = client.chat.completions.create(
+                model=model_name,
+                messages=[
+                    {
+                        "role": "system",
+                        "content": (
+                            "Bạn chỉ trả về JSON hợp lệ và luôn dẫn chứng "
+                            "bằng article_ids được cung cấp."
+                        ),
+                    },
+                    {"role": "user", "content": prompt},
+                ],
+                temperature=0.1,
+                max_completion_tokens=1800,
+                response_format={"type": "json_object"},
+            )
+            content = response.choices[0].message.content
+            if not content:
+                raise ValueError("Groq trả về trend rỗng.")
+            trends = extract_json(content)
+            validate_trends(trends, valid_article_ids)
+            trends["generated_at"] = now.strftime("%d/%m/%Y %H:%M")
+            trends["window_days"] = 7
+            trends["disclaimer"] = (
+                "Phân tích do AI tổng hợp từ các bài báo đã lưu, "
+                "không phải tư vấn đầu tư."
+            )
+
+            counts = {
+                section: len(articles)
+                for section, articles in recent_by_section.items()
+            }
+            trends["overall"]["article_count"] = sum(counts.values())
+            for section in REQUIRED_SECTIONS:
+                trends["sections"][section]["article_count"] = counts[section]
+            return trends
+        except Exception as error:
+            errors.append(f"{model_name}: {type(error).__name__}: {error}")
+            print(
+                f"CẢNH BÁO: Phân tích trend thất bại với {model_name}: {error}",
+                file=sys.stderr,
+                flush=True,
+            )
+
+    raise RuntimeError("Không thể tạo trend:\n- " + "\n- ".join(errors))
+
+
+def write_json_atomically(data, output_file=OUTPUT_FILE):
+    """Chỉ thay tệp JSON sau khi dữ liệu mới đã hoàn chỉnh."""
+    temporary_file = output_file.with_suffix(".json.tmp")
 
     with temporary_file.open(
         "w",
@@ -669,7 +978,7 @@ def write_json_atomically(data):
         json.dump(data, file, ensure_ascii=False, indent=2)
         file.write("\n")
 
-    temporary_file.replace(OUTPUT_FILE)
+    temporary_file.replace(output_file)
 
 
 def main():
@@ -685,6 +994,7 @@ def main():
         return 1
 
     try:
+        previous_data = load_json_file(OUTPUT_FILE, {})
         old_tickers = load_previous_tickers()
 
         cpi = get_value_or_fallback(
@@ -722,9 +1032,29 @@ def main():
             vnindex_data,
             news_sources,
         )
-        write_json_atomically(data)
+        history = update_history(data, previous_data)
 
-        print("Đã cập nhật data.json thành công.", flush=True)
+        try:
+            data["trends"] = fetch_trends_from_groq(client, history)
+        except Exception as trend_error:
+            old_trends = previous_data.get("trends")
+            if isinstance(old_trends, dict) and old_trends.get("sections"):
+                data["trends"] = old_trends
+                print(
+                    f"CẢNH BÁO: Giữ trend cũ do lỗi: {trend_error}",
+                    file=sys.stderr,
+                    flush=True,
+                )
+            else:
+                data["trends"] = make_fallback_trends(history)
+
+        write_json_atomically(data)
+        write_json_atomically(history, HISTORY_FILE)
+
+        print(
+            "Đã cập nhật data.json và history.json thành công.",
+            flush=True,
+        )
         return 0
 
     except Exception:
