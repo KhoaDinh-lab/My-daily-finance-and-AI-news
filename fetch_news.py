@@ -19,9 +19,24 @@ from groq import Groq
 
 OUTPUT_FILE = Path(__file__).with_name("data.json")
 
-REQUIRED_SECTIONS = ("macro", "vietnam", "ai")
-REQUIRED_TICKERS = ("fed_rate", "cpi", "vnindex", "usd_vnd")
-REQUIRED_NEWS_FIELDS = ("title", "summary", "source", "tag")
+REQUIRED_SECTIONS = ("macro", "vietnam", "ai", "logistics")
+REQUIRED_TICKERS = (
+    "fed_rate",
+    "cpi",
+    "vnindex",
+    "vnindex_change",
+    "vnindex_change_pct",
+    "vnindex_direction",
+    "usd_vnd",
+)
+REQUIRED_NEWS_FIELDS = (
+    "title",
+    "summary",
+    "source",
+    "tag",
+    "url",
+    "published_at",
+)
 
 # Tin mới được lấy từ RSS; Groq chỉ biên tập và tóm tắt.
 MODELS_TO_TRY = (
@@ -34,27 +49,14 @@ SYSTEM_PROMPT = """
 Bạn là biên tập viên của website tin tức The Daily Edge.
 
 Nhiệm vụ:
-- Biên tập danh sách tin RSS mới trong 24-48 giờ do chương trình cung cấp.
-- Ưu tiên nguồn chính thức hoặc báo chí uy tín.
+- Chọn và biên tập tin từ danh sách RSS do chương trình cung cấp.
 - Không được tự bịa tiêu đề, số liệu, nguồn tin hoặc sự kiện.
-- Không thêm sự kiện hoặc số liệu không có trong dữ liệu đầu vào.
-- Giữ nguyên title gốc nhưng mọi summary và tag PHẢI viết bằng tiếng Việt.
+- Không thêm chi tiết không có trong tiêu đề RSS.
+- Dịch title sang tiếng Việt tự nhiên, nhưng không làm thay đổi ý nghĩa.
+- Mọi title, summary và tag PHẢI viết bằng tiếng Việt.
+- Giữ đúng source_index của tin RSS được chọn.
 - Nếu chưa tìm được một số liệu đáng tin cậy, ghi "Chưa có dữ liệu".
-- Viết bằng tiếng Việt dễ hiểu.
-
-Các nhóm cần thu thập:
-
-1. macro:
-   FED, lãi suất Mỹ, CPI, lạm phát và kinh tế Mỹ.
-   Ưu tiên federalreserve.gov, bls.gov, Reuters, Bloomberg, Financial Times.
-
-2. vietnam:
-   VN-Index, USD/VND, NHNN, FDI và thị trường chứng khoán Việt Nam.
-   Ưu tiên nguồn chính thức, CafeF, Vietstock, VnEconomy, Báo Đầu Tư.
-
-3. ai:
-   Mô hình AI mới, AI Agent, chip AI và thông báo từ các công ty AI.
-   Ưu tiên blog chính thức của công ty, Reuters, TechCrunch và VentureBeat.
+- Mỗi nhóm chọn tối đa 4 tin đáng chú ý, giữ nguyên thứ tự theo source_index.
 
 Chỉ trả về một JSON object hợp lệ, không dùng Markdown và không thêm
 lời giải thích bên ngoài JSON.
@@ -64,38 +66,44 @@ Cấu trúc bắt buộc:
 {
   "updated_at": "thời gian cập nhật",
   "tickers": {
-    "fed_rate": "mức lãi suất mục tiêu mới nhất của FED",
-    "cpi": "giá trị CPI Mỹ mới nhất",
-    "vnindex": "điểm VN-Index mới nhất",
-    "usd_vnd": "tỷ giá USD/VND mới nhất"
+    "fed_rate": "giá trị hoặc Chưa có dữ liệu",
+    "cpi": "giá trị",
+    "vnindex": "giá trị",
+    "usd_vnd": "giá trị"
   },
   "macro": [
     {
-      "title": "tiêu đề",
-      "summary": "tóm tắt 2-3 câu",
-      "source": "tên nguồn",
-      "tag": "FED hoặc CPI hoặc Kinh tế Mỹ"
+      "source_index": 0,
+      "title": "tiêu đề tiếng Việt",
+      "summary": "tóm tắt 2 câu tiếng Việt",
+      "tag": "chủ đề tiếng Việt"
     }
   ],
   "vietnam": [
     {
-      "title": "tiêu đề",
-      "summary": "tóm tắt 2-3 câu",
-      "source": "tên nguồn",
-      "tag": "VN-Index hoặc NHNN hoặc FDI"
+      "source_index": 0,
+      "title": "tiêu đề tiếng Việt",
+      "summary": "tóm tắt 2 câu tiếng Việt",
+      "tag": "chủ đề tiếng Việt"
     }
   ],
   "ai": [
     {
-      "title": "tiêu đề",
-      "summary": "tóm tắt 2-3 câu",
-      "source": "tên nguồn",
-      "tag": "AI Tech"
+      "source_index": 0,
+      "title": "tiêu đề tiếng Việt",
+      "summary": "tóm tắt 2 câu tiếng Việt",
+      "tag": "chủ đề tiếng Việt"
+    }
+  ],
+  "logistics": [
+    {
+      "source_index": 0,
+      "title": "tiêu đề tiếng Việt",
+      "summary": "tóm tắt 2 câu tiếng Việt",
+      "tag": "Logistics Việt Nam hoặc Logistics Thế giới"
     }
   ]
 }
-
-Mỗi nhóm nên có 3 tin nếu tìm được đủ nguồn đáng tin cậy.
 """
 
 
@@ -253,6 +261,49 @@ def fetch_usd_vnd():
     return f"{vnd_rate:,.0f}"
 
 
+def fetch_vnindex():
+    """Lấy điểm VN-Index và mức thay đổi ngày từ Yahoo Finance."""
+    payload = download_json(
+        "https://query1.finance.yahoo.com/v8/finance/chart/"
+        "%5EVNINDEX.VN?range=1mo&interval=1d"
+    )
+    results = payload.get("chart", {}).get("result") or []
+    if not results:
+        raise RuntimeError("Yahoo Finance không trả về dữ liệu VN-Index.")
+
+    result = results[0]
+    meta = result.get("meta", {})
+    current = meta.get("regularMarketPrice")
+    previous = meta.get("chartPreviousClose")
+
+    if not isinstance(current, (int, float)):
+        raise RuntimeError("Không tìm thấy điểm VN-Index hiện tại.")
+
+    if not isinstance(previous, (int, float)):
+        closes = (
+            result.get("indicators", {})
+            .get("quote", [{}])[0]
+            .get("close", [])
+        )
+        valid_closes = [value for value in closes if isinstance(value, (int, float))]
+        if len(valid_closes) >= 2:
+            previous = valid_closes[-2]
+
+    if not isinstance(previous, (int, float)) or previous == 0:
+        raise RuntimeError("Không tìm thấy điểm VN-Index phiên trước.")
+
+    change = current - previous
+    change_pct = change / previous * 100
+    direction = "up" if change > 0 else "down" if change < 0 else "flat"
+
+    return {
+        "vnindex": f"{current:,.2f}",
+        "vnindex_change": f"{change:+,.2f}",
+        "vnindex_change_pct": f"{change_pct:+.2f}%",
+        "vnindex_direction": direction,
+    }
+
+
 def clean_rss_text(value):
     """Bỏ thẻ HTML và khoảng trắng thừa trong RSS."""
     text = re.sub(r"<[^>]+>", " ", value or "")
@@ -275,6 +326,7 @@ def fetch_google_news(query, language, country, edition, limit=6):
             source_element.text if source_element is not None else ""
         )
         published_at = clean_rss_text(item.findtext("pubDate"))
+        article_url = clean_rss_text(item.findtext("link"))
 
         if title:
             articles.append(
@@ -282,6 +334,7 @@ def fetch_google_news(query, language, country, edition, limit=6):
                     "title": title,
                     "source": source or "Google News",
                     "published_at": published_at,
+                    "url": article_url,
                 }
             )
 
@@ -291,9 +344,27 @@ def fetch_google_news(query, language, country, edition, limit=6):
     return articles
 
 
+def merge_articles(*article_groups, limit=8):
+    """Gộp nhiều RSS và loại tiêu đề trùng nhau."""
+    merged = []
+    seen_titles = set()
+
+    for group in article_groups:
+        for article in group:
+            key = article["title"].casefold()
+            if key in seen_titles:
+                continue
+            seen_titles.add(key)
+            merged.append(article)
+            if len(merged) >= limit:
+                return merged
+
+    return merged
+
+
 def fetch_news_sources():
-    """Thu thập ba nhóm tiêu đề mới trước khi gửi sang Groq."""
-    return {
+    """Thu thập các nhóm tiêu đề mới trước khi gửi sang Groq."""
+    sources = {
         "macro": fetch_google_news(
             "(Federal Reserve OR Fed OR US CPI OR US inflation) when:2d",
             "en-US",
@@ -312,7 +383,62 @@ def fetch_news_sources():
             "US",
             "US:en",
         ),
+        "logistics": merge_articles(
+            fetch_google_news(
+                '("logistics Việt Nam" OR "cảng biển" OR '
+                '"chuỗi cung ứng" OR "vận tải hàng hóa") when:3d',
+                "vi",
+                "VN",
+                "VN:vi",
+                limit=5,
+            ),
+            fetch_google_news(
+                '("global logistics" OR shipping OR freight OR '
+                '"supply chain") when:3d',
+                "en-US",
+                "US",
+                "US:en",
+                limit=5,
+            ),
+            limit=8,
+        ),
     }
+
+    for articles in sources.values():
+        for source_index, article in enumerate(articles):
+            article["source_index"] = source_index
+
+    return sources
+
+
+def get_vnindex_or_fallback(old_tickers):
+    """Giữ dữ liệu VN-Index cũ nếu Yahoo Finance tạm thời bị lỗi."""
+    try:
+        values = fetch_vnindex()
+        print(
+            "Đã lấy VN-Index: "
+            f"{values['vnindex']} ({values['vnindex_change_pct']})",
+            flush=True,
+        )
+        return values
+    except Exception as error:
+        values = {
+            "vnindex": old_tickers.get("vnindex", "Chưa có dữ liệu"),
+            "vnindex_change": old_tickers.get("vnindex_change", "0.00"),
+            "vnindex_change_pct": old_tickers.get(
+                "vnindex_change_pct", "0.00%"
+            ),
+            "vnindex_direction": old_tickers.get(
+                "vnindex_direction", "flat"
+            ),
+        }
+        print(
+            f"CẢNH BÁO: Không lấy được VN-Index: {error}. "
+            "Sử dụng dữ liệu dự phòng.",
+            file=sys.stderr,
+            flush=True,
+        )
+        return values
 
 
 def get_value_or_fallback(fetch_function, ticker_name, old_tickers):
@@ -382,10 +508,49 @@ def validate_news_data(data):
                     )
 
 
-def fetch_news_from_groq(client, cpi, usd_vnd, news_sources):
+def attach_source_metadata(data, news_sources):
+    """Gắn nguồn, link và thời gian thật từ RSS vào bài Groq đã chọn."""
+    for section in REQUIRED_SECTIONS:
+        source_articles = news_sources.get(section, [])
+        selected_articles = data.get(section, [])
+
+        if not isinstance(selected_articles, list):
+            raise ValueError(f"Mục {section} không phải danh sách.")
+
+        for position, article in enumerate(selected_articles, start=1):
+            source_index = article.pop("source_index", None)
+            if not isinstance(source_index, int):
+                raise ValueError(
+                    f"{section}[{position}] thiếu source_index hợp lệ."
+                )
+            if source_index < 0 or source_index >= len(source_articles):
+                raise ValueError(
+                    f"{section}[{position}] có source_index ngoài phạm vi."
+                )
+
+            original = source_articles[source_index]
+            article["source"] = original["source"]
+            article["url"] = original["url"]
+            article["published_at"] = original["published_at"]
+
+
+def fetch_news_from_groq(client, cpi, usd_vnd, vnindex_data, news_sources):
     vietnam_time = datetime.now(
         ZoneInfo("Asia/Ho_Chi_Minh")
     ).strftime("%d/%m/%Y %H:%M")
+
+    compact_sources = {
+        section: [
+            {
+                "source_index": article["source_index"],
+                "title": article["title"],
+                "source": article["source"],
+                "published_at": article["published_at"],
+            }
+            for article in articles
+        ]
+        for section, articles in news_sources.items()
+    }
 
     user_prompt = f"""
 Thời gian hiện tại tại Việt Nam: {vietnam_time}.
@@ -393,20 +558,23 @@ Thời gian hiện tại tại Việt Nam: {vietnam_time}.
 Hãy biên tập bản tin từ đúng danh sách tiêu đề RSS dưới đây.
 Không tự tìm thêm hoặc thêm chi tiết không có trong tiêu đề.
 
-Hai số liệu đã được lấy trực tiếp từ API dữ liệu:
+Các số liệu đã được lấy trực tiếp từ API dữ liệu:
 - CPI Mỹ theo năm: {cpi}
 - Tỷ giá tham khảo USD/VND: {usd_vnd}
+- VN-Index: {vnindex_data['vnindex']}
+- Thay đổi VN-Index: {vnindex_data['vnindex_change']} ({vnindex_data['vnindex_change_pct']})
 
-Không tự thay đổi hai số liệu trên.
+Không tự thay đổi các số liệu trên.
 
-Đối với fed_rate và vnindex:
+Đối với fed_rate:
 - Chỉ điền số liệu nếu tìm được nguồn mới và đáng tin cậy.
 - Nếu không chắc chắn, ghi "Chưa có dữ liệu".
 
 Danh sách tiêu đề RSS:
-{json.dumps(news_sources, ensure_ascii=False)}
+{json.dumps(compact_sources, ensure_ascii=False)}
 
-Nhắc lại: mọi trường summary và tag bắt buộc hoàn toàn bằng tiếng Việt.
+Nhắc lại: mọi title, summary và tag bắt buộc hoàn toàn bằng tiếng Việt.
+Giữ nguyên source_index của từng tin được chọn.
 Trả về đúng JSON theo cấu trúc được yêu cầu.
 """
 
@@ -443,12 +611,14 @@ Trả về đúng JSON theo cấu trúc được yêu cầu.
 
                 data = extract_json(content)
 
-                # Luôn dùng dữ liệu trực tiếp từ API cho hai chỉ số này.
+                # Luôn dùng dữ liệu trực tiếp từ API cho các chỉ số này.
                 data.setdefault("tickers", {})
                 data["tickers"]["cpi"] = cpi
                 data["tickers"]["usd_vnd"] = usd_vnd
+                data["tickers"].update(vnindex_data)
                 data["updated_at"] = vietnam_time
 
+                attach_source_metadata(data, news_sources)
                 validate_news_data(data)
 
                 print(
@@ -527,6 +697,7 @@ def main():
             "usd_vnd",
             old_tickers,
         )
+        vnindex_data = get_vnindex_or_fallback(old_tickers)
         news_sources = fetch_news_sources()
         print(
             "Đã lấy RSS: "
@@ -548,6 +719,7 @@ def main():
             client,
             cpi,
             usd_vnd,
+            vnindex_data,
             news_sources,
         )
         write_json_atomically(data)

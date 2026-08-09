@@ -1,348 +1,535 @@
-<!DOCTYPE html>
-<html lang="vi" class="dark bg-slate-950">
+<!doctype html>
+<html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Daily Edge - Finance & AI Updates</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                        serif: ['Playfair Display', 'Georgia', 'serif'],
-                        mono: ['JetBrains Mono', 'monospace'],
-                    },
-                    colors: {
-                        brand: {
-                            finance: '#10b981', // Emerald 500
-                            ai: '#8b5cf6',      // Violet 500
-                            dark: '#0f172a',    // Slate 900
-                            darker: '#020617',   // Slate 950
-                            card: '#1e293b',    // Slate 800
-                        }
-                    },
-                    animation: {
-                        'fade-in': 'fadeIn 0.5s ease-out',
-                        'slide-up': 'slideUp 0.5s ease-out',
-                        'pulse-slow': 'pulse 8s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                    },
-                    keyframes: {
-                        fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
-                        slideUp: { '0%': { transform: 'translateY(20px)', opacity: '0' }, '100%': { transform: 'translateY(0)', opacity: '1' } }
-                    }
-                }
-            }
-        }
-    </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        html, body {
-            background-color: #020617 !important; /* Fix chói mắt - Ép màu nền tối cho toàn bộ trang */
-            color: #e2e8f0;
-            min-height: 100vh;
-        }
-        
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #020617; }
-        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #334155; }
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Daily Edge — bản tin tài chính, AI và logistics được cập nhật tự động.">
+  <meta name="theme-color" content="#07111f">
+  <title>The Daily Edge | Financial Intelligence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #07111f;
+      --ink-soft: #0d1b2d;
+      --panel: rgba(13, 27, 45, .74);
+      --line: rgba(255, 255, 255, .1);
+      --text: #f4f7fb;
+      --muted: #9cabbc;
+      --green: #5ee6b5;
+      --cyan: #6ed8ff;
+      --violet: #a89cff;
+      --danger: #ff8d9b;
+      --shadow: 0 30px 80px rgba(0, 0, 0, .32);
+    }
 
-        .glass-header {
-            background: rgba(15, 23, 42, 0.85);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 8% 4%, rgba(94, 230, 181, .12), transparent 30rem),
+        radial-gradient(circle at 92% 12%, rgba(168, 156, 255, .12), transparent 34rem),
+        var(--ink);
+      font: 400 16px/1.65 "DM Sans", sans-serif;
+      overflow-x: hidden;
+    }
 
-        .news-card {
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            background-color: #1e293b;
-        }
-        .news-card:hover {
-            transform: translateY(-4px);
-            border-color: rgba(255, 255, 255, 0.15);
-            box-shadow: 0 10px 40px -10px rgba(0,0,0,0.5);
-        }
-        
-        .tag-finance {
-            background: rgba(16, 185, 129, 0.1);
-            color: #10b981;
-            border: 1px solid rgba(16, 185, 129, 0.2);
-        }
-        
-        .tag-ai {
-            background: rgba(139, 92, 246, 0.1);
-            color: #8b5cf6;
-            border: 1px solid rgba(139, 92, 246, 0.2);
-        }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: .22;
+      background-image:
+        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: linear-gradient(to bottom, black, transparent 78%);
+    }
 
-        .hero-bg {
-            position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 60vh;
-            background: radial-gradient(circle at 50% 0%, rgba(30, 41, 59, 0.5) 0%, rgba(2, 6, 23, 1) 100%);
-            z-index: -1;
-            overflow: hidden;
-        }
-        
-        .blob {
-            position: absolute;
-            filter: blur(80px);
-            border-radius: 50%;
-            opacity: 0.15;
-            animation: pulse-slow 8s infinite alternate;
-        }
-    </style>
+    button, input, a { font: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    button { color: inherit; }
+    a { color: inherit; }
+    [hidden] { display: none !important; }
+
+    .shell { width: min(1180px, calc(100% - 40px)); margin: 0 auto; }
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      border-bottom: 1px solid transparent;
+      background: rgba(7, 17, 31, .72);
+      backdrop-filter: blur(22px);
+      transition: border-color .25s, box-shadow .25s;
+    }
+    .topbar.scrolled { border-color: var(--line); box-shadow: 0 12px 40px rgba(0,0,0,.2); }
+    .topbar-inner { min-height: 76px; display: flex; align-items: center; gap: 24px; }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; white-space: nowrap; }
+    .brand-mark {
+      width: 38px; height: 38px; display: grid; place-items: center;
+      border-radius: 12px; color: #07111f; font-weight: 900;
+      background: linear-gradient(135deg, var(--green), var(--cyan));
+      box-shadow: 0 0 30px rgba(94,230,181,.22);
+    }
+    .brand-copy strong { display: block; font: 800 14px/1.1 "Manrope"; letter-spacing: .12em; }
+    .brand-copy span { color: var(--muted); font-size: 11px; letter-spacing: .08em; }
+    .nav { margin-left: auto; display: flex; align-items: center; gap: 4px; }
+    .nav-btn {
+      border: 0; border-radius: 10px; background: transparent; cursor: pointer;
+      padding: 10px 12px; color: var(--muted); font-size: 14px; font-weight: 600;
+      transition: color .2s, background .2s, transform .2s;
+    }
+    .nav-btn:hover { color: var(--text); background: rgba(255,255,255,.055); transform: translateY(-1px); }
+    .nav-btn.active { color: var(--text); background: rgba(94,230,181,.1); box-shadow: inset 0 0 0 1px rgba(94,230,181,.14); }
+    .icon-btn {
+      width: 40px; height: 40px; display: grid; place-items: center; flex: 0 0 auto;
+      border: 1px solid var(--line); border-radius: 12px; cursor: pointer;
+      color: var(--muted); background: rgba(255,255,255,.035); transition: .2s;
+    }
+    .icon-btn:hover { color: var(--text); border-color: rgba(255,255,255,.2); transform: translateY(-1px); }
+    .icon-btn svg { width: 18px; height: 18px; }
+
+    main { position: relative; z-index: 1; min-height: calc(100vh - 156px); }
+    .view { display: none; padding: 74px 0 90px; }
+    .view.active { display: block; animation: view-in .5s cubic-bezier(.2,.8,.2,1) both; }
+    @keyframes view-in { from { opacity: 0; transform: translateY(12px); } }
+
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; color: var(--green); font-size: 12px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+    .eyebrow::before { content: ""; width: 26px; height: 1px; background: currentColor; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1, h2, h3 { font-family: "Manrope", sans-serif; letter-spacing: -.035em; }
+    .hero { display: grid; grid-template-columns: 1.45fr .55fr; gap: 60px; align-items: end; padding: 22px 0 72px; }
+    .hero h1 { max-width: 820px; margin: 19px 0 22px; font-size: clamp(46px, 7.2vw, 88px); line-height: .98; }
+    .gradient-word { color: transparent; background: linear-gradient(100deg, var(--green), var(--cyan) 55%, var(--violet)); background-clip: text; }
+    .hero-copy { max-width: 680px; color: var(--muted); font-size: clamp(16px, 2vw, 19px); }
+    .hero-aside { border-left: 1px solid var(--line); padding-left: 28px; }
+    .pulse-line { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; font-size: 13px; font-weight: 700; }
+    .pulse-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 0 rgba(94,230,181,.55); animation: pulse 2s infinite; }
+    @keyframes pulse { 70% { box-shadow: 0 0 0 10px rgba(94,230,181,0); } }
+    .updated { color: var(--muted); font-size: 13px; }
+
+    .ticker-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .ticker-card {
+      min-height: 164px; padding: 22px; border: 1px solid var(--line); border-radius: 20px;
+      background: linear-gradient(145deg, rgba(255,255,255,.065), rgba(255,255,255,.025));
+      box-shadow: 0 16px 50px rgba(0,0,0,.13); overflow: hidden; position: relative;
+      transition: transform .28s, border-color .28s, background .28s;
+    }
+    .ticker-card::after { content:""; position:absolute; width:100px; height:100px; border-radius:50%; right:-42px; bottom:-48px; background:var(--accent, var(--green)); opacity:.1; filter:blur(2px); }
+    .ticker-card:hover { transform: translateY(-5px); border-color: rgba(255,255,255,.2); background: rgba(255,255,255,.075); }
+    .ticker-label { color: var(--muted); font-size: 12px; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; }
+    .ticker-value { margin-top: 18px; font: 700 clamp(24px,3vw,34px)/1 "Manrope"; letter-spacing: -.04em; }
+    .ticker-note { margin-top: 12px; color: var(--muted); font-size: 12px; }
+    .change-badge { display:inline-flex; align-items:center; gap:6px; margin-top:12px; padding:5px 9px; border-radius:999px; font-size:12px; font-weight:700; }
+    .change-badge.up { color: var(--green); background: rgba(94,230,181,.11); }
+    .change-badge.down { color: var(--danger); background: rgba(255,141,155,.11); }
+    .change-badge.flat { color: var(--muted); background: rgba(255,255,255,.06); }
+
+    .section-bar { display:flex; align-items:end; justify-content:space-between; gap:24px; margin: 78px 0 28px; }
+    .section-bar h2 { margin: 8px 0 0; font-size: clamp(30px,4vw,46px); line-height:1.1; }
+    .section-bar p { margin: 0; max-width: 430px; color:var(--muted); font-size:14px; }
+    .topic-header { max-width: 820px; margin-bottom: 46px; }
+    .topic-header h1 { margin: 14px 0 18px; font-size: clamp(42px,7vw,72px); line-height:1.02; }
+    .topic-header p { max-width: 650px; color: var(--muted); font-size: 18px; }
+    .topic-count { color:var(--muted); font-size:13px; }
+
+    .news-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+    .news-card {
+      width:100%; min-height:200px; display:flex; flex-direction:column; align-items:stretch; text-align:left;
+      padding:25px; border:1px solid var(--line); border-radius:20px; cursor:pointer;
+      background:linear-gradient(145deg, rgba(255,255,255,.055), rgba(255,255,255,.025));
+      box-shadow:0 15px 50px rgba(0,0,0,.12); animation:card-in .55s var(--delay,0s) both;
+      transition:transform .28s, border-color .28s, box-shadow .28s;
+    }
+    @keyframes card-in { from { opacity:0; transform:translateY(16px); } }
+    .news-card:hover { transform:translateY(-6px); border-color:rgba(110,216,255,.32); box-shadow:0 24px 60px rgba(0,0,0,.24); }
+    .news-card:hover .card-arrow { transform:translate(2px,-2px); color:var(--green); }
+    .card-top { display:flex; align-items:center; justify-content:space-between; gap:18px; }
+    .tag { display:inline-flex; width:max-content; max-width:80%; padding:5px 9px; border-radius:999px; color:var(--cyan); background:rgba(110,216,255,.09); font-size:11px; font-weight:700; letter-spacing:.05em; text-transform:uppercase; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .card-arrow { color:var(--muted); font-size:22px; transition:.25s; }
+    .news-card h3 { margin:24px 0 22px; font-size:clamp(19px,2.4vw,25px); line-height:1.28; }
+    .card-meta { display:flex; gap:8px; align-items:center; margin-top:auto; color:var(--muted); font-size:12px; }
+    .card-meta span { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+    .card-meta i { width:3px; height:3px; flex:0 0 auto; border-radius:50%; background:currentColor; }
+    .empty-state { grid-column:1/-1; padding:54px; text-align:center; border:1px dashed var(--line); border-radius:20px; color:var(--muted); }
+
+    footer { position:relative; z-index:1; border-top:1px solid var(--line); }
+    .footer-inner { min-height:92px; display:flex; align-items:center; justify-content:space-between; gap:20px; color:var(--muted); font-size:12px; }
+    .footer-inner a { text-decoration:none; color:#c8d3de; }
+
+    .login-gate { position:fixed; inset:0; z-index:100; display:grid; place-items:center; padding:24px; background:rgba(4,10,18,.9); backdrop-filter:blur(24px); }
+    .login-orb { position:absolute; width:420px; height:420px; border-radius:50%; background:linear-gradient(135deg,rgba(94,230,181,.18),rgba(168,156,255,.16)); filter:blur(70px); animation:float 7s ease-in-out infinite; }
+    @keyframes float { 50% { transform:translate(28px,-24px) scale(1.08); } }
+    .login-card { position:relative; width:min(440px,100%); padding:38px; border:1px solid rgba(255,255,255,.13); border-radius:26px; background:rgba(13,27,45,.82); box-shadow:var(--shadow); }
+    .login-card h1 { margin:24px 0 10px; font-size:32px; }
+    .login-card > p { color:var(--muted); margin-bottom:28px; font-size:14px; }
+    .field { display:block; margin-top:16px; }
+    .field > span { display:block; margin-bottom:7px; color:#c7d1dc; font-size:12px; font-weight:700; }
+    .input-wrap { display:flex; align-items:center; border:1px solid var(--line); border-radius:12px; background:rgba(255,255,255,.035); transition:.2s; }
+    .input-wrap:focus-within { border-color:rgba(94,230,181,.55); box-shadow:0 0 0 3px rgba(94,230,181,.08); }
+    .input-wrap input { width:100%; padding:13px 14px; border:0; outline:0; color:var(--text); background:transparent; }
+    .input-wrap button { width:44px; border:0; background:transparent; color:var(--muted); cursor:pointer; }
+    .login-submit { width:100%; margin-top:24px; padding:13px 18px; border:0; border-radius:12px; cursor:pointer; color:#07111f; background:linear-gradient(105deg,var(--green),var(--cyan)); font-weight:800; box-shadow:0 15px 30px rgba(94,230,181,.14); transition:.2s; }
+    .login-submit:hover { transform:translateY(-2px); box-shadow:0 18px 38px rgba(94,230,181,.22); }
+    .login-submit:disabled { opacity:.55; cursor:wait; transform:none; }
+    .login-error { min-height:20px; margin:12px 0 0; color:var(--danger); font-size:12px; }
+    .session-note { display:flex; gap:8px; margin-top:18px; color:var(--muted); font-size:11px; }
+
+    dialog { width:min(920px,calc(100% - 28px)); max-height:calc(100vh - 36px); padding:0; border:1px solid rgba(255,255,255,.15); border-radius:24px; color:var(--text); background:#0c1929; box-shadow:var(--shadow); overflow:hidden; }
+    dialog::backdrop { background:rgba(2,7,13,.78); backdrop-filter:blur(10px); }
+    dialog[open] { animation:modal-in .3s cubic-bezier(.2,.8,.2,1); }
+    @keyframes modal-in { from { opacity:0; transform:translateY(18px) scale(.985); } }
+    .modal-scroll { max-height:calc(100vh - 36px); overflow-y:auto; }
+    .modal-head { display:flex; justify-content:flex-end; position:sticky; top:0; z-index:2; padding:16px 18px; background:linear-gradient(#0c1929 60%,transparent); }
+    .modal-body { max-width:720px; margin:0 auto; padding:22px 34px 62px; }
+    .modal-kicker { display:flex; align-items:center; gap:10px; color:var(--green); font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.1em; }
+    .modal-kicker::before { content:""; width:32px; height:1px; background:currentColor; }
+    .modal-body h2 { margin:22px 0 20px; font-size:clamp(31px,5vw,51px); line-height:1.12; }
+    .modal-meta { display:flex; flex-wrap:wrap; gap:10px 20px; padding-bottom:27px; border-bottom:1px solid var(--line); color:var(--muted); font-size:13px; }
+    .modal-summary { margin:30px 0; color:#d6dee7; font-size:18px; line-height:1.85; white-space:pre-line; }
+    .source-link { display:inline-flex; align-items:center; gap:9px; padding:12px 16px; border-radius:12px; color:#07111f; background:var(--green); text-decoration:none; font-weight:800; transition:.2s; }
+    .source-link:hover { transform:translateY(-2px); filter:brightness(1.04); }
+    .source-link.disabled { pointer-events:none; opacity:.45; }
+
+    .toast { position:fixed; left:50%; bottom:28px; z-index:90; transform:translate(-50%,20px); padding:11px 16px; border:1px solid var(--line); border-radius:12px; background:#142337; box-shadow:var(--shadow); opacity:0; pointer-events:none; transition:.3s; font-size:13px; }
+    .toast.show { opacity:1; transform:translate(-50%,0); }
+
+    @media (max-width: 980px) {
+      .topbar-inner { flex-wrap:wrap; gap:10px; padding:13px 0 10px; }
+      .nav { order:3; width:100%; overflow-x:auto; padding-bottom:2px; scrollbar-width:none; }
+      .nav::-webkit-scrollbar { display:none; }
+      .nav-btn { flex:0 0 auto; }
+      .hero { grid-template-columns:1fr; gap:30px; }
+      .hero-aside { border-left:0; border-top:1px solid var(--line); padding:22px 0 0; }
+      .ticker-grid { grid-template-columns:repeat(2,1fr); }
+    }
+    @media (max-width: 680px) {
+      .shell { width:min(100% - 24px,1180px); }
+      .brand-copy span { display:none; }
+      .view { padding:50px 0 70px; }
+      .hero { padding-bottom:38px; }
+      .ticker-grid, .news-grid { grid-template-columns:1fr; }
+      .ticker-card { min-height:140px; }
+      .section-bar { align-items:start; flex-direction:column; margin-top:54px; }
+      .news-card { min-height:180px; }
+      .login-card { padding:28px 22px; }
+      .modal-body { padding:12px 22px 46px; }
+      .footer-inner { padding:24px 0; align-items:flex-start; flex-direction:column; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; scroll-behavior:auto !important; transition-duration:.01ms !important; }
+    }
+  </style>
 </head>
-<body class="antialiased selection:bg-emerald-500 selection:text-white bg-slate-950 min-h-screen flex flex-col justify-between">
+<body>
+  <div class="login-gate" id="login-gate" aria-modal="true" role="dialog" aria-labelledby="login-title">
+    <div class="login-orb"></div>
+    <form class="login-card" id="login-form">
+      <div class="brand-mark" aria-hidden="true">DE</div>
+      <h1 id="login-title">Chào mừng trở lại.</h1>
+      <p>Đăng nhập để mở không gian tin tức riêng của The Daily Edge.</p>
+      <label class="field">
+        <span>Tên đăng nhập</span>
+        <span class="input-wrap"><input id="username" name="username" autocomplete="username" required></span>
+      </label>
+      <label class="field">
+        <span>Mật khẩu</span>
+        <span class="input-wrap">
+          <input id="password" name="password" type="password" autocomplete="current-password" required>
+          <button id="toggle-password" type="button" aria-label="Hiện mật khẩu">◉</button>
+        </span>
+      </label>
+      <button class="login-submit" id="login-submit" type="submit">Mở bản tin →</button>
+      <p class="login-error" id="login-error" role="alert"></p>
+      <div class="session-note"><span>◇</span><span>Phiên đăng nhập tự kết thúc khi bạn đóng trình duyệt.</span></div>
+    </form>
+  </div>
 
-    <div class="hero-bg">
-        <div class="blob bg-emerald-500 w-96 h-96 -top-20 -left-20"></div>
-        <div class="blob bg-purple-500 w-96 h-96 top-20 -right-20" style="animation-delay: 2s;"></div>
+  <header class="topbar" id="topbar">
+    <div class="shell topbar-inner">
+      <a class="brand" href="#overview" aria-label="The Daily Edge">
+        <span class="brand-mark">DE</span>
+        <span class="brand-copy"><strong>THE DAILY EDGE</strong><span>FINANCIAL INTELLIGENCE</span></span>
+      </a>
+      <nav class="nav" aria-label="Chuyên mục">
+        <button class="nav-btn active" data-route="overview">Tổng quan</button>
+        <button class="nav-btn" data-route="macro">Vĩ mô</button>
+        <button class="nav-btn" data-route="vietnam">Việt Nam</button>
+        <button class="nav-btn" data-route="ai">AI</button>
+        <button class="nav-btn" data-route="logistics">Logistics</button>
+      </nav>
+      <button class="icon-btn" id="refresh-btn" aria-label="Làm mới dữ liệu" title="Làm mới dữ liệu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 11a8.1 8.1 0 0 0-15.5-2M4 4v5h5M4 13a8.1 8.1 0 0 0 15.5 2M20 20v-5h-5"/></svg>
+      </button>
+      <button class="icon-btn" id="logout-btn" aria-label="Đăng xuất" title="Đăng xuất">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10 17l5-5-5-5M15 12H3M15 4h4a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-4"/></svg>
+      </button>
     </div>
+  </header>
 
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 glass-header">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-purple-500 flex items-center justify-center shadow-lg">
-                        <i class="fa-solid fa-bolt text-white text-xl"></i>
-                    </div>
-                    <div>
-                        <h1 class="font-serif text-2xl font-bold tracking-tight text-white">The Daily Edge</h1>
-                        <!-- Ngày hiển thị động -->
-                        <p class="text-xs text-slate-400 font-mono" id="current-date">Đang tải ngày...</p>
-                    </div>
-                </div>
-                <div class="flex items-center gap-6 hidden md:flex">
-                    <a href="#macro" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Vĩ mô & FED</a>
-                    <a href="#vietnam" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">Thị trường VN</a>
-                    <a href="#ai" class="text-sm font-medium text-slate-300 hover:text-white transition-colors">AI Frontiers</a>
-                    
-                    <!-- Nút Refresh Cập nhật thật -->
-                    <button id="refresh-btn" onclick="fetchLatestNews(true)" class="px-4 py-2 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-sm font-medium transition-all flex items-center gap-2 text-slate-200">
-                        <i class="fa-solid fa-rotate-right text-xs" id="refresh-icon"></i> <span id="refresh-text">Cập nhật</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <main class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-screen-2xl mx-auto w-full flex-grow">
-        
-        <!-- Hero Header -->
-        <div class="text-center max-w-3xl mx-auto mb-12 animate-fade-in">
-            <h2 class="text-4xl md:text-5xl font-serif font-bold text-white mb-4 leading-tight">
-                Tri thức tinh gọn <br/> cho ngày mới.
-            </h2>
-            <p class="text-slate-400 text-lg">
-                Điểm tin chuyên sâu về FED, lạm phát, dòng tiền Việt Nam và những đột phá AI mới nhất.
-            </p>
+  <main>
+    <section class="view active" data-view="overview">
+      <div class="shell">
+        <div class="hero">
+          <div>
+            <span class="eyebrow">Bản tin chọn lọc mỗi ngày</span>
+            <h1>Đọc ít hơn.<br><span class="gradient-word">Hiểu sâu hơn.</span></h1>
+            <p class="hero-copy">Một góc nhìn cô đọng về vĩ mô, thị trường Việt Nam, trí tuệ nhân tạo và chuỗi cung ứng toàn cầu.</p>
+          </div>
+          <aside class="hero-aside">
+            <div class="pulse-line"><span class="pulse-dot"></span><span>Hệ thống đang hoạt động</span></div>
+            <div class="updated">Cập nhật gần nhất: <strong id="updated-at">Đang tải…</strong></div>
+          </aside>
         </div>
 
-        <!-- Market Tickers -->
-        <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12 animate-slide-up">
-            <div class="bg-slate-800/80 rounded-2xl p-4 flex items-center gap-3 border border-white/5">
-                <div class="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-400 flex-shrink-0">
-                    <i class="fa-solid fa-building-columns"></i>
-                </div>
-                <div>
-                    <p class="text-[11px] text-slate-400 font-medium uppercase tracking-wider">FED Funds Rate</p>
-                    <p class="text-lg font-bold text-white" id="fed-rate-val">3.75%</p>
-                </div>
-            </div>
-            
-            <div class="bg-slate-800/80 rounded-2xl p-4 flex items-center gap-3 border border-white/5">
-                <div class="w-10 h-10 rounded-full bg-red-500/10 flex items-center justify-center text-red-400 flex-shrink-0">
-                    <i class="fa-solid fa-arrow-trend-down"></i>
-                </div>
-                <div>
-                    <p class="text-[11px] text-slate-400 font-medium uppercase tracking-wider">US CPI</p>
-                    <p class="text-lg font-bold text-white" id="cpi-val">3.5%</p>
-                </div>
-            </div>
-
-            <div class="bg-slate-800/80 rounded-2xl p-4 flex items-center gap-3 border border-white/5">
-                <div class="w-10 h-10 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-400 flex-shrink-0">
-                    <i class="fa-solid fa-chart-line"></i>
-                </div>
-                <div>
-                    <p class="text-[11px] text-slate-400 font-medium uppercase tracking-wider">VN-Index</p>
-                    <p class="text-lg font-bold text-white" id="vnindex-val">1,285.5</p>
-                </div>
-            </div>
-
-            <div class="bg-slate-800/80 rounded-2xl p-4 flex items-center gap-3 border border-white/5">
-                <div class="w-10 h-10 rounded-full bg-amber-500/10 flex items-center justify-center text-amber-400 flex-shrink-0">
-                    <i class="fa-solid fa-money-bill-transfer"></i>
-                </div>
-                <div>
-                    <p class="text-[11px] text-slate-400 font-medium uppercase tracking-wider">USD/VND</p>
-                    <p class="text-lg font-bold text-white" id="usdvnd-val">25,420</p>
-                </div>
-            </div>
+        <div class="ticker-grid">
+          <article class="ticker-card" style="--accent:var(--violet)"><div class="ticker-label">Lãi suất FED</div><div class="ticker-value" id="fed-rate">—</div><div class="ticker-note">Lãi suất mục tiêu</div></article>
+          <article class="ticker-card" style="--accent:var(--cyan)"><div class="ticker-label">CPI Mỹ</div><div class="ticker-value" id="cpi">—</div><div class="ticker-note">So với cùng kỳ</div></article>
+          <article class="ticker-card" style="--accent:var(--green)"><div class="ticker-label">VN-Index</div><div class="ticker-value" id="vnindex">—</div><div class="change-badge flat" id="vnindex-change">—</div></article>
+          <article class="ticker-card" style="--accent:#ffce72"><div class="ticker-label">USD / VND</div><div class="ticker-value" id="usd-vnd">—</div><div class="ticker-note">Tỷ giá tham khảo</div></article>
         </div>
 
-        <!-- Section Grid: 3 Main Categories -->
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            
-            <!-- 1. GLOBAL MACRO & FED -->
-            <section id="macro">
-                <div class="flex items-center gap-3 mb-6">
-                    <div class="h-7 w-1 bg-emerald-500 rounded-full"></div>
-                    <h2 class="text-xl font-serif font-bold text-white">Vĩ mô & <span class="text-emerald-400">FED</span></h2>
-                </div>
-                <div class="space-y-5" id="macro-news-container">
-                    <article class="bg-slate-800/80 rounded-2xl p-6 news-card">
-                        <span class="px-2.5 py-0.5 text-xs font-semibold rounded-full tag-finance mb-3 inline-block">Lạm Phát Mỹ</span>
-                        <h3 class="text-lg font-bold text-white mb-2 leading-snug">Lạm phát Mỹ giảm xuống 3.5%, củng cố kỳ vọng cắt giảm lãi suất</h3>
-                        <p class="text-xs text-slate-400 mb-3">CPI giảm giúp hạ áp lực chi phí. FED nhận định kinh tế Mỹ vẫn mở rộng tốt nhờ đầu tư hạ tầng AI.</p>
-                        <span class="text-[10px] text-slate-500"><i class="fa-regular fa-newspaper mr-1"></i> Trading Economics</span>
-                    </article>
-                </div>
-            </section>
-
-            <!-- 2. VIETNAM MARKET -->
-            <section id="vietnam">
-                <div class="flex items-center gap-3 mb-6">
-                    <div class="h-7 w-1 bg-emerald-400 rounded-full"></div>
-                    <h2 class="text-xl font-serif font-bold text-white">Kinh tế <span class="text-emerald-400">Việt Nam</span></h2>
-                </div>
-                <div class="space-y-5" id="vietnam-news-container">
-                    <article class="bg-slate-800/80 rounded-2xl p-6 news-card">
-                        <span class="px-2.5 py-0.5 text-xs font-semibold rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 mb-3 inline-block">VN-Index</span>
-                        <h3 class="text-lg font-bold text-white mb-2 leading-snug">VN-Index áp sát mốc 1,290 điểm nhờ lực cầu khối ngoại</h3>
-                        <p class="text-xs text-slate-400 mb-3">Khối ngoại quay lại mua ròng ở nhóm Ngân hàng & Công nghệ khi áp lực tỷ giá giảm nhiệt.</p>
-                        <span class="text-[10px] text-slate-500"><i class="fa-regular fa-newspaper mr-1"></i> Báo Tài Chính</span>
-                    </article>
-                </div>
-            </section>
-
-            <!-- 3. AI FRONTIERS -->
-            <section id="ai">
-                <div class="flex items-center gap-3 mb-6">
-                    <div class="h-7 w-1 bg-purple-500 rounded-full"></div>
-                    <h2 class="text-xl font-serif font-bold text-white">Frontiers of <span class="text-purple-400">AI</span></h2>
-                </div>
-                <div class="space-y-5" id="ai-news-container">
-                    <article class="bg-slate-800/80 rounded-2xl p-6 news-card">
-                        <span class="px-2.5 py-0.5 text-xs font-semibold rounded-full tag-ai mb-3 inline-block">AI Tech</span>
-                        <h3 class="text-lg font-bold text-white mb-2 leading-snug">GPT-5.6 & Gemini 3.6 Flash bùng nổ tính năng Agentic AI</h3>
-                        <p class="text-xs text-slate-400 mb-3">Các mô hình AI mới tập trung khả năng suy luận dài hạn và giúp giảm mạnh chi phí vận hành.</p>
-                        <span class="text-[10px] text-slate-500"><i class="fa-regular fa-newspaper mr-1"></i> AI Tech Updates</span>
-                    </article>
-                </div>
-            </section>
+        <div class="section-bar">
+          <div><span class="eyebrow">Điểm tin</span><h2>Nổi bật hôm nay</h2></div>
+          <p>Nhấn vào một tiêu đề để mở bản tóm tắt đầy đủ, nguồn gốc và thời gian công bố.</p>
         </div>
+        <div class="news-grid" id="overview-news"></div>
+      </div>
+    </section>
 
-    </main>
+    <section class="view" data-view="macro"><div class="shell"><header class="topic-header"><span class="eyebrow">Vĩ mô toàn cầu</span><h1>Lạm phát, lãi suất<br>và dòng tiền.</h1><p>Theo dõi những chuyển động có ảnh hưởng tới chính sách tiền tệ và thị trường tài chính quốc tế.</p></header><div class="section-bar"><div><h2>Bản tin mới</h2></div><span class="topic-count" id="macro-count"></span></div><div class="news-grid" id="macro-news"></div></div></section>
+    <section class="view" data-view="vietnam"><div class="shell"><header class="topic-header"><span class="eyebrow">Thị trường Việt Nam</span><h1>Nhịp đập<br>kinh tế trong nước.</h1><p>VN-Index, tỷ giá, chính sách điều hành và dòng vốn được chọn lọc trong một không gian dễ đọc.</p></header><div class="section-bar"><div><h2>Bản tin mới</h2></div><span class="topic-count" id="vietnam-count"></span></div><div class="news-grid" id="vietnam-news"></div></div></section>
+    <section class="view" data-view="ai"><div class="shell"><header class="topic-header"><span class="eyebrow">Frontiers of AI</span><h1>Công nghệ đang<br>định hình ngày mai.</h1><p>Mô hình mới, AI agent, hạ tầng chip và những thay đổi quan trọng trong hệ sinh thái trí tuệ nhân tạo.</p></header><div class="section-bar"><div><h2>Bản tin mới</h2></div><span class="topic-count" id="ai-count"></span></div><div class="news-grid" id="ai-news"></div></div></section>
+    <section class="view" data-view="logistics"><div class="shell"><header class="topic-header"><span class="eyebrow">Logistics & Supply Chain</span><h1>Dòng chảy hàng hóa<br>không ngừng nghỉ.</h1><p>Cảng biển, vận tải, chuỗi cung ứng và thị trường logistics tại Việt Nam lẫn trên thế giới.</p></header><div class="section-bar"><div><h2>Bản tin mới</h2></div><span class="topic-count" id="logistics-count"></span></div><div class="news-grid" id="logistics-news"></div></div></section>
+  </main>
 
-    <!-- Footer đồng màu tối dính chặt ở đáy màn hình -->
-    <footer class="border-t border-white/5 py-8 text-center bg-slate-950 w-full mt-auto">
-        <p class="text-slate-500 text-sm font-mono">
-            &copy; The Daily Edge. Cập nhật tự động lúc 07:00 AM & 10:00 PM.
-        </p>
+  <footer><div class="shell footer-inner"><span>© <span id="year"></span> The Daily Edge · Curated for Khoa</span><span>Dữ liệu: <a href="https://news.google.com/" target="_blank" rel="noopener">Google News RSS</a> · <a href="https://finance.yahoo.com/quote/%5EVNINDEX.VN/" target="_blank" rel="noopener">Yahoo Finance</a> · <a href="https://www.bls.gov/cpi/" target="_blank" rel="noopener">BLS</a></span></div></footer>
 
-        <p class="text-slate-600 text-xs mt-3">
-            Tỷ giá tham khảo:
-            <a
-                href="https://www.exchangerate-api.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="text-slate-500 hover:text-emerald-400 transition-colors"
-            >
-                Rates By Exchange Rate API
-            </a>
-        </p>
-    </footer>
+  <dialog id="article-dialog">
+    <div class="modal-scroll">
+      <div class="modal-head"><button class="icon-btn" id="modal-close" aria-label="Đóng">✕</button></div>
+      <article class="modal-body">
+        <div class="modal-kicker" id="modal-tag"></div>
+        <h2 id="modal-title"></h2>
+        <div class="modal-meta"><span id="modal-source"></span><span id="modal-time"></span></div>
+        <p class="modal-summary" id="modal-summary"></p>
+        <a class="source-link" id="modal-link" target="_blank" rel="noopener noreferrer">Đọc bài báo gốc ↗</a>
+      </article>
+    </div>
+  </dialog>
+  <div class="toast" id="toast" role="status"></div>
 
-    <script>
-        // Hàm tự động cập nhật ngày giờ hiện tại
-        function updateDisplayDate(customDateStr) {
-            const dateElem = document.getElementById('current-date');
-            if (customDateStr) {
-                dateElem.textContent = 'Cập nhật: ' + customDateStr;
-            } else {
-                const now = new Date();
-                const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                const formattedDate = now.toLocaleDateString('vi-VN', options);
-                dateElem.textContent = formattedDate;
-            }
+  <script>
+    const CREDENTIAL_HASH = "b6bb5d48a9f5f26bf047764fd4250a2a4c8a232c3e95ce906ce7134174d71c83";
+    const ROUTES = ["overview", "macro", "vietnam", "ai", "logistics"];
+    const SECTION_LABELS = { macro: "Vĩ mô", vietnam: "Việt Nam", ai: "Trí tuệ nhân tạo", logistics: "Logistics" };
+    let newsData = null;
+
+    const $ = (selector) => document.querySelector(selector);
+    const $$ = (selector) => [...document.querySelectorAll(selector)];
+
+    async function sha256(text) {
+      const bytes = new TextEncoder().encode(text);
+      const digest = await crypto.subtle.digest("SHA-256", bytes);
+      return [...new Uint8Array(digest)].map(value => value.toString(16).padStart(2, "0")).join("");
+    }
+
+    function unlock() {
+      $("#login-gate").hidden = true;
+      document.body.style.overflow = "";
+    }
+
+    function lock() {
+      $("#login-gate").hidden = false;
+      document.body.style.overflow = "hidden";
+      setTimeout(() => $("#username").focus(), 50);
+    }
+
+    $("#login-form").addEventListener("submit", async event => {
+      event.preventDefault();
+      const submit = $("#login-submit");
+      const username = $("#username").value.trim().normalize("NFC");
+      const password = $("#password").value;
+      submit.disabled = true;
+      $("#login-error").textContent = "";
+      try {
+        const hash = await sha256(`${username}\n${password}`);
+        if (hash !== CREDENTIAL_HASH) {
+          $("#login-error").textContent = "Tên đăng nhập hoặc mật khẩu chưa đúng.";
+          $("#password").select();
+          return;
         }
+        sessionStorage.setItem("daily-edge-auth", "granted");
+        unlock();
+      } finally {
+        submit.disabled = false;
+      }
+    });
 
-        // Hàm tải dữ liệu tin tức từ file data.json
-        async function fetchLatestNews(isManualClick = false) {
-            const icon = document.getElementById('refresh-icon');
-            const text = document.getElementById('refresh-text');
-            
-            if (isManualClick) {
-                icon.classList.add('animate-spin');
-                text.textContent = 'Đang tải...';
-            }
+    $("#toggle-password").addEventListener("click", () => {
+      const field = $("#password");
+      field.type = field.type === "password" ? "text" : "password";
+      $("#toggle-password").setAttribute("aria-label", field.type === "password" ? "Hiện mật khẩu" : "Ẩn mật khẩu");
+    });
 
-            try {
-                // Thêm parameter ngẫu nhiên để xóa bộ nhớ đệm (cache-busting)
-                const cacheBuster = '?t=' + new Date().getTime();
-                const response = await fetch('data.json' + cacheBuster);
-                
-                if (response.ok) {
-                    const data = await response.json();
+    $("#logout-btn").addEventListener("click", () => {
+      sessionStorage.removeItem("daily-edge-auth");
+      $("#password").value = "";
+      lock();
+    });
 
-                    if (data.updated_at) {
-                        updateDisplayDate(data.updated_at);
-                    } else {
-                        updateDisplayDate();
-                    }
+    function formatDate(value) {
+      if (!value) return "Chưa rõ thời gian";
+      const date = new Date(value);
+      if (Number.isNaN(date.getTime())) return value;
+      return new Intl.DateTimeFormat("vi-VN", { dateStyle: "medium", timeStyle: "short" }).format(date);
+    }
 
-                    if (data.tickers) {
-                        if(data.tickers.fed_rate) document.getElementById('fed-rate-val').textContent = data.tickers.fed_rate;
-                        if(data.tickers.cpi) document.getElementById('cpi-val').textContent = data.tickers.cpi;
-                        if(data.tickers.vnindex) document.getElementById('vnindex-val').textContent = data.tickers.vnindex;
-                        if(data.tickers.usd_vnd) document.getElementById('usdvnd-val').textContent = data.tickers.usd_vnd;
-                    }
+    function safeUrl(value) {
+      try {
+        const url = new URL(value);
+        return ["http:", "https:"].includes(url.protocol) ? url.href : "";
+      } catch { return ""; }
+    }
 
-                    renderSection('macro-news-container', data.macro, 'tag-finance');
-                    renderSection('vietnam-news-container', data.vietnam, 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20');
-                    renderSection('ai-news-container', data.ai, 'tag-ai');
-                } else {
-                    updateDisplayDate();
-                }
-            } catch (e) {
-                console.log('Sử dụng dữ liệu mặc định');
-                updateDisplayDate();
-            } finally {
-                if (isManualClick) {
-                    setTimeout(() => {
-                        icon.classList.remove('animate-spin');
-                        text.textContent = 'Đã cập nhật';
-                        setTimeout(() => { text.textContent = 'Cập nhật'; }, 2000);
-                    }, 600);
-                }
-            }
-        }
+    function makeCard(article, section, index) {
+      const card = document.createElement("button");
+      card.type = "button";
+      card.className = "news-card";
+      card.style.setProperty("--delay", `${Math.min(index * 70, 350)}ms`);
 
-        function renderSection(containerId, newsList, tagClass) {
-            if (!newsList || !newsList.length) return;
-            const container = document.getElementById(containerId);
-            container.innerHTML = newsList.map(item => `
-                <article class="bg-slate-800/80 rounded-2xl p-6 news-card">
-                    <span class="px-2.5 py-0.5 text-xs font-semibold rounded-full ${tagClass} mb-3 inline-block">${item.tag || 'Hot'}</span>
-                    <h3 class="text-lg font-bold text-white mb-2 leading-snug">${item.title}</h3>
-                    <p class="text-xs text-slate-400 mb-3">${item.summary}</p>
-                    <span class="text-[10px] text-slate-500"><i class="fa-regular fa-newspaper mr-1"></i> ${item.source || 'Tin tức'}</span>
-                </article>
-            `).join('');
-        }
+      const top = document.createElement("div");
+      top.className = "card-top";
+      const tag = document.createElement("span");
+      tag.className = "tag";
+      tag.textContent = article.tag || SECTION_LABELS[section];
+      const arrow = document.createElement("span");
+      arrow.className = "card-arrow";
+      arrow.textContent = "↗";
+      top.append(tag, arrow);
 
-        window.addEventListener('DOMContentLoaded', () => {
-            fetchLatestNews(false);
-        });
-    </script>
+      const title = document.createElement("h3");
+      title.textContent = article.title || "Chưa có tiêu đề";
+
+      const meta = document.createElement("div");
+      meta.className = "card-meta";
+      const source = document.createElement("span");
+      source.textContent = article.source || "Chưa rõ nguồn";
+      const dot = document.createElement("i");
+      const time = document.createElement("span");
+      time.textContent = formatDate(article.published_at);
+      meta.append(source, dot, time);
+      card.append(top, title, meta);
+      card.addEventListener("click", () => openArticle(article, section));
+      return card;
+    }
+
+    function renderList(targetId, articles, section) {
+      const target = document.getElementById(targetId);
+      target.replaceChildren();
+      if (!articles.length) {
+        const empty = document.createElement("div");
+        empty.className = "empty-state";
+        empty.textContent = "Chuyên mục này sẽ có tin sau lần cập nhật tiếp theo.";
+        target.append(empty);
+      } else {
+        articles.forEach((article, index) => target.append(makeCard(article, section, index)));
+      }
+      const count = document.getElementById(`${section}-count`);
+      if (count) count.textContent = `${articles.length} bài viết`;
+    }
+
+    function renderData(data) {
+      const tickers = data.tickers || {};
+      $("#updated-at").textContent = data.updated_at || "Chưa có dữ liệu";
+      $("#fed-rate").textContent = tickers.fed_rate || "—";
+      $("#cpi").textContent = tickers.cpi || "—";
+      $("#vnindex").textContent = tickers.vnindex || "—";
+      $("#usd-vnd").textContent = tickers.usd_vnd || "—";
+
+      const change = $("#vnindex-change");
+      const direction = ["up", "down", "flat"].includes(tickers.vnindex_direction) ? tickers.vnindex_direction : "flat";
+      const symbol = direction === "up" ? "▲" : direction === "down" ? "▼" : "●";
+      change.className = `change-badge ${direction}`;
+      change.textContent = `${symbol} ${tickers.vnindex_change || "—"} · ${tickers.vnindex_change_pct || "—"}`;
+
+      ROUTES.slice(1).forEach(section => renderList(`${section}-news`, Array.isArray(data[section]) ? data[section] : [], section));
+      const featured = ROUTES.slice(1).flatMap(section => (Array.isArray(data[section]) ? data[section].slice(0, 1).map(article => ({ article, section })) : []));
+      const overview = $("#overview-news");
+      overview.replaceChildren();
+      featured.forEach(({ article, section }, index) => overview.append(makeCard(article, section, index)));
+      if (!featured.length) overview.innerHTML = '<div class="empty-state">Chưa tải được bản tin mới.</div>';
+    }
+
+    async function loadData(showNotice = false) {
+      try {
+        const response = await fetch(`data.json?v=${Date.now()}`, { cache: "no-store" });
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        newsData = await response.json();
+        renderData(newsData);
+        if (showNotice) showToast("Đã tải dữ liệu mới nhất.");
+      } catch (error) {
+        console.error(error);
+        showToast("Chưa thể tải dữ liệu. Vui lòng thử lại sau.");
+        ROUTES.slice(1).forEach(section => renderList(`${section}-news`, [], section));
+      }
+    }
+
+    function openArticle(article, section) {
+      $("#modal-tag").textContent = article.tag || SECTION_LABELS[section];
+      $("#modal-title").textContent = article.title || "Chưa có tiêu đề";
+      $("#modal-source").textContent = `Nguồn: ${article.source || "Chưa rõ"}`;
+      $("#modal-time").textContent = `Công bố: ${formatDate(article.published_at)}`;
+      $("#modal-summary").textContent = article.summary || "Chưa có bản tóm tắt cho bài viết này.";
+      const link = $("#modal-link");
+      const url = safeUrl(article.url);
+      link.href = url || "#";
+      link.classList.toggle("disabled", !url);
+      link.textContent = url ? "Đọc bài báo gốc ↗" : "Chưa có đường dẫn bài gốc";
+      $("#article-dialog").showModal();
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeArticle() {
+      $("#article-dialog").close();
+      document.body.style.overflow = "";
+    }
+
+    $("#modal-close").addEventListener("click", closeArticle);
+    $("#article-dialog").addEventListener("click", event => { if (event.target === $("#article-dialog")) closeArticle(); });
+    $("#article-dialog").addEventListener("close", () => { document.body.style.overflow = ""; });
+
+    function navigate(route) {
+      const safeRoute = ROUTES.includes(route) ? route : "overview";
+      $$(".view").forEach(view => view.classList.toggle("active", view.dataset.view === safeRoute));
+      $$(".nav-btn").forEach(button => button.classList.toggle("active", button.dataset.route === safeRoute));
+      document.title = safeRoute === "overview" ? "The Daily Edge | Financial Intelligence" : `${SECTION_LABELS[safeRoute]} | The Daily Edge`;
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    $$(".nav-btn").forEach(button => button.addEventListener("click", () => { location.hash = button.dataset.route; }));
+    window.addEventListener("hashchange", () => navigate(location.hash.slice(1)));
+    window.addEventListener("scroll", () => $("#topbar").classList.toggle("scrolled", scrollY > 8), { passive: true });
+    $("#refresh-btn").addEventListener("click", () => loadData(true));
+
+    let toastTimer;
+    function showToast(message) {
+      const toast = $("#toast");
+      toast.textContent = message;
+      toast.classList.add("show");
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toast.classList.remove("show"), 2600);
+    }
+
+    $("#year").textContent = new Date().getFullYear();
+    if (sessionStorage.getItem("daily-edge-auth") === "granted") unlock(); else lock();
+    navigate(location.hash.slice(1));
+    loadData();
+  </script>
 </body>
 </html>
