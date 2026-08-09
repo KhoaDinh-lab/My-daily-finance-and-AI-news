@@ -1,3 +1,5 @@
+import csv
+import io
 import json
 import os
 import re
@@ -23,8 +25,8 @@ REQUIRED_NEWS_FIELDS = ("title", "summary", "source", "tag")
 
 # Tin mới được lấy từ RSS; Groq chỉ biên tập và tóm tắt.
 MODELS_TO_TRY = (
-    "openai/gpt-oss-20b",
     "llama-3.3-70b-versatile",
+    "openai/gpt-oss-20b",
 )
 
 
@@ -36,6 +38,7 @@ Nhiệm vụ:
 - Ưu tiên nguồn chính thức hoặc báo chí uy tín.
 - Không được tự bịa tiêu đề, số liệu, nguồn tin hoặc sự kiện.
 - Không thêm sự kiện hoặc số liệu không có trong dữ liệu đầu vào.
+- Giữ nguyên title gốc nhưng mọi summary và tag PHẢI viết bằng tiếng Việt.
 - Nếu chưa tìm được một số liệu đáng tin cậy, ghi "Chưa có dữ liệu".
 - Viết bằng tiếng Việt dễ hiểu.
 
@@ -147,7 +150,7 @@ def load_previous_tickers():
         return {}
 
 
-def fetch_us_cpi():
+def fetch_us_cpi_from_bls():
     """
     Lấy CPI Mỹ từ BLS.
 
@@ -190,6 +193,48 @@ def fetch_us_cpi():
 
     inflation = (latest_value / previous_value - 1) * 100
     return f"{inflation:.1f}%"
+
+
+def fetch_us_cpi_from_fred():
+    """Nguồn dự phòng CPI từ Federal Reserve Bank of St. Louis."""
+    csv_text = download_text(
+        "https://fred.stlouisfed.org/graph/fredgraph.csv?id=CPIAUCSL"
+    )
+    monthly_values = {}
+
+    for row in csv.DictReader(io.StringIO(csv_text)):
+        date_text = row.get("DATE") or row.get("observation_date")
+        value_text = row.get("CPIAUCSL")
+        if not date_text or not value_text or value_text == ".":
+            continue
+
+        date_value = datetime.strptime(date_text, "%Y-%m-%d")
+        monthly_values[(date_value.year, date_value.month)] = float(value_text)
+
+    if not monthly_values:
+        raise RuntimeError("FRED không trả về dữ liệu CPI theo tháng.")
+
+    latest_year, latest_month = max(monthly_values)
+    latest_value = monthly_values[(latest_year, latest_month)]
+    previous_value = monthly_values.get((latest_year - 1, latest_month))
+    if previous_value is None:
+        raise RuntimeError("FRED không đủ dữ liệu để tính CPI cùng kỳ.")
+
+    inflation = (latest_value / previous_value - 1) * 100
+    return f"{inflation:.1f}%"
+
+
+def fetch_us_cpi():
+    """Ưu tiên BLS và tự chuyển sang FRED nếu BLS tạm lỗi."""
+    try:
+        return fetch_us_cpi_from_bls()
+    except Exception as error:
+        print(
+            f"BLS tạm lỗi ({error}); chuyển sang nguồn FRED...",
+            file=sys.stderr,
+            flush=True,
+        )
+        return fetch_us_cpi_from_fred()
 
 
 def fetch_usd_vnd():
@@ -361,6 +406,7 @@ Không tự thay đổi hai số liệu trên.
 Danh sách tiêu đề RSS:
 {json.dumps(news_sources, ensure_ascii=False)}
 
+Nhắc lại: mọi trường summary và tag bắt buộc hoàn toàn bằng tiếng Việt.
 Trả về đúng JSON theo cấu trúc được yêu cầu.
 """
 
