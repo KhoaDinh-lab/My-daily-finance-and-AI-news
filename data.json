@@ -1,69 +1,148 @@
 {
-  "updated_at": "09/08/2026 15:08",
+  "updated_at": "09/08/2026 15:44",
   "tickers": {
     "fed_rate": "Chưa có dữ liệu",
     "cpi": "3.5%",
-    "vnindex": "Chưa có dữ liệu",
-    "usd_vnd": "26,161"
+    "vnindex": "1,768.06",
+    "usd_vnd": "26,161",
+    "vnindex_change": "+3.28",
+    "vnindex_change_pct": "+0.19%",
+    "vnindex_direction": "up"
   },
   "macro": [
     {
-      "title": "Week Ahead for FX, Bonds: U.S. Inflation Data in Focus - wsj.com",
-      "summary": "Tuần tới, dữ liệu lạm phát của Mỹ sẽ là tâm điểm chú ý của thị trường tài chính. Điều này sẽ ảnh hưởng đến quyết định của Cục Dự trữ Liên bang Mỹ về lãi suất.",
-      "source": "wsj.com",
-      "tag": "Lạm phát Mỹ"
+      "title": "Tuần tới đối với FX, Trái phiếu: Dữ liệu lạm phát của Mỹ đang được chú ý - WSJ",
+      "summary": "Tuần tới, dữ liệu lạm phát của Mỹ sẽ được công bố, điều này sẽ ảnh hưởng đến thị trường tài chính. Các nhà đầu tư sẽ theo dõi chặt chẽ những thông tin này để đưa ra quyết định đầu tư. Dữ liệu lạm phát sẽ giúp họ đánh giá tình hình kinh tế và đưa ra chiến lược đầu tư phù hợp.",
+      "tag": "Lạm phát Mỹ",
+      "source": "WSJ",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQZFU4TzBJT1J6VWhxb3kzVGlxZ0pWaWxBQ1JzUWNfX05aeHd2U0VTVTE5aUtfc2xCVXBnMjhEVnBwem05b3d2bm9DeXUxZGxMSVR1TURVOVdaOFVGcF94ZDdDVkdBTGZNQXktLVdMLVpXdXB6a3ZtUENhVzBqMFhMYmp6bWUzaGdDTldnMHdpQV96QQ?oc=5",
+      "published_at": "Fri, 07 Aug 2026 15:38:00 GMT"
     },
     {
-      "title": "NY Fed finds little change in inflation expectations in July - Reuters",
-      "summary": "Theo khảo sát của Ngân hàng Dự trữ Liên bang New York, kỳ vọng lạm phát trong tháng 7 không thay đổi nhiều. Điều này cho thấy rằng người tiêu dùng và doanh nghiệp vẫn còn thận trọng về tình hình kinh tế.",
+      "title": "NY Fed tìm thấy ít thay đổi trong kỳ vọng lạm phát vào tháng 7 - Reuters",
+      "summary": "Theo báo cáo của NY Fed, kỳ vọng lạm phát vào tháng 7 không có nhiều thay đổi. Điều này cho thấy rằng người tiêu dùng và doanh nghiệp vẫn còn thận trọng về tình hình lạm phát. Tuy nhiên, vẫn cần theo dõi chặt chẽ những thông tin này để đánh giá tình hình kinh tế.",
+      "tag": "Kỳ vọng lạm phát",
       "source": "Reuters",
-      "tag": "Kinh tế Mỹ"
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPbGNfNWhtNDlqY3Zmek5qankza054ZXYycWdMSldrMlUtRjg5cm1iaEpUcGJLbEFNaHRmdFplUWRlcTdnaDlpRkdZbE1mRW5jQklId2xLX2xGaW04bElNa1JEVnpPUkFJR0t3OE1MX0otMVFCd19BakN4Z3lJQ2JLcmhaZkVlSU9udVVBT0JxTXhkUFNoM1ZSUkFlZ0swUVRI?oc=5",
+      "published_at": "Fri, 07 Aug 2026 15:03:43 GMT"
     },
     {
-      "title": "The Fed was expected to hike interest rates in September. Don't bet on that now, economists say. - cbsnews.com",
-      "summary": "Các nhà kinh tế học cho rằng Cục Dự trữ Liên bang Mỹ có thể sẽ không tăng lãi suất vào tháng 9 như dự kiến trước đó. Điều này sẽ phụ thuộc vào tình hình kinh tế và lạm phát trong thời gian tới.",
-      "source": "cbsnews.com",
-      "tag": "FED"
+      "title": "Donald Trump tái khởi động nỗ lực sa thải thống đốc Cục Dự trữ Liên bang Lisa Cook - Al Jazeera",
+      "summary": "Donald Trump đang cố gắng sa thải thống đốc Cục Dự trữ Liên bang Lisa Cook. Điều này có thể ảnh hưởng đến chính sách tiền tệ của Mỹ và gây ra những biến động trên thị trường tài chính. Các nhà đầu tư cần theo dõi chặt chẽ những thông tin này để đánh giá tình hình.",
+      "tag": "Chính sách tiền tệ",
+      "source": "Al Jazeera",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQR2lST2oyVjhTMHprd0JNbG5MYjdxNi00cHVIRW1LcHZLeDFWN0tzem5sMjV3MnNoY0E5eVhhVkdNMk0yOW5Jc2xNbkswRUhjU2hQbllmWThLX3J1RXFoYmJqUTZ2VjVrbUYweXIxcnd5NXgtUmpsNGFDQ0RjNUNQNk5melhxbjNxdmtmZEc5U05NeU8tNGFjT0sya3dZNDhrZk9ncV8yMWRqcmRLaGfSAbMBQVVfeXFMTVFZR3JwUHBOUlM4ZEhETkdZWnRZeGFYX3ZFUzZLOGM3cDh5c1FSX1h3eWZFbS1ObGRHNG1tdV9XdW9rc1FwbGtfX04yR3dkYzN4QnN5VDk5S3ZmQTRFdDRzY2hOTXg5MVpXTFpPWDl4R3pFMTBNRGNXT0hqcmhEbFRjNHIzNTR4LVpCTHJUOXl5S1otajMwWjg0dV9TLWNILTRzYnFmOUxqZVFWeVBiOWZIVmM?oc=5",
+      "published_at": "Fri, 07 Aug 2026 23:41:34 GMT"
+    },
+    {
+      "title": "Đất nước lạm phát: Giá cả Mỹ và tuần đầu tư sắp tới - Finimize",
+      "summary": "Tình hình lạm phát tại Mỹ đang được chú ý. Dữ liệu lạm phát sẽ được công bố trong tuần tới, điều này sẽ ảnh hưởng đến thị trường tài chính. Các nhà đầu tư cần theo dõi chặt chẽ những thông tin này để đưa ra quyết định đầu tư phù hợp.",
+      "tag": "Lạm phát Mỹ",
+      "source": "Finimize",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNNFUzeDZnZnBQR0pmV0p6cW9ieGM1cVg0cWpxa1B0YWRNd19DV3RoTXhqdUpCdHllZE1VNnlTWVBLcU9FTU5aWi0tMGIxV2R5b09fbVBaX0Nad21QOFJSZUVac2didGRnZDBYeW5FdjRmV2VNRmQwU0tNX0ZfTHlsRkV0NTAzanZqbDdMTQ?oc=5",
+      "published_at": "Sun, 09 Aug 2026 04:05:45 GMT"
     }
   ],
   "vietnam": [
     {
       "title": "VN-Index được kỳ vọng tìm lại điểm cân bằng quanh vùng 1760 - 1780 điểm - VnEconomy",
-      "summary": "Chỉ số VN-Index được dự đoán sẽ tìm lại điểm cân bằng trong vùng 1760-1780 điểm. Điều này sẽ phụ thuộc vào tình hình kinh tế và các yếu tố khác.",
+      "summary": "VN-Index đang được kỳ vọng sẽ tìm lại điểm cân bằng quanh vùng 1760 - 1780 điểm. Điều này cho thấy rằng thị trường chứng khoán Việt Nam đang có những tín hiệu tích cực. Các nhà đầu tư cần theo dõi chặt chẽ những thông tin này để đưa ra quyết định đầu tư phù hợp.",
+      "tag": "Thị trường chứng khoán",
       "source": "VnEconomy",
-      "tag": "VN-Index"
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOeXhQV2lvOEZSVGJyS3Uydlp5RXl2eUtrVGx4S1EzeXRPbG5uTXM1N1lBcWN5M1pKXzY2YkY4Uk9NcjgzQUFmcV9qMktIaUNDc3VLUEUtSUE1ajlGbFpRSW9NS241cWdvby10X0x5dmJlbmpFeUlxanpqNUppdUYyYjdBR2xSNzdqYUQwS2sxNWtjenVJMEp0TXF3?oc=5",
+      "published_at": "Sun, 09 Aug 2026 03:24:29 GMT"
     },
     {
       "title": "Góc nhìn TTCK tuần 10/8 - 14/8: Phép thử với VN-Index ở vùng 1.780 - 1.800 điểm - baodautu",
-      "summary": "Tuần tới, chỉ số VN-Index sẽ đối mặt với thử thách ở vùng 1780-1800 điểm. Điều này sẽ phụ thuộc vào tình hình kinh tế và các yếu tố khác.",
+      "summary": "Tuần tới, VN-Index sẽ đối mặt với phép thử ở vùng 1.780 - 1.800 điểm. Điều này sẽ giúp đánh giá tình hình thị trường chứng khoán Việt Nam. Các nhà đầu tư cần theo dõi chặt chẽ những thông tin này để đưa ra quyết định đầu tư phù hợp.",
+      "tag": "Thị trường chứng khoán",
       "source": "baodautu",
-      "tag": "Thị trường chứng khoán"
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQZGNfMTR6RDdWaHF0c2pjWVh2TEJoZXBMS0E5ZDhQZHU4ZXhwSUNxSzB5TTQ0dlVEVmtNM2xtZVItdDJnSzZ6UHd2dDJNVEdXaWxiN0tOUUpLWEFXaWVXazdvXzdsVmVlREVVZ2MxSUpyX0RUNlJpSGtzbVVtR2J5cXJEVjZubG1yRm05bjdaS0JkaUxpQkdYWUdIRUJNQldUUm5aZy0yUkRBcEk?oc=5",
+      "published_at": "Sun, 09 Aug 2026 07:40:00 GMT"
     },
     {
-      "title": "Bổ sung quy định sử dụng tài khoản ngoại tệ, đồng Việt Nam của tổ chức tín dụng nước ngoài - CafeF",
-      "summary": "CafeF đưa tin về việc bổ sung quy định sử dụng tài khoản ngoại tệ và đồng Việt Nam của các tổ chức tín dụng nước ngoài. Điều này sẽ giúp quản lý và giám sát các hoạt động tài chính của các tổ chức này.",
-      "source": "CafeF",
-      "tag": "NHNN"
+      "title": "Định giá thấp, VN-Index có thể tiến gần 2.000 điểm đầu năm 2027? - Tạp chí Kinh tế - Tài chính Online",
+      "summary": "VN-Index đang có định giá thấp, điều này cho thấy rằng có thể tiến gần 2.000 điểm vào đầu năm 2027. Tuy nhiên, vẫn cần theo dõi chặt chẽ những thông tin này để đánh giá tình hình thị trường chứng khoán.",
+      "tag": "Thị trường chứng khoán",
+      "source": "Tạp chí Kinh tế - Tài chính Online",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQUEJydXhrSHRmRkVKQ0RtSzZRZ0IyQjB6UHRjR0Rnck9Nc04xNGxPbnJLbkV0b2pwNGFNTUdnRlJObGMxT3lodmhsRlZzNDJ2UlJZa0Q3R0FVR3ZwakVhWWxEdk5sX2hueWhsSEM1Q1RYSF9yVmtnRXpiQ0JRTktHOG5Uc2JsNmFLUEJpV09wb2JwU25aWENvNXM0d3RsVUFhQkROa2pETWMwUQ?oc=5",
+      "published_at": "Sun, 09 Aug 2026 07:23:04 GMT"
+    },
+    {
+      "title": "Chứng khoán tuần qua: Cổ phiếu công nghệ mất gần 1,8%, VN-Index lại đứng trước 'cửa ải' 1.800 điểm - Báo Dân Việt",
+      "summary": "Tuần qua, cổ phiếu công nghệ đã mất gần 1,8%, điều này cho thấy rằng thị trường chứng khoán đang có những biến động. VN-Index lại đứng trước 'cửa ải' 1.800 điểm, điều này sẽ giúp đánh giá tình hình thị trường.",
+      "tag": "Thị trường chứng khoán",
+      "source": "Báo Dân Việt",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOUllaaUpqWm5wajlCUGRnZmJiNGZ4eFdGQ3JjTlVQUzJubUc1WUxtZjVTZG1MOGxkcENQQTllNnY5b3JKSXB6UzNrQWRVSVVwYldPd0dKVndkT2tpMjN5am10X3lIZm92Q2wyYTJ0QjNfY05xVGsxUkpzX3ZQbm1yVjVZX1NncXBfdllkZlpkaWU0REdWbjhZd3p6amdnTTRET0pIbWl5bFlWSjBxWk10cDhpMkdDdzltcTBleTNvQ2lDQQ?oc=5",
+      "published_at": "Sun, 09 Aug 2026 07:00:00 GMT"
     }
   ],
   "ai": [
     {
-      "title": "Broadcom (AVGO) Pairs AI Chip Boom With A Software Security Push - Yahoo Finance",
-      "summary": "Broadcom đang kết hợp sự phát triển của chip AI với nỗ lực bảo mật phần mềm. Điều này sẽ giúp công ty tăng cường vị thế trong lĩnh vực công nghệ.",
+      "title": "Broadcom (AVGO) kết hợp sự bùng nổ của chip AI với một đợt thúc đẩy bảo mật phần mềm - Yahoo Finance",
+      "summary": "Broadcom đang kết hợp sự bùng nổ của chip AI với một đợt thúc đẩy bảo mật phần mềm. Điều này cho thấy rằng công ty đang đầu tư vào công nghệ mới và cải thiện bảo mật. Các nhà đầu tư cần theo dõi chặt chẽ những thông tin này để đánh giá tình hình.",
+      "tag": "Trí tuệ nhân tạo",
       "source": "Yahoo Finance",
-      "tag": "AI Tech"
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNc3diTDc1NXZtZ0R6Mks5cGY3Slk0MjdvbGoya0xuN0k1bXJ3UmdpNWRtQ0dxRTBLNzNGbjhPQnB5VEttODU0c25wb1lONlBmeURBazNYYXBVYUVUNkE4eDFONUgyS3E4TzVUanYtRk9JWlU5cmNhNHQzVkxSQzFMWXZ6YnNwb1ZLbnB0VmJrQzBLRjZOSWc?oc=5",
+      "published_at": "Sat, 08 Aug 2026 20:42:34 GMT"
     },
     {
-      "title": "The impending, inescapable deluge of AI - The Mercury News",
-      "summary": "The Mercury News đưa tin về sự phát triển không thể tránh khỏi của công nghệ AI. Điều này sẽ mang lại nhiều thay đổi và cơ hội cho các ngành công nghiệp và xã hội.",
+      "title": "Làn sóng lũ lụt sắp tới của AI - The Mercury News",
+      "summary": "AI đang trở thành một công nghệ quan trọng và sẽ có những ảnh hưởng lớn đến nhiều ngành công nghiệp. Các nhà đầu tư cần theo dõi chặt chẽ những thông tin này để đánh giá tình hình và đưa ra quyết định đầu tư phù hợp.",
+      "tag": "Trí tuệ nhân tạo",
       "source": "The Mercury News",
-      "tag": "AI"
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOeXlzNHFGalh6RTJOVzNvSUdITkNoR3pKRkZVNnVvSENBLXdYa3dMNVRISmpfbFV2RTkwNVdXdmZMeUxwZXNnX1M1RGZhREFFYW5QZ29XbUJjLW9rV1BadlRTMmJDWnFfbkQ5WUsxR3l4WWM0SkhHOHZZR0JObkx6alpFUlJXUjFvUUpPLdIBjAFBVV95cUxOeXlzNHFGalh6RTJOVzNvSUdITkNoR3pKRkZVNnVvSENBLXdYa3dMNVRISmpfbFV2RTkwNVdXdmZMeUxwZXNnX1M1RGZhREFFYW5QZ29XbUJjLW9rV1BadlRTMmJDWnFfbkQ5WUsxR3l4WWM0SkhHOHZZR0JObkx6alpFUlJXUjFvUUpPLQ?oc=5",
+      "published_at": "Sat, 08 Aug 2026 22:44:24 GMT"
     },
     {
-      "title": "Anthropic co-designing custom AI inference chips to bypass costly Nvidia GPUs — Samsung reported as manufacturing partner for Claude maker - Tom's Hardware",
-      "summary": "Anthropic đang hợp tác với Samsung để thiết kế chip AI tùy chỉnh, nhằm vượt qua giới hạn của card đồ họa Nvidia. Điều này sẽ giúp công ty tăng cường khả năng cạnh tranh trong lĩnh vực AI.",
+      "title": "Anthropic đồng thiết kế chip suy luận AI tùy chỉnh để vượt qua GPU Nvidia đắt tiền - Tom's Hardware",
+      "summary": "Anthropic đang đồng thiết kế chip suy luận AI tùy chỉnh để vượt qua GPU Nvidia đắt tiền. Điều này cho thấy rằng công ty đang đầu tư vào công nghệ mới và cải thiện hiệu suất. Các nhà đầu tư cần theo dõi chặt chẽ những thông tin này để đánh giá tình hình.",
+      "tag": "Trí tuệ nhân tạo",
       "source": "Tom's Hardware",
-      "tag": "Chip AI"
+      "url": "https://news.google.com/rss/articles/CBMirwJBVV95cUxORm5iZ2QzQkJoZFB2UFlObDRTNU11WDVaeDdFbGYtMWoyRmd2VzV3UWppV2g1TWJjdFZZZ0dlZVNaaWk5MmVCZzFSRUNfRXN4ZFY1TFdKWkx2SWJIczNqaTlzQ1JYTmJnT09ST2VrTUhJMS05dE9DUUczVml5ZUxJbjNYZVpoa1BkclR0QkZmMWZlUFpyTWdtUG5HYkNMUHhuNHJaWDF0SDYza2sycGJ6VUFjS1dzMmRaSDdSV1dIVng5X2IxWDl6aFEwQ0hyVDhDNWRFR24tVDFwMEF0OHpSQjRfOEM5aDlLSHNzanNqb1NpWDRCNTVsV0dxSjA1TDhlU29UNFZvRFVjZFYycnRnSkhsaVFXSmxBNnk4MWRCNURNanRkTkt4dEhmV1Jmc0k?oc=5",
+      "published_at": "Fri, 07 Aug 2026 10:30:00 GMT"
+    },
+    {
+      "title": "Jensen Huang nói rằng AI sẽ giết chết các nhiệm vụ, không phải công việc. Điều này có nghĩa là gì đối với cổ phiếu đang đi trên con đường AI - The Globe and Mail",
+      "summary": "Jensen Huang cho rằng AI sẽ giết chết các nhiệm vụ, không phải công việc. Điều này cho thấy rằng AI sẽ có những ảnh hưởng lớn đến nhiều ngành công nghiệp. Các nhà đầu tư cần theo dõi chặt chẽ những thông tin này để đánh giá tình hình và đưa ra quyết định đầu tư phù hợp.",
+      "tag": "Trí tuệ nhân tạo",
+      "source": "The Globe and Mail",
+      "url": "https://news.google.com/rss/articles/CBMilAJBVV95cUxQTk1ZSjJTTVhSVGFSXzA0M1BxelEycnU4Slh0OFVkSzV0dy1lcVVyeVM1QUU1QzdySlhTOVliMlpBdElVb0ptNGI4LUFaaWxYamlrNzI2Z0xFWFUyaGNjNVZEeXd2Q0xuNUZVN2xPOWxxVEp5eFl4TEk2UWx3Z05YUzk5Zlo4TnJ0aG96aDh4WXlVcHBmdVQyNF9fOFVwV2RTckwwejc0WW03ZlRGazlnYzZ1WG1wY1VlSlB2SW9sdmhGLWsxYS1XLTNia1BLTTgxWnR5YnFMT0RyRWJCaW5FSXExNTVXb1hkXzJlRmJmd1BUNkhnamRnbmtfS09Lc3huc0dGeldlZVRORHBuNnNMVWs1aDE?oc=5",
+      "published_at": "Sun, 09 Aug 2026 04:28:37 GMT"
+    }
+  ],
+  "logistics": [
+    {
+      "title": "Quảng Ninh: Cơ hội bứt phá từ siêu dự án cảng biển - đô thị sinh thái 18 tỷ USD - cafeland.vn",
+      "summary": "Quảng Ninh đang có cơ hội bứt phá từ siêu dự án cảng biển - đô thị sinh thái 18 tỷ USD. Điều này sẽ giúp cải thiện cơ sở hạ tầng và tăng cường phát triển kinh tế. Các nhà đầu tư cần theo dõi chặt chẽ những thông tin này để đánh giá tình hình.",
+      "tag": "Logistics Việt Nam",
+      "source": "cafeland.vn",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPMV9Fb0xEdWRyNnRTaU93MTdtdWtKeWhRZ2M4Slp3YWVfOUFMTy1yT1BVSHVhRnJvQkxsYkRlLTM1UXJ6c3dBcWhMLXljS29peXZsd01yRkUyaHh6NUM0dkRKS01wUFRYUXYwV0RMVnR6N0pOeE83QWE0QnNrVno1SXloZEYwUUZaRnl4Vm9YSmZzWUxoSXU3cjVUNnV6akpBenZOTFhMTFVWVUJPMUxIdl9QLTJWSzg?oc=5",
+      "published_at": "Sun, 09 Aug 2026 07:00:00 GMT"
+    },
+    {
+      "title": "Mở cơ hội để doanh nghiệp Việt bước sâu vào chuỗi cung ứng FDI - congly.vn",
+      "summary": "Doanh nghiệp Việt đang có cơ hội bước sâu vào chuỗi cung ứng FDI. Điều này sẽ giúp cải thiện năng lực cạnh tranh và tăng cường phát triển kinh tế. Các nhà đầu tư cần theo dõi chặt chẽ những thông tin này để đánh giá tình hình.",
+      "tag": "Logistics Việt Nam",
+      "source": "congly.vn",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOS0pfRFd2N0ZlcWdRQWhQNlR4UGpveDAwSEdwNlpEc3BaR2lzLWVSeXZRZGhrc183enl3MlJCOFdhX2UydzhBVk8tZFZodTFPc2dOcWxxLTFSLU9rZ191VmkxZENnZjJjOUhvT2RoWlVlSjFFbUZLamxiM1VGRXpXbmlwbjZsSkpBN0JDOEJteGlaRTJrZVFYbTdLRQ?oc=5",
+      "published_at": "Sun, 09 Aug 2026 08:19:34 GMT"
+    },
+    {
+      "title": "Nhiều sân bay, cảng biển lớn sẽ được kết nối đường sắt - Báo Xây dựng",
+      "summary": "Nhiều sân bay, cảng biển lớn sẽ được kết nối đường sắt. Điều này sẽ giúp cải thiện cơ sở hạ tầng và tăng cường phát triển kinh tế. Các nhà đầu tư cần theo dõi chặt chẽ những thông tin này để đánh giá tình hình.",
+      "tag": "Logistics Việt Nam",
+      "source": "Báo Xây dựng",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPZ1Z6WXcyUk1QeEt4Q3FhX2h3SzBsMW1IbTJDRjVGeGJrNm5OSV95cWs3bFJmZlpJTV9GdzA2OUlKY29Ra250bnNyTjAzb1JFbXJKemQ0WjgwLXpwMVRvZlBVelZ4NkROZEhtVnItSWpiMmIwRlREcFE0OTluZUlONDIxQ3FuUTM3OUdXUVJIbVRIMnpmQ1p0SzByUm5PblU?oc=5",
+      "published_at": "Sun, 09 Aug 2026 02:55:00 GMT"
+    },
+    {
+      "title": "“Mở lối” cho doanh nghiệp công nghiệp hỗ trợ vào chuỗi cung ứng toàn cầu - diendandoanhnghiep.vn",
+      "summary": "Doanh nghiệp công nghiệp hỗ trợ đang có cơ hội vào chuỗi cung ứng toàn cầu. Điều này sẽ giúp cải thiện năng lực cạnh tranh và tăng cường phát triển kinh tế. Các nhà đầu tư cần theo dõi chặt chẽ những thông tin này để đánh giá tình hình.",
+      "tag": "Logistics Việt Nam",
+      "source": "diendandoanhnghiep.vn",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQZHZiUm9pLWhfSDQ1UmJ2X1lVT1AtazlWbVBiS25nSXoyTFNFMnVGamtBZHJwMEYwTnhUdnB1VEw4OTFpSUdCR1o2dmtJNlBYLUZnakszc1JVd1hJOGR1ZWF3RG1DQ0p4VEJXVlEtVmEtSmZJTGJGUHZCLXFnajB5cFc1cWd1YXhSRU5QbXlpNkdGUU5BdFVNUkd0V2VabExOWDN4dlJmMHFzNWgxdGZfVVNuVlk?oc=5",
+      "published_at": "Sat, 08 Aug 2026 20:27:01 GMT"
     }
   ]
 }
