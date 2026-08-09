@@ -4,8 +4,11 @@ import re
 import sys
 import time
 import traceback
+import xml.etree.ElementTree as ET
 from datetime import datetime
+from html import unescape
 from pathlib import Path
+from urllib.parse import quote_plus
 from urllib.request import Request, urlopen
 from zoneinfo import ZoneInfo
 
@@ -18,10 +21,10 @@ REQUIRED_SECTIONS = ("macro", "vietnam", "ai")
 REQUIRED_TICKERS = ("fed_rate", "cpi", "vnindex", "usd_vnd")
 REQUIRED_NEWS_FIELDS = ("title", "summary", "source", "tag")
 
-# Groq Compound có khả năng tìm kiếm thông tin mới trên web.
+# Tin mới được lấy từ RSS; Groq chỉ biên tập và tóm tắt.
 MODELS_TO_TRY = (
-    "groq/compound",
-    "groq/compound-mini",
+    "openai/gpt-oss-20b",
+    "llama-3.3-70b-versatile",
 )
 
 
@@ -29,9 +32,10 @@ SYSTEM_PROMPT = """
 Bạn là biên tập viên của website tin tức The Daily Edge.
 
 Nhiệm vụ:
-- Tìm kiếm và kiểm chứng tin tức mới trong 24-48 giờ gần nhất.
+- Biên tập danh sách tin RSS mới trong 24-48 giờ do chương trình cung cấp.
 - Ưu tiên nguồn chính thức hoặc báo chí uy tín.
 - Không được tự bịa tiêu đề, số liệu, nguồn tin hoặc sự kiện.
+- Không thêm sự kiện hoặc số liệu không có trong dữ liệu đầu vào.
 - Nếu chưa tìm được một số liệu đáng tin cậy, ghi "Chưa có dữ liệu".
 - Viết bằng tiếng Việt dễ hiểu.
 
@@ -92,8 +96,8 @@ Mỗi nhóm nên có 3 tin nếu tìm được đủ nguồn đáng tin cậy.
 """
 
 
-def download_json(url):
-    """Tải JSON từ một API công khai."""
+def download_text(url):
+    """Tải văn bản từ một API hoặc RSS công khai, có tự thử lại."""
     request = Request(
         url,
         headers={
@@ -106,7 +110,7 @@ def download_json(url):
     for attempt in range(1, 4):
         try:
             with urlopen(request, timeout=30) as response:
-                return json.loads(response.read().decode("utf-8"))
+                return response.read().decode("utf-8")
         except Exception as error:
             last_error = error
             if attempt == 3:
@@ -121,6 +125,11 @@ def download_json(url):
             time.sleep(wait_seconds)
 
     raise last_error
+
+
+def download_json(url):
+    """Tải và đọc JSON từ một API công khai."""
+    return json.loads(download_text(url))
 
 
 def load_previous_tickers():
@@ -199,6 +208,68 @@ def fetch_usd_vnd():
     return f"{vnd_rate:,.0f}"
 
 
+def clean_rss_text(value):
+    """Bỏ thẻ HTML và khoảng trắng thừa trong RSS."""
+    text = re.sub(r"<[^>]+>", " ", value or "")
+    return re.sub(r"\s+", " ", unescape(text)).strip()
+
+
+def fetch_google_news(query, language, country, edition, limit=6):
+    """Lấy tiêu đề mới từ Google News RSS, không cần API key."""
+    url = (
+        "https://news.google.com/rss/search?q="
+        f"{quote_plus(query)}&hl={language}&gl={country}&ceid={edition}"
+    )
+    root = ET.fromstring(download_text(url))
+    articles = []
+
+    for item in root.findall("./channel/item")[:limit]:
+        title = clean_rss_text(item.findtext("title"))
+        source_element = item.find("source")
+        source = clean_rss_text(
+            source_element.text if source_element is not None else ""
+        )
+        published_at = clean_rss_text(item.findtext("pubDate"))
+
+        if title:
+            articles.append(
+                {
+                    "title": title,
+                    "source": source or "Google News",
+                    "published_at": published_at,
+                }
+            )
+
+    if not articles:
+        raise RuntimeError(f"RSS không có kết quả cho truy vấn: {query}")
+
+    return articles
+
+
+def fetch_news_sources():
+    """Thu thập ba nhóm tiêu đề mới trước khi gửi sang Groq."""
+    return {
+        "macro": fetch_google_news(
+            "(Federal Reserve OR Fed OR US CPI OR US inflation) when:2d",
+            "en-US",
+            "US",
+            "US:en",
+        ),
+        "vietnam": fetch_google_news(
+            '("VN-Index" OR "USD/VND" OR NHNN OR "FDI Việt Nam") when:2d',
+            "vi",
+            "VN",
+            "VN:vi",
+        ),
+        "ai": fetch_google_news(
+            "(OpenAI OR Anthropic OR Gemini OR AI model OR AI chip) when:2d",
+            "en-US",
+            "US",
+            "US:en",
+        ),
+    }
+
+
 def get_value_or_fallback(fetch_function, ticker_name, old_tickers):
     """Nếu API tạm lỗi thì giữ số liệu cũ thay vì làm hỏng cả website."""
     try:
@@ -266,7 +337,7 @@ def validate_news_data(data):
                     )
 
 
-def fetch_news_from_groq(client, cpi, usd_vnd):
+def fetch_news_from_groq(client, cpi, usd_vnd, news_sources):
     vietnam_time = datetime.now(
         ZoneInfo("Asia/Ho_Chi_Minh")
     ).strftime("%d/%m/%Y %H:%M")
@@ -274,7 +345,8 @@ def fetch_news_from_groq(client, cpi, usd_vnd):
     user_prompt = f"""
 Thời gian hiện tại tại Việt Nam: {vietnam_time}.
 
-Hãy dùng công cụ tìm kiếm web để tạo bản tin mới nhất.
+Hãy biên tập bản tin từ đúng danh sách tiêu đề RSS dưới đây.
+Không tự tìm thêm hoặc thêm chi tiết không có trong tiêu đề.
 
 Hai số liệu đã được lấy trực tiếp từ API dữ liệu:
 - CPI Mỹ theo năm: {cpi}
@@ -285,6 +357,9 @@ Không tự thay đổi hai số liệu trên.
 Đối với fed_rate và vnindex:
 - Chỉ điền số liệu nếu tìm được nguồn mới và đáng tin cậy.
 - Nếu không chắc chắn, ghi "Chưa có dữ liệu".
+
+Danh sách tiêu đề RSS:
+{json.dumps(news_sources, ensure_ascii=False)}
 
 Trả về đúng JSON theo cấu trúc được yêu cầu.
 """
@@ -312,7 +387,8 @@ Trả về đúng JSON theo cấu trúc được yêu cầu.
                         },
                     ],
                     temperature=0.1,
-                    max_completion_tokens=2500,
+                    max_completion_tokens=2200,
+                    response_format={"type": "json_object"},
                 )
 
                 content = response.choices[0].message.content
@@ -405,6 +481,15 @@ def main():
             "usd_vnd",
             old_tickers,
         )
+        news_sources = fetch_news_sources()
+        print(
+            "Đã lấy RSS: "
+            + ", ".join(
+                f"{section}={len(items)}"
+                for section, items in news_sources.items()
+            ),
+            flush=True,
+        )
 
         client = Groq(
             api_key=api_key,
@@ -413,7 +498,12 @@ def main():
             },
         )
 
-        data = fetch_news_from_groq(client, cpi, usd_vnd)
+        data = fetch_news_from_groq(
+            client,
+            cpi,
+            usd_vnd,
+            news_sources,
+        )
         write_json_atomically(data)
 
         print("Đã cập nhật data.json thành công.", flush=True)
