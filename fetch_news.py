@@ -12,18 +12,34 @@ from datetime import datetime, timedelta
 from email.utils import parsedate_to_datetime
 from html import unescape
 from pathlib import Path
-from urllib.parse import quote_plus
+from urllib.parse import quote, quote_plus
 from urllib.request import Request, urlopen
 from zoneinfo import ZoneInfo
 
 from groq import Groq
 
 
+# Giữ log tiếng Việt hoạt động khi chạy thủ công trên Windows.
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8")
+
+
 OUTPUT_FILE = Path(__file__).with_name("data.json")
 HISTORY_FILE = Path(__file__).with_name("history.json")
 HISTORY_RETENTION_DAYS = 30
 
-REQUIRED_SECTIONS = ("macro", "vietnam", "ai", "logistics", "realestate")
+REQUIRED_SECTIONS = (
+    "macro",
+    "vietnam",
+    "ai",
+    "logistics",
+    "gold",
+    "silver",
+    "stocks",
+    "realestate",
+)
 TREND_SECTIONS = ("macro", "vietnam", "ai", "logistics")
 REQUIRED_TICKERS = (
     "fed_rate",
@@ -111,6 +127,30 @@ Cấu trúc bắt buộc:
       "title": "tiêu đề tiếng Việt",
       "summary": "tóm tắt 2 câu tiếng Việt",
       "tag": "Logistics Việt Nam hoặc Logistics Thế giới"
+    }
+  ],
+  "gold": [
+    {
+      "source_index": 0,
+      "title": "tiêu đề tiếng Việt",
+      "summary": "tóm tắt 2-3 câu tiếng Việt",
+      "tag": "Giá vàng / Nhu cầu trú ẩn / Ngân hàng trung ương"
+    }
+  ],
+  "silver": [
+    {
+      "source_index": 0,
+      "title": "tiêu đề tiếng Việt",
+      "summary": "tóm tắt 2-3 câu tiếng Việt",
+      "tag": "Giá bạc / Nhu cầu công nghiệp"
+    }
+  ],
+  "stocks": [
+    {
+      "source_index": 0,
+      "title": "tiêu đề tiếng Việt",
+      "summary": "tóm tắt 2-3 câu tiếng Việt",
+      "tag": "VN30 / VN-Index / Cổ phiếu Việt Nam"
     }
   ],
   "realestate": [
@@ -235,6 +275,38 @@ def download_text(url):
 def download_json(url):
     """Tải và đọc JSON từ một API công khai."""
     return json.loads(download_text(url))
+
+
+def download_json_post(url, payload):
+    """Gửi POST JSON tới nguồn dữ liệu công khai, có tự thử lại."""
+    body = json.dumps(payload).encode("utf-8")
+    request = Request(
+        url,
+        data=body,
+        headers={
+            "User-Agent": (
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                "AppleWebKit/537.36 Chrome/124 Safari/537.36"
+            ),
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+            "Origin": "https://www.tradingview.com",
+        },
+        method="POST",
+    )
+
+    last_error = None
+    for attempt in range(1, 4):
+        try:
+            with urlopen(request, timeout=30) as response:
+                return json.loads(response.read().decode("utf-8"))
+        except Exception as error:
+            last_error = error
+            if attempt == 3:
+                break
+            time.sleep(attempt * 3)
+
+    raise last_error
 
 
 def download_html(url):
@@ -661,47 +733,155 @@ def fetch_usd_vnd():
     return f"{vnd_rate:,.0f}"
 
 
-def fetch_vnindex():
-    """Lấy điểm VN-Index và mức thay đổi ngày từ Yahoo Finance."""
+def fetch_yahoo_market(symbol, label, unit, decimals=2):
+    """Lấy giá hiện tại và phiên liền trước từ biểu đồ Yahoo Finance."""
     payload = download_json(
         "https://query1.finance.yahoo.com/v8/finance/chart/"
-        "%5EVNINDEX.VN?range=1mo&interval=1d"
+        f"{quote(symbol, safe='')}?range=1mo&interval=1d"
     )
     results = payload.get("chart", {}).get("result") or []
     if not results:
-        raise RuntimeError("Yahoo Finance không trả về dữ liệu VN-Index.")
+        raise RuntimeError(f"Yahoo Finance không trả về dữ liệu {label}.")
 
     result = results[0]
     meta = result.get("meta", {})
     current = meta.get("regularMarketPrice")
-    previous = meta.get("chartPreviousClose")
-
     if not isinstance(current, (int, float)):
-        raise RuntimeError("Không tìm thấy điểm VN-Index hiện tại.")
+        raise RuntimeError(f"Không tìm thấy giá {label} hiện tại.")
 
+    closes = (
+        result.get("indicators", {})
+        .get("quote", [{}])[0]
+        .get("close", [])
+    )
+    valid_closes = [
+        value for value in closes if isinstance(value, (int, float))
+    ]
+    previous = valid_closes[-2] if len(valid_closes) >= 2 else None
     if not isinstance(previous, (int, float)):
-        closes = (
-            result.get("indicators", {})
-            .get("quote", [{}])[0]
-            .get("close", [])
-        )
-        valid_closes = [value for value in closes if isinstance(value, (int, float))]
-        if len(valid_closes) >= 2:
-            previous = valid_closes[-2]
+        previous = meta.get("chartPreviousClose")
 
     if not isinstance(previous, (int, float)) or previous == 0:
-        raise RuntimeError("Không tìm thấy điểm VN-Index phiên trước.")
+        raise RuntimeError(f"Không tìm thấy giá {label} phiên trước.")
 
     change = current - previous
     change_pct = change / previous * 100
     direction = "up" if change > 0 else "down" if change < 0 else "flat"
+    market_time = meta.get("regularMarketTime")
+    if isinstance(market_time, (int, float)):
+        checked_at = datetime.fromtimestamp(
+            market_time, tz=ZoneInfo("UTC")
+        ).astimezone(ZoneInfo("Asia/Ho_Chi_Minh")).strftime(
+            "%d/%m/%Y %H:%M"
+        )
+    else:
+        checked_at = datetime.now(ZoneInfo("Asia/Ho_Chi_Minh")).strftime(
+            "%d/%m/%Y %H:%M"
+        )
+
+    source_url = f"https://finance.yahoo.com/quote/{quote(symbol, safe='')}"
+    return {
+        "label": label,
+        "value": f"{current:,.{decimals}f}",
+        "numeric_value": round(current, decimals + 2),
+        "previous_close": f"{previous:,.{decimals}f}",
+        "change": f"{change:+,.{decimals}f}",
+        "change_pct": f"{change_pct:+.2f}%",
+        "direction": direction,
+        "unit": unit,
+        "source": "Yahoo Finance · COMEX" if symbol.endswith("=F") else "Yahoo Finance",
+        "source_url": source_url,
+        "updated_at": checked_at,
+    }
+
+
+def fetch_vnindex():
+    """Lấy điểm VN-Index và mức thay đổi so với phiên trước."""
+    market = fetch_yahoo_market(
+        "^VNINDEX.VN", "VN-Index", "điểm", decimals=2
+    )
 
     return {
-        "vnindex": f"{current:,.2f}",
-        "vnindex_change": f"{change:+,.2f}",
-        "vnindex_change_pct": f"{change_pct:+.2f}%",
-        "vnindex_direction": direction,
+        "vnindex": market["value"],
+        "vnindex_change": market["change"],
+        "vnindex_change_pct": market["change_pct"],
+        "vnindex_direction": market["direction"],
+        "vnindex_previous_close": market["previous_close"],
+        "vnindex_updated_at": market["updated_at"],
     }
+
+
+def fetch_vn30():
+    """Lấy VN30 từ TradingView; nguồn công khai trễ khoảng 15 phút."""
+    payload = download_json_post(
+        "https://scanner.tradingview.com/vietnam/scan",
+        {
+            "symbols": {
+                "tickers": ["HOSE:VN30"],
+                "query": {"types": []},
+            },
+            "columns": [
+                "name",
+                "description",
+                "close",
+                "change",
+                "change_abs",
+                "update_mode",
+            ],
+        },
+    )
+    rows = payload.get("data") or []
+    values = rows[0].get("d") if rows else None
+    if not isinstance(values, list) or len(values) < 5:
+        raise RuntimeError("TradingView không trả về dữ liệu VN30.")
+
+    current, change_pct, change = values[2], values[3], values[4]
+    if not all(isinstance(value, (int, float)) for value in (current, change_pct, change)):
+        raise RuntimeError("Dữ liệu điểm VN30 không hợp lệ.")
+    previous = current - change
+    direction = "up" if change > 0 else "down" if change < 0 else "flat"
+    checked_at = datetime.now(ZoneInfo("Asia/Ho_Chi_Minh")).strftime(
+        "%d/%m/%Y %H:%M"
+    )
+    return {
+        "label": "VN30",
+        "value": f"{current:,.2f}",
+        "numeric_value": round(current, 4),
+        "previous_close": f"{previous:,.2f}",
+        "change": f"{change:+,.2f}",
+        "change_pct": f"{change_pct:+.2f}%",
+        "direction": direction,
+        "unit": "điểm",
+        "source": "TradingView · dữ liệu trễ khoảng 15 phút",
+        "source_url": "https://www.tradingview.com/symbols/HOSE-VN30/",
+        "updated_at": checked_at,
+    }
+
+
+def fetch_precious_metal(symbol, label, usd_vnd, metal):
+    """Lấy Vàng/Bạc quốc tế và quy đổi tham khảo sang VND."""
+    market = fetch_yahoo_market(symbol, label, "USD/oz", decimals=2)
+    try:
+        rate = float(str(usd_vnd).replace(",", ""))
+    except (TypeError, ValueError):
+        rate = None
+    value = market.get("numeric_value")
+    if isinstance(rate, (int, float)) and isinstance(value, (int, float)):
+        if metal == "gold":
+            # 1 lượng = 37,5 g; 1 troy oz = 31,1034768 g.
+            converted = value * rate * (37.5 / 31.1034768) / 1_000_000
+            market["vnd_equivalent"] = f"{converted:,.2f} triệu đồng/lượng"
+            market["conversion_note"] = (
+                "Quy đổi từ giá quốc tế; chưa gồm chênh lệch SJC, thuế và phí."
+            )
+        else:
+            # 1 kg = 32,1507466 troy oz.
+            converted = value * rate * 32.1507466 / 1_000_000
+            market["vnd_equivalent"] = f"{converted:,.2f} triệu đồng/kg"
+            market["conversion_note"] = (
+                "Quy đổi từ giá quốc tế; chưa gồm thuế, phí và chênh lệch bán lẻ."
+            )
+    return market
 
 
 def clean_rss_text(value):
@@ -802,6 +982,48 @@ def fetch_news_sources():
             ),
             limit=8,
         ),
+        "gold": merge_articles(
+            fetch_google_news(
+                '("giá vàng" OR "vàng SJC" OR "thị trường vàng") when:2d',
+                "vi",
+                "VN",
+                "VN:vi",
+                limit=5,
+            ),
+            fetch_google_news(
+                '(gold price OR gold market OR central bank gold) when:2d',
+                "en-US",
+                "US",
+                "US:en",
+                limit=4,
+            ),
+            limit=7,
+        ),
+        "silver": merge_articles(
+            fetch_google_news(
+                '("giá bạc" OR "thị trường bạc") when:3d',
+                "vi",
+                "VN",
+                "VN:vi",
+                limit=4,
+            ),
+            fetch_google_news(
+                '(silver price OR silver market OR industrial silver) when:3d',
+                "en-US",
+                "US",
+                "US:en",
+                limit=5,
+            ),
+            limit=7,
+        ),
+        "stocks": fetch_google_news(
+            '("VN30" OR "cổ phiếu VN30" OR "thị trường chứng khoán Việt Nam" '
+            'OR "VN-Index") when:2d',
+            "vi",
+            "VN",
+            "VN:vi",
+            limit=8,
+        ),
         "realestate": fetch_google_news(
             '("bất động sản TP.HCM" OR "giá căn hộ TP.HCM" OR '
             '"thị trường nhà ở TP.HCM" OR "pháp lý dự án TP.HCM" OR '
@@ -840,6 +1062,12 @@ def get_vnindex_or_fallback(old_tickers):
             "vnindex_direction": old_tickers.get(
                 "vnindex_direction", "flat"
             ),
+            "vnindex_previous_close": old_tickers.get(
+                "vnindex_previous_close", "Chưa có dữ liệu"
+            ),
+            "vnindex_updated_at": old_tickers.get(
+                "vnindex_updated_at", "Chưa rõ"
+            ),
         }
         print(
             f"CẢNH BÁO: Không lấy được VN-Index: {error}. "
@@ -848,6 +1076,150 @@ def get_vnindex_or_fallback(old_tickers):
             flush=True,
         )
         return values
+
+
+def empty_market_asset(label, unit, source):
+    """Cấu trúc dự phòng khi một nguồn giá tạm thời không phản hồi."""
+    return {
+        "label": label,
+        "value": "Chưa có dữ liệu",
+        "previous_close": "Chưa có dữ liệu",
+        "change": "0.00",
+        "change_pct": "0.00%",
+        "direction": "flat",
+        "unit": unit,
+        "source": source,
+        "source_url": "",
+        "updated_at": "Chưa rõ",
+    }
+
+
+def get_market_asset_or_fallback(fetch_function, key, previous_data, fallback):
+    """Giữ snapshot cũ nếu nguồn Vàng/Bạc/VN30 tạm lỗi."""
+    try:
+        value = fetch_function()
+        print(
+            f"Đã lấy {value.get('label', key)}: "
+            f"{value.get('value')} ({value.get('change_pct')})",
+            flush=True,
+        )
+        return value
+    except Exception as error:
+        old_value = previous_data.get("market_snapshot", {}).get(key)
+        value = old_value if isinstance(old_value, dict) else fallback
+        print(
+            f"CẢNH BÁO: Không lấy được {key}: {error}. "
+            "Sử dụng snapshot dự phòng.",
+            file=sys.stderr,
+            flush=True,
+        )
+        return value
+
+
+def fetch_market_snapshot(previous_data, usd_vnd, vnindex_data):
+    """Tạo snapshot các tài sản đầu tư tại mỗi mốc cập nhật."""
+    gold = get_market_asset_or_fallback(
+        lambda: fetch_precious_metal(
+            "GC=F", "Vàng thế giới", usd_vnd, "gold"
+        ),
+        "gold",
+        previous_data,
+        empty_market_asset("Vàng thế giới", "USD/oz", "Yahoo Finance · COMEX"),
+    )
+    silver = get_market_asset_or_fallback(
+        lambda: fetch_precious_metal(
+            "SI=F", "Bạc thế giới", usd_vnd, "silver"
+        ),
+        "silver",
+        previous_data,
+        empty_market_asset("Bạc thế giới", "USD/oz", "Yahoo Finance · COMEX"),
+    )
+    vn30 = get_market_asset_or_fallback(
+        fetch_vn30,
+        "vn30",
+        previous_data,
+        empty_market_asset(
+            "VN30", "điểm", "TradingView · dữ liệu trễ khoảng 15 phút"
+        ),
+    )
+    vnindex = {
+        "label": "VN-Index",
+        "value": vnindex_data.get("vnindex", "Chưa có dữ liệu"),
+        "previous_close": vnindex_data.get(
+            "vnindex_previous_close", "Chưa có dữ liệu"
+        ),
+        "change": vnindex_data.get("vnindex_change", "0.00"),
+        "change_pct": vnindex_data.get("vnindex_change_pct", "0.00%"),
+        "direction": vnindex_data.get("vnindex_direction", "flat"),
+        "unit": "điểm",
+        "source": "Yahoo Finance",
+        "source_url": "https://finance.yahoo.com/quote/%5EVNINDEX.VN/",
+        "updated_at": vnindex_data.get("vnindex_updated_at", "Chưa rõ"),
+    }
+    return {
+        "updated_at": datetime.now(
+            ZoneInfo("Asia/Ho_Chi_Minh")
+        ).strftime("%d/%m/%Y %H:%M"),
+        "gold": gold,
+        "silver": silver,
+        "vnindex": vnindex,
+        "vn30": vn30,
+        "disclaimer": (
+            "Giá Vàng/Bạc là chuẩn quốc tế COMEX; số VND là quy đổi tham khảo, "
+            "không phải giá bán lẻ SJC. VN30 có thể trễ khoảng 15 phút."
+        ),
+    }
+
+
+def build_investment_overview(data):
+    """Tóm tắt tự động toàn bộ nhóm tài sản đầu tư."""
+    snapshot = data.get("market_snapshot", {})
+    real_estate = data.get("real_estate_market", {})
+    gold = snapshot.get("gold", {})
+    silver = snapshot.get("silver", {})
+    vnindex = snapshot.get("vnindex", {})
+    vn30 = snapshot.get("vn30", {})
+    benchmark = real_estate.get("city_benchmark", {})
+
+    def movement(asset):
+        direction = asset.get("direction")
+        verb = "tăng" if direction == "up" else "giảm" if direction == "down" else "đi ngang"
+        return f"{verb} {asset.get('change_pct', '0.00%')}"
+
+    property_text = "chưa có dữ liệu mới"
+    if benchmark.get("value_million_per_sqm"):
+        property_text = (
+            f"{benchmark['value_million_per_sqm']:,.0f} triệu đồng/m² "
+            f"({benchmark.get('change', 'chưa rõ biến động')})"
+        )
+
+    summary = (
+        f"Tại mốc {snapshot.get('updated_at', data.get('updated_at', 'hiện tại'))}, "
+        f"vàng quốc tế {movement(gold)}, bạc {movement(silver)}; "
+        f"VN-Index {movement(vnindex)} và VN30 {movement(vn30)} so với phiên trước. "
+        f"Mốc tham khảo căn hộ sơ cấp khu trung tâm TP.HCM hiện ở {property_text}. "
+        "Hãy đọc từng chuyên mục để đối chiếu động lực giá, tin mới và rủi ro riêng "
+        "của từng loại tài sản."
+    )
+    return {
+        "updated_at": snapshot.get("updated_at", data.get("updated_at", "")),
+        "summary": summary,
+        "items": [
+            {"key": "gold", "label": "Vàng", "status": movement(gold)},
+            {"key": "silver", "label": "Bạc", "status": movement(silver)},
+            {
+                "key": "stocks",
+                "label": "Cổ phiếu Việt Nam",
+                "status": f"VN30 {movement(vn30)}",
+            },
+            {
+                "key": "realestate",
+                "label": "Bất động sản",
+                "status": property_text,
+            },
+        ],
+        "disclaimer": "Thông tin nhằm hỗ trợ theo dõi thị trường, không phải khuyến nghị mua bán.",
+    }
 
 
 def get_value_or_fallback(fetch_function, ticker_name, old_tickers):
@@ -1011,7 +1383,7 @@ Trả về đúng JSON theo cấu trúc được yêu cầu.
                         },
                     ],
                     temperature=0.1,
-                    max_completion_tokens=2400,
+                    max_completion_tokens=3600,
                     response_format={"type": "json_object"},
                 )
 
@@ -1387,6 +1759,11 @@ def main():
             old_tickers,
         )
         vnindex_data = get_vnindex_or_fallback(old_tickers)
+        market_snapshot = fetch_market_snapshot(
+            previous_data,
+            usd_vnd,
+            vnindex_data,
+        )
         news_sources = fetch_news_sources()
         print(
             "Đã lấy RSS: "
@@ -1411,7 +1788,9 @@ def main():
             vnindex_data,
             news_sources,
         )
+        data["market_snapshot"] = market_snapshot
         data["real_estate_market"] = fetch_real_estate_market(previous_data)
+        data["investment_overview"] = build_investment_overview(data)
         history = update_history(data, previous_data)
 
         try:

@@ -92,6 +92,14 @@
     .nav-btn:hover { color: var(--text); background: rgba(255,255,255,.055); transform: translateY(-1px); }
     .nav-btn.active { color: var(--text); background: rgba(94,230,181,.1); box-shadow: inset 0 0 0 1px rgba(94,230,181,.14); }
     .nav-count { display:inline-grid; place-items:center; min-width:19px; height:19px; margin-left:5px; padding:0 5px; border-radius:999px; color:#07111f; background:var(--green); font-size:10px; font-weight:900; }
+    .nav-dropdown { position:relative; }
+    .nav-dropdown-trigger { display:flex; align-items:center; gap:6px; }
+    .nav-chevron { display:inline-block; font-size:11px; transition:transform .22s; }
+    .nav-menu { position:absolute; top:calc(100% + 9px); right:0; z-index:45; min-width:245px; padding:8px; border:1px solid rgba(255,255,255,.14); border-radius:16px; background:rgba(10,24,40,.98); box-shadow:0 24px 70px rgba(0,0,0,.36); opacity:0; visibility:hidden; transform:translateY(-7px); transition:.22s; }
+    .nav-dropdown:hover .nav-menu, .nav-dropdown:focus-within .nav-menu, .nav-dropdown.open .nav-menu { opacity:1; visibility:visible; transform:translateY(0); }
+    .nav-dropdown:hover .nav-chevron, .nav-dropdown:focus-within .nav-chevron, .nav-dropdown.open .nav-chevron { transform:rotate(180deg); }
+    .nav-sub-btn { width:100%; display:flex; align-items:center; gap:10px; padding:11px 12px; border:0; border-radius:10px; color:var(--muted); background:transparent; cursor:pointer; text-align:left; font-size:13px; font-weight:700; transition:.18s; }
+    .nav-sub-btn:hover, .nav-sub-btn.active { color:var(--text); background:rgba(94,230,181,.09); }
     .icon-btn {
       width: 40px; height: 40px; display: grid; place-items: center; flex: 0 0 auto;
       border: 1px solid var(--line); border-radius: 12px; cursor: pointer;
@@ -135,6 +143,40 @@
     .change-badge.up { color: var(--green); background: rgba(94,230,181,.11); }
     .change-badge.down { color: var(--danger); background: rgba(255,141,155,.11); }
     .change-badge.flat { color: var(--muted); background: rgba(255,255,255,.06); }
+
+    .investment-summary { position:relative; overflow:hidden; display:grid; grid-template-columns:1.25fr .75fr; gap:28px; align-items:center; padding:34px; border:1px solid rgba(255,206,114,.2); border-radius:26px; background:linear-gradient(135deg,rgba(255,206,114,.11),rgba(110,216,255,.055) 55%,rgba(168,156,255,.08)); }
+    .investment-summary::after { content:""; position:absolute; width:300px; height:300px; right:-130px; top:-170px; border-radius:50%; background:#ffce72; opacity:.11; filter:blur(18px); }
+    .investment-summary h2 { position:relative; margin:14px 0 12px; font-size:clamp(29px,4vw,48px); line-height:1.12; }
+    .investment-summary p { position:relative; margin:0; color:#ccd7e2; font-size:16px; line-height:1.8; }
+    .summary-radar { position:relative; width:170px; height:170px; display:grid; place-items:center; justify-self:center; border:1px solid rgba(255,206,114,.2); border-radius:50%; background:radial-gradient(circle,rgba(255,206,114,.16),transparent 65%); }
+    .summary-radar::before, .summary-radar::after { content:""; position:absolute; border:1px solid rgba(110,216,255,.2); border-radius:50%; animation:radar-pulse 3s ease-out infinite; }
+    .summary-radar::before { inset:22px; }
+    .summary-radar::after { inset:46px; animation-delay:1s; }
+    .radar-icon { font-size:52px; animation:asset-float 3.4s ease-in-out infinite; }
+    @keyframes radar-pulse { 0% { transform:scale(.72); opacity:.2; } 65% { opacity:.75; } 100% { transform:scale(1.22); opacity:0; } }
+    @keyframes asset-float { 50% { transform:translateY(-8px) rotate(3deg); } }
+    .asset-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px; margin-top:20px; }
+    .asset-card { position:relative; overflow:hidden; min-height:235px; padding:22px; border:1px solid var(--line); border-radius:21px; color:var(--text); background:rgba(255,255,255,.035); cursor:pointer; text-align:left; transition:.28s; }
+    .asset-card:hover { transform:translateY(-5px); border-color:rgba(255,255,255,.21); background:rgba(255,255,255,.065); }
+    .asset-card::after { content:""; position:absolute; width:120px; height:120px; right:-58px; bottom:-64px; border-radius:50%; background:var(--asset-color,var(--green)); opacity:.13; }
+    .asset-head { display:flex; align-items:center; justify-content:space-between; gap:14px; }
+    .asset-icon { width:46px; height:46px; display:grid; place-items:center; border:1px solid rgba(255,255,255,.12); border-radius:15px; background:rgba(255,255,255,.06); font-size:24px; animation:asset-float 3.8s ease-in-out infinite; }
+    .asset-card:nth-child(2) .asset-icon { animation-delay:.6s; }
+    .asset-card:nth-child(3) .asset-icon { animation-delay:1.1s; }
+    .asset-card:nth-child(4) .asset-icon { animation-delay:1.7s; }
+    .asset-label { color:var(--muted); font-size:11px; font-weight:800; letter-spacing:.1em; text-transform:uppercase; }
+    .asset-value { margin:26px 0 8px; font:750 clamp(24px,3vw,34px)/1 "Manrope"; letter-spacing:-.04em; }
+    .asset-unit, .asset-previous, .asset-source { color:var(--muted); font-size:11px; }
+    .asset-previous { margin-top:13px; }
+    .asset-source { display:block; margin-top:14px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+    .market-detail { display:grid; grid-template-columns:1.1fr .9fr; gap:18px; margin-bottom:18px; }
+    .market-detail-card { padding:30px; border:1px solid var(--line); border-radius:24px; background:rgba(255,255,255,.035); }
+    .market-detail-card.primary { background:linear-gradient(140deg,rgba(255,206,114,.1),rgba(255,255,255,.03)); }
+    .market-detail-value { margin:23px 0 10px; font:750 clamp(38px,6vw,68px)/.95 "Manrope"; letter-spacing:-.055em; }
+    .market-conversion { margin:22px 0 8px; color:var(--cyan); font-size:18px; font-weight:800; }
+    .market-detail-note { color:var(--muted); font-size:12px; line-height:1.7; }
+    .market-source-link { display:inline-flex; margin-top:18px; color:var(--green); font-size:12px; font-weight:800; text-decoration:none; }
+    .investment-disclaimer { margin:18px 0 0; color:var(--muted); font-size:11px; }
 
     .personal-bar { display:grid; grid-template-columns:1fr auto; gap:26px; align-items:center; margin:-30px 0 34px; padding:22px 24px; border:1px solid rgba(94,230,181,.16); border-radius:20px; background:linear-gradient(115deg,rgba(94,230,181,.08),rgba(110,216,255,.035) 50%,rgba(168,156,255,.06)); box-shadow:0 18px 60px rgba(0,0,0,.14); }
     .welcome-row { display:flex; align-items:center; gap:14px; }
@@ -324,6 +366,9 @@
 
     .toast { position:fixed; left:50%; bottom:28px; z-index:90; transform:translate(-50%,20px); padding:11px 16px; border:1px solid var(--line); border-radius:12px; background:#142337; box-shadow:var(--shadow); opacity:0; pointer-events:none; transition:.3s; font-size:13px; }
     .toast.show { opacity:1; transform:translate(-50%,0); }
+    .runner-cat { position:fixed; left:-70px; bottom:9px; z-index:18; pointer-events:none; font-size:29px; filter:drop-shadow(0 8px 12px rgba(0,0,0,.35)); animation:cat-walk 24s linear infinite; }
+    .runner-cat::after { content:"· · ·"; position:absolute; right:31px; top:2px; width:44px; color:rgba(110,216,255,.45); font-size:10px; letter-spacing:3px; }
+    @keyframes cat-walk { 0% { transform:translateX(-80px) scaleX(1); } 48% { transform:translateX(calc(100vw + 80px)) scaleX(1); } 50% { transform:translateX(calc(100vw + 80px)) scaleX(-1); } 98% { transform:translateX(-80px) scaleX(-1); } 100% { transform:translateX(-80px) scaleX(1); } }
 
     @media (max-width: 980px) {
       .topbar-inner { flex-wrap:wrap; gap:10px; padding:13px 0 10px; }
@@ -336,6 +381,8 @@
       .personal-bar { grid-template-columns:1fr; margin-top:0; }
       .personal-stats { justify-content:flex-start; }
       .trend-visual { grid-template-columns:1fr; }
+      .investment-summary, .market-detail { grid-template-columns:1fr; }
+      .asset-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
       .market-hero { grid-template-columns:1fr; }
       .area-grid, .property-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
     }
@@ -345,6 +392,8 @@
       .view { padding:50px 0 70px; }
       .hero { padding-bottom:38px; }
       .ticker-grid, .news-grid, .trend-grid, .horizon-grid, .area-grid, .property-grid { grid-template-columns:1fr; }
+      .asset-grid { grid-template-columns:1fr; }
+      .nav-menu { position:fixed; top:122px; left:12px; right:12px; min-width:0; }
       .market-section-head { align-items:start; flex-direction:column; }
       .range-row { grid-template-columns:1.1fr 1fr; gap:5px 12px; padding:12px 16px; }
       .range-row.range-head { display:none; }
@@ -407,7 +456,16 @@
         <button class="nav-btn" data-route="vietnam">Việt Nam</button>
         <button class="nav-btn" data-route="ai">AI</button>
         <button class="nav-btn" data-route="logistics">Logistics</button>
-        <button class="nav-btn" data-route="realestate">BĐS</button>
+        <div class="nav-dropdown" id="investment-menu">
+          <button class="nav-btn nav-dropdown-trigger" id="investment-trigger" type="button" aria-haspopup="true" aria-expanded="false">Đầu tư <span class="nav-chevron">⌄</span></button>
+          <div class="nav-menu" role="menu">
+            <button class="nav-sub-btn" data-route="investment" role="menuitem"><span>◈</span> Tổng hợp đầu tư</button>
+            <button class="nav-sub-btn" data-route="gold" role="menuitem"><span>●</span> Vàng</button>
+            <button class="nav-sub-btn" data-route="silver" role="menuitem"><span>◉</span> Bạc</button>
+            <button class="nav-sub-btn" data-route="stocks" role="menuitem"><span>↗</span> Cổ phiếu Việt Nam</button>
+            <button class="nav-sub-btn" data-route="realestate" role="menuitem"><span>⌂</span> Bất động sản</button>
+          </div>
+        </div>
         <button class="nav-btn" data-route="trends">Xu hướng</button>
         <button class="nav-btn" data-route="missed">Bỏ lỡ <span class="nav-count" id="missed-nav-count">0</span></button>
       </nav>
@@ -467,6 +525,36 @@
     <section class="view" data-view="vietnam"><div class="shell"><header class="topic-header"><span class="eyebrow">Thị trường Việt Nam</span><h1>Nhịp đập<br>kinh tế trong nước.</h1><p>VN-Index, tỷ giá, chính sách điều hành và dòng vốn được chọn lọc trong một không gian dễ đọc.</p></header><div class="section-bar"><div><h2>Bản tin mới</h2></div><span class="topic-count" id="vietnam-count"></span></div><div class="news-grid" id="vietnam-news"></div></div></section>
     <section class="view" data-view="ai"><div class="shell"><header class="topic-header"><span class="eyebrow">Frontiers of AI</span><h1>Công nghệ đang<br>định hình ngày mai.</h1><p>Mô hình mới, AI agent, hạ tầng chip và những thay đổi quan trọng trong hệ sinh thái trí tuệ nhân tạo.</p></header><div class="section-bar"><div><h2>Bản tin mới</h2></div><span class="topic-count" id="ai-count"></span></div><div class="news-grid" id="ai-news"></div></div></section>
     <section class="view" data-view="logistics"><div class="shell"><header class="topic-header"><span class="eyebrow">Logistics & Supply Chain</span><h1>Dòng chảy hàng hóa<br>không ngừng nghỉ.</h1><p>Cảng biển, vận tải, chuỗi cung ứng và thị trường logistics tại Việt Nam lẫn trên thế giới.</p></header><div class="section-bar"><div><h2>Bản tin mới</h2></div><span class="topic-count" id="logistics-count"></span></div><div class="news-grid" id="logistics-news"></div></div></section>
+    <section class="view" data-view="investment">
+      <div class="shell">
+        <header class="topic-header"><span class="eyebrow">Investment Intelligence</span><h1>Một nơi nhìn<br>toàn bộ tài sản.</h1><p>Đối chiếu Vàng, Bạc, VN-Index, VN30 và bất động sản trong cùng một bức tranh, tại đúng mốc cập nhật của The Daily Edge.</p></header>
+        <div id="investment-overview"><div class="empty-state">Đang tải toàn cảnh đầu tư…</div></div>
+      </div>
+    </section>
+    <section class="view" data-view="gold">
+      <div class="shell">
+        <header class="topic-header"><span class="eyebrow">Gold Market</span><h1>Vàng và nhịp<br>trú ẩn toàn cầu.</h1><p>Giá vàng COMEX, quy đổi tham khảo sang VND và mức thay đổi so với phiên giao dịch trước.</p></header>
+        <div id="gold-market"><div class="empty-state">Đang tải giá vàng…</div></div>
+        <div class="section-bar"><div><span class="eyebrow">Tin & động lực</span><h2>Chuyển động của Vàng</h2></div><span class="topic-count" id="gold-count"></span></div>
+        <div class="news-grid" id="gold-news"></div>
+      </div>
+    </section>
+    <section class="view" data-view="silver">
+      <div class="shell">
+        <header class="topic-header"><span class="eyebrow">Silver Market</span><h1>Bạc giữa đầu tư<br>và công nghiệp.</h1><p>Giá bạc COMEX, quy đổi tham khảo sang VND và mức thay đổi so với phiên giao dịch trước.</p></header>
+        <div id="silver-market"><div class="empty-state">Đang tải giá bạc…</div></div>
+        <div class="section-bar"><div><span class="eyebrow">Tin & động lực</span><h2>Chuyển động của Bạc</h2></div><span class="topic-count" id="silver-count"></span></div>
+        <div class="news-grid" id="silver-news"></div>
+      </div>
+    </section>
+    <section class="view" data-view="stocks">
+      <div class="shell">
+        <header class="topic-header"><span class="eyebrow">Vietnam Equity Market</span><h1>VN-Index, VN30<br>và dòng tiền.</h1><p>Theo dõi chỉ số thị trường rộng và nhóm 30 doanh nghiệp vốn hóa, thanh khoản hàng đầu HOSE.</p></header>
+        <div id="stocks-market"><div class="empty-state">Đang tải VN-Index và VN30…</div></div>
+        <div class="section-bar"><div><span class="eyebrow">Tin thị trường</span><h2>Cổ phiếu Việt Nam</h2></div><span class="topic-count" id="stocks-count"></span></div>
+        <div class="news-grid" id="stocks-news"></div>
+      </div>
+    </section>
     <section class="view" data-view="realestate">
       <div class="shell">
         <header class="topic-header"><span class="eyebrow">Real Estate Intelligence</span><h1>Nhà để ở.<br>Tài sản để hiểu.</h1><p>Mặt bằng giá căn hộ, nhà riêng và đất nền tại TP.HCM được trình bày theo khu vực, phân khúc và dự án tham khảo.</p></header>
@@ -532,6 +620,7 @@
     </div>
   </dialog>
   <div class="toast" id="toast" role="status"></div>
+  <div class="runner-cat" aria-hidden="true">🐈</div>
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
   <script>
@@ -541,10 +630,11 @@
       auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true }
     });
     const PROGRESS_KEY = "daily-edge-progress-v1";
-    const CONTENT_SECTIONS = ["macro", "vietnam", "ai", "logistics", "realestate"];
+    const CONTENT_SECTIONS = ["macro", "vietnam", "ai", "logistics", "gold", "silver", "stocks", "realestate"];
     const TREND_SECTIONS = ["macro", "vietnam", "ai", "logistics"];
-    const ROUTES = ["overview", ...CONTENT_SECTIONS, "trends", "missed"];
-    const SECTION_LABELS = { macro: "Vĩ mô", vietnam: "Việt Nam", ai: "Trí tuệ nhân tạo", logistics: "Logistics", realestate: "Bất động sản", trends: "Xu hướng", missed: "Bài bỏ lỡ" };
+    const INVESTMENT_ROUTES = ["investment", "gold", "silver", "stocks", "realestate"];
+    const ROUTES = ["overview", "macro", "vietnam", "ai", "logistics", ...INVESTMENT_ROUTES, "trends", "missed"];
+    const SECTION_LABELS = { overview: "Tổng quan", macro: "Vĩ mô", vietnam: "Việt Nam", ai: "Trí tuệ nhân tạo", logistics: "Logistics", investment: "Tổng hợp đầu tư", gold: "Vàng", silver: "Bạc", stocks: "Cổ phiếu Việt Nam", realestate: "Bất động sản", trends: "Xu hướng", missed: "Bài bỏ lỡ" };
     let newsData = null;
     let historyData = { articles: [] };
     let progress = loadProgress();
@@ -1234,6 +1324,181 @@
       $("#trend-disclaimer").textContent = `${trends.disclaimer || "Phân tích AI chỉ mang tính tham khảo."} Cập nhật: ${trends.generated_at || "chưa rõ"}.`;
     }
 
+    function marketDirection(asset) {
+      return ["up", "down", "flat"].includes(asset?.direction) ? asset.direction : "flat";
+    }
+
+    function marketBadge(asset) {
+      const direction = marketDirection(asset);
+      const badge = document.createElement("span");
+      badge.className = `change-badge ${direction}`;
+      const symbol = direction === "up" ? "▲" : direction === "down" ? "▼" : "●";
+      badge.textContent = `${symbol} ${asset?.change || "—"} · ${asset?.change_pct || "—"}`;
+      return badge;
+    }
+
+    function investmentAssetCard(route, asset, icon, color, secondaryText = "") {
+      const card = document.createElement("button");
+      card.type = "button";
+      card.className = "asset-card";
+      card.style.setProperty("--asset-color", color);
+      card.addEventListener("click", () => { location.hash = route; });
+
+      const head = document.createElement("div");
+      head.className = "asset-head";
+      const label = document.createElement("span");
+      label.className = "asset-label";
+      label.textContent = asset?.label || SECTION_LABELS[route];
+      const iconBox = document.createElement("span");
+      iconBox.className = "asset-icon";
+      iconBox.textContent = icon;
+      head.append(label, iconBox);
+
+      const value = document.createElement("div");
+      value.className = "asset-value";
+      value.textContent = asset?.value || "Chưa có dữ liệu";
+      const unit = document.createElement("div");
+      unit.className = "asset-unit";
+      unit.textContent = secondaryText || asset?.unit || "";
+      const previous = document.createElement("div");
+      previous.className = "asset-previous";
+      previous.textContent = asset?.previous_close ? `Phiên trước: ${asset.previous_close}` : "Mở chuyên mục để xem chi tiết";
+      const source = document.createElement("span");
+      source.className = "asset-source";
+      source.textContent = asset?.source || "The Daily Edge";
+      card.append(head, value, unit, marketBadge(asset), previous, source);
+      return card;
+    }
+
+    function realEstateAsset(market) {
+      const benchmark = market?.city_benchmark || {};
+      const changeText = String(benchmark.change || "0.00%");
+      const numericChange = Number.parseFloat(changeText.replace(",", ".")) || 0;
+      return {
+        label: "Bất động sản TP.HCM",
+        value: benchmark.value_million_per_sqm ? `${Number(benchmark.value_million_per_sqm).toLocaleString("vi-VN")}` : "Chưa có dữ liệu",
+        unit: "triệu đồng/m² · căn hộ sơ cấp khu trung tâm",
+        previous_close: benchmark.period || "Chưa rõ kỳ",
+        change: changeText,
+        change_pct: benchmark.period || "—",
+        direction: numericChange > 0 ? "up" : numericChange < 0 ? "down" : "flat",
+        source: benchmark.source || "OneHousing"
+      };
+    }
+
+    function renderInvestmentOverview(data) {
+      const target = $("#investment-overview");
+      if (!target) return;
+      target.replaceChildren();
+      const snapshot = data.market_snapshot || {};
+      const overview = data.investment_overview || {};
+
+      const summary = document.createElement("section");
+      summary.className = "investment-summary";
+      const copy = document.createElement("div");
+      const eyebrow = document.createElement("span");
+      eyebrow.className = "eyebrow";
+      eyebrow.textContent = "Tóm tắt toàn bộ danh mục";
+      const title = document.createElement("h2");
+      title.textContent = "Tín hiệu thị trường trong một lần nhìn.";
+      const paragraph = document.createElement("p");
+      paragraph.textContent = overview.summary || "Dữ liệu đầu tư sẽ xuất hiện sau lần cập nhật tiếp theo.";
+      copy.append(eyebrow, title, paragraph);
+      const radar = document.createElement("div");
+      radar.className = "summary-radar";
+      const radarIcon = document.createElement("span");
+      radarIcon.className = "radar-icon";
+      radarIcon.textContent = "◈";
+      radar.append(radarIcon);
+      summary.append(copy, radar);
+
+      const grid = document.createElement("div");
+      grid.className = "asset-grid";
+      grid.append(
+        investmentAssetCard("gold", snapshot.gold, "●", "#ffce72"),
+        investmentAssetCard("silver", snapshot.silver, "◉", "#d8e3ef"),
+        investmentAssetCard("stocks", snapshot.vn30, "↗", "#5ee6b5", snapshot.vnindex?.value ? `VN-Index ${snapshot.vnindex.value} · VN30` : "VN30"),
+        investmentAssetCard("realestate", realEstateAsset(data.real_estate_market), "⌂", "#a89cff")
+      );
+      const disclaimer = document.createElement("p");
+      disclaimer.className = "investment-disclaimer";
+      disclaimer.textContent = `${snapshot.disclaimer || ""} ${overview.disclaimer || ""}`.trim();
+      target.append(summary, grid, disclaimer);
+    }
+
+    function marketPanel(asset, icon, primary = true) {
+      const panel = document.createElement("article");
+      panel.className = `market-detail-card${primary ? " primary" : ""}`;
+      const head = document.createElement("div");
+      head.className = "asset-head";
+      const label = document.createElement("span");
+      label.className = "asset-label";
+      label.textContent = asset?.label || "Thị trường";
+      const iconBox = document.createElement("span");
+      iconBox.className = "asset-icon";
+      iconBox.textContent = icon;
+      head.append(label, iconBox);
+      const value = document.createElement("div");
+      value.className = "market-detail-value";
+      value.textContent = asset?.value || "Chưa có dữ liệu";
+      const unit = document.createElement("div");
+      unit.className = "asset-unit";
+      unit.textContent = asset?.unit || "";
+      panel.append(head, value, unit, marketBadge(asset));
+      if (asset?.vnd_equivalent) {
+        const conversion = document.createElement("div");
+        conversion.className = "market-conversion";
+        conversion.textContent = `≈ ${asset.vnd_equivalent}`;
+        panel.append(conversion);
+      }
+      const note = document.createElement("p");
+      note.className = "market-detail-note";
+      note.textContent = `Phiên trước: ${asset?.previous_close || "—"}. Cập nhật: ${asset?.updated_at || "chưa rõ"}. ${asset?.conversion_note || "So sánh với phiên giao dịch liền trước."}`;
+      panel.append(note);
+      const url = safeUrl(asset?.source_url);
+      if (url) {
+        const link = document.createElement("a");
+        link.className = "market-source-link";
+        link.href = url;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        link.textContent = `${asset.source || "Mở nguồn dữ liệu"} ↗`;
+        panel.append(link);
+      }
+      return panel;
+    }
+
+    function renderMarketSnapshot(data) {
+      const snapshot = data.market_snapshot || {};
+      [["gold-market", snapshot.gold, "●"], ["silver-market", snapshot.silver, "◉"]].forEach(([targetId, asset, icon]) => {
+        const target = document.getElementById(targetId);
+        if (!target) return;
+        target.replaceChildren();
+        const wrap = document.createElement("div");
+        wrap.className = "market-detail";
+        wrap.append(marketPanel(asset || {}, icon, true));
+        const guide = document.createElement("article");
+        guide.className = "market-detail-card";
+        const guideTitle = document.createElement("h3");
+        guideTitle.textContent = "Cách đọc con số";
+        const guideText = document.createElement("p");
+        guideText.className = "market-detail-note";
+        guideText.textContent = "Giá chính hiển thị theo USD trên mỗi troy ounce. Mức tăng/giảm được tính với phiên giao dịch liền trước; số VND chỉ là quy đổi để so sánh nhanh, không phải báo giá mua bán trong nước.";
+        guide.append(guideTitle, guideText);
+        wrap.append(guide);
+        target.append(wrap);
+      });
+
+      const stocksTarget = $("#stocks-market");
+      if (stocksTarget) {
+        stocksTarget.replaceChildren();
+        const stocksGrid = document.createElement("div");
+        stocksGrid.className = "market-detail";
+        stocksGrid.append(marketPanel(snapshot.vnindex || {}, "〽", true), marketPanel(snapshot.vn30 || {}, "↗", false));
+        stocksTarget.append(stocksGrid);
+      }
+    }
+
     function renderData(data) {
       const tickers = data.tickers || {};
       $("#updated-at").textContent = data.updated_at || "Chưa có dữ liệu";
@@ -1247,6 +1512,8 @@
       change.className = `change-badge ${direction}`;
       change.textContent = `${symbol} ${tickers.vnindex_change || "—"} · ${tickers.vnindex_change_pct || "—"}`;
       renderNewsCollections();
+      renderInvestmentOverview(data);
+      renderMarketSnapshot(data);
       renderRealEstateMarket(data.real_estate_market);
       renderTrends(data.trends);
       renderPersonalization();
@@ -1301,12 +1568,28 @@
     function navigate(route) {
       const safeRoute = ROUTES.includes(route) ? route : "overview";
       $$(".view").forEach(view => view.classList.toggle("active", view.dataset.view === safeRoute));
-      $$(".nav-btn").forEach(button => button.classList.toggle("active", button.dataset.route === safeRoute));
+      $$(".nav-btn[data-route]").forEach(button => button.classList.toggle("active", button.dataset.route === safeRoute));
+      $$(".nav-sub-btn").forEach(button => button.classList.toggle("active", button.dataset.route === safeRoute));
+      $("#investment-trigger").classList.toggle("active", INVESTMENT_ROUTES.includes(safeRoute));
+      $("#investment-menu").classList.remove("open");
+      $("#investment-trigger").setAttribute("aria-expanded", "false");
       document.title = safeRoute === "overview" ? "The Daily Edge | Financial Intelligence" : `${SECTION_LABELS[safeRoute]} | The Daily Edge`;
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
 
-    $$(".nav-btn").forEach(button => button.addEventListener("click", () => { location.hash = button.dataset.route; }));
+    $$("[data-route]").forEach(button => button.addEventListener("click", () => { location.hash = button.dataset.route; }));
+    $("#investment-trigger").addEventListener("click", event => {
+      event.stopPropagation();
+      const menu = $("#investment-menu");
+      const isOpen = menu.classList.toggle("open");
+      $("#investment-trigger").setAttribute("aria-expanded", String(isOpen));
+    });
+    document.addEventListener("click", event => {
+      if (!event.target.closest("#investment-menu")) {
+        $("#investment-menu").classList.remove("open");
+        $("#investment-trigger").setAttribute("aria-expanded", "false");
+      }
+    });
     $("#missed-shortcut").addEventListener("click", () => { location.hash = "missed"; });
     $("#mark-all-read").addEventListener("click", () => {
       const allArticles = getAllArticles();

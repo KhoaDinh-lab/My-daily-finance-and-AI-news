@@ -9,6 +9,71 @@
     "vnindex_change_pct": "+0.49%",
     "vnindex_direction": "up"
   },
+  "market_snapshot": {
+    "updated_at": "10/08/2026 22:20",
+    "gold": {
+      "label": "Vàng thế giới",
+      "value": "4,404.50",
+      "numeric_value": 4404.5,
+      "previous_close": "4,340.70",
+      "change": "+63.80",
+      "change_pct": "+1.47%",
+      "direction": "up",
+      "unit": "USD/oz",
+      "source": "Yahoo Finance · COMEX",
+      "source_url": "https://finance.yahoo.com/quote/GC%3DF",
+      "updated_at": "10/08/2026 22:09",
+      "vnd_equivalent": "138.78 triệu đồng/lượng",
+      "conversion_note": "Quy đổi từ giá quốc tế; chưa gồm chênh lệch SJC, thuế và phí."
+    },
+    "silver": {
+      "label": "Bạc thế giới",
+      "value": "64.91",
+      "numeric_value": 64.91,
+      "previous_close": "63.33",
+      "change": "+1.58",
+      "change_pct": "+2.49%",
+      "direction": "up",
+      "unit": "USD/oz",
+      "source": "Yahoo Finance · COMEX",
+      "source_url": "https://finance.yahoo.com/quote/SI%3DF",
+      "updated_at": "10/08/2026 22:09",
+      "vnd_equivalent": "54.53 triệu đồng/kg",
+      "conversion_note": "Quy đổi từ giá quốc tế; chưa gồm thuế, phí và chênh lệch bán lẻ."
+    },
+    "vnindex": {
+      "label": "VN-Index",
+      "value": "1,776.77",
+      "previous_close": "1,768.06",
+      "change": "+8.71",
+      "change_pct": "+0.49%",
+      "direction": "up",
+      "unit": "điểm",
+      "source": "Yahoo Finance",
+      "source_url": "https://finance.yahoo.com/quote/%5EVNINDEX.VN/",
+      "updated_at": "10/08/2026 15:33"
+    },
+    "vn30": {
+      "label": "VN30",
+      "value": "1,925.18",
+      "numeric_value": 1925.18,
+      "previous_close": "1,911.09",
+      "change": "+14.09",
+      "change_pct": "+0.74%",
+      "direction": "up",
+      "unit": "điểm",
+      "source": "TradingView · dữ liệu trễ khoảng 15 phút",
+      "source_url": "https://www.tradingview.com/symbols/HOSE-VN30/",
+      "updated_at": "10/08/2026 22:20"
+    },
+    "disclaimer": "Giá Vàng/Bạc là chuẩn quốc tế COMEX; số VND là quy đổi tham khảo, không phải giá bán lẻ SJC. VN30 có thể trễ khoảng 15 phút."
+  },
+  "investment_overview": {
+    "updated_at": "10/08/2026 22:20",
+    "summary": "Tại mốc 10/08/2026 22:20, vàng quốc tế tăng +1.47%, bạc tăng +2.49%; VN-Index tăng +0.49% và VN30 tăng +0.74% so với phiên trước. Mốc tham khảo căn hộ sơ cấp khu trung tâm TP.HCM hiện ở 102 triệu đồng/m² (-1,2% QoQ). Hãy đọc từng chuyên mục để đối chiếu động lực giá, tin mới và rủi ro riêng của từng loại tài sản.",
+    "items": [],
+    "disclaimer": "Thông tin nhằm hỗ trợ theo dõi thị trường, không phải khuyến nghị mua bán."
+  },
   "macro": [
     {
       "title": "Cục Dự trữ Liên bang Mỹ vừa công bố dự báo lạm phát tháng 8 và nó có thể khiến FOMC đối mặt với một cuộc họp tháng 9 đầy thách thức",
