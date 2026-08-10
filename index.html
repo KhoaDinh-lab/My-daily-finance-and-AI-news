@@ -291,6 +291,9 @@
     .login-card { position:relative; width:min(440px,100%); padding:38px; border:1px solid rgba(255,255,255,.13); border-radius:26px; background:rgba(13,27,45,.82); box-shadow:var(--shadow); }
     .login-card h1 { margin:24px 0 10px; font-size:32px; }
     .login-card > p { color:var(--muted); margin-bottom:28px; font-size:14px; }
+    .auth-tabs { display:grid; grid-template-columns:1fr 1fr; gap:5px; margin:22px 0 8px; padding:5px; border:1px solid var(--line); border-radius:13px; background:rgba(255,255,255,.025); }
+    .auth-tab { padding:9px 12px; border:0; border-radius:9px; color:var(--muted); background:transparent; cursor:pointer; font-size:12px; font-weight:800; transition:.2s; }
+    .auth-tab.active { color:#07111f; background:linear-gradient(105deg,var(--green),var(--cyan)); }
     .field { display:block; margin-top:16px; }
     .field > span { display:block; margin-bottom:7px; color:#c7d1dc; font-size:12px; font-weight:700; }
     .input-wrap { display:flex; align-items:center; border:1px solid var(--line); border-radius:12px; background:rgba(255,255,255,.035); transition:.2s; }
@@ -366,10 +369,18 @@
     <form class="login-card" id="login-form">
       <div class="brand-mark" aria-hidden="true">DE</div>
       <h1 id="login-title">Chào mừng trở lại.</h1>
-      <p>Đăng nhập để mở không gian tin tức riêng của The Daily Edge.</p>
+      <p id="login-description">Đăng nhập để đồng bộ streak và các bài đã đọc trên mọi thiết bị.</p>
+      <div class="auth-tabs" role="tablist" aria-label="Chọn cách truy cập">
+        <button class="auth-tab active" data-auth-mode="login" type="button">Đăng nhập</button>
+        <button class="auth-tab" data-auth-mode="signup" type="button">Tạo tài khoản</button>
+      </div>
+      <label class="field" id="display-name-field" hidden>
+        <span>Tên hiển thị</span>
+        <span class="input-wrap"><input id="display-name" name="display_name" autocomplete="name" maxlength="80"></span>
+      </label>
       <label class="field">
-        <span>Tên đăng nhập</span>
-        <span class="input-wrap"><input id="username" name="username" autocomplete="username" required></span>
+        <span>Email</span>
+        <span class="input-wrap"><input id="email" name="email" type="email" autocomplete="email" required></span>
       </label>
       <label class="field">
         <span>Mật khẩu</span>
@@ -380,7 +391,7 @@
       </label>
       <button class="login-submit" id="login-submit" type="submit">Mở bản tin →</button>
       <p class="login-error" id="login-error" role="alert"></p>
-      <div class="session-note"><span>◇</span><span>Phiên đăng nhập tự kết thúc khi bạn đóng trình duyệt.</span></div>
+      <div class="session-note"><span>◇</span><span id="auth-note">Dữ liệu riêng được bảo vệ bởi Supabase và tự đồng bộ giữa các thiết bị.</span></div>
     </form>
   </div>
 
@@ -522,8 +533,13 @@
   </dialog>
   <div class="toast" id="toast" role="status"></div>
 
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
   <script>
-    const CREDENTIAL_HASH = "b6bb5d48a9f5f26bf047764fd4250a2a4c8a232c3e95ce906ce7134174d71c83";
+    const SUPABASE_URL = "https://jayiozatpkaltpuhueuh.supabase.co";
+    const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_LBfMCzupsGPKyQPfCZiuRA_Gj8SRpKo";
+    const supabaseClient = window.supabase?.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY, {
+      auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true }
+    });
     const PROGRESS_KEY = "daily-edge-progress-v1";
     const CONTENT_SECTIONS = ["macro", "vietnam", "ai", "logistics", "realestate"];
     const TREND_SECTIONS = ["macro", "vietnam", "ai", "logistics"];
@@ -535,19 +551,18 @@
     let deferredInstallPrompt = null;
     let refreshCountdownTimer = null;
     let refreshPollTimer = null;
+    let currentUser = null;
+    let currentProfileName = "";
+    let authMode = "login";
+    let activeUserId = "";
+    let currentProgressKey = PROGRESS_KEY;
 
     const $ = selector => document.querySelector(selector);
     const $$ = selector => [...document.querySelectorAll(selector)];
 
-    async function sha256(text) {
-      const bytes = new TextEncoder().encode(text);
-      const digest = await crypto.subtle.digest("SHA-256", bytes);
-      return [...new Uint8Array(digest)].map(value => value.toString(16).padStart(2, "0")).join("");
-    }
-
-    function loadProgress() {
+    function loadProgress(storageKey = PROGRESS_KEY) {
       try {
-        const stored = JSON.parse(localStorage.getItem(PROGRESS_KEY) || "{}");
+        const stored = JSON.parse(localStorage.getItem(storageKey) || "{}");
         return {
           lastVisitDate: stored.lastVisitDate || "",
           lastVisitAt: stored.lastVisitAt || "",
@@ -563,7 +578,7 @@
     }
 
     function saveProgress() {
-      localStorage.setItem(PROGRESS_KEY, JSON.stringify(progress));
+      localStorage.setItem(currentProgressKey, JSON.stringify(progress));
     }
 
     function vietnamDate(date = new Date()) {
@@ -576,7 +591,25 @@
       return Math.round((end - start) / 86400000);
     }
 
-    function recordVisit() {
+    function applyVisitRows(rows) {
+      const dates = [...new Set((rows || []).map(row => row.visit_date).filter(Boolean))].sort();
+      let longest = 0;
+      let run = 0;
+      let previous = "";
+      dates.forEach(date => {
+        run = previous && dayDifference(previous, date) === 1 ? run + 1 : 1;
+        longest = Math.max(longest, run);
+        previous = date;
+      });
+      progress.currentStreak = run;
+      progress.longestStreak = longest;
+      progress.totalVisits = dates.length;
+      progress.lastVisitDate = dates.at(-1) || "";
+      progress.lastVisitAt = rows?.[0]?.last_seen_at || new Date().toISOString();
+      saveProgress();
+    }
+
+    function recordLocalVisit() {
       const today = vietnamDate();
       if (progress.lastVisitDate === today) return;
       const gap = progress.lastVisitDate ? dayDifference(progress.lastVisitDate, today) : null;
@@ -589,6 +622,20 @@
       saveProgress();
     }
 
+    async function recordVisit() {
+      if (!supabaseClient || !currentUser) {
+        recordLocalVisit();
+        return;
+      }
+      const { data, error } = await supabaseClient.rpc("record_daily_visit");
+      if (error) {
+        console.warn("Chưa đồng bộ được streak", error);
+        recordLocalVisit();
+        return;
+      }
+      applyVisitRows(data);
+    }
+
     function articleKey(article) {
       return article.id || article.url || `${article.section || "news"}|${article.source || ""}|${article.title || ""}`;
     }
@@ -597,18 +644,32 @@
       return progress.readArticleIds.includes(articleKey(article));
     }
 
+    async function persistReadArticles(articles) {
+      if (!supabaseClient || !currentUser || !articles.length) return;
+      const rows = articles.map(article => ({
+        user_id: currentUser.id,
+        article_key: articleKey(article),
+        section: article.section || "news",
+        title: (article.title || "").slice(0, 500),
+        updated_at: new Date().toISOString()
+      }));
+      const { error } = await supabaseClient.from("article_reads").upsert(rows, { onConflict: "user_id,article_key" });
+      if (error) console.warn("Chưa đồng bộ được bài đã đọc", error);
+    }
+
     function markArticleRead(article) {
       const id = articleKey(article);
       if (!progress.readArticleIds.includes(id)) {
         progress.readArticleIds.push(id);
         saveProgress();
+        void persistReadArticles([article]);
         renderNewsCollections();
         renderPersonalization();
       }
     }
 
     function currentDisplayName() {
-      return sessionStorage.getItem("daily-edge-display-name") || "Khoa Đinh";
+      return currentProfileName || currentUser?.user_metadata?.display_name || currentUser?.email?.split("@")[0] || "Thành viên";
     }
 
     function initials(name) {
@@ -641,36 +702,119 @@
       $("#missed-nav-count").hidden = unread === 0;
     }
 
-    function unlock() {
+    async function syncReadingProgress() {
+      if (!supabaseClient || !currentUser) return;
+      const localIds = [...new Set(progress.readArticleIds)];
+      if (localIds.length) {
+        const articlesByKey = new Map(getAllArticles().map(article => [articleKey(article), article]));
+        await persistReadArticles(localIds.map(id => articlesByKey.get(id) || { id, section: "news", title: "" }));
+      }
+      const { data, error } = await supabaseClient.from("article_reads").select("article_key").order("first_read_at", { ascending: false });
+      if (error) {
+        console.warn("Chưa tải được lịch sử đọc", error);
+        return;
+      }
+      progress.readArticleIds = [...new Set((data || []).map(row => row.article_key))];
+      saveProgress();
+    }
+
+    async function activateUser(user) {
+      if (!user || activeUserId === user.id) return;
+      activeUserId = user.id;
+      currentUser = user;
+      currentProgressKey = `${PROGRESS_KEY}:${user.id}`;
+      const cachedProgress = loadProgress(currentProgressKey);
+      const legacyOwnerKey = `${PROGRESS_KEY}:legacy-owner`;
+      let legacyOwner = localStorage.getItem(legacyOwnerKey);
+      if (!legacyOwner) {
+        legacyOwner = user.id;
+        localStorage.setItem(legacyOwnerKey, user.id);
+      }
+      if (legacyOwner === user.id) {
+        const legacyProgress = loadProgress(PROGRESS_KEY);
+        cachedProgress.readArticleIds = [...new Set([...cachedProgress.readArticleIds, ...legacyProgress.readArticleIds])];
+      }
+      progress = cachedProgress;
+      const fallbackName = user.user_metadata?.display_name || user.email?.split("@")[0] || "Thành viên";
+      const { data: profile, error } = await supabaseClient.from("profiles").select("display_name").eq("id", user.id).maybeSingle();
+      if (error) console.warn("Chưa tải được hồ sơ", error);
+      if (!profile) {
+        const { error: profileError } = await supabaseClient.from("profiles").upsert({ id: user.id, display_name: fallbackName });
+        if (profileError) console.warn("Chưa tạo được hồ sơ", profileError);
+      }
+      currentProfileName = profile?.display_name || fallbackName;
       $("#login-gate").hidden = true;
       document.body.style.overflow = "";
-      recordVisit();
+      await Promise.all([syncReadingProgress(), recordVisit()]);
+      renderNewsCollections();
       renderPersonalization();
     }
 
     function lock() {
+      activeUserId = "";
+      currentUser = null;
+      currentProfileName = "";
+      currentProgressKey = PROGRESS_KEY;
+      progress = loadProgress(PROGRESS_KEY);
       $("#login-gate").hidden = false;
       document.body.style.overflow = "hidden";
-      setTimeout(() => $("#username").focus(), 50);
+      setTimeout(() => $("#email").focus(), 50);
     }
+
+    function setAuthMode(mode) {
+      authMode = mode === "signup" ? "signup" : "login";
+      $$(".auth-tab").forEach(button => button.classList.toggle("active", button.dataset.authMode === authMode));
+      $("#display-name-field").hidden = authMode !== "signup";
+      $("#display-name").required = authMode === "signup";
+      $("#login-title").textContent = authMode === "signup" ? "Tạo không gian của bạn." : "Chào mừng trở lại.";
+      $("#login-description").textContent = authMode === "signup"
+        ? "Tạo tài khoản riêng để streak và bài đã đọc đi cùng bạn trên mọi thiết bị."
+        : "Đăng nhập để đồng bộ streak và các bài đã đọc trên mọi thiết bị.";
+      $("#login-submit").textContent = authMode === "signup" ? "Tạo tài khoản →" : "Mở bản tin →";
+      $("#login-error").textContent = "";
+    }
+
+    $$(".auth-tab").forEach(button => button.addEventListener("click", () => setAuthMode(button.dataset.authMode)));
 
     $("#login-form").addEventListener("submit", async event => {
       event.preventDefault();
       const submit = $("#login-submit");
-      const username = $("#username").value.trim().normalize("NFC");
+      const email = $("#email").value.trim().toLowerCase();
       const password = $("#password").value;
+      const displayName = $("#display-name").value.trim().normalize("NFC");
       submit.disabled = true;
       $("#login-error").textContent = "";
       try {
-        const hash = await sha256(`${username}\n${password}`);
-        if (hash !== CREDENTIAL_HASH) {
-          $("#login-error").textContent = "Tên đăng nhập hoặc mật khẩu chưa đúng.";
-          $("#password").select();
+        if (!supabaseClient) throw new Error("Không tải được kết nối Supabase. Hãy kiểm tra Internet rồi thử lại.");
+        if (authMode === "signup") {
+          if (displayName.length < 2) throw new Error("Tên hiển thị cần có ít nhất 2 ký tự.");
+          if (password.length < 6) throw new Error("Mật khẩu cần có ít nhất 6 ký tự.");
+          const { data, error } = await supabaseClient.auth.signUp({
+            email,
+            password,
+            options: {
+              data: { display_name: displayName },
+              emailRedirectTo: `${location.origin}${location.pathname}`
+            }
+          });
+          if (error) throw error;
+          if (!data.session) {
+            $("#login-error").style.color = "var(--green)";
+            $("#login-error").textContent = "Tài khoản đã được tạo. Hãy mở email xác nhận, rồi quay lại đăng nhập.";
+            return;
+          }
+          await activateUser(data.user);
           return;
         }
-        sessionStorage.setItem("daily-edge-auth", "granted");
-        sessionStorage.setItem("daily-edge-display-name", username);
-        unlock();
+        const { data, error } = await supabaseClient.auth.signInWithPassword({ email, password });
+        if (error) throw error;
+        await activateUser(data.user);
+      } catch (error) {
+        $("#login-error").style.color = "var(--danger)";
+        $("#login-error").textContent = /invalid login credentials/i.test(error.message)
+          ? "Email hoặc mật khẩu chưa đúng."
+          : error.message || "Chưa thể đăng nhập. Vui lòng thử lại.";
+        $("#password").select();
       } finally {
         submit.disabled = false;
       }
@@ -682,9 +826,8 @@
       $("#toggle-password").setAttribute("aria-label", field.type === "password" ? "Hiện mật khẩu" : "Ẩn mật khẩu");
     });
 
-    $("#logout-btn").addEventListener("click", () => {
-      sessionStorage.removeItem("daily-edge-auth");
-      sessionStorage.removeItem("daily-edge-display-name");
+    $("#logout-btn").addEventListener("click", async () => {
+      if (supabaseClient) await supabaseClient.auth.signOut();
       $("#password").value = "";
       lock();
     });
@@ -1166,8 +1309,10 @@
     $$(".nav-btn").forEach(button => button.addEventListener("click", () => { location.hash = button.dataset.route; }));
     $("#missed-shortcut").addEventListener("click", () => { location.hash = "missed"; });
     $("#mark-all-read").addEventListener("click", () => {
-      progress.readArticleIds = [...new Set([...progress.readArticleIds, ...getAllArticles().map(articleKey)])];
+      const allArticles = getAllArticles();
+      progress.readArticleIds = [...new Set([...progress.readArticleIds, ...allArticles.map(articleKey)])];
       saveProgress();
+      void persistReadArticles(allArticles);
       renderNewsCollections();
       renderPersonalization();
       showToast("Đã đánh dấu tất cả bài là đã đọc.");
@@ -1293,7 +1438,24 @@
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", () => navigator.serviceWorker.register("./sw.js").catch(error => console.warn("Không thể khởi tạo app offline", error)));
     }
-    if (sessionStorage.getItem("daily-edge-auth") === "granted") unlock(); else lock();
+    async function initializeAuth() {
+      if (!supabaseClient) {
+        lock();
+        $("#login-error").textContent = "Không tải được kết nối Supabase. Hãy kiểm tra Internet rồi tải lại trang.";
+        return;
+      }
+      const { data, error } = await supabaseClient.auth.getUser();
+      if (error && !/session/i.test(error.message)) console.warn("Chưa kiểm tra được phiên đăng nhập", error);
+      if (data?.user) await activateUser(data.user); else lock();
+      supabaseClient.auth.onAuthStateChange((_event, session) => {
+        setTimeout(() => {
+          if (session?.user) void activateUser(session.user);
+          else lock();
+        }, 0);
+      });
+    }
+    setAuthMode("login");
+    void initializeAuth();
     navigate(location.hash.slice(1));
     loadData();
   </script>
