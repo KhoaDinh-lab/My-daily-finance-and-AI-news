@@ -91,6 +91,9 @@
     }
     .nav-btn:hover { color: var(--text); background: rgba(255,255,255,.055); transform: translateY(-1px); }
     .nav-btn.active { color: var(--text); background: rgba(94,230,181,.1); box-shadow: inset 0 0 0 1px rgba(94,230,181,.14); }
+    .pro-nav-btn { color:#d8d2ff; background:linear-gradient(110deg,rgba(168,156,255,.12),rgba(94,230,181,.08)); box-shadow:inset 0 0 0 1px rgba(168,156,255,.14); }
+    .pro-nav-btn.active { color:#fff; background:linear-gradient(110deg,rgba(168,156,255,.22),rgba(94,230,181,.14)); box-shadow:inset 0 0 0 1px rgba(168,156,255,.28),0 0 24px rgba(168,156,255,.1); }
+    .pro-dot { color:var(--violet); font-size:9px; }
     .nav-count { display:inline-grid; place-items:center; min-width:19px; height:19px; margin-left:5px; padding:0 5px; border-radius:999px; color:#07111f; background:var(--green); font-size:10px; font-weight:900; }
     .nav-dropdown { position:relative; }
     .nav-dropdown-trigger { display:flex; align-items:center; gap:6px; }
@@ -308,6 +311,68 @@
     .range-note a { color:var(--cyan); text-decoration:none; }
     .market-disclaimer { margin-top:34px; padding:18px 20px; border:1px solid rgba(255,206,114,.16); border-radius:15px; color:#c6d0da; background:rgba(255,206,114,.045); font-size:12px; }
 
+    .founder-strip { display:grid; grid-template-columns:1fr auto; gap:24px; align-items:center; margin:18px 0 0; padding:20px 24px; border:1px solid rgba(168,156,255,.2); border-radius:18px; background:linear-gradient(115deg,rgba(168,156,255,.1),rgba(94,230,181,.055) 55%,rgba(110,216,255,.04)); overflow:hidden; position:relative; }
+    .founder-strip::after { content:""; position:absolute; width:150px; height:150px; right:-42px; top:-100px; border-radius:50%; background:rgba(168,156,255,.16); filter:blur(25px); }
+    .founder-strip-copy { position:relative; z-index:1; }
+    .founder-strip-copy strong { display:block; margin-bottom:5px; font:800 15px/1.3 "Manrope"; }
+    .founder-strip-copy span { color:var(--muted); font-size:12px; }
+    .founder-strip .soft-btn { position:relative; z-index:1; white-space:nowrap; }
+
+    .pro-hero { display:grid; grid-template-columns:1.25fr .75fr; gap:48px; align-items:end; padding:12px 0 58px; }
+    .beta-badge { display:inline-flex; align-items:center; gap:8px; padding:7px 11px; border:1px solid rgba(168,156,255,.22); border-radius:999px; color:#ded9ff; background:rgba(168,156,255,.09); font-size:11px; font-weight:900; letter-spacing:.08em; text-transform:uppercase; }
+    .beta-badge i { width:7px; height:7px; border-radius:50%; background:var(--green); box-shadow:0 0 14px var(--green); }
+    .pro-hero h1 { max-width:800px; margin:21px 0 20px; font-size:clamp(45px,6.7vw,82px); line-height:.98; }
+    .pro-hero p { max-width:690px; color:var(--muted); font-size:18px; line-height:1.65; }
+    .pro-hero-actions { display:flex; gap:10px; flex-wrap:wrap; margin-top:28px; }
+    .pro-proof { display:grid; gap:10px; }
+    .proof-card { display:flex; align-items:center; justify-content:space-between; gap:16px; min-height:74px; padding:15px 18px; border:1px solid var(--line); border-radius:15px; background:rgba(255,255,255,.03); }
+    .proof-card span { color:var(--muted); font-size:12px; }
+    .proof-card strong { font:800 24px/1 "Manrope"; }
+    .pro-section { margin-top:42px; }
+    .pro-section-head { display:flex; justify-content:space-between; gap:32px; align-items:end; margin-bottom:20px; }
+    .pro-section-head h2 { margin:7px 0 0; font-size:clamp(28px,4vw,42px); }
+    .pro-section-head p { max-width:520px; margin:0; color:var(--muted); font-size:13px; }
+    .plan-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+    .plan-card { padding:28px; border:1px solid var(--line); border-radius:22px; background:rgba(255,255,255,.03); }
+    .plan-card.featured { border-color:rgba(168,156,255,.28); background:linear-gradient(145deg,rgba(168,156,255,.11),rgba(94,230,181,.045)); box-shadow:0 24px 70px rgba(0,0,0,.16); }
+    .plan-top { display:flex; align-items:start; justify-content:space-between; gap:16px; }
+    .plan-name { color:#d8e1eb; font-size:12px; font-weight:900; letter-spacing:.1em; text-transform:uppercase; }
+    .plan-status { padding:5px 8px; border-radius:999px; color:var(--green); background:rgba(94,230,181,.1); font-size:9px; font-weight:900; text-transform:uppercase; }
+    .plan-price { margin:17px 0 8px; font:800 39px/1 "Manrope"; }
+    .plan-price small { color:var(--muted); font:500 13px/1 "DM Sans"; }
+    .plan-card > p { min-height:42px; color:var(--muted); font-size:13px; }
+    .feature-list { display:grid; gap:12px; margin:23px 0 0; padding:20px 0 0; border-top:1px solid var(--line); list-style:none; }
+    .feature-list li { display:flex; gap:10px; color:#d0d9e3; font-size:13px; }
+    .feature-list li::before { content:"✓"; color:var(--green); font-weight:900; }
+    .pro-form-shell { display:grid; grid-template-columns:.8fr 1.2fr; gap:18px; align-items:stretch; }
+    .pro-promise { padding:28px; border:1px solid var(--line); border-radius:22px; background:rgba(255,255,255,.028); }
+    .pro-promise h3 { margin:15px 0 13px; font-size:28px; }
+    .pro-promise p { color:var(--muted); line-height:1.7; }
+    .promise-list { display:grid; gap:12px; margin-top:24px; }
+    .promise-item { display:flex; gap:11px; color:#d3dce6; font-size:12px; }
+    .promise-item span:first-child { color:var(--cyan); }
+    .interest-form { padding:28px; border:1px solid rgba(168,156,255,.22); border-radius:22px; background:linear-gradient(145deg,rgba(16,33,53,.94),rgba(13,27,45,.9)); }
+    .interest-form h3 { margin:0 0 6px; font-size:27px; }
+    .interest-form > p { color:var(--muted); font-size:13px; }
+    .form-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+    .pro-field { display:block; margin-top:15px; }
+    .pro-field.full { grid-column:1/-1; }
+    .pro-field span { display:block; margin-bottom:7px; color:#cbd5df; font-size:11px; font-weight:800; }
+    .pro-field select, .pro-field textarea { width:100%; padding:12px 13px; border:1px solid var(--line); border-radius:11px; outline:0; color:var(--text); background:#122238; font:inherit; font-size:13px; }
+    .pro-field textarea { min-height:92px; resize:vertical; }
+    .pro-field select:focus, .pro-field textarea:focus { border-color:rgba(94,230,181,.5); box-shadow:0 0 0 3px rgba(94,230,181,.07); }
+    .interest-submit { width:100%; margin-top:18px; }
+    .interest-submit:disabled { opacity:.55; cursor:wait; }
+    .interest-status { min-height:20px; margin:12px 0 0; color:var(--green); font-size:12px; }
+    .privacy-note { display:block; margin-top:13px; color:var(--muted); font-size:10px; line-height:1.55; }
+    .sponsor-panel { display:grid; grid-template-columns:1fr auto; gap:28px; align-items:center; margin-top:18px; padding:25px 28px; border:1px solid rgba(255,206,114,.18); border-radius:19px; background:rgba(255,206,114,.045); }
+    .sponsor-panel h3 { margin:7px 0 8px; font-size:25px; }
+    .sponsor-panel p { margin:0; color:var(--muted); font-size:13px; }
+    .transparency-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
+    .transparency-card { padding:19px; border:1px solid var(--line); border-radius:16px; background:rgba(255,255,255,.025); }
+    .transparency-card strong { display:block; margin-bottom:7px; font-size:13px; }
+    .transparency-card span { color:var(--muted); font-size:11px; line-height:1.6; }
+
     .update-dialog { width:min(620px,calc(100% - 28px)); }
     .update-body { padding-top:4px; }
     .update-body h2 { margin:8px 0 12px; font-size:32px; }
@@ -385,6 +450,7 @@
       .asset-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
       .market-hero { grid-template-columns:1fr; }
       .area-grid, .property-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+      .pro-hero, .pro-form-shell { grid-template-columns:1fr; }
     }
     @media (max-width: 680px) {
       .shell { width:min(100% - 24px,1180px); }
@@ -406,6 +472,10 @@
       .login-card { padding:28px 22px; }
       .modal-body { padding:12px 22px 46px; }
       .footer-inner { padding:24px 0; align-items:flex-start; flex-direction:column; }
+      .founder-strip, .sponsor-panel { grid-template-columns:1fr; }
+      .plan-grid, .form-grid, .transparency-grid { grid-template-columns:1fr; }
+      .pro-section-head { align-items:start; flex-direction:column; }
+      .pro-field.full { grid-column:auto; }
     }
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; scroll-behavior:auto !important; transition-duration:.01ms !important; }
@@ -467,6 +537,7 @@
           </div>
         </div>
         <button class="nav-btn" data-route="trends">Xu hướng</button>
+        <button class="nav-btn pro-nav-btn" data-route="pro"><span class="pro-dot">◆</span> Pro</button>
         <button class="nav-btn" data-route="missed">Bỏ lỡ <span class="nav-count" id="missed-nav-count">0</span></button>
       </nav>
       <button class="icon-btn" id="refresh-btn" aria-label="Yêu cầu cập nhật tin mới" title="Yêu cầu cập nhật tin mới">
@@ -504,6 +575,11 @@
             <button class="stat-pill action" id="missed-shortcut" type="button"><span>◌</span><span><strong id="missed-count">0</strong> bài chưa xem</span></button>
             <button class="stat-pill action" id="install-app-btn" type="button"><span>▣</span><span>Cài ứng dụng</span></button>
           </div>
+        </section>
+
+        <section class="founder-strip" aria-label="Daily Edge Pro Founder Beta">
+          <div class="founder-strip-copy"><strong>Giúp định hình Daily Edge Pro.</strong><span>Chọn mức giá và tính năng bạn thực sự muốn — hiện tại chưa thu tiền.</span></div>
+          <button class="soft-btn" type="button" data-route="pro" data-product-cta="overview_founder">Khám phá Founder Beta →</button>
         </section>
 
         <div class="ticker-grid">
@@ -578,10 +654,82 @@
         <p class="trend-note" id="trend-disclaimer"></p>
       </div>
     </section>
+    <section class="view" data-view="pro">
+      <div class="shell">
+        <header class="pro-hero">
+          <div>
+            <span class="beta-badge"><i></i> Founder Beta · Chưa thu tiền</span>
+            <h1>Biến dữ liệu thành<br><span class="gradient-word">quyết định.</span></h1>
+            <p>Daily Edge Pro được thiết kế cho người muốn nhận đúng tín hiệu quan trọng, đúng thời điểm. Giai đoạn này dùng để lắng nghe nhu cầu và kiểm chứng mức giá trước khi mở thanh toán.</p>
+            <div class="pro-hero-actions">
+              <button class="primary-btn" type="button" data-pro-scroll data-product-cta="pro_hero">Giữ một suất Founder →</button>
+              <button class="soft-btn" type="button" data-route="overview">Xem bản tin miễn phí</button>
+            </div>
+          </div>
+          <aside class="pro-proof" aria-label="Quy mô bản tin hiện tại">
+            <div class="proof-card"><span>Bản tin mới nhất</span><strong id="pro-article-count">24</strong></div>
+            <div class="proof-card"><span>Chuyên mục theo dõi</span><strong>8</strong></div>
+            <div class="proof-card"><span>Lần cập nhật mỗi ngày</span><strong>3</strong></div>
+          </aside>
+        </header>
+
+        <section class="pro-section" aria-labelledby="plans-title">
+          <div class="pro-section-head"><div><span class="eyebrow">Gói sản phẩm</span><h2 id="plans-title">Miễn phí để đọc. Pro để hành động.</h2></div><p>49.000đ là mức giá thử nghiệm, chưa phải giá chính thức. Bản miễn phí vẫn được duy trì ngay cả khi Pro ra mắt.</p></div>
+          <div class="plan-grid">
+            <article class="plan-card">
+              <div class="plan-top"><span class="plan-name">Daily Edge Free</span><span class="plan-status">Đang hoạt động</span></div>
+              <div class="plan-price">0đ <small>/ mãi mãi</small></div>
+              <p>Cho người muốn đọc bản tin tổng hợp mỗi ngày và theo dõi tiến độ của riêng mình.</p>
+              <ul class="feature-list"><li>8 chuyên mục tin tức và đầu tư</li><li>Streak, bài đã đọc và bài bỏ lỡ đồng bộ</li><li>Phân tích xu hướng ngắn hạn và dài hạn</li><li>Cập nhật lúc 06:00, 15:00 và 20:30</li></ul>
+            </article>
+            <article class="plan-card featured">
+              <div class="plan-top"><span class="plan-name">Daily Edge Pro Founder</span><span class="plan-status">Đang kiểm chứng</span></div>
+              <div class="plan-price">49.000đ <small>/ tháng dự kiến</small></div>
+              <p>Dành cho người muốn một lớp phân tích cá nhân hóa giúp giảm nhiễu và theo dõi đúng tài sản quan tâm.</p>
+              <ul class="feature-list"><li>Bản tóm tắt cá nhân hóa theo danh mục</li><li>Cảnh báo khi tín hiệu quan trọng thay đổi</li><li>Báo cáo tổng hợp cuối tuần</li><li>Watchlist đồng bộ trên mọi thiết bị</li><li>Quyền góp ý và thử tính năng sớm</li></ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="pro-section" id="founder-interest" aria-labelledby="interest-title">
+          <div class="pro-form-shell">
+            <article class="pro-promise">
+              <span class="eyebrow">Cam kết Founder</span>
+              <h3>Đăng ký quan tâm, không đăng ký thanh toán.</h3>
+              <p>Mình chỉ mở thu phí khi đủ người thấy sản phẩm này hữu ích. Bạn có thể thay đổi lựa chọn bất cứ lúc nào.</p>
+              <div class="promise-list"><div class="promise-item"><span>◇</span><span>Không trừ tiền và không yêu cầu thẻ.</span></div><div class="promise-item"><span>◇</span><span>Lựa chọn được lưu riêng trong tài khoản Supabase của bạn.</span></div><div class="promise-item"><span>◇</span><span>Giá cuối cùng sẽ được thông báo rõ trước khi mở bán.</span></div></div>
+            </article>
+            <form class="interest-form" id="pro-interest-form">
+              <h3 id="interest-title">Bạn muốn Daily Edge Pro thế nào?</h3>
+              <p>Ba lựa chọn ngắn để mình xây đúng thứ có giá trị nhất.</p>
+              <div class="form-grid">
+                <label class="pro-field"><span>Gói bạn quan tâm</span><select id="pro-offer"><option value="founder_monthly">Founder theo tháng</option><option value="founder_annual">Founder theo năm</option><option value="sponsor">Tài trợ chuyên mục</option></select></label>
+                <label class="pro-field"><span>Mức giá bạn thấy hợp lý</span><select id="pro-price"><option value="0">Chưa sẵn sàng trả phí</option><option value="29000">29.000đ / tháng</option><option value="49000" selected>49.000đ / tháng</option><option value="99000">99.000đ / tháng</option><option value="490000">490.000đ / gói tài trợ thử</option></select></label>
+                <label class="pro-field full"><span>Tính năng quan trọng nhất</span><select id="pro-feature"><option value="personalized_digest">Bản tin cá nhân hóa</option><option value="market_alerts">Cảnh báo thị trường</option><option value="weekly_report">Báo cáo cuối tuần</option><option value="synced_watchlist">Watchlist đồng bộ</option><option value="ad_free">Không quảng cáo</option><option value="sponsor_visibility">Hiển thị thương hiệu tài trợ</option></select></label>
+                <label class="pro-field full"><span>Góp ý thêm (không bắt buộc)</span><textarea id="pro-note" maxlength="1000" placeholder="Ví dụ: Mình muốn theo dõi vàng và bất động sản TP.HCM…"></textarea></label>
+              </div>
+              <button class="primary-btn interest-submit" id="pro-submit" type="submit">Gửi lựa chọn Founder →</button>
+              <p class="interest-status" id="pro-status" role="status"></p>
+              <small class="privacy-note">Chỉ tài khoản của bạn đọc được lựa chọn này. Website không lưu thông tin thẻ hay dữ liệu thanh toán.</small>
+            </form>
+          </div>
+        </section>
+
+        <section class="sponsor-panel" aria-label="Tài trợ chuyên mục">
+          <div><span class="eyebrow">Dành cho thương hiệu</span><h3>Tài trợ một chuyên mục phù hợp.</h3><p>Gói thử nghiệm dự kiến từ 490.000đ/tuần. Nội dung tài trợ luôn được gắn nhãn và không can thiệp vào kết luận xu hướng.</p></div>
+          <button class="soft-btn" id="sponsor-interest" type="button" data-pro-scroll data-product-cta="sponsor_panel">Đăng ký quan tâm →</button>
+        </section>
+
+        <section class="pro-section" aria-labelledby="transparency-title">
+          <div class="pro-section-head"><div><span class="eyebrow">Minh bạch</span><h2 id="transparency-title">Kiếm tiền mà không đánh đổi niềm tin.</h2></div></div>
+          <div class="transparency-grid"><article class="transparency-card"><strong>Bản miễn phí được giữ lại</strong><span>Những nội dung cốt lõi đang có không bị khóa đột ngột sau paywall.</span></article><article class="transparency-card"><strong>Tài trợ luôn có nhãn</strong><span>Bài hoặc vị trí được tài trợ sẽ được phân biệt rõ với nội dung biên tập.</span></article><article class="transparency-card"><strong>Không phải khuyến nghị đầu tư</strong><span>Dữ liệu và phân tích nhằm cung cấp thông tin, không cam kết lợi nhuận.</span></article></div>
+        </section>
+      </div>
+    </section>
     <section class="view" data-view="missed"><div class="shell"><header class="topic-header"><span class="eyebrow">Reading Inbox</span><h1>Những bài bạn<br>chưa kịp xem.</h1><p>Tin được lưu trong 30 ngày. Một bài sẽ tự chuyển sang trạng thái đã đọc khi bạn mở phần chi tiết.</p></header><div class="section-bar"><div><h2>Danh sách chưa đọc</h2></div><button class="soft-btn" id="mark-all-read" type="button">✓ Đánh dấu tất cả đã đọc</button></div><div class="news-grid" id="missed-news"></div></div></section>
   </main>
 
-  <footer><div class="shell footer-inner"><span>© <span id="year"></span> The Daily Edge · Curated for Khoa</span><span>Dữ liệu: <a href="https://news.google.com/" target="_blank" rel="noopener">Google News RSS</a> · <a href="https://finance.yahoo.com/quote/%5EVNINDEX.VN/" target="_blank" rel="noopener">Yahoo Finance</a> · <a href="https://www.bls.gov/cpi/" target="_blank" rel="noopener">BLS</a> · <a href="https://onehousing.vn/" target="_blank" rel="noopener">OneHousing</a></span></div></footer>
+  <footer><div class="shell footer-inner"><span>© <span id="year"></span> The Daily Edge · Curated for Khoa · <a href="#pro">Founder Beta & minh bạch tài trợ</a></span><span>Dữ liệu: <a href="https://news.google.com/" target="_blank" rel="noopener">Google News RSS</a> · <a href="https://finance.yahoo.com/quote/%5EVNINDEX.VN/" target="_blank" rel="noopener">Yahoo Finance</a> · <a href="https://www.bls.gov/cpi/" target="_blank" rel="noopener">BLS</a> · <a href="https://onehousing.vn/" target="_blank" rel="noopener">OneHousing</a></span></div></footer>
 
   <dialog id="article-dialog">
     <div class="modal-scroll">
@@ -633,8 +781,9 @@
     const CONTENT_SECTIONS = ["macro", "vietnam", "ai", "logistics", "gold", "silver", "stocks", "realestate"];
     const TREND_SECTIONS = ["macro", "vietnam", "ai", "logistics"];
     const INVESTMENT_ROUTES = ["investment", "gold", "silver", "stocks", "realestate"];
-    const ROUTES = ["overview", "macro", "vietnam", "ai", "logistics", ...INVESTMENT_ROUTES, "trends", "missed"];
-    const SECTION_LABELS = { overview: "Tổng quan", macro: "Vĩ mô", vietnam: "Việt Nam", ai: "Trí tuệ nhân tạo", logistics: "Logistics", investment: "Tổng hợp đầu tư", gold: "Vàng", silver: "Bạc", stocks: "Cổ phiếu Việt Nam", realestate: "Bất động sản", trends: "Xu hướng", missed: "Bài bỏ lỡ" };
+    const ROUTES = ["overview", "macro", "vietnam", "ai", "logistics", ...INVESTMENT_ROUTES, "trends", "pro", "missed"];
+    const SECTION_LABELS = { overview: "Tổng quan", macro: "Vĩ mô", vietnam: "Việt Nam", ai: "Trí tuệ nhân tạo", logistics: "Logistics", investment: "Tổng hợp đầu tư", gold: "Vàng", silver: "Bạc", stocks: "Cổ phiếu Việt Nam", realestate: "Bất động sản", trends: "Xu hướng", pro: "Daily Edge Pro", missed: "Bài bỏ lỡ" };
+    const PRODUCT_EVENTS = new Set(["pro_view", "pro_cta_click", "pro_interest_submitted", "sponsor_cta_click"]);
     let newsData = null;
     let historyData = { articles: [] };
     let progress = loadProgress();
@@ -646,6 +795,7 @@
     let authMode = "login";
     let activeUserId = "";
     let currentProgressKey = PROGRESS_KEY;
+    const trackedProViews = new Set();
 
     const $ = selector => document.querySelector(selector);
     const $$ = selector => [...document.querySelectorAll(selector)];
@@ -808,6 +958,54 @@
       saveProgress();
     }
 
+    function renderProMetrics() {
+      const currentArticleCount = CONTENT_SECTIONS.reduce((total, section) => total + (newsData?.[section]?.length || 0), 0);
+      const target = $("#pro-article-count");
+      if (target) target.textContent = currentArticleCount || "—";
+    }
+
+    async function trackProductEvent(eventName, metadata = {}) {
+      if (!supabaseClient || !currentUser || !PRODUCT_EVENTS.has(eventName)) return;
+      const safeMetadata = Object.fromEntries(
+        Object.entries(metadata).slice(0, 8).map(([key, value]) => [String(key).slice(0, 50), String(value).slice(0, 200)])
+      );
+      const route = ROUTES.includes(location.hash.slice(1)) ? location.hash.slice(1) : "overview";
+      const { error } = await supabaseClient.from("product_events").insert({
+        user_id: currentUser.id,
+        event_name: eventName,
+        route,
+        metadata: safeMetadata
+      });
+      if (error) console.warn("Chưa ghi nhận được tương tác sản phẩm", error);
+    }
+
+    function trackProViewOnce() {
+      if (!currentUser) return;
+      const key = `${currentUser.id}:pro`;
+      if (trackedProViews.has(key)) return;
+      trackedProViews.add(key);
+      void trackProductEvent("pro_view", { source: "navigation" });
+    }
+
+    async function loadMonetizationLead() {
+      if (!supabaseClient || !currentUser) return;
+      const { data, error } = await supabaseClient.from("monetization_leads")
+        .select("offer,price_signal,desired_feature,note,updated_at")
+        .eq("user_id", currentUser.id)
+        .maybeSingle();
+      if (error) {
+        console.warn("Chưa tải được lựa chọn Founder", error);
+        return;
+      }
+      if (!data) return;
+      $("#pro-offer").value = data.offer;
+      $("#pro-price").value = String(data.price_signal);
+      $("#pro-feature").value = data.desired_feature;
+      $("#pro-note").value = data.note || "";
+      $("#pro-submit").textContent = "Cập nhật lựa chọn →";
+      $("#pro-status").textContent = `Đã lưu lựa chọn của bạn lúc ${formatDate(data.updated_at)}.`;
+    }
+
     async function activateUser(user) {
       if (!user || activeUserId === user.id) return;
       activeUserId = user.id;
@@ -835,9 +1033,10 @@
       currentProfileName = profile?.display_name || fallbackName;
       $("#login-gate").hidden = true;
       document.body.style.overflow = "";
-      await Promise.all([syncReadingProgress(), recordVisit()]);
+      await Promise.all([syncReadingProgress(), recordVisit(), loadMonetizationLead()]);
       renderNewsCollections();
       renderPersonalization();
+      if (location.hash.slice(1) === "pro") trackProViewOnce();
     }
 
     function lock() {
@@ -1517,6 +1716,7 @@
       renderRealEstateMarket(data.real_estate_market);
       renderTrends(data.trends);
       renderPersonalization();
+      renderProMetrics();
     }
 
     async function loadData(showNotice = false) {
@@ -1574,6 +1774,10 @@
       $("#investment-menu").classList.remove("open");
       $("#investment-trigger").setAttribute("aria-expanded", "false");
       document.title = safeRoute === "overview" ? "The Daily Edge | Financial Intelligence" : `${SECTION_LABELS[safeRoute]} | The Daily Edge`;
+      if (safeRoute === "pro") {
+        renderProMetrics();
+        trackProViewOnce();
+      }
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
 
@@ -1590,6 +1794,64 @@
         $("#investment-trigger").setAttribute("aria-expanded", "false");
       }
     });
+
+    $$('[data-product-cta]').forEach(button => button.addEventListener("click", () => {
+      const source = button.dataset.productCta || "unknown";
+      const eventName = source.includes("sponsor") ? "sponsor_cta_click" : "pro_cta_click";
+      void trackProductEvent(eventName, { source });
+    }));
+
+    $$('[data-pro-scroll]').forEach(button => button.addEventListener("click", () => {
+      if (button.id === "sponsor-interest") {
+        $("#pro-offer").value = "sponsor";
+        $("#pro-price").value = "490000";
+        $("#pro-feature").value = "sponsor_visibility";
+      }
+      $("#founder-interest").scrollIntoView({ behavior: "smooth", block: "start" });
+      setTimeout(() => $("#pro-offer").focus(), 450);
+    }));
+
+    $("#pro-offer").addEventListener("change", event => {
+      const suggestedPrices = { founder_monthly: "49000", founder_annual: "490000", sponsor: "490000" };
+      $("#pro-price").value = suggestedPrices[event.target.value] || "49000";
+      if (event.target.value === "sponsor") $("#pro-feature").value = "sponsor_visibility";
+    });
+
+    $("#pro-interest-form").addEventListener("submit", async event => {
+      event.preventDefault();
+      const submit = $("#pro-submit");
+      const status = $("#pro-status");
+      const offer = $("#pro-offer").value;
+      const priceSignal = Number($("#pro-price").value);
+      const desiredFeature = $("#pro-feature").value;
+      const note = $("#pro-note").value.trim();
+      submit.disabled = true;
+      status.style.color = "var(--muted)";
+      status.textContent = "Đang lưu lựa chọn an toàn vào tài khoản của bạn…";
+      try {
+        if (!supabaseClient || !currentUser) throw new Error("Bạn cần đăng nhập trước khi gửi lựa chọn.");
+        const { error } = await supabaseClient.from("monetization_leads").upsert({
+          user_id: currentUser.id,
+          offer,
+          price_signal: priceSignal,
+          desired_feature: desiredFeature,
+          note
+        }, { onConflict: "user_id" });
+        if (error) throw error;
+        await trackProductEvent("pro_interest_submitted", { offer, price_signal: priceSignal, desired_feature: desiredFeature });
+        submit.textContent = "Cập nhật lựa chọn →";
+        status.style.color = "var(--green)";
+        status.textContent = "Đã ghi nhận. Cảm ơn bạn đã giúp định hình Daily Edge Pro!";
+        showToast("Đã lưu lựa chọn Founder của bạn.");
+      } catch (error) {
+        console.error(error);
+        status.style.color = "var(--danger)";
+        status.textContent = error.message || "Chưa thể lưu lựa chọn. Vui lòng thử lại.";
+      } finally {
+        submit.disabled = false;
+      }
+    });
+
     $("#missed-shortcut").addEventListener("click", () => { location.hash = "missed"; });
     $("#mark-all-read").addEventListener("click", () => {
       const allArticles = getAllArticles();

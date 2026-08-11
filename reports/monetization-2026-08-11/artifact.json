@@ -1,0 +1,224 @@
+{
+  "surface": "report",
+  "manifest": {
+    "version": 1,
+    "surface": "report",
+    "title": "Kế hoạch kiếm tiền cho The Daily Edge",
+    "description": "Chiến lược kiểm chứng nhu cầu trả phí trước khi mở thanh toán hoặc quảng cáo.",
+    "generatedAt": "2026-08-11T08:30:00+07:00",
+    "filters": [],
+    "cards": [
+      {
+        "id": "accounts_card",
+        "description": "Số tài khoản đã tạo tới thời điểm chụp dữ liệu.",
+        "dataset": "baseline",
+        "sourceId": "supabase_baseline",
+        "metrics": [{ "label": "Tài khoản", "field": "accounts", "format": "number" }]
+      },
+      {
+        "id": "readers_card",
+        "description": "Tài khoản có ít nhất một bài đã đọc.",
+        "dataset": "baseline",
+        "sourceId": "supabase_baseline",
+        "metrics": [{ "label": "Người đã đọc", "field": "readers", "format": "number" }]
+      },
+      {
+        "id": "reads_card",
+        "description": "Tổng số bản ghi bài đã đọc trong bảy ngày gần nhất.",
+        "dataset": "baseline",
+        "sourceId": "supabase_baseline",
+        "metrics": [{ "label": "Lượt đọc 7 ngày", "field": "reads_last_7d", "format": "number" }]
+      }
+    ],
+    "charts": [
+      {
+        "id": "audience_funnel_chart",
+        "title": "Tài khoản theo mức độ hoạt động",
+        "subtitle": "Snapshot ngày 11/08/2026; các nhóm là các tầng lồng nhau, n = 5 tài khoản.",
+        "type": "bar",
+        "dataset": "audience_funnel",
+        "sourceId": "supabase_baseline",
+        "valueFormat": "number",
+        "encodings": {
+          "x": { "field": "stage", "type": "nominal", "label": "Mức độ hoạt động" },
+          "y": { "field": "accounts", "type": "quantitative", "label": "Tài khoản" },
+          "tooltip": [{ "field": "share_of_accounts", "type": "quantitative", "label": "Tỷ lệ trên tổng tài khoản", "format": "percent" }]
+        }
+      }
+    ],
+    "tables": [
+      {
+        "id": "phase_plan_table",
+        "title": "Lộ trình doanh thu theo bằng chứng",
+        "subtitle": "Các ngưỡng là giả thuyết vận hành, không phải dự báo doanh thu.",
+        "dataset": "phase_plan",
+        "sourceId": "phase_plan_hypotheses",
+        "defaultSort": { "field": "phase_order", "direction": "asc" },
+        "columns": [
+          { "field": "phase_order", "label": "Thứ tự", "format": "number" },
+          { "field": "phase", "label": "Giai đoạn", "type": "text" },
+          { "field": "objective", "label": "Mục tiêu", "type": "text" },
+          { "field": "gate", "label": "Điều kiện chuyển bước", "type": "text" },
+          { "field": "action", "label": "Hành động doanh thu", "type": "text" }
+        ]
+      },
+      {
+        "id": "kpi_table",
+        "title": "KPI quyết định có mở bán Pro hay không",
+        "subtitle": "Đo theo tài khoản trong cửa sổ 30 ngày; loại trừ lượt thử nội bộ khi phân tích.",
+        "dataset": "kpi_definitions",
+        "sourceId": "kpi_hypotheses",
+        "defaultSort": { "field": "priority", "direction": "asc" },
+        "columns": [
+          { "field": "priority", "label": "Ưu tiên", "format": "number" },
+          { "field": "metric", "label": "KPI", "type": "text" },
+          { "field": "definition", "label": "Định nghĩa", "type": "text" },
+          { "field": "decision_rule", "label": "Quy tắc quyết định", "type": "text" }
+        ]
+      }
+    ],
+    "sources": [
+      { "id": "supabase_baseline", "label": "Supabase production snapshot" },
+      { "id": "site_content_snapshot", "label": "The Daily Edge data snapshot", "path": "repository/data.json" },
+      { "id": "phase_plan_hypotheses", "label": "Founder Beta phase-plan assumptions" },
+      { "id": "kpi_hypotheses", "label": "Founder Beta KPI assumptions" },
+      { "id": "adsense_eligibility", "label": "Google AdSense eligibility", "url": "https://support.google.com/adsense/answer/9724?hl=en" },
+      { "id": "stripe_availability", "label": "Stripe global availability", "url": "https://stripe.com/global" },
+      { "id": "payos_payment_links", "label": "payOS payment links", "url": "https://payos.vn/3-phut-hieu-ro-ve-payos/" }
+    ],
+    "blocks": [
+      {
+        "id": "title",
+        "type": "markdown",
+        "body": "# Kế hoạch kiếm tiền cho The Daily Edge\n\nChiến lược kiểm chứng nhu cầu trả phí trước khi mở thanh toán hoặc quảng cáo."
+      },
+      {
+        "id": "executive_summary",
+        "type": "markdown",
+        "sourceId": "supabase_baseline",
+        "body": "## Executive Summary\n\n**Đề xuất:** chưa bật quảng cáo và chưa tích hợp thanh toán ngay. Website mới có **5 tài khoản**, **2 người đã đọc** và **44 lượt đọc trong 7 ngày**. Mẫu này chưa đủ để chứng minh nhu cầu hoặc tạo doanh thu quảng cáo đáng kể. Bước có giá trị nhất là mở **Founder Beta** để đo tỷ lệ quan tâm, mức sẵn sàng trả và tính năng được ưu tiên."
+      },
+      { "id": "baseline_metrics", "type": "metric-strip", "cardIds": ["accounts_card", "readers_card", "reads_card"] },
+      { "id": "audience_funnel", "type": "chart", "chartId": "audience_funnel_chart" },
+      {
+        "id": "what_changed",
+        "type": "markdown",
+        "body": "## Những gì đã được triển khai\n\n- Thêm trang **Daily Edge Pro** với gói Free và Founder Beta 49.000đ/tháng dự kiến.\n- Thêm form chọn gói, mức giá, tính năng và góp ý; hiện tại **không thu tiền**.\n- Thêm gói tài trợ chuyên mục thử nghiệm, kèm cam kết gắn nhãn rõ ràng.\n- Thêm funnel tối giản: xem trang Pro, bấm CTA, gửi form và quan tâm tài trợ.\n- Lưu dữ liệu theo tài khoản trong Supabase với Row Level Security."
+      },
+      { "id": "phase_plan", "type": "table", "tableId": "phase_plan_table" },
+      {
+        "id": "monetization_logic",
+        "type": "markdown",
+        "body": "## Vì sao hướng này hợp lý\n\n**Pro trước, quảng cáo sau.** Sản phẩm tin tức ngách về tài chính, AI, logistics và tài sản có thể kiếm tiền từ giá trị tiết kiệm thời gian và cá nhân hóa trước khi có lượng truy cập lớn. Quảng cáo ở giai đoạn sớm dễ làm trải nghiệm kém đi nhưng chưa tạo doanh thu đáng kể.\n\n**Mức 49.000đ chỉ là giá thử nghiệm.** Nó dùng để đo ý định trả phí, không phải kết luận về giá tối ưu. Quyết định cuối cùng phải dựa trên ít nhất 100 người xem trang Pro và phân bố mức giá thực tế.\n\n**Tài trợ là nguồn thu phụ.** Chỉ mở khi có nhãn minh bạch và nội dung tài trợ không ảnh hưởng tới phân tích xu hướng."
+      },
+      { "id": "kpi_definition", "type": "table", "tableId": "kpi_table" },
+      {
+        "id": "adsense_note",
+        "type": "markdown",
+        "sourceId": "adsense_eligibility",
+        "body": "## Khi nào mới nên bật quảng cáo\n\nGoogle yêu cầu website có nội dung độc đáo, chất lượng và đủ sức thu hút người đọc trước khi xét AdSense. Vì vậy, chỉ nên nộp AdSense sau khi The Daily Edge có nội dung gốc rõ ràng, lịch sử cập nhật ổn định và lượng người quay lại đủ lớn để quảng cáo không lấn át giá trị đọc."
+      },
+      {
+        "id": "payment_note_stripe",
+        "type": "markdown",
+        "sourceId": "stripe_availability",
+        "body": "## Hạ tầng thanh toán sau giai đoạn kiểm chứng\n\nDanh sách quốc gia hỗ trợ thanh toán của Stripe hiện không liệt kê Việt Nam. Không nên xây luồng thanh toán đầu tiên dựa trên Stripe cho dự án này."
+      },
+      {
+        "id": "payment_note_payos",
+        "type": "markdown",
+        "sourceId": "payos_payment_links",
+        "body": "### Hướng phù hợp tại Việt Nam\n\npayOS cung cấp payment link và phù hợp để thử thanh toán nội địa sau khi Founder Beta chứng minh có nhu cầu. Khóa bí mật và webhook phải đặt ở backend hoặc Supabase Edge Function, không đặt trong HTML công khai."
+      },
+      {
+        "id": "limitations",
+        "type": "markdown",
+        "body": "## Caveats & Further Questions\n\n- Dữ liệu hiện tại chỉ phản ánh vài ngày đầu và có thể gồm hoạt động thử nghiệm của chủ website.\n- Chưa có baseline về lượt xem trang, tỷ lệ quay lại 7 ngày hay chuyển đổi Pro trước lần triển khai này.\n- Cần gắn nhãn tài khoản nội bộ để loại khỏi báo cáo funnel.\n- Chưa tích hợp thanh toán; mọi con số giá và ngưỡng đều là giả thuyết cần kiểm chứng.\n- Nên đánh giá lại sau 30 ngày hoặc khi có ít nhất 100 người xem trang Pro, tùy điều kiện nào đến sau."
+      }
+    ]
+  },
+  "snapshot": {
+    "version": 1,
+    "generatedAt": "2026-08-11T08:30:00+07:00",
+    "status": "ready",
+    "datasets": {
+      "baseline": [{ "accounts": 5, "readers": 2, "read_events": 44, "reads_last_7d": 44, "users_with_visits": 3, "visit_days": 4 }],
+      "audience_funnel": [
+        { "stage_order": 1, "stage": "Đã tạo tài khoản", "accounts": 5, "share_of_accounts": 1.0 },
+        { "stage_order": 2, "stage": "Đã ghé ít nhất 1 ngày", "accounts": 3, "share_of_accounts": 0.6 },
+        { "stage_order": 3, "stage": "Đã đọc ít nhất 1 bài", "accounts": 2, "share_of_accounts": 0.4 }
+      ],
+      "content_snapshot": [{ "current_articles": 24, "categories": 8, "history_articles": 70, "retention_days": 30, "daily_updates": 3 }],
+      "phase_plan": [
+        { "phase_order": 1, "phase": "1 · Kiểm chứng", "objective": "Đo nhu cầu và mức giá", "gate": "≥100 người xem Pro; ≥10 người chọn từ 49.000đ; form conversion ≥10%", "action": "Founder Beta, chưa thu tiền" },
+        { "phase_order": 2, "phase": "2 · Thanh toán thử", "objective": "Đo người thực sự trả", "gate": "Không có lỗi Auth/RLS; nhóm thử đồng ý trả", "action": "Payment link nội địa cho nhóm nhỏ" },
+        { "phase_order": 3, "phase": "3 · Mở rộng", "objective": "Tăng doanh thu bền vững", "gate": "Retention và chất lượng cập nhật ổn định", "action": "Pro chính thức, tài trợ có nhãn; cân nhắc quảng cáo" }
+      ],
+      "kpi_definitions": [
+        { "priority": 1, "metric": "Founder intent conversion", "definition": "Tài khoản gửi form / tài khoản xem trang Pro trong 30 ngày", "decision_rule": "Mục tiêu thử nghiệm ≥10%" },
+        { "priority": 2, "metric": "Willingness to pay", "definition": "Số tài khoản chọn mức từ 49.000đ/tháng trở lên", "decision_rule": "Cần ≥10 tài khoản trước bước thanh toán" },
+        { "priority": 3, "metric": "Pro CTA click rate", "definition": "Tài khoản bấm CTA / tài khoản xem trang Pro", "decision_rule": "Chẩn đoán thông điệp và vị trí CTA" },
+        { "priority": 4, "metric": "7-day return rate", "definition": "Tài khoản có lượt truy cập ở ít nhất hai ngày trong 7 ngày đầu / tài khoản mới", "decision_rule": "Guardrail cho giá trị lặp lại" },
+        { "priority": 5, "metric": "Operational trust", "definition": "Số lỗi nghiêm trọng Auth, RLS hoặc cập nhật tin", "decision_rule": "Phải bằng 0 trước khi thu tiền" }
+      ]
+    },
+    "accessIssues": []
+  },
+  "sources": [
+    {
+      "id": "supabase_baseline",
+      "label": "Supabase production snapshot",
+      "query": {
+        "engine": "postgresql",
+        "sql": "select count(*) from auth.users; select count(distinct user_id), count(*) from public.article_reads; select count(distinct user_id), count(*) from public.daily_visits;",
+        "description": "Reviewed account, reader, read-event and visit counts for the production project.",
+        "executed_at": "2026-08-11T08:00:00+07:00",
+        "tables_used": ["auth.users", "public.article_reads", "public.daily_visits"],
+        "filters": ["reads_last_7d uses first_read_at within the preceding 7 days", "aggregate counts only; no emails or user identifiers exported"]
+      }
+    },
+    {
+      "id": "site_content_snapshot",
+      "label": "The Daily Edge data snapshot",
+      "path": "repository/data.json",
+      "query": {
+        "engine": "file",
+        "description": "Counts current articles across the eight configured content sections.",
+        "executed_at": "2026-08-11T08:05:00+07:00",
+        "language": "json",
+        "filters": ["macro, vietnam, ai, logistics, gold, silver, stocks, realestate"]
+      }
+    },
+    {
+      "id": "phase_plan_hypotheses",
+      "label": "Founder Beta phase-plan assumptions",
+      "query": {
+        "engine": "postgresql",
+        "sql": "select * from (values (1, '1 · Kiểm chứng', 'Đo nhu cầu và mức giá', '≥100 người xem Pro; ≥10 người chọn từ 49.000đ; form conversion ≥10%', 'Founder Beta, chưa thu tiền'), (2, '2 · Thanh toán thử', 'Đo người thực sự trả', 'Không có lỗi Auth/RLS; nhóm thử đồng ý trả', 'Payment link nội địa cho nhóm nhỏ'), (3, '3 · Mở rộng', 'Tăng doanh thu bền vững', 'Retention và chất lượng cập nhật ổn định', 'Pro chính thức, tài trợ có nhãn; cân nhắc quảng cáo')) as t(phase_order, phase, objective, gate, action) order by phase_order;",
+        "description": "Materializes the authored phase gates used by the Founder Beta decision plan.",
+        "executed_at": "2026-08-11T08:30:00+07:00",
+        "metric_definitions": { "phase_order": "Authored sequence of the experiment phases; not an observed metric." },
+        "filters": ["planning assumptions only; not measured outcomes"]
+      }
+    },
+    {
+      "id": "kpi_hypotheses",
+      "label": "Founder Beta KPI assumptions",
+      "query": {
+        "engine": "postgresql",
+        "sql": "select * from (values (1, 'Founder intent conversion', 'Tài khoản gửi form / tài khoản xem trang Pro trong 30 ngày', 'Mục tiêu thử nghiệm ≥10%'), (2, 'Willingness to pay', 'Số tài khoản chọn mức từ 49.000đ/tháng trở lên', 'Cần ≥10 tài khoản trước bước thanh toán'), (3, 'Pro CTA click rate', 'Tài khoản bấm CTA / tài khoản xem trang Pro', 'Chẩn đoán thông điệp và vị trí CTA'), (4, '7-day return rate', 'Tài khoản có lượt truy cập ở ít nhất hai ngày trong 7 ngày đầu / tài khoản mới', 'Guardrail cho giá trị lặp lại'), (5, 'Operational trust', 'Số lỗi nghiêm trọng Auth, RLS hoặc cập nhật tin', 'Phải bằng 0 trước khi thu tiền')) as t(priority, metric, definition, decision_rule) order by priority;",
+        "description": "Materializes the KPI definitions and decision thresholds for the Founder Beta experiment.",
+        "executed_at": "2026-08-11T08:30:00+07:00",
+        "metric_definitions": { "Founder intent conversion": "Distinct users submitting interest divided by distinct Pro viewers in 30 days.", "7-day return rate": "New users with visits on at least two distinct days in their first seven days divided by new users." },
+        "filters": ["exclude owner and test accounts from the decision readout"]
+      }
+    },
+    { "id": "adsense_eligibility", "label": "Google AdSense eligibility", "url": "https://support.google.com/adsense/answer/9724?hl=en" },
+    { "id": "stripe_availability", "label": "Stripe global availability", "url": "https://stripe.com/global" },
+    { "id": "payos_payment_links", "label": "payOS payment links", "url": "https://payos.vn/3-phut-hieu-ro-ve-payos/" }
+  ],
+  "package_info": {
+    "originUrl": "artifact://daily-edge-monetization-2026-08-11",
+    "controls": { "edit": false, "refresh": false }
+  }
+}
