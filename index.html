@@ -413,6 +413,20 @@
     .login-error { min-height:20px; margin:12px 0 0; color:var(--danger); font-size:12px; }
     .session-note { display:flex; gap:8px; margin-top:18px; color:var(--muted); font-size:11px; }
 
+    .auth-feedback-dialog { width:min(540px,calc(100% - 28px)); }
+    .auth-feedback { padding:4px 36px 38px; text-align:center; }
+    .auth-feedback-icon { display:grid; place-items:center; width:66px; height:66px; margin:0 auto 20px; border:1px solid rgba(94,230,181,.28); border-radius:20px; color:#07111f; background:linear-gradient(135deg,var(--green),var(--cyan)); box-shadow:0 18px 44px rgba(94,230,181,.18); font-size:28px; font-weight:900; }
+    .auth-feedback .eyebrow { justify-content:center; }
+    .auth-feedback h2 { margin:13px 0 12px; font-size:clamp(27px,6vw,36px); }
+    .auth-feedback > p { margin:0 auto; max-width:430px; color:var(--muted); line-height:1.7; }
+    .auth-email-chip { display:inline-flex; margin:18px auto 0; padding:8px 12px; border:1px solid var(--line); border-radius:999px; color:#d9e4ee; background:rgba(255,255,255,.035); font-size:12px; font-weight:800; }
+    .auth-steps { display:grid; gap:9px; margin:23px 0 0; padding:0; list-style:none; text-align:left; counter-reset:auth-step; }
+    .auth-steps li { display:flex; align-items:flex-start; gap:11px; padding:12px 13px; border:1px solid var(--line); border-radius:12px; color:#d7e0e9; background:rgba(255,255,255,.025); font-size:12px; line-height:1.55; }
+    .auth-steps li::before { counter-increment:auth-step; content:counter(auth-step); display:grid; flex:0 0 22px; place-items:center; width:22px; height:22px; border-radius:50%; color:#07111f; background:var(--green); font-weight:900; }
+    .auth-feedback-actions { display:flex; justify-content:center; gap:10px; flex-wrap:wrap; margin-top:24px; }
+    .auth-feedback-status { min-height:19px; margin-top:14px !important; color:var(--green) !important; font-size:12px; }
+    .auth-feedback-status.error { color:var(--danger) !important; }
+
     dialog { width:min(920px,calc(100% - 28px)); max-height:calc(100vh - 36px); padding:0; border:1px solid rgba(255,255,255,.15); border-radius:24px; color:var(--text); background:#0c1929; box-shadow:var(--shadow); overflow:hidden; }
     dialog::backdrop { background:rgba(2,7,13,.78); backdrop-filter:blur(10px); }
     dialog[open] { animation:modal-in .3s cubic-bezier(.2,.8,.2,1); }
@@ -767,6 +781,29 @@
       </div>
     </div>
   </dialog>
+  <dialog id="auth-dialog" class="auth-feedback-dialog" aria-labelledby="auth-dialog-title">
+    <div class="modal-scroll">
+      <div class="modal-head"><button class="icon-btn" id="auth-dialog-close" type="button" aria-label="Đóng">✕</button></div>
+      <div class="auth-feedback">
+        <div class="auth-feedback-icon" id="auth-feedback-icon" aria-hidden="true">✉</div>
+        <span class="eyebrow" id="auth-feedback-kicker">Xác nhận email</span>
+        <h2 id="auth-dialog-title">Email xác nhận đã được gửi</h2>
+        <p id="auth-feedback-message">Mở hộp thư và bấm liên kết xác nhận để hoàn tất tài khoản.</p>
+        <div class="auth-email-chip" id="auth-feedback-email"></div>
+        <ol class="auth-steps" id="auth-feedback-steps">
+          <li>Mở email do The Daily Edge gửi qua Supabase.</li>
+          <li>Bấm nút xác nhận trong email; website sẽ tự nhận biết tài khoản mới.</li>
+          <li>Quay lại đây nếu email mở trong một tab khác.</li>
+        </ol>
+        <div class="auth-feedback-actions">
+          <a class="primary-btn" id="auth-open-mail" href="https://mail.google.com/" target="_blank" rel="noopener">Mở Gmail ↗</a>
+          <button class="soft-btn" id="auth-confirmed-check" type="button">Tôi đã xác nhận email</button>
+          <button class="primary-btn" id="auth-enter-site" type="button" hidden>Vào The Daily Edge →</button>
+        </div>
+        <p class="auth-feedback-status" id="auth-feedback-status" role="status"></p>
+      </div>
+    </div>
+  </dialog>
   <div class="toast" id="toast" role="status"></div>
   <div class="runner-cat" aria-hidden="true">🐈</div>
 
@@ -778,6 +815,8 @@
       auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true }
     });
     const PROGRESS_KEY = "daily-edge-progress-v1";
+    const PENDING_SIGNUP_KEY = "daily-edge-pending-signup-v1";
+    const AUTH_RETURN_TYPE = new URLSearchParams(location.search).get("auth");
     const CONTENT_SECTIONS = ["macro", "vietnam", "ai", "logistics", "gold", "silver", "stocks", "realestate"];
     const TREND_SECTIONS = ["macro", "vietnam", "ai", "logistics"];
     const INVESTMENT_ROUTES = ["investment", "gold", "silver", "stocks", "realestate"];
@@ -793,6 +832,8 @@
     let currentUser = null;
     let currentProfileName = "";
     let authMode = "login";
+    let pendingSignupPassword = "";
+    let authSuccessShown = false;
     let activeUserId = "";
     let currentProgressKey = PROGRESS_KEY;
     const trackedProViews = new Set();
@@ -1063,6 +1104,82 @@
       $("#login-error").textContent = "";
     }
 
+    function getPendingSignup() {
+      try {
+        const value = JSON.parse(localStorage.getItem(PENDING_SIGNUP_KEY) || "null");
+        if (!value?.email || Date.now() - Number(value.createdAt || 0) > 86400000) {
+          localStorage.removeItem(PENDING_SIGNUP_KEY);
+          return null;
+        }
+        return value;
+      } catch {
+        localStorage.removeItem(PENDING_SIGNUP_KEY);
+        return null;
+      }
+    }
+
+    function rememberPendingSignup(email, displayName) {
+      localStorage.setItem(PENDING_SIGNUP_KEY, JSON.stringify({ email, displayName, createdAt: Date.now() }));
+    }
+
+    function confirmationRedirectUrl() {
+      const url = new URL(location.href);
+      url.search = "";
+      url.searchParams.set("auth", "confirmed");
+      url.hash = "";
+      return url.toString();
+    }
+
+    function cleanAuthReturnUrl() {
+      const url = new URL(location.href);
+      url.searchParams.delete("auth");
+      const route = ROUTES.includes(url.hash.slice(1)) ? url.hash : "#overview";
+      history.replaceState({}, "", `${url.pathname}${url.search}${route}`);
+    }
+
+    function showAuthFeedback(state, options = {}) {
+      const dialog = $("#auth-dialog");
+      const pending = getPendingSignup();
+      const email = options.email || pending?.email || "";
+      const isSuccess = state === "success";
+      const isChecking = state === "checking";
+
+      $("#auth-feedback-icon").textContent = isSuccess ? "✓" : isChecking ? "…" : "✉";
+      $("#auth-feedback-kicker").textContent = isSuccess ? "Hoàn tất đăng ký" : "Xác nhận email";
+      $("#auth-dialog-title").textContent = isSuccess
+        ? "Tạo tài khoản thành công!"
+        : isChecking
+          ? "Đang kiểm tra xác nhận"
+          : "Email xác nhận đã được gửi";
+      $("#auth-feedback-message").textContent = isSuccess
+        ? "Tài khoản đã được xác nhận và dữ liệu cá nhân sẽ được đồng bộ trên các thiết bị đăng nhập cùng email."
+        : isChecking
+          ? "Hệ thống chưa nhận được phiên xác nhận. Nếu bạn vừa bấm liên kết trong Gmail, hãy chờ vài giây rồi kiểm tra lại."
+          : "Hãy vào Gmail và bấm liên kết trong email của The Daily Edge để hoàn tất việc tạo tài khoản.";
+      $("#auth-feedback-email").textContent = email;
+      $("#auth-feedback-email").hidden = !email;
+      $("#auth-feedback-steps").hidden = isSuccess;
+      $("#auth-open-mail").hidden = isSuccess;
+      $("#auth-confirmed-check").hidden = isSuccess;
+      $("#auth-enter-site").hidden = !isSuccess;
+      $("#auth-feedback-status").textContent = options.status || (isSuccess ? "Bạn đã có thể bắt đầu đọc bản tin." : "");
+      $("#auth-feedback-status").classList.toggle("error", Boolean(options.error));
+      if (!dialog.open) dialog.showModal();
+    }
+
+    async function finishConfirmedSignup(user) {
+      if (!user) return;
+      await activateUser(user);
+      if (!authSuccessShown && (AUTH_RETURN_TYPE === "confirmed" || getPendingSignup())) {
+        authSuccessShown = true;
+        const email = user.email || getPendingSignup()?.email || "";
+        localStorage.removeItem(PENDING_SIGNUP_KEY);
+        pendingSignupPassword = "";
+        showAuthFeedback("success", { email });
+        cleanAuthReturnUrl();
+      }
+    }
+
     $$(".auth-tab").forEach(button => button.addEventListener("click", () => setAuthMode(button.dataset.authMode)));
 
     $("#login-form").addEventListener("submit", async event => {
@@ -1072,6 +1189,7 @@
       const password = $("#password").value;
       const displayName = $("#display-name").value.trim().normalize("NFC");
       submit.disabled = true;
+      $("#login-error").style.color = "var(--danger)";
       $("#login-error").textContent = "";
       try {
         if (!supabaseClient) throw new Error("Không tải được kết nối Supabase. Hãy kiểm tra Internet rồi thử lại.");
@@ -1083,16 +1201,24 @@
             password,
             options: {
               data: { display_name: displayName },
-              emailRedirectTo: `${location.origin}${location.pathname}`
+              emailRedirectTo: confirmationRedirectUrl()
             }
           });
           if (error) throw error;
+          if (data.user && Array.isArray(data.user.identities) && data.user.identities.length === 0) {
+            throw new Error("Email này đã có tài khoản hoặc đang chờ xác nhận. Hãy thử Đăng nhập hoặc kiểm tra lại email cũ.");
+          }
           if (!data.session) {
+            pendingSignupPassword = password;
+            rememberPendingSignup(email, displayName);
             $("#login-error").style.color = "var(--green)";
-            $("#login-error").textContent = "Tài khoản đã được tạo. Hãy mở email xác nhận, rồi quay lại đăng nhập.";
+            $("#login-error").textContent = "Đã gửi email xác nhận. Hãy mở Gmail để hoàn tất tài khoản.";
+            showAuthFeedback("email-sent", { email });
             return;
           }
           await activateUser(data.user);
+          authSuccessShown = true;
+          showAuthFeedback("success", { email: data.user?.email || email });
           return;
         }
         const { data, error } = await supabaseClient.auth.signInWithPassword({ email, password });
@@ -1102,7 +1228,9 @@
         $("#login-error").style.color = "var(--danger)";
         $("#login-error").textContent = /invalid login credentials/i.test(error.message)
           ? "Email hoặc mật khẩu chưa đúng."
-          : error.message || "Chưa thể đăng nhập. Vui lòng thử lại.";
+          : /email rate limit exceeded/i.test(error.message)
+            ? "Bạn đã yêu cầu gửi email quá nhiều lần. Hãy chờ một lúc rồi thử lại, không cần bấm liên tục."
+            : error.message || "Chưa thể đăng nhập. Vui lòng thử lại.";
         $("#password").select();
       } finally {
         submit.disabled = false;
@@ -1795,6 +1923,45 @@
       }
     });
 
+    $("#auth-dialog-close").addEventListener("click", () => $("#auth-dialog").close());
+    $("#auth-enter-site").addEventListener("click", () => $("#auth-dialog").close());
+    $("#auth-dialog").addEventListener("click", event => { if (event.target === $("#auth-dialog")) $("#auth-dialog").close(); });
+    $("#auth-confirmed-check").addEventListener("click", async () => {
+      const button = $("#auth-confirmed-check");
+      const pending = getPendingSignup();
+      button.disabled = true;
+      showAuthFeedback("checking", { email: pending?.email });
+      try {
+        const { data: userData } = await supabaseClient.auth.getUser();
+        if (userData?.user) {
+          await finishConfirmedSignup(userData.user);
+          return;
+        }
+        if (!pending?.email || !pendingSignupPassword) {
+          showAuthFeedback("checking", {
+            email: pending?.email,
+            status: "Nếu Gmail mở xác nhận ở tab mới, hãy tiếp tục tại tab đó hoặc quay lại Đăng nhập bằng email và mật khẩu vừa tạo.",
+            error: true
+          });
+          return;
+        }
+        const { data, error } = await supabaseClient.auth.signInWithPassword({ email: pending.email, password: pendingSignupPassword });
+        if (error) throw error;
+        await finishConfirmedSignup(data.user);
+      } catch (error) {
+        const notConfirmed = /email not confirmed/i.test(error.message || "");
+        showAuthFeedback("checking", {
+          email: pending?.email,
+          status: notConfirmed
+            ? "Chưa thấy email được xác nhận. Hãy bấm liên kết trong Gmail, chờ vài giây rồi thử lại."
+            : "Chưa kiểm tra được lúc này. Bạn có thể đóng hộp này và đăng nhập lại.",
+          error: true
+        });
+      } finally {
+        button.disabled = false;
+      }
+    });
+
     $$('[data-product-cta]').forEach(button => button.addEventListener("click", () => {
       const source = button.dataset.productCta || "unknown";
       const eventName = source.includes("sponsor") ? "sponsor_cta_click" : "pro_cta_click";
@@ -1989,15 +2156,26 @@
         $("#login-error").textContent = "Không tải được kết nối Supabase. Hãy kiểm tra Internet rồi tải lại trang.";
         return;
       }
-      const { data, error } = await supabaseClient.auth.getUser();
-      if (error && !/session/i.test(error.message)) console.warn("Chưa kiểm tra được phiên đăng nhập", error);
-      if (data?.user) await activateUser(data.user); else lock();
-      supabaseClient.auth.onAuthStateChange((_event, session) => {
+      supabaseClient.auth.onAuthStateChange((event, session) => {
         setTimeout(() => {
-          if (session?.user) void activateUser(session.user);
-          else lock();
+          if (session?.user) void finishConfirmedSignup(session.user);
+          else if (event === "SIGNED_OUT") lock();
         }, 0);
       });
+      const { data, error } = await supabaseClient.auth.getUser();
+      if (error && !/session/i.test(error.message)) console.warn("Chưa kiểm tra được phiên đăng nhập", error);
+      if (data?.user) {
+        await finishConfirmedSignup(data.user);
+      } else {
+        lock();
+        if (AUTH_RETURN_TYPE === "confirmed") {
+          showAuthFeedback("checking", {
+            email: getPendingSignup()?.email,
+            status: "Liên kết xác nhận có thể đã hết hạn hoặc chưa tạo được phiên đăng nhập. Hãy thử mở lại liên kết mới nhất trong Gmail.",
+            error: true
+          });
+        }
+      }
     }
     setAuthMode("login");
     void initializeAuth();

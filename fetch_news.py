@@ -82,7 +82,16 @@ Nhiệm vụ:
 - Mọi title, summary và tag PHẢI viết bằng tiếng Việt.
 - Giữ đúng source_index của tin RSS được chọn.
 - Nếu chưa tìm được một số liệu đáng tin cậy, ghi "Chưa có dữ liệu".
-- Mỗi nhóm chọn tối đa 3 tin đáng chú ý, giữ nguyên thứ tự theo source_index.
+- Các nhóm macro, vietnam, ai, gold, silver, stocks và realestate chọn tối đa
+  3 tin đáng chú ý. Riêng logistics chọn tối đa 6 tin, ưu tiên cân bằng ít
+  nhất 2 tin Việt Nam và 2 tin thế giới khi danh sách nguồn có đủ tin phù hợp.
+- Với logistics, ưu tiên cảng biển, vận tải biển/hàng không/đường sắt, giá cước,
+  hành lang thương mại, hạ tầng kho vận, gián đoạn chuỗi cung ứng và chính sách.
+- Phải phân biệt rõ dự án đã phê duyệt, đang triển khai, đang nghiên cứu và mới
+  chỉ là đề xuất. Không gọi Thailand Land Bridge là "kênh đào Kra"; không suy
+  diễn rằng Cần Giờ sẽ nhận toàn bộ hoạt động cảng miền Nam nếu nguồn không nói.
+- Không tự ghép quan hệ nhân quả giữa một dự án của Thái Lan và cảng Cần Giờ
+  nếu tiêu đề RSS hoặc nguồn tin không đưa ra mối liên hệ đó.
 
 Chỉ trả về một JSON object hợp lệ, không dùng Markdown và không thêm
 lời giải thích bên ngoài JSON.
@@ -125,7 +134,7 @@ Cấu trúc bắt buộc:
     {
       "source_index": 0,
       "title": "tiêu đề tiếng Việt",
-      "summary": "tóm tắt 2 câu tiếng Việt",
+      "summary": "tóm tắt 2-3 câu tiếng Việt, nêu rõ địa điểm, trạng thái dự án và tác động logistics nếu tiêu đề nguồn có thông tin",
       "tag": "Logistics Việt Nam hoặc Logistics Thế giới"
     }
   ],
@@ -924,6 +933,19 @@ def fetch_google_news(query, language, country, edition, limit=6):
     return articles
 
 
+def fetch_google_news_optional(query, language, country, edition, limit=6):
+    """Bỏ qua một truy vấn chuyên sâu nếu RSS tạm thời không có kết quả."""
+    try:
+        return fetch_google_news(query, language, country, edition, limit)
+    except Exception as error:
+        print(
+            f"CẢNH BÁO: Bỏ qua nguồn RSS bổ sung: {error}",
+            file=sys.stderr,
+            flush=True,
+        )
+        return []
+
+
 def merge_articles(*article_groups, limit=8):
     """Gộp nhiều RSS và loại tiêu đề trùng nhau."""
     merged = []
@@ -965,22 +987,50 @@ def fetch_news_sources():
         ),
         "logistics": merge_articles(
             fetch_google_news(
-                '("logistics Việt Nam" OR "cảng biển" OR '
-                '"chuỗi cung ứng" OR "vận tải hàng hóa") when:3d',
+                '("logistics Việt Nam" OR "cảng biển Việt Nam" OR '
+                '"chuỗi cung ứng Việt Nam" OR "vận tải hàng hóa" OR '
+                '"giá cước vận tải") when:5d',
                 "vi",
                 "VN",
                 "VN:vi",
-                limit=5,
+                limit=6,
             ),
             fetch_google_news(
-                '("global logistics" OR shipping OR freight OR '
-                '"supply chain") when:3d',
+                '("global logistics" OR "container shipping" OR freight OR '
+                '"supply chain disruption" OR "port congestion" OR '
+                '"freight rates") when:5d',
                 "en-US",
                 "US",
                 "US:en",
-                limit=5,
+                limit=6,
             ),
-            limit=8,
+            fetch_google_news_optional(
+                '("cảng trung chuyển quốc tế Cần Giờ" OR "cảng Cần Giờ" OR '
+                '"Cái Mép Thị Vải" OR "cảng Lạch Huyện" OR '
+                '"hành lang logistics Việt Nam") when:30d',
+                "vi",
+                "VN",
+                "VN:vi",
+                limit=4,
+            ),
+            fetch_google_news_optional(
+                '("Thailand Land Bridge" OR "Kra Canal" OR "Thai Canal" OR '
+                '"Southern Economic Corridor Thailand") '
+                '(shipping OR port OR logistics OR trade) when:30d',
+                "en-US",
+                "US",
+                "US:en",
+                limit=4,
+            ),
+            fetch_google_news_optional(
+                '("Red Sea shipping" OR "Suez Canal" OR "Panama Canal" OR '
+                '"Strait of Malacca" OR "South China Sea shipping") when:7d',
+                "en-US",
+                "US",
+                "US:en",
+                limit=4,
+            ),
+            limit=24,
         ),
         "gold": merge_articles(
             fetch_google_news(
@@ -1383,7 +1433,7 @@ Trả về đúng JSON theo cấu trúc được yêu cầu.
                         },
                     ],
                     temperature=0.1,
-                    max_completion_tokens=3600,
+                    max_completion_tokens=4300,
                     response_format={"type": "json_object"},
                 )
 
