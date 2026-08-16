@@ -1,10 +1,10 @@
 {
-  "updated_at": "16/08/2026 06:43",
+  "updated_at": "16/08/2026 16:01",
   "tickers": {
     "fed_rate": "Chưa có dữ liệu",
     "cpi": "3.3%",
     "vnindex": "1,729.08",
-    "usd_vnd": "26,098",
+    "usd_vnd": "26,072",
     "vnindex_change": "-36.55",
     "vnindex_change_pct": "-2.07%",
     "vnindex_direction": "down",
@@ -13,17 +13,8 @@
   },
   "macro": [
     {
-      "title": "Áp lực lạm phát từ trí tuệ nhân tạo gây thêm sức ép lên Fed",
-      "summary": "Lạm phát từ trí tuệ nhân tạo đang gây thêm sức ép lên Cục Dự trữ Liên bang Mỹ (Fed). Liệu lãi suất cao hơn có thể là bước tiếp theo? Fed đang đối mặt với thách thức lớn trong việc kiểm soát lạm phát.",
-      "tag": "Lạm phát và lãi suất",
-      "source": "MarketWatch",
-      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNLVNEdUgtSlF5Q0NHNVc3LUpRMGVMRHktNDhwdDhtUGljNmtYckF5UXAtcnF0TF96NjkyUnFodnoyM3N4TTN1alAzbGdNLTFBcG5Bb0dIbEVOYm1XVWd3UVJCa25qYVJKMVMzZVZmcF9wR1RzVUdpckpTeExIX3RnRmVMZzBKU0xhVU5JM3U2UHE2WmNvZFRFNW1fcTM5MmZ4N1NhQ0Nlc2dHZnBEMFhmN3ZxbkVpMEt3UDhxSHdHVzBjMG1OUW82aVZ4bXM?oc=5",
-      "published_at": "Sat, 15 Aug 2026 13:00:00 GMT",
-      "id": "62b56acfe661c3c67d24"
-    },
-    {
-      "title": "Dữ liệu lạm phát thấp hơn có thể buộc Fed giữ nguyên lãi suất",
-      "summary": "Dữ liệu lạm phát thấp hơn có thể buộc Fed giữ nguyên lãi suất. Điều này có thể ảnh hưởng đến quyết định của Fed trong việc điều chỉnh lãi suất.",
+      "title": "Dữ liệu lạm phát thấp hơn có thể buộc Fed chia rẽ phải giữ nguyên lãi suất",
+      "summary": "Dữ liệu lạm phát thấp hơn có thể buộc Fed chia rẽ phải giữ nguyên lãi suất. Điều này có thể ảnh hưởng đến quyết định lãi suất của Fed trong tương lai.",
       "tag": "Lạm phát và lãi suất",
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQbDJaOWp0UVZZRVd3MUp5UGNUVk1EOXNybWFfeXRKR2FQYzJsUnJCN3VEU1I2bldJWHFodHlUWXQxcUdzXzVtaTN4RmEyaHlwREhvdVpialZycTYyaFozME5kWWV3MGFqT1hGS00zTnMyQmVDZkZXZTFvT0VGR0RSMU1FMnBiT3dyZFlSQmx5RDRXX0JsZ1dPMy1KOTNteGVOaVJRemdUaDhtWkpmRndEeQ?oc=5",
@@ -31,77 +22,86 @@
       "id": "627acd752676ce247fc5"
     },
     {
-      "title": "Vàng tăng giá khi đồng USD yếu đi và dữ liệu lạm phát ủng hộ việc giữ nguyên lãi suất",
-      "summary": "Vàng tăng giá khi đồng USD yếu đi và dữ liệu lạm phát ủng hộ việc giữ nguyên lãi suất. Điều này cho thấy sự quan tâm đến vàng như một phương tiện trú ẩn an toàn.",
+      "title": "Vàng đạt mức cao hai tháng khi thị trường chờ đợi dữ liệu lạm phát của Mỹ",
+      "summary": "Vàng đạt mức cao hai tháng khi thị trường chờ đợi dữ liệu lạm phát của Mỹ. Điều này cho thấy sự quan tâm của nhà đầu tư đến vàng như một tài sản an toàn.",
       "tag": "Giá vàng và lạm phát",
-      "source": "CNBC",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOVWxidENoLWdvdmlvbHp3RHdjdTN1RmFDc1RoVUVIVTFxQVFmNnJLRE0wUHlkcEhEQkIxbEpfQkR5VEZjdURzdThqenduWVgtclhTQXhvZ19WZFB2QVFDb0s3eURsOUMyMk1FNF9vRHFBVGV1eGdSUi1TX0l3Ti1IVmVTTzNlNXN2VHpmU0VnQm1sVk11ejgteFA1Z1VWNk5sWk1KWndUWjVWOTjSAbABQVVfeXFMUG5Ec1dBSHJGZUlabzZqWG1KUFpxZkgwNU1iSjhud0Q2MlpKN3lBSVBlTnRrenJjZm12NlZGSjlrOWFTT1hYY2FMbmJORm4zdlVlUEYydFZDQV9mbXpfeHJxSDNZeE1QOU5nWEQ5YnZobElnRjNOQWFEUk52OVh3MWZrNjVuUjJVTlVfLVhBcktIY0FDQ3dadE9Lc3RpSlJMWlp2TVNIdGwxaHVhS0VhaFg?oc=5",
-      "published_at": "Fri, 14 Aug 2026 04:18:59 GMT",
-      "id": "794a225515f4015efcb5"
+      "source": "investingLive",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPbWRReVNPY082YjNlZy1GZmJScXdsN1dqSG5hQXVYeVotWE5hbkJEa0dSTV96b3N3aUNTRl9BeGFXSGNiczRRc0Z2ZHBwcTk5TkotTU8xaHhPdEFnbHBlNjNVM3VSbGJfTTI4ZkJtak43RVktaU5ZY1ZpSFV5M19PQW9PMHo5UXRIMDBpMlpORm0yQ0pnY1VwaHVNZU5GQ2dmaHNxcEVQYm5ITE9O?oc=5",
+      "published_at": "Sun, 16 Aug 2026 01:50:14 GMT",
+      "id": "c9a5d4524b3222bd945b"
+    },
+    {
+      "title": "Tình hình địa chính trị và việc làm tại Mỹ ảnh hưởng đến triển vọng lãi suất toàn cầu",
+      "summary": "Tình hình địa chính trị và việc làm tại Mỹ ảnh hưởng đến triển vọng lãi suất toàn cầu. Điều này có thể ảnh hưởng đến quyết định đầu tư của các nhà đầu tư.",
+      "tag": "Lãi suất và địa chính trị",
+      "source": "AZ FREE NEWS",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPaVZsTnhUOGpzTHRPVWlhMXhpV1dQcTVfZThzU3ZvUExtX0g1MlY5NlRrejBQZGJUc2tTNnB5eUhLTGk3aHUxdW1Qakc1eW5PcVFjQkU3XzFGbEk2TEpuUklVdkYzZE1hUG85UVJpZnA2SUM1M2FOekVRcXpFUHFpRmg2cEJkaldGeUQ4UzRic0xWQlp1aGhJb3NNOXBIWHpsUjBYRw?oc=5",
+      "published_at": "Fri, 14 Aug 2026 09:48:06 GMT",
+      "id": "c2551eebe6d2118f7831"
     }
   ],
   "vietnam": [
     {
-      "title": "VN-Index chịu áp lực điều chỉnh cùng chiến lược tái cơ cấu danh mục",
-      "summary": "VN-Index đang chịu áp lực điều chỉnh do chiến lược tái cơ cấu danh mục. Điều này cho thấy sự điều chỉnh trong thị trường chứng khoán Việt Nam.",
-      "tag": "Thị trường chứng khoán Việt Nam",
-      "source": "vietnamplus.vn",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOVGxkN3JHcU9KVzdZUWxTdmFKeVJndk95cVVKRUVlZ2ZfV1F1QktSbGIzT2NYYmRzd1N4LVB4RTVKcFUwWTRPTFcwa0lQMlRyZzNYZDNoZERGcVhnRHpTUkUtSjRSd3pKRFJ4SXU3UUtqTHlfbGt0WmJjOW52TlBlQVBzSllKU1loUzRWWmlaekcwN0R5Q3hKSlVSZDJrVmhKa3BwLVdnR3ROM0o0dWh3?oc=5",
-      "published_at": "Sat, 15 Aug 2026 09:04:56 GMT",
-      "id": "3dc19ea8da4a4ba6ac08"
+      "title": "Thủ tướng yêu cầu Ngân hàng Nhà nước chỉ đạo giảm lãi suất",
+      "summary": "Thủ tướng yêu cầu Ngân hàng Nhà nước chỉ đạo giảm lãi suất. Điều này có thể ảnh hưởng đến quyết định đầu tư của các doanh nghiệp.",
+      "tag": "Lãi suất và kinh tế",
+      "source": "Báo Dân trí",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNaWU3VWpqOTZkYWttaFJBVTQtU0FTdVV6YjV2YmJab0poajlBVmZBdmc5ZHpRalk3dHp2aUloc3N1NnNOR25NSU1qTGVESUpDX0JOX3VGQ2xtOG1ZWkktWk05dldwd2ZSd2RvUUV4TzdQc3M1NmRIb0NiZFdqX294NzdBdUdGM3NTYmlFZ2ROSFZ5OUdlb0JTVWtsU1lld0lIRzhXREtaa1ZVLXRCSFptMWk5MjQzc2w3dVkzcUFMOF9aTU1nWWZB?oc=5",
+      "published_at": "Sun, 16 Aug 2026 03:22:30 GMT",
+      "id": "b541eea2f6a53aa7d1eb"
     },
     {
-      "title": "VN-Index lùi bước sau khi tiến sát mốc 1.800 điểm",
-      "summary": "VN-Index đã lùi bước sau khi tiến sát mốc 1.800 điểm. Điều này cho thấy sự biến động trong thị trường chứng khoán.",
-      "tag": "Thị trường chứng khoán Việt Nam",
-      "source": "Tạp chí Kinh tế - Tài chính Online",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNYklGdHFMNFlSM2NJVEJiQjBPZGtIVjNaVE80bGd5QzZmMzB6RXlpUWZJU3Q4SzdPTm5HVDFFcVo5eDIwVFhYNXptTlNKbDVDbmFJMVFMU3JnSnNBdGVUQnY2LV9tNVV4ekNiRm4zYXBfMkVSbHh2MWQ3YmV4RzZ2WkhlVnpiMWlyRzdueFNHc0RnMXhpWlg0aw?oc=5",
-      "published_at": "Sat, 15 Aug 2026 10:16:04 GMT",
-      "id": "dcc01ef71a5f572d7e01"
+      "title": "Xu hướng dòng tiền: Nhịp hồi kỹ thuật kết thúc, VN-Index có nguy cơ giảm",
+      "summary": "Xu hướng dòng tiền: Nhịp hồi kỹ thuật kết thúc, VN-Index có nguy cơ giảm. Điều này cho thấy sự quan tâm của nhà đầu tư đến thị trường chứng khoán.",
+      "tag": "Thị trường chứng khoán",
+      "source": "VnEconomy",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNTWMyM2l5anR4UmtWZmEwcW1jSDNiYzIxaXFsSXNBSGE5MnNxYUxWMVJvSUdZa3lyTEI0OVV0WVlwNUlhai1KQkNxTk1SVXhtUGh4cWFQVXN2VmdXcy1KUGw4MjU3VzBtVU5nODNwODd0LWFld244dWZIRVVtOGVpY2lZcWpHVlhCM2dwUE9sT0JqcWJNRTRRWGhHQmc1bUs2bU9SSTJxTC1BQQ?oc=5",
+      "published_at": "Sun, 16 Aug 2026 03:21:53 GMT",
+      "id": "39ad4473cd3ec3ebcaaa"
     },
     {
-      "title": "VN-Index không vượt được mốc 1.800 điểm, giảm 2,2% trong tuần",
-      "summary": "VN-Index không vượt được mốc 1.800 điểm và giảm 2,2% trong tuần. Điều này cho thấy sự giảm nhẹ trong thị trường chứng khoán.",
-      "tag": "Thị trường chứng khoán Việt Nam",
-      "source": "Báo Thanh tra",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNMy1OeTNOUFQ0LUwxSm5xcldhdDB1MnVRXzFyemVHZW9yQ0xiVzdEMDlxaW9aSUxlT3hFczBVNjlKNy1PSDFOZWR5TThUc1UzanJYbTlCMlBWV1lSYWtyeC0wQkE3bDVuZDhQOUpldFJ0clpBVUU2TXZ2QTBZbW9CM2dqc3VKbS1fb3NjcnpGTkxmYUFUejJ2VzdYSXlFRWtPM3E3MkRDalE5SUQ2alg1WkpjOUp3TzA?oc=5",
-      "published_at": "Sat, 15 Aug 2026 02:29:20 GMT",
-      "id": "505843a0bb3a2242afa2"
+      "title": "Góc nhìn chuyên gia: Rung lắc tiếp diễn, chưa có cơ sở để VN-Index phục hồi bền vững",
+      "summary": "Góc nhìn chuyên gia: Rung lắc tiếp diễn, chưa có cơ sở để VN-Index phục hồi bền vững. Điều này cho thấy sự quan tâm của nhà đầu tư đến thị trường chứng khoán.",
+      "tag": "Thị trường chứng khoán",
+      "source": "CafeF",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQbS1yVzFpd3IyeWU4aVFlaDNJcW5FeFRXQ0RhVUpmQW9tLUNwdnhkRDlpR0h2UzEzS1lIVXA3RlUwcTJfaHI0alBkV0NNdW40cmVHVF94ZmxBMS13VTFGbkRuOUZhdUJqVzJPeWZ1MlJkYTBBd0syRTVaZ0RyYmsycGE4c0VIdFhUTDdlZUI2ZFFqVVpkSDM5NzA5ajdKWXZsUGl3MXM5NnpCaUQzbVQ5Tk03d2JadnFLdGZtSHZ2RQ?oc=5",
+      "published_at": "Sun, 16 Aug 2026 08:28:00 GMT",
+      "id": "c5daf81c7924f0fae5b8"
     }
   ],
   "ai": [
     {
-      "title": "AMD đầu tư 566 triệu USD vào SpaceX, đặt câu hỏi lớn hơn về đơn đặt hàng chip AI",
-      "summary": "AMD đã đầu tư 566 triệu USD vào SpaceX, đặt ra câu hỏi lớn hơn về đơn đặt hàng chip AI. Điều này cho thấy sự quan tâm đến công nghệ AI.",
-      "tag": "Trí tuệ nhân tạo",
-      "source": "Yahoo Finance",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQaXFwSFFIT1NySVNIZm9PamVickpuOE5hcUJWVEpJbkdSTFBqb2QwaFlVamxvNlVvNVpid2I4ejd0eTZ5Vlp3RUNXTTJNd1VKLWJFcXgxM19jYUVIbkkySE9xODZFY01LMERrR1FqWDlyX20xQm53bFVucDN0U1VCZU54N3Q5R0x6YUhsUlFWRWNsaklCUkU2MA?oc=5",
-      "published_at": "Sat, 15 Aug 2026 15:41:13 GMT",
-      "id": "c098b1f13c8029f21406"
-    },
-    {
-      "title": "Lạm phát 'chip' do AI gây ra đang ảnh hưởng đến nền kinh tế Anh",
-      "summary": "Lạm phát 'chip' do AI gây ra đang ảnh hưởng đến nền kinh tế Anh. Điều này cho thấy sự tác động của AI đến kinh tế.",
-      "tag": "Trí tuệ nhân tạo",
+      "title": "Lạm phát do AI đang gây áp lực thêm cho Fed",
+      "summary": "Lạm phát do AI đang gây áp lực thêm cho Fed. Điều này có thể ảnh hưởng đến quyết định lãi suất của Fed trong tương lai.",
+      "tag": "Lạm phát và AI",
       "source": "Bloomberg.com",
       "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNbVpIQ3BISXd0cXNHSy1Sd2RNd2l0RzFRNU4yQXZsbnFnNlNQSE85c0xYbTdsTzJLQm5yQXhjd201bnBrWWNwY2sxSl9TZXpmeV8xNGRqLVpiQU11VUJaejZ5YjFJcGZCX1RUYWNubzhxLVhzb3BsNnNVd1lEYzhjVzVBdFExRmxBZXloTk13UDJQSjhvb01SYlJaWGlwZw?oc=5",
-      "published_at": "Sat, 15 Aug 2026 20:00:00 GMT",
+      "published_at": "Sun, 16 Aug 2026 06:20:00 GMT",
       "id": "378bace06ec01ccdc1a8"
     },
     {
-      "title": "AMD đầu tư 566 triệu USD vào SpaceX, đặt câu hỏi lớn hơn về đơn đặt hàng chip AI",
-      "summary": "AMD đã đầu tư 566 triệu USD vào SpaceX, đặt ra câu hỏi lớn hơn về đơn đặt hàng chip AI. Điều này cho thấy sự quan tâm đến công nghệ AI.",
-      "tag": "Trí tuệ nhân tạo",
-      "source": "24/7 Wall St.",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNMnc1U2NBQmxlZGdUeF90ZXQ4RHlNVUZHYUlIb0VTU3NacVMyNUtqdmZYRXVrSHFVWHNNMk52Z2hGaDg0NHUyUE8yNHJIQXM1WU43X2d6OWVvTXdVR3M5QmxnYjBJVWNZd1RkNUkzT3ZBZ19RaWNkUnIwVlpJMnpOY0VvLWFqRVNxX3VOSFp3Zlg4TlFnTElnRnZFQzJoQmoxV0NZOFdfX21CbzJPWXEyVnJvRHI4YmxGX3c?oc=5",
-      "published_at": "Sat, 15 Aug 2026 15:41:13 GMT",
-      "id": "5bf6f0d1c2fdac9d2361"
+      "title": "5 cổ phiếu AI đã tăng hơn 300% trong 3 năm qua",
+      "summary": "5 cổ phiếu AI đã tăng hơn 300% trong 3 năm qua. Điều này cho thấy sự quan tâm của nhà đầu tư đến công nghệ AI.",
+      "tag": "Cổ phiếu AI",
+      "source": "The Motley Fool",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOZFllNDAxOEdXb2M4OHpMbVFaRUV0R1Z2VUFaMTh0TDhhVnJkMWRhY0ktWFQ5ZVRPV0RRWWw3OWszdWJFWk11c0lUaTlTS0ZlT1YxTFN2MFZyV0kzRGRhdVlfQVlsenJYaS1QdzZHZ0NQdVNMOXFDODhLOVRkd3R2akdkZHZzdUZ4ZFdqYW1vb0tDUlJHc09B?oc=5",
+      "published_at": "Sun, 16 Aug 2026 08:40:00 GMT",
+      "id": "e5d014a442cedf22f19a"
+    },
+    {
+      "title": "SK Square sẽ sử dụng lợi nhuận từ SK Hynix để đầu tư vào AI và chip",
+      "summary": "SK Square sẽ sử dụng lợi nhuận từ SK Hynix để đầu tư vào AI và chip. Điều này cho thấy sự quan tâm của các công ty đến công nghệ AI.",
+      "tag": "Đầu tư vào AI",
+      "source": "KED Global",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE14aGhaWWlmNndKVEJscVM2bG1YYU5JWm9weWFlTEM0STdaWUpPSVZRMjZObmRlRUtUTnVQY19xbFBHbHdzUklwYmdPZlc2VWU5cTZPSWZPSjM1ODB0S0trZEFaYjZHd3gzTm91czRMc29zZFgtNUxPVA?oc=5",
+      "published_at": "Sun, 16 Aug 2026 08:00:05 GMT",
+      "id": "e4974db2b9b97b198f5d"
     }
   ],
   "logistics": [
     {
       "title": "Đà Nẵng trong chiến lược nâng cao vị thế của logistics Việt Nam",
-      "summary": "Đà Nẵng đang trong chiến lược nâng cao vị thế của logistics Việt Nam. Điều này cho thấy sự quan tâm đến việc phát triển logistics.",
+      "summary": "Đà Nẵng trong chiến lược nâng cao vị thế của logistics Việt Nam. Điều này cho thấy sự quan tâm của các doanh nghiệp đến ngành logistics.",
       "tag": "Logistics Việt Nam",
       "source": "Vietnam.vn",
       "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQa0tDX0RYOTZTbGJWcW5FbWZ4Wks4NE5OMkxXZVRNMGl3V3pVZW9GTUhlU3hyVE1Fa0djOUFYMHFtb1ZtZU8wLWpKVDVVNEgwLVdNUmVIclA5RnlnREFaNjNVYXFReHhOVGxVZExNdGxKWUVXRlpJS1R2MEVrdmRJcWdDd3J2bzVCMTVwRURLYw?oc=5",
@@ -109,44 +109,44 @@
       "id": "38144b7426aec6efb176"
     },
     {
-      "title": "ITL thúc đẩy logistics thông minh và bền vững tại VILOG 2026",
-      "summary": "ITL đang thúc đẩy logistics thông minh và bền vững tại VILOG 2026. Điều này cho thấy sự quan tâm đến việc phát triển logistics thông minh.",
-      "tag": "Logistics thông minh",
-      "source": "CafeF",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOOWlsbHlacl9tRnVydUZOSG9IRjBNQkZ4ZzlTaVlOX1FLeGxTdTJieFNKU1NTa1FLZ1NWbmc2YnVkRGNLYXg0eVVLMGJjRnVRQi1NdzkwOTVKV2F1N0J0c0ZwTlBFWjVhSHVUcVlVYUNVSDBnMEM1bS02eGxJVTA2WEc5RUZlUnZBdXB5a19udGlHNHR0ZE54OHU5NHlnSUNKdVE?oc=5",
-      "published_at": "Fri, 14 Aug 2026 03:09:00 GMT",
-      "id": "1b71d82055985d062935"
+      "title": "Tàu hàng hóa bị tai nạn ở Worcester",
+      "summary": "Tàu hàng hóa bị tai nạn ở Worcester. Điều này có thể ảnh hưởng đến hoạt động logistics tại khu vực.",
+      "tag": "Logistics Thế giới",
+      "source": "WJAR",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPeUNRSjBNQzlmWlhoeHowaVg0ZktqaGxZZDFiOHRXNnZBRldMcDNrVUgzU1A0OVE3Y0tvYVpMVFRUdXAwTk15QU1PR18xUElON3hpa0FPeTVpb1YzSDdhVmo2UnM1V2x5OUhwbmoydzhNaGR4YlJDM2E0UlN4ZE1KNl9FMk5GWnlxbEpUXzBPU3F2eVlNWUU5aGVhNkdCVFZsOGF0Z2NVdmNZZXVqRFZIREFpYWhBX3ZQQzQySUUtMA?oc=5",
+      "published_at": "Sun, 16 Aug 2026 00:32:29 GMT",
+      "id": "0566afab1c157549a191"
     },
     {
-      "title": "Tàu hàng hóa bị tai nạn ở Worcester",
-      "summary": "Tàu hàng hóa bị tai nạn ở Worcester, gây ảnh hưởng đến hoạt động logistics. Điều này cho thấy sự rủi ro trong hoạt động logistics.",
+      "title": "Maersk tăng dự báo lợi nhuận do nhu cầu vận tải biển tăng",
+      "summary": "Maersk tăng dự báo lợi nhuận do nhu cầu vận tải biển tăng. Điều này cho thấy sự quan tâm của các doanh nghiệp đến ngành logistics.",
       "tag": "Logistics Thế giới",
-      "source": "Boston 25 News",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOWVRFdE9ibHNyZU1CUGZobzRMUF9kTmZRS2pvODdNWW1Xa0ZYNGlHTjFNSDhUZWdGZlpvZ05RakNFVW5vYlRKbXUtczhzTTFTdjYxVElHdEcwUU9jVXUzSjBFRW5uVm1hMFgwank3ZExycEg0TW9wTW53UnZBUWRnc3I5T1JUbjJpajBkV0FkSXZTVFVWbmtMX0V0dTZ5Tk5t0gG0AUFVX3lxTFBFejlMTUE4dlhfNmczSjRRVDdhZUNXbjJ4d2xZenZZM1JXNmwxbmdVbG9lSlhvTTVDN3AyTzlPX2FWZnp3ZDlMRkRrdnpESDNPcFN4TTM2eFF4TU1iaXJsQ3lDMGdmY0IzTWNiTWR5U0g1S1JMQTJ2SzZVSGZKdkFaSU5KeUZWNVYyMXlZd09pY1o4NTBhcXhQZkJoTnJKNS1RU0VROXRHUE8zaV9BTkdaNk9tUg?oc=5",
-      "published_at": "Sat, 15 Aug 2026 15:06:38 GMT",
-      "id": "894ffceef88dfdfd8b72"
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOQW5qM2VYQ3RlX1Q5SWhodmtJeXJpTkI3YzNiMFBQc3l5VUlQOTctcGctMHIxaU1hdE03MmdodV9ub1V1YjQzSGlLcTN2MzEyY2dxSnlDSTc1U0JiY1BIcDNZNjk1MmFVVzFIRURheEVUVEwzeDR4S2trQ1B0eUJmWF9mb1F6cl9Kc3V3OWpOMWY4enZMbGd3ZFNjdUpYZHc0aXY0dXRuZkU0a3JHOHVsY3JVdmJGdXNL?oc=5",
+      "published_at": "Thu, 13 Aug 2026 12:08:29 GMT",
+      "id": "d200049d6336ad5825ed"
     },
     {
       "title": "TP.HCM phát huy lợi thế Cần Giờ, Cái Mép - Thị Vải để phát triển kinh tế biển",
-      "summary": "TP.HCM đang phát huy lợi thế Cần Giờ, Cái Mép - Thị Vải để phát triển kinh tế biển. Điều này cho thấy sự quan tâm đến việc phát triển kinh tế biển.",
+      "summary": "TP.HCM phát huy lợi thế Cần Giờ, Cái Mép - Thị Vải để phát triển kinh tế biển. Điều này cho thấy sự quan tâm của các doanh nghiệp đến ngành logistics.",
       "tag": "Logistics Việt Nam",
-      "source": "Báo Tuổi Trẻ",
+      "source": "Tuổi Trẻ",
       "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPODBETE1IeEg1dFBPMnJyZDFlUS1QNC16ejFYRDA5N2k5Q2Q4U3hTV3d6ejJOUGpZNlZMMGx4NEFmdFdhZ05MTm8tS3ZjaW45akl6Vk45dHpGOFpXUXp0LXhULU5zcnZQeHRtSmQ5a0xheEd6TU5zc19tUzZkaWF4UldEYlJkVG5SVkx5eGllYkRsZk9fQURrZzFDNTI4aXpTTEFTZEVld2dhTzJvVkstbWdJRUQ3QQ?oc=5",
       "published_at": "Fri, 07 Aug 2026 03:16:00 GMT",
       "id": "303a770f7b9c2b5fecf2"
     },
     {
-      "title": "Phấn đấu khởi công 4 bến cảng tại Lạch Huyện vào cuối năm 2026",
-      "summary": "Phấn đấu khởi công 4 bến cảng tại Lạch Huyện vào cuối năm 2026. Điều này cho thấy sự quan tâm đến việc phát triển hạ tầng cảng.",
+      "title": "TP.HCM mở hành lang logistics nối Cái Mép - Thị Vải - Cần Giờ với sân bay Long Thành",
+      "summary": "TP.HCM mở hành lang logistics nối Cái Mép - Thị Vải - Cần Giờ với sân bay Long Thành. Điều này cho thấy sự quan tâm của các doanh nghiệp đến ngành logistics.",
       "tag": "Logistics Việt Nam",
-      "source": "baohaiphong.vn",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPZjM5bldaNU5naHpzazQxNGZ5R245NjdmanVoMEdiMm5MaHprSi1PSEZuMVJDY0ota2FySkpEMnRVcGRMV0dhdVFqUm82WFkwU1pUSzh5Q3ZIbWlGaDlQSk5FTWZkVW1PYlhhSUtEZjdoeHNyQ0ptQzFtbnB6bnV0M19ybzNhWXgxdGFjNWkzVFA5QVlPUlY4MkFmcTcydw?oc=5",
-      "published_at": "Wed, 22 Jul 2026 07:00:00 GMT",
-      "id": "392b0d947506693c78e2"
+      "source": "cafeland.vn",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQbklIZWE1VThQbDhRc3VSckR2cm9EWTQyMWoyTlh3cF82LXkyemZkdmpNaGhxc1lzaHBjbGlCSTdQc053UkE4T3B6bEVIcjNKMGt2d1VDSVl2LW4zamk2d1JFOE5sLVNmVFRoWC11ZEZHUXJkNXlvOXg1SDVtVDY5XzVzd01lX3NZN0h1QUFoXzlpcDRFRWZSekxyY1JGbzlXUC1fMDZXb29mRmt1R2RlQms4REU3Z2VIUG9v?oc=5",
+      "published_at": "Sun, 02 Aug 2026 07:00:00 GMT",
+      "id": "fcfd271646e406c7489a"
     },
     {
-      "title": "Thailand tạm dừng dự án đường bộ tránh eo Malacca",
-      "summary": "Thailand tạm dừng dự án đường bộ tránh eo Malacca. Điều này cho thấy sự điều chỉnh trong chiến lược logistics của Thailand.",
+      "title": "Thái Lan tạm dừng dự án đường bộ tránh eo Malacca",
+      "summary": "Thái Lan tạm dừng dự án đường bộ tránh eo Malacca. Điều này có thể ảnh hưởng đến hoạt động logistics tại khu vực.",
       "tag": "Logistics Thế giới",
       "source": "The China-Global South Project",
       "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOM2EtcFpCSWZzSXpmZUg0Q3dxRnNKcnhHWVBUeFZ1ZldYWEc2aGptWXlkWm1IT19SWE16YnJiZmFRVjJaT0tzd0N6cWtiaU1sMzdkWlRra0lQSWZpcFlFNC1QdGhUeDZOQ2s4VkdhdGpFbVRoS21jODFyOGFCMEJyQmRseWl4NGszTE5USjQzSUZvQQ?oc=5",
@@ -156,122 +156,122 @@
   ],
   "gold": [
     {
-      "title": "Giá vàng hôm nay (16-8): Đảo chiều tăng",
-      "summary": "Giá vàng hôm nay (16-8) đã đảo chiều tăng. Điều này cho thấy sự biến động trong giá vàng.",
+      "title": "Giá vàng hôm nay giữ ngưỡng 144 triệu đồng/lượng bán ra",
+      "summary": "Giá vàng hôm nay giữ ngưỡng 144 triệu đồng/lượng bán ra. Điều này cho thấy sự quan tâm của nhà đầu tư đến vàng như một tài sản an toàn.",
       "tag": "Giá vàng",
       "source": "Báo Quân đội nhân dân",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOT2VNM1IwVTc3Zm9KT0l1dEMxNFZOa2RIdG1ueElwdEZDaVJaU09BUGFOZm5WVjhoY19qSi1xWmJHUkpoZEl4c1R0ZnFRT050a0l5WHVINWx5SFJ0YUx2Vk45SzFWYy1rbG9yQURVZ1BDcFNqZWhzTlNBMzNYNWZrYXVKdk8xdXc?oc=5",
-      "published_at": "Sat, 15 Aug 2026 22:43:50 GMT",
-      "id": "2f55ed8519618e03ffc7"
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNVkY2NUFWcHFIdmR3UkRaY0kwTWFucEg5R09tem9EYUR0MlBnRVlPYmdybWZvYTdWdjBJMmdIMTRjLUJIYUdHb2pQQTdmNFcyN2RuUmVpZ0Z0cGZfdUduXzQyQ1M2ZHB3cFBhQzA3RFpLa0JCMldzcjNiT1Z4MV91RWV4R2FlMTVzR25RM3BrVXROVlFTTUZ5cGZlMnVGNHMwdm81b20xT1pUYUo4bXd0RktDRzRNd0pHUGpZ?oc=5",
+      "published_at": "Sun, 16 Aug 2026 07:33:59 GMT",
+      "id": "0ff1e44d4378ee633c3f"
     },
     {
-      "title": "Giá vàng hôm nay 16/8: Vàng SJC ở mức 141 - 144 triệu đồng/lượng",
-      "summary": "Giá vàng hôm nay 16/8: Vàng SJC ở mức 141 - 144 triệu đồng/lượng. Điều này cho thấy sự ổn định trong giá vàng.",
+      "title": "Giá vàng có thể đang hình thành mô hình đỉnh vai đầu vai",
+      "summary": "Giá vàng có thể đang hình thành mô hình đỉnh vai đầu vai. Điều này cho thấy sự quan tâm của nhà đầu tư đến vàng như một tài sản an toàn.",
       "tag": "Giá vàng",
-      "source": "VOV.VN",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOaGh1VFNEWFJsOEx2WDJyLVZIQzNYeEJmX3g0U0c0ZVpkV1hnVmczcUdULWlkVjBBczh2c3doVW5YYnVma0stOVA4U21jc2F3SVYtcGNYUUZJbE5yejlhb2tQTEtBcHVHeDl4dlZHMEpwNWJJZEl2WGN1Y215RzhIT2J6ZlVSVDdQYW1MeDZQaWcyN21qN2lia3dWNTNyTWw0TWdR?oc=5",
-      "published_at": "Sat, 15 Aug 2026 22:10:00 GMT",
-      "id": "0efcfa5dfb7d764efa93"
+      "source": "tinnhanhchungkhoan.vn",
+      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQdlI0Y1BIYVhjRjlBQkJnek5rbi0yOFZzVnMwbHNfaTIzOFFlVHVkWE55a3g5bmJEVFp3WFR0YlplRlB4ZGxqbjBvakItbWU2V2ViWUFtNy1qcFVBc0lOemJMZ0dTMDlaUW1DOWk0OUszdFJpV3hlU2dzTldQRDY2V1NSejhyZUJwLVhWREtkT3BtTnh1RDVBeW1zc2txUjB0d2FnWGwxakhEbDRHVGVXTFotOTg4U3c5cUpPT0hzcUo3TFHSAcMBQVVfeXFMUHZSNGNQSGFYY0Y5QUJCZ3pOa24tMjhWc1ZzMGxzX2kyMzhRZVR1ZFhOeWt4OW5iRFRad1hUdGJaZUZQeGRsam4wb2pCLW1lNldlYllBbTctanBVQXNJTnpiTGdHUzA5WlFtQzlpNDlLM3RSaVd4ZVNnc05XUEQ2NldTUno4cmVCcC1YVkRLZE9wbU54dUQ1QXltc3NrcVIwdHdhZ1hsMWpIRGw0R1RlV0xaLTk4OFN3OXFKT09Ic3FKN0xR?oc=5",
+      "published_at": "Sun, 16 Aug 2026 04:52:01 GMT",
+      "id": "c38ea3e2f68ebee21580"
     },
     {
-      "title": "Cập nhật thị trường vàng Trung Quốc: Mua mạnh từ phía chính phủ trong tháng 7",
-      "summary": "Cập nhật thị trường vàng Trung Quốc: Mua mạnh từ phía chính phủ trong tháng 7. Điều này cho thấy sự quan tâm đến vàng từ phía chính phủ.",
-      "tag": "Thị trường vàng",
-      "source": "World Gold Council",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOU0diX0NXMU9LM2thenJRM2g2VTN6OF91b2FieHhmWTVpaUZoaWplalc3RmtfR2tjeExNWmVwdGlrNGJ6VDFhYVBLS2NmRGJwSVVLajIxQlRoTG5qSUphMm45UDZ2d0FGSHdfdUVQNEZWNGtSX2NFWXJnUm5uN3dVZjhscWlNRGJrM3dQd1ZXT1VSQTBfQU9YMDA2OWJCUlhFQmtESUFjOG93SFE?oc=5",
-      "published_at": "Fri, 14 Aug 2026 10:16:49 GMT",
-      "id": "91c8e6a185f1c562aae2"
+      "title": "Ngân hàng trung ương mua kỷ lục 289 tấn vàng trong tháng 7",
+      "summary": "Ngân hàng trung ương mua kỷ lục 289 tấn vàng trong tháng 7. Điều này cho thấy sự quan tâm của các ngân hàng trung ương đến vàng như một tài sản an toàn.",
+      "tag": "Ngân hàng trung ương và vàng",
+      "source": "Startup Fortune",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQaS02ZU5jeGZWczZ4U1kydVA3bUIzT09HNGk1Vi1LVGttUGJaUGlSYUp2OWMtMEhCZEVSWWpLa0c3ZGFEemlYNExkNUtSeEQyYVh1bkh1Vmp4Q05wNWNoeXM0ay01d0lnQmtpSmdjcndxS21PLUVmMFJuMTNfWmEtbkFmUDVFWTRIVXFPSHdXU0dCVk0yMEFVSnd3?oc=5",
+      "published_at": "Sun, 16 Aug 2026 06:15:13 GMT",
+      "id": "838a58bfb8e8f55ac580"
     }
   ],
   "silver": [
     {
-      "title": "Giá bạc hôm nay 16/8/2026: Suy giảm phiên cuối tuần",
-      "summary": "Giá bạc hôm nay 16/8/2026 đã suy giảm phiên cuối tuần. Điều này cho thấy sự biến động trong giá bạc.",
+      "title": "Giá bạc tăng mạnh, nhiều yếu tố hỗ trợ",
+      "summary": "Giá bạc tăng mạnh, nhiều yếu tố hỗ trợ. Điều này cho thấy sự quan tâm của nhà đầu tư đến bạc như một tài sản an toàn.",
       "tag": "Giá bạc",
-      "source": "MoneyF",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNN21ENjY3eGpRLUluWk0wREVQa1ExeDhjbmhkV0k0MVFybm1maHFtdW5peFFaQmdzYnlGRzQ2RUZsSHBETnkzTHB1LVFReEdRWHFIYVBhaUtNY3I2ZWlZb0psaGFDVjFfS3FmbXk1VVJPMGM2cVpWbXNQanV1bEV6bw?oc=5",
-      "published_at": "Sat, 15 Aug 2026 23:00:00 GMT",
-      "id": "78a8f4cb49cea5cea6f5"
+      "source": "laodong.vn",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxObXAxWDBHVVFoZE5RS2pPYjFVWkVmaVQ3N2hmRVRFaG5oSnVrV1g1NkpzbVV2R19vdzMzY1lTZXJORE1UZVhSZVM3dkRRa0x6N25zeVZwb2hxYkR5TG5ZRjVLaGVmNVplU09OQkpibElUV1RUMlRSQ1NQRk55UXhpbV90MFhFQXZZcXVwdEpKenFsY1Y2ZWtVN0prY0kyUQ?oc=5",
+      "published_at": "Sun, 16 Aug 2026 06:35:23 GMT",
+      "id": "806cdd14e87f44ef3b13"
     },
     {
-      "title": "Giá bạc hôm nay 16/8/2026: Suy giảm phiên cuối tuần",
-      "summary": "Giá bạc hôm nay 16/8/2026 đã suy giảm phiên cuối tuần. Điều này cho thấy sự biến động trong giá bạc.",
+      "title": "Giá bạc chốt phiên cuối tuần tăng 2,61%",
+      "summary": "Giá bạc chốt phiên cuối tuần tăng 2,61%. Điều này cho thấy sự quan tâm của nhà đầu tư đến bạc như một tài sản an toàn.",
       "tag": "Giá bạc",
-      "source": "Vietnam.vn",
-      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE11QlpiN0RwN0R2a2tBNnJUVTEyZERZUnRyS0pqNHkyMENxRkVoMUhseVdGTXA1RDdjUWpkMUprT2d4XzJjQXJiTUZWU191eGMwRjRsaFFQd3JKaDNZVHdMUEF6T05VZF8wdGpVRVlxOGZpR0h5d3kya2t6cVoydw?oc=5",
-      "published_at": "Sat, 15 Aug 2026 22:49:29 GMT",
-      "id": "9493e5c257debf1616f6"
+      "source": "Tạp chí Doanh nghiệp và Hội nhập",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQNHFFT0JKWndYYVpZRk94dVZVRjRGcHBfYW1DLS14Y0gtNnliQmprN0FNSHJTQmZPakdhcU1XYy13bDNGQTB1aS14cFlZRUp4bUV0NXJ0QkxUMXRqVFNKUEhsU2l3eGtQS043Q1lMRTJaLTRUamxmTENzcmtkLWVyal9Uc1VqdkZpUGtoSWRPNUU2VnlvQ1EyUXctTDhKTDdpbUlHS0t3?oc=5",
+      "published_at": "Sun, 16 Aug 2026 01:30:12 GMT",
+      "id": "ebcdc0ab6073cfaab368"
     },
     {
-      "title": "Giá bạc hiện tại",
-      "summary": "Giá bạc hiện tại đang biến động. Điều này cho thấy sự quan tâm đến giá bạc.",
+      "title": "Giá bạc trong nước neo cao",
+      "summary": "Giá bạc trong nước neo cao. Điều này cho thấy sự quan tâm của nhà đầu tư đến bạc như một tài sản an toàn.",
       "tag": "Giá bạc",
-      "source": "LinkedIn",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNd1BoUEg2SDJuWjdwSVY3eWt6b1Q3SVo0UTBZVEhKMDlLeGVWZHVYdnZNd2dXT3NWenl4WE16NXRRTGt0Yjg3dFJoSVJLZEdFSWZTbjJranc1bHRUWmFkX0FQZ0duYkJOQmhOdlI1UXdjY3VNRmVQZTBFaC1GajFpbFRfUFQ2ZHNjT2lIbHFabmFqVnEzWld4SGRR?oc=5",
-      "published_at": "Sat, 15 Aug 2026 10:30:02 GMT",
-      "id": "b4414f6d5b8b4d01596c"
+      "source": "Thế giới tiếp thị",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOV0RPTFhIcXluZjBpcXRHWjJWTDVsOGRzTGtPZmswTG9faDR4aFJyR1QyNTFZQ3FoM3NuYnlQM0VrRG1fTHp5bzBfVFRFMkh2UGdZMlVMRHZOZWlEX0FjUUVXU0YtWmxsblU1ekUyWXhuaVNEem1kT0xqQ0lkOHJhTUVZYWhkajktQ3hCWk0yR3dyQVltQ3hTSkR4NEhNV2FsWnhrSVpXYXprUm9NSFZPZHBkSEpLR0tQMXBiOHNEZTBabDdqY3g0?oc=5",
+      "published_at": "Sun, 16 Aug 2026 01:09:00 GMT",
+      "id": "d0da41740c0bb06420cd"
     }
   ],
   "stocks": [
     {
-      "title": "VN-Index chịu áp lực điều chỉnh cùng chiến lược tái cơ cấu danh mục",
-      "summary": "VN-Index đang chịu áp lực điều chỉnh do chiến lược tái cơ cấu danh mục. Điều này cho thấy sự điều chỉnh trong thị trường chứng khoán.",
+      "title": "Xu hướng dòng tiền: Nhịp hồi kỹ thuật kết thúc, VN-Index có nguy cơ giảm",
+      "summary": "Xu hướng dòng tiền: Nhịp hồi kỹ thuật kết thúc, VN-Index có nguy cơ giảm. Điều này cho thấy sự quan tâm của nhà đầu tư đến thị trường chứng khoán.",
       "tag": "Thị trường chứng khoán",
-      "source": "vietnamplus.vn",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOVGxkN3JHcU9KVzdZUWxTdmFKeVJndk95cVVKRUVlZ2ZfV1F1QktSbGIzT2NYYmRzd1N4LVB4RTVKcFUwWTRPTFcwa0lQMlRyZzNYZDNoZERGcVhnRHpTUkUtSjRSd3pKRFJ4SXU3UUtqTHlfbGt0WmJjOW52TlBlQVBzSllKU1loUzRWWmlaekcwN0R5Q3hKSlVSZDJrVmhKa3BwLVdnR3ROM0o0dWh3?oc=5",
-      "published_at": "Sat, 15 Aug 2026 09:04:56 GMT",
-      "id": "3dc19ea8da4a4ba6ac08"
+      "source": "VnEconomy",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNTWMyM2l5anR4UmtWZmEwcW1jSDNiYzIxaXFsSXNBSGE5MnNxYUxWMVJvSUdZa3lyTEI0OVV0WVlwNUlhai1KQkNxTk1SVXhtUGh4cWFQVXN2VmdXcy1KUGw4MjU3VzBtVU5nODNwODd0LWFld244dWZIRVVtOGVpY2lZcWpHVlhCM2dwUE9sT0JqcWJNRTRRWGhHQmc1bUs2bU9SSTJxTC1BQQ?oc=5",
+      "published_at": "Sun, 16 Aug 2026 03:21:53 GMT",
+      "id": "39ad4473cd3ec3ebcaaa"
     },
     {
-      "title": "VN-Index lùi bước sau khi tiến sát mốc 1.800 điểm",
-      "summary": "VN-Index đã lùi bước sau khi tiến sát mốc 1.800 điểm. Điều này cho thấy sự biến động trong thị trường chứng khoán.",
+      "title": "Góc nhìn TTCK tuần 17/8 - 21/8: Kỳ vọng hiệu ứng tâm lý giúp cải thiện dòng tiền",
+      "summary": "Góc nhìn TTCK tuần 17/8 - 21/8: Kỳ vọng hiệu ứng tâm lý giúp cải thiện dòng tiền. Điều này cho thấy sự quan tâm của nhà đầu tư đến thị trường chứng khoán.",
       "tag": "Thị trường chứng khoán",
-      "source": "Tạp chí Kinh tế - Tài chính Online",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNYklGdHFMNFlSM2NJVEJiQjBPZGtIVjNaVE80bGd5QzZmMzB6RXlpUWZJU3Q4SzdPTm5HVDFFcVo5eDIwVFhYNXptTlNKbDVDbmFJMVFMU3JnSnNBdGVUQnY2LV9tNVV4ekNiRm4zYXBfMkVSbHh2MWQ3YmV4RzZ2WkhlVnpiMWlyRzdueFNHc0RnMXhpWlg0aw?oc=5",
-      "published_at": "Sat, 15 Aug 2026 10:16:04 GMT",
-      "id": "dcc01ef71a5f572d7e01"
+      "source": "baodautu",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQTE5TMmt0aWJ1VHZOV1lVXzNSN1B6NTlDUFZnUEpGTy10dzVUT0tlcUhkMFRYQnNBcUNGdF93aW9ETE9YUE5fWm1DQVJCM1ZWYXRNY3RqNHFEUU55R1Z0YTBlTVV4MFhvakhTV0xqYTlQdlFkT3R6VkhYSktKVm9WSGc4cXJVdUxxWEZabTYzRFh3b3JRM1pUdVhTQUJfUGQ3Q3dGc3hIYjBWR0hWSTRj?oc=5",
+      "published_at": "Sun, 16 Aug 2026 08:17:00 GMT",
+      "id": "d8979408c8726b5107f4"
     },
     {
-      "title": "VN-Index không vượt được mốc 1.800 điểm, giảm 2,2% trong tuần",
-      "summary": "VN-Index không vượt được mốc 1.800 điểm và giảm 2,2% trong tuần. Điều này cho thấy sự giảm nhẹ trong thị trường chứng khoán.",
+      "title": "Góc nhìn chuyên gia: Rung lắc tiếp diễn, chưa có cơ sở để VN-Index phục hồi bền vững",
+      "summary": "Góc nhìn chuyên gia: Rung lắc tiếp diễn, chưa có cơ sở để VN-Index phục hồi bền vững. Điều này cho thấy sự quan tâm của nhà đầu tư đến thị trường chứng khoán.",
       "tag": "Thị trường chứng khoán",
-      "source": "Báo Thanh tra",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNMy1OeTNOUFQ0LUwxSm5xcldhdDB1MnVRXzFyemVHZW9yQ0xiVzdEMDlxaW9aSUxlT3hFczBVNjlKNy1PSDFOZWR5TThUc1UzanJYbTlCMlBWV1lSYWtyeC0wQkE3bDVuZDhQOUpldFJ0clpBVUU2TXZ2QTBZbW9CM2dqc3VKbS1fb3NjcnpGTkxmYUFUejJ2VzdYSXlFRWtPM3E3MkRDalE5SUQ2alg1WkpjOUp3TzA?oc=5",
-      "published_at": "Sat, 15 Aug 2026 02:29:20 GMT",
-      "id": "505843a0bb3a2242afa2"
+      "source": "CafeF",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQbS1yVzFpd3IyeWU4aVFlaDNJcW5FeFRXQ0RhVUpmQW9tLUNwdnhkRDlpR0h2UzEzS1lIVXA3RlUwcTJfaHI0alBkV0NNdW40cmVHVF94ZmxBMS13VTFGbkRuOUZhdUJqVzJPeWZ1MlJkYTBBd0syRTVaZ0RyYmsycGE4c0VIdFhUTDdlZUI2ZFFqVVpkSDM5NzA5ajdKWXZsUGl3MXM5NnpCaUQzbVQ5Tk03d2JadnFLdGZtSHZ2RQ?oc=5",
+      "published_at": "Sun, 16 Aug 2026 08:28:00 GMT",
+      "id": "c5daf81c7924f0fae5b8"
     }
   ],
   "realestate": [
     {
-      "title": "Bất động sản TP HCM đóng băng: Căn hộ cao cấp cắt lỗ vẫn ế khách",
-      "summary": "Bất động sản TP HCM đang đóng băng, căn hộ cao cấp cắt lỗ vẫn ế khách. Điều này cho thấy sự khó khăn trong thị trường bất động sản.",
-      "tag": "Bất động sản",
-      "source": "Báo Tri thức và Cuộc sống",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPUWpaS253dWlwOThYblM2ay1DZExzcmhhT0IzakZOV2l4RWpLZU5WbU45QmJ1MnpJeElCWVBpUUpXV21lMmtaN3Raa1ZUcG90MV9VZjAzU2s5LUgwMjdvalhQdTJzc2RYc1kybGlrd291TDVETVJaZ3JaaUNSMnlhTElNeExVYVRBejJDdl9OOTFodWlxc0swVm9RN0w0M21NRjRGVTF0LWktUDgtOVpJ?oc=5",
-      "published_at": "Sat, 15 Aug 2026 23:20:00 GMT",
-      "id": "f62bfcf456bbd3a02cf3"
+      "title": "Giá căn hộ TP.HCM leo thang, 80% nguồn cung mới trên 120 triệu đồng/m2",
+      "summary": "Giá căn hộ TP.HCM leo thang, 80% nguồn cung mới trên 120 triệu đồng/m2. Điều này cho thấy sự quan tâm của nhà đầu tư đến thị trường bất động sản.",
+      "tag": "Thị trường bất động sản",
+      "source": "cafeland.vn",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQaEtkdWxuRF9pNnVDU0JjTE9lck1iYnd4WTVoMzYtLTVOUGhjMUpSX3ZKdlY0LXRkTzI2T3RUa2o1MWJDWngtRGlkYkFoNUVkVFFvNVZkQTd3ejB4bVZ5SzVNWVZQcTBHbEJwdjctXzcwREx5emh0Y1Y0ZnFzZ0lGb0djSWdWMnp0emc5VWdJald6WFIxeEN3VS0zQmZLWnVHMUZlWEVQNmo0Zw?oc=5",
+      "published_at": "Sun, 16 Aug 2026 05:30:00 GMT",
+      "id": "d1dba8e5bbc66cdbb777"
+    },
+    {
+      "title": "Thị trường bất động sản TP. HCM: Hạ tầng mở đường, Bình Dương cũ thành tâm điểm nguồn cung căn hộ",
+      "summary": "Thị trường bất động sản TP. HCM: Hạ tầng mở đường, Bình Dương cũ thành tâm điểm nguồn cung căn hộ. Điều này cho thấy sự quan tâm của nhà đầu tư đến thị trường bất động sản.",
+      "tag": "Thị trường bất động sản",
+      "source": "nguoiquansat.vn",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPVnN2eFdUNjZCNGxwTW5ObXNBVlJsakpyWkpsZjFOSlc3MWdnbWpVbUdLRG5YZXgzdnQyaG5famt0YjBDQms4WThnTzZjamNiMk40QXc5VEdtc3FfcHo4T1puUmRkSTRTWE1WWXFFUEVKWmJ6eVRSX2dNUzlEemRDUUE0Q0xNVUV5NDBVcWdQUUhVek9wMUxWSlNRN2FCQ3BrS1pERXZUNGFQLWlfY1RHdjllck5DdHFGM1MxenV4SjlvWVRxR3J1Wll3?oc=5",
+      "published_at": "Sun, 16 Aug 2026 01:00:01 GMT",
+      "id": "74f7715f3b5217ca9896"
     },
     {
       "title": "Tin vui cho hạ tầng TP.HCM: 5 dự án lớn tăng tốc, đâu là khu vực hưởng lợi?",
-      "summary": "Tin vui cho hạ tầng TP.HCM: 5 dự án lớn tăng tốc, đâu là khu vực hưởng lợi? Điều này cho thấy sự quan tâm đến việc phát triển hạ tầng.",
-      "tag": "Hạ tầng",
+      "summary": "Tin vui cho hạ tầng TP.HCM: 5 dự án lớn tăng tốc, đâu là khu vực hưởng lợi? Điều này cho thấy sự quan tâm của nhà đầu tư đến thị trường bất động sản.",
+      "tag": "Thị trường bất động sản",
       "source": "cafeland.vn",
       "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQTVdWLWJRaTRVM0ttVW5ZbU1RLUl1emhBZjBtN0FzZVZ6VUFpeVJTMlpYV1hEYWc3bk9TclpZMHZhM1FFcWdMNjNyVGlTOUoxQkcwQWd1ajRoS3lCZVdnTk5DX1hHaGxzcUVBUWJULV9iUE50Qm40eDAtNjhyX0c5X01MYjFqTFZhc1Q3T0ptUnU3VE44RUhlSlBaY05hbzg4OEdyVVd6Sm1oY2hSX3JrdA?oc=5",
       "published_at": "Sat, 15 Aug 2026 06:16:57 GMT",
       "id": "22fca64327dd4cbe9135"
-    },
-    {
-      "title": "HoREA đề xuất quản lý đất nền ngoài dự án, gỡ 'nút thắt' cho doanh nghiệp",
-      "summary": "HoREA đề xuất quản lý đất nền ngoài dự án, gỡ 'nút thắt' cho doanh nghiệp. Điều này cho thấy sự quan tâm đến việc quản lý đất nền.",
-      "tag": "Quản lý đất nền",
-      "source": "Một Thế Giới",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNRUw1Mjc4Sks0RlMwWVF0TE1TMlBRem12N3QyOVZNXzl4OHNuOW1zNmxXM3FxT3BkUFlFaUhhaUR3by12LTZrSlFJam5Palp6YjVnNUFkTW9XdVlKVjdaRDBGZjZoYjlySDlPMlBhVENXd1gwM001Mjhqd2l1ZFBTelg4N1IwdHg0N3JXQ0xfY1Y3TDFaTTlINFZnTFY3aXdXcGl1QQ?oc=5",
-      "published_at": "Thu, 13 Aug 2026 04:09:01 GMT",
-      "id": "6e2996165df499d4497d"
     }
   ],
   "market_snapshot": {
-    "updated_at": "16/08/2026 06:43",
+    "updated_at": "16/08/2026 16:01",
     "gold": {
       "label": "Vàng thế giới",
       "value": "4,437.30",
@@ -284,7 +284,7 @@
       "source": "Yahoo Finance · COMEX",
       "source_url": "https://finance.yahoo.com/quote/GC%3DF",
       "updated_at": "15/08/2026 04:00",
-      "vnd_equivalent": "139.62 triệu đồng/lượng",
+      "vnd_equivalent": "139.48 triệu đồng/lượng",
       "conversion_note": "Quy đổi từ giá quốc tế; chưa gồm chênh lệch SJC, thuế và phí."
     },
     "silver": {
@@ -299,7 +299,7 @@
       "source": "Yahoo Finance · COMEX",
       "source_url": "https://finance.yahoo.com/quote/SI%3DF",
       "updated_at": "15/08/2026 03:59",
-      "vnd_equivalent": "54.63 triệu đồng/kg",
+      "vnd_equivalent": "54.58 triệu đồng/kg",
       "conversion_note": "Quy đổi từ giá quốc tế; chưa gồm thuế, phí và chênh lệch bán lẻ."
     },
     "vnindex": {
@@ -325,7 +325,7 @@
       "unit": "điểm",
       "source": "TradingView · dữ liệu trễ khoảng 15 phút",
       "source_url": "https://www.tradingview.com/symbols/HOSE-VN30/",
-      "updated_at": "16/08/2026 06:43"
+      "updated_at": "16/08/2026 16:01"
     },
     "disclaimer": "Giá Vàng/Bạc là chuẩn quốc tế COMEX; số VND là quy đổi tham khảo, không phải giá bán lẻ SJC. VN30 có thể trễ khoảng 15 phút."
   },
@@ -672,8 +672,8 @@
     "disclaimer": "Dữ liệu chỉ để tham khảo, không phải định giá hay khuyến nghị đầu tư. Trước khi đặt cọc cần kiểm tra pháp lý, quy hoạch, phí bảo trì, phí quản lý và giá giao dịch thực tế."
   },
   "investment_overview": {
-    "updated_at": "16/08/2026 06:43",
-    "summary": "Tại mốc 16/08/2026 06:43, vàng quốc tế tăng +1.69%, bạc tăng +0.36%; VN-Index giảm -2.07% và VN30 giảm -1.70% so với phiên trước. Mốc tham khảo căn hộ sơ cấp khu trung tâm TP.HCM hiện ở 102 triệu đồng/m² (-1,2% QoQ). Hãy đọc từng chuyên mục để đối chiếu động lực giá, tin mới và rủi ro riêng của từng loại tài sản.",
+    "updated_at": "16/08/2026 16:01",
+    "summary": "Tại mốc 16/08/2026 16:01, vàng quốc tế tăng +1.69%, bạc tăng +0.36%; VN-Index giảm -2.07% và VN30 giảm -1.70% so với phiên trước. Mốc tham khảo căn hộ sơ cấp khu trung tâm TP.HCM hiện ở 102 triệu đồng/m² (-1,2% QoQ). Hãy đọc từng chuyên mục để đối chiếu động lực giá, tin mới và rủi ro riêng của từng loại tài sản.",
     "items": [
       {
         "key": "gold",
