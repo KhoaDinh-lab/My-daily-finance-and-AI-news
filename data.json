@@ -1,10 +1,10 @@
 {
-  "updated_at": "12/09/2026 18:53",
+  "updated_at": "13/09/2026 07:46",
   "tickers": {
     "fed_rate": "Chưa có dữ liệu",
     "cpi": "3.4%",
     "vnindex": "1,795.21",
-    "usd_vnd": "25,887",
+    "usd_vnd": "25,876",
     "vnindex_change": "-34.02",
     "vnindex_change_pct": "-1.86%",
     "vnindex_direction": "down",
@@ -13,8 +13,17 @@
   },
   "macro": [
     {
-      "title": "Cục Dự trữ Liên bang Mỹ đang xem xét tăng lãi suất do lạm phát không giảm",
-      "summary": "Cục Dự trữ Liên bang Mỹ đang xem xét tăng lãi suất do lạm phát không giảm. Reuters báo cáo tình hình hiện tại.",
+      "title": "Lạm phát cao giữ áp lực lên Fed để tăng lãi suất",
+      "summary": "Lạm phát cao giữ áp lực lên Fed để tăng lãi suất. Báo cáo được công bố bởi NYTimes.",
+      "tag": "Lạm phát / Fed",
+      "source": "nytimes.com",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5IMFFtaTVreE9NQ2hRcW9hc0JHQ21zU2w1OUY3Nm85MHVuZXZMejVBN2xrUFZORm1mRjRvYTdpNDdVWUIxRENhTWxJd0lTWGxzdlBSQjhoN1gzd0duaWxXTWQybC1QSjNVelU2cVRQa0hmdGg3V040Ng?oc=5",
+      "published_at": "Fri, 11 Sep 2026 20:40:24 GMT",
+      "id": "574e25464d5ffae3d96d"
+    },
+    {
+      "title": "Trường hợp tăng lãi suất Fed tăng lên khi lạm phát không giảm - Reuters",
+      "summary": "Lạm phát không giảm làm tăng khả năng Fed tăng lãi suất. Báo cáo được đưa ra bởi Reuters.",
       "tag": "Lạm phát / Fed",
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOU2R5eFJ0eFBfbWR4dnNKaUdDZC1MTVY5aWYxc3BlaUY1S2ZMM0xwaFhMbEh1cWtsSFhFVGk5eEE4NkRTb3FxREhvbkpKVjdXdVY1VHhNT2NaUkhUNmEtSzdoQno5aWFRUGpWS0ZBMXcwUEFKSHFOVF9jcFJQSExCbjBYaU5JNTdMdlladkpZdkp2TURmcW94ZkxtV1dwbTR3TkJhUXlmc1A?oc=5",
@@ -22,86 +31,77 @@
       "id": "1ece3cb121f96c4d5caa"
     },
     {
-      "title": "Lạm phát cao tiếp tục áp lực lên Fed để tăng lãi suất",
-      "summary": "Lạm phát cao tiếp tục áp lực lên Fed để tăng lãi suất. The New York Times đưa tin về xu hướng này.",
+      "title": "Đọc lạm phát mạnh đẩy Fed gần hơn tới tăng lãi suất - WSJ",
+      "summary": "Đọc lạm phát mạnh đẩy Fed gần hơn tới tăng lãi suất. Thông tin được công bố bởi Wall Street Journal.",
       "tag": "Lạm phát / Fed",
-      "source": "The New York Times",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPak4wQ1JYNHFfS3Y1cGl2dldRYVJPb2h1VUsxb3lhc2tUekdDOWJRVHJEcGNDOVdxdEdpTmlrNVV1VFF6UjhkMElTLUF5c25aNERWbDFRME5CaFBka2NJMG4yNGZyek84dElkbjZ3cXQwX2laZFNEVndNV291ODhGRzM1WQ?oc=5",
-      "published_at": "Sat, 12 Sep 2026 01:25:46 GMT",
-      "id": "9ab71e02819c664c522d"
-    },
-    {
-      "title": "Lạm phát cứng rắn làm tăng triển vọng tăng lãi suất Fed",
-      "summary": "Lạm phát cứng rắn làm tăng triển vọng tăng lãi suất Fed. The Hill báo cáo về tình hình.",
-      "tag": "Lạm phát / Fed",
-      "source": "The Hill",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxONDZjRFRRQ0s2S0NwVjBLYkg4eVJERUwxU1FkaDdRQTZ4YVc4ZVFUeHh4aWs0LURPVmptMzJXdzhtZERHbDZUYjQwSmtuN0d6WnY0WGJ1RHJxN3MwWVM5Zy03TncxYm96cDJJcW12S3NnUDJndFl1S0FKd2ZxN0hfZWpCWmdzQ2NnVEHSAY8BQVVfeXFMT095VEQydEJhN2xtWm95SGNPVDdWMzZZOVZUSXFqWkNraVN4MzdYbWdEWnZjMDRwempSeGR0eElwUnU5NmF1aFF0UTRMUFZxMnY5X3ZmYWZOeG5wbjI4WFJkaTJmd3Z6bHliX2ZQOFNJdW5OenR6anRvR0NaYmd5bFZmLXhMQ1cwVWd2eUR6ZVU?oc=5",
-      "published_at": "Fri, 11 Sep 2026 20:49:00 GMT",
-      "id": "a82734f2d7ce01c2d112"
+      "source": "WSJ",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5YeGlveWlreGUwUGJJNVh0d3A3OEl6UG9CLWJhdGtoWGVjNFl1MEpuMC1jelBXRmVjOS1TYTJDV1JOV0JpYld5Z0lmWHQ5M0l6QWJ2T3lDSWUyQWNfSjBZbG83ZVdNdkt3dlRwSnBVN3BuV2NIOHFqYw?oc=5",
+      "published_at": "Fri, 11 Sep 2026 18:19:00 GMT",
+      "id": "3d0bdad5bd2f343b05dc"
     }
   ],
   "vietnam": [
     {
-      "title": "VN-Index giảm xuống 1.800 điểm, tạo vùng cản ngắn hạn",
-      "summary": "VN-Index giảm xuống 1.800 điểm, tạo vùng cản ngắn hạn. Tình hình thanh khoản hẹp ảnh hưởng thị trường.",
+      "title": "Công ty chứng khoán nhận định gì khi VN-Index thủng mốc 1800 điểm? - VnEconomy",
+      "summary": "Công ty chứng khoán phân tích tác động khi VN-Index thủng 1800 điểm. Bài viết được đăng trên VnEconomy.",
+      "tag": "VN-Index / Chứng khoán",
+      "source": "VnEconomy",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOOERDVWVDdGNFNXg5NUJKS1RkSU1qYUhzd3NUMkE4cnhhTGRDQWJvVlhhLWdJdWdFV2Z0azJPbWRvZElsMW04SzJ2Vk82NHVBX0dQUlM3bWJfeU5CV0xuVGM1V2tRbFg2VVFwRDFZSXU3UHQ1R1ZiSXJWS00zaGc3dXF5SnVkbUdfT1lLZDl2aUdzZWpE?oc=5",
+      "published_at": "Sat, 12 Sep 2026 10:31:10 GMT",
+      "id": "c90fc2920a4886df4d7c"
+    },
+    {
+      "title": "VIC, VHM cùng loạt cổ phiếu ngân hàng kéo VN-Index về dưới 1,800 điểm - Fili.vn",
+      "summary": "Cổ phiếu ngân hàng VIC, VHM làm VN-Index giảm dưới 1,800 điểm. Bài viết trên Fili.vn.",
+      "tag": "VN-Index / Cổ phiếu ngân hàng",
+      "source": "Fili.vn",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNWUJGcWw0Z21SWkVmWVpqZHpWa2ZJNXBUX0V6aXhMQTY3X29fckFNczlvbWZTOTNiX2hiclI4Mmo1Q0E4cTZzMDF1SjQ4VTJpTmludEdka3NuNGRFQm94eWVNN2pmcVBSYVFDck0yTGpiNFluc0Rra3p4VUhFYjdWazBVUjItbEFXLWxOQ2VBc0hwUkZuV3NlVE4weUpTWXBRY1hjeV8xWG1oVUE?oc=5",
+      "published_at": "Sat, 12 Sep 2026 12:28:00 GMT",
+      "id": "e56bad41106db5d826e6"
+    },
+    {
+      "title": "Thanh khoản co hẹp khiến VN-Index 1.800 điểm trở thành vùng cản ngắn hạn - Vietnam+ (VietnamPlus)",
+      "summary": "Thanh khoản hẹp tạo vùng cản ngắn hạn cho VN-Index 1,800 điểm. Được đăng trên VietnamPlus.",
       "tag": "VN-Index / Thanh khoản",
       "source": "Vietnam+ (VietnamPlus)",
       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQY2xYeUo5QXRjWlhxb1ZHUmRWaTBmT1dOWUJnTHhLUmxtd20tQzZldFBNV2Y2aGN5RldpQWpoVm50cktQNFUyQUYydEt5eXE4bVEyODk2eFdBUkFSTHdUTWU0ZUlRcG02bGE1OGQ5WnZPNENRTDFubDlBSktIcjV5M1gxVTlUN0xlSWRfQXk1X0o3LTR4dFI1dzFIcTZ2N1NOUTdYTjNjSm5ZWFdEYzFyUEdqaWE?oc=5",
       "published_at": "Sat, 12 Sep 2026 04:13:18 GMT",
       "id": "6d0fd55444affa1cd42c"
-    },
-    {
-      "title": "Khối ngoại và doanh nghiệp bán ròng khiến VN-Index giảm hơn 57 điểm",
-      "summary": "Khối ngoại và doanh nghiệp bán ròng khiến VN-Index giảm hơn 57 điểm trong tuần. Báo Tuổi Trẻ.",
-      "tag": "VN-Index",
-      "source": "Báo Tuổi Trẻ",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQdEhHU043MHE4WVlWeTJSSE82YmF6WTVYR3hSWEhSamVtXzJoVncwd1otZXF1SEd0MHpDWEpsNUFOMkxad3ZDVTk0U0R3Sk5YMk9rQm9fZEhJUlkzVGJ3UHlacDVmbFNZRnd3cEo5OUhCaGgwMG1mRzczRktmSW1ySmFsYW1ScUE0OUtrTFg4ZEE4LUVfZzZiaUE0M0RDblhPQjRRNHBDWDAtdk9BOEUtNzZmaFM?oc=5",
-      "published_at": "Sat, 12 Sep 2026 02:52:00 GMT",
-      "id": "d48dbfbaeb2122b703f1"
-    },
-    {
-      "title": "VN-Index hồi phục, dòng tiền vẫn là phép thử",
-      "summary": "VN-Index hồi phục, dòng tiền vẫn là phép thử. Tạp chí Kinh tế - Tài chính Online báo cáo.",
-      "tag": "VN-Index",
-      "source": "Tạp chí Kinh tế - Tài chính Online",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQWGprbk10U1ZaRlcxRU9kVHJteUR5MWcyOXd4Nlo5MTlETWZLWXh2REZ3RlBEdkR2MXB1ZkotUUliNWRUMzB4YUxRRThaYk1VSnE4eDB4WFpibFRJUzBhS0d6WFFLY1FaaUF0VUZ4djIxYkJIdTZhUHRteFFMM2htYkdGX3pqNFZQMDROVjBjeW4?oc=5",
-      "published_at": "Sat, 12 Sep 2026 06:00:20 GMT",
-      "id": "ce628c6d6d049931f66a"
     }
   ],
   "ai": [
     {
-      "title": "Doanh thu chip AI của Broadcom tăng 221% trong quý vừa qua",
-      "summary": "Doanh thu chip AI của Broadcom tăng 221% trong quý vừa qua. Đầu tư 1.000 USD một năm trước có giá trị lớn.",
-      "tag": "Chip AI / Doanh thu",
-      "source": "The Motley Fool",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOSkRsRlVEVnRnYWtxYlBkMGFPOWNTR3FVcmpkRnlmWE9CU212NHo1dC1BOV9ubXItelpudmFJbzdldjBsMHdwNDBUTm1kV0E4LXNWQzRGOXdibGJpZENCTWtUQmtLcy04NlFvZVliejZnMUxtcVhYY0EzMjFXbHgwcEhJYUdvVkhMSWlZVHl3?oc=5",
-      "published_at": "Sat, 12 Sep 2026 11:26:55 GMT",
-      "id": "4463737aad5c91aa4a3c"
+      "title": "Cổ phiếu chip AI tốt hơn: Broadcom vs. Nvidia - fool.com",
+      "summary": "So sánh cổ phiếu chip AI của Broadcom và Nvidia. Bài viết trên Fool.com.",
+      "tag": "AI / Chip",
+      "source": "fool.com",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPaWp0Uk9CeU5NYkMxdE01cjA1aUpCNDdsZG16ZXllNUZIUklXb1h3Ny1Ja3lST2s1R1pyVUs0c05CQUNNYmE5WHpmQ0JzV2NKSjlXLUg1WDBweGVja0I0bVJoOFE2dE5QSW84bEYxMFZhbnNDMUNmTDhzYWZiYTNROXFQVUEzQlB5dnc?oc=5",
+      "published_at": "Sat, 12 Sep 2026 18:26:00 GMT",
+      "id": "d97d43e2944e37878984"
     },
     {
-      "title": "Boom chip AI tùy chỉnh của Broadcom có nhà cho thuê mạnh: TSM",
-      "summary": "Boom chip AI tùy chỉnh của Broadcom có nhà cho thuê mạnh: TSM. Yahoo Finance báo cáo.",
-      "tag": "Chip AI / Nhà cung cấp",
-      "source": "finance.yahoo.com",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNWW9WcUFDOGxqS1U3MEgtcUVFNDJ0aWxYdk1adlVBVC00M25oNVYwRGVCSkNjMldWYzFwVkh4dWlJcXF5V3V4YmFsT1NSVFpoUG1IUktBOF9EMzk5bEhMeVg4QXFQc0N6OEdhRDFOTVZnXy1ydmhmdUZHNnBFMDhPa2xEcEpVWERHbURsSDVxZUJfLXY1Ti1V?oc=5",
-      "published_at": "Fri, 11 Sep 2026 23:16:14 GMT",
-      "id": "a62e8d7b4734ab40cb82"
+      "title": "Cổ phiếu chip AI tốt hơn: Broadcom vs. Nvidia - Currently.com",
+      "summary": "So sánh cổ phiếu chip AI của Broadcom và Nvidia. Đăng trên Currently.com.",
+      "tag": "AI / Chip",
+      "source": "Currently.com",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNZ0RpNG1SV3ZUb1ozdUdlQUFiWURkaFd3YzNhOEI3VnQtbkxiX0ZDVEFraUwwRmtEbzJ3aVM1cmxqQ0Q1SHNBQmF4NzJpR3lzSVh0S3p1c2dISTU5ejh6RmJlZWpTUUh5amN4YTlVbmpGV0xoY3FSTGFabGIxX05fT0Noal9PQVE?oc=5",
+      "published_at": "Sat, 12 Sep 2026 17:46:00 GMT",
+      "id": "457f358ea045820dd232"
     },
     {
-      "title": "Nhà phát triển chip AI Trung Quốc Enflame huy động 912 triệu USD trong IPO",
-      "summary": "Nhà phát triển chip AI Trung Quốc Enflame huy động 912 triệu USD trong IPO. SiliconANGLE đưa tin.",
-      "tag": "Chip AI / IPO",
-      "source": "SiliconANGLE",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOdlZWNFg2YVlSSHU0Mll1OVJlTjBNdkR1TEI0Ry1pRGUxU1RBdko2Mzhtb3pBNFNwUndDSFN3OGZjM05mX0hHcE5odlJXTC1pS1NSVjVnWlNtdlZkdHlvcU9fTzlCcTFRRDNRbzlGdnZoZjQ2WXF3WmlhWEwtWFN5NENiU1BBbkE4dm5zaEJST2lIM0k?oc=5",
-      "published_at": "Fri, 11 Sep 2026 20:54:00 GMT",
-      "id": "ebf985b1377292d58766"
+      "title": "Phân tích lợi ích của Broadcom khi liên kết chip AI sâu hơn - simplywall.st",
+      "summary": "Phân tích lợi ích của Broadcom khi liên kết chip AI sâu hơn. Đăng trên Simplywall.st.",
+      "tag": "AI / Công nghệ",
+      "source": "simplywall.st",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOUzcyamdrV3I5RWVQRkMwWV9kZDFPRkxUZG1lbnN5Q3JaWU0ydkEyUVlyZUdDVHo3MUJWSGlqQW14UWt4eTJMOElLeEUyMmZyZzNGNVo1RDFSTThscm1hVEwwb0FjV2VJV1NvVUNCUGVsZm1yS1p6XzhnMmRXZmdnNGpsUS1ZVy1OR3lxT0VYSnBNWDR1YlNLRXJWbDJUeUlaRWxSdDdsTjA0Z2pWdEd5Qms4VnVIcDB0UWhOajd0d0NyNENVSTZ30gHMAUFVX3lxTE9LeEJqVjU0WkFLV1pNTU04NVNHemE4Q2kzNW5sdXd2Nkc1aGNhMEpRNG9aTngxVURYYzVXTG5kN1d0TmNvMEVORlowdWdWaFR0VGVabVF6WkFoUExGcERLX0VVR1VSVU91eTJNUlRsUU53SjZFUmtCS1pJRDZjQ2pHMUhjSzZudkRnZG9wdjJYc29RRDQ3Z0lwanhrUE1LNUhvUHFrZVVBVjB5OEE5aDBuOG5VQXdWbXgzN1Bfc3EwMDY4eDFGamxaaUhRbQ?oc=5",
+      "published_at": "Sat, 12 Sep 2026 12:25:54 GMT",
+      "id": "caa1516a7ef4ad28b71a"
     }
   ],
   "logistics": [
     {
-      "title": "Chương trình Tài năng trẻ Logistics Việt Nam 2026 cung cấp cơ hội thực tập cho sinh viên HUTECH",
-      "summary": "Chương trình Tài năng trẻ Logistics Việt Nam 2026 cung cấp cơ hội thực tập cho sinh viên HUTECH. Đây là sáng kiến phát triển nguồn nhân lực trong ngành.",
+      "title": "“Tài năng trẻ Logistics Việt Nam 2026” tạo cơ hội thực chiến nghề nghiệp cho sinh viên HUTECH - hutech.edu.vn",
+      "summary": "Chương trình “Tài năng trẻ Logistics Việt Nam 2026” cung cấp cơ hội thực chiến cho sinh viên HUTECH. Đăng trên hutech.edu.vn.",
       "tag": "Logistics Việt Nam",
       "source": "hutech.edu.vn",
       "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxOdFI2c29Xamk0Z0JGVkNOVVltMU9seDRiS2FSeUQ2dWpjWkJTWlFDVVRJcjJJUmhkVHpUX1dlMzg0UEE5TGhpZXY0V0o2VXRrSlNlU1pnT3Z2eHlOZjBJbVU4ektvYW9oZjlOQlRqSHlQWk1Fbm5IZW1GbklCNHV6dHAtazQzMVFDMVZ3enpiczUxVl9Sd0RoRmFaZ0k4ZlFuYzAya09pMWlhU2hMXzY0MC1DMUstT1pVa3hpcHZaNHkxYmxyNFVMaHpXcXNyNk5qcEtTVVA0U2YyUUxGV3c5akwxX2ZMblp5TVRB?oc=5",
@@ -109,8 +109,8 @@
       "id": "a01934eba7dd928dff50"
     },
     {
-      "title": "Ba cảng biển Việt Nam nằm trong bảng xếp hạng thế giới",
-      "summary": "Ba cảng biển Việt Nam nằm trong bảng xếp hạng thế giới. Thông tin từ Doanh nghiệp và Tiếp thị.",
+      "title": "3 cảng biển Việt Nam giữ vị thế trên bảng xếp hạng thế giới - Doanh nghiệp và Tiếp thị",
+      "summary": "Ba cảng biển Việt Nam giữ vị thế hàng đầu trên bảng xếp hạng thế giới. Bài viết trên Doanh nghiệp và Tiếp thị.",
       "tag": "Logistics Việt Nam",
       "source": "Doanh nghiệp và Tiếp thị",
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPSTZMc3lRU05vSUJ1WmkyS2dXYVl0cjBFaDdkX2FBcjlyenlCaTBKQVNGZmxoVXJhR2h6dXZNdzd4ME8tSHVIb2QtZGREaGozNkhQU3lZUnhWSFVsbXpjZmRYQ1lVZjFMSWlYT05CMjA3dUdHX0lnZUZFX0NQdlFSazIybFBLRlVuSndWc3hmMWdwWFVGZTdGQk1xRHpnYmx4YlVpZEFjS2hLYXZDSVVjaFZn?oc=5",
@@ -118,17 +118,17 @@
       "id": "b01cb6b7b4961675a507"
     },
     {
-      "title": "Báo cáo khuyến khích khai thác tiềm năng cảng biển và bến thủy nội địa",
-      "summary": "Báo cáo khuyến khích khai thác tiềm năng cảng biển và bến thủy nội địa. Tập trung vào phát triển hạ tầng.",
+      "title": "3 cảng biển Việt Nam giữ vị thế trên bảng xếp hạng thế giới - VTV.vn",
+      "summary": "Ba cảng biển Việt Nam duy trì vị thế hàng đầu trên bảng xếp hạng thế giới. Đăng trên VTV.vn.",
       "tag": "Logistics Việt Nam",
-      "source": "Vietnam.vn",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQcUgweTdpdzVtYnpJTkxpTHVMYTk5VlZIdW5mMTIxNHh0VFhLcHVsaXp2UWh4NEVaNDBueENJaWJ3aElYNFdESm9IRm5POGNwQmhWNm1ITVFBZWpnaGhFc2d1YU5mYUxDRGZER3JHa0FYZV9QVFNmVG16a05OVGIyckVUQ0U?oc=5",
-      "published_at": "Sat, 12 Sep 2026 03:54:26 GMT",
-      "id": "358c2b6fcbb1b3d3d4ef"
+      "source": "VTV.vn",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQY3RXVk0zbTFCeTlyUXRvcUhRQXlHUGdHVzh4dVdxLUlZcUVhYnA4WTNycjcyRkdicDVUdXdJYllDLUhuUnBEQzFqN2pBcEVKTlFwQXh5eTc0MW1XZExaQ3NNYnBUZ0RCSWNORXRpSUJvZGVEODJocmlJRUdfcUpoT1lLbXh1ZVhJOUpXaVo5cWtMNDJJOUlpUERkV0s4UQ?oc=5",
+      "published_at": "Tue, 08 Sep 2026 13:14:00 GMT",
+      "id": "4bafc802a214ef18948d"
     },
     {
-      "title": "Tỷ giá cước vận chuyển biển giảm mặc dù giá vẫn tăng",
-      "summary": "Tỷ giá cước vận chuyển biển giảm mặc dù giá vẫn tăng. Báo cáo từ Supply Chain Dive.",
+      "title": "Ocean freight rates cool despite continued price elevation - Supply Chain Dive",
+      "summary": "Mức giá cước vận chuyển biển giảm mặc dù giá vẫn tăng. Đăng trên Supply Chain Dive.",
       "tag": "Logistics Thế giới",
       "source": "Supply Chain Dive",
       "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNRkl2Z1REd0JvNDJ4aVB2bjIyQk53RFZUNGxuc3RSVHdGWGExVk5ZR2RJU1FLTTI0OXpWbzVfRmo3bUFDcHdIV0IzQ2FrUDR0bWlTdHBsUl9LbXdLMzlUQno3Rk83c1hlXzhrdFlIbi16TG1XdlFLZkotSFVfclFfOTdzRmM5RHViVkl2VWpQUmtvdU56NzN6VW5KQnJBNUVtWHB4a0J3?oc=5",
@@ -136,115 +136,115 @@
       "id": "be141b2ccf8765828dda"
     },
     {
-      "title": "Dự án kênh đào Kra tại Thái Lan bị đình chỉ",
-      "summary": "Dự án kênh đào Kra tại Thái Lan bị đình chỉ. Thông tin từ Manifold Times.",
+      "title": "3 US Freight Stocks Facing Diesel Margin Pressure - simplywall.st",
+      "summary": "Ba cổ phiếu vận tải Mỹ đối mặt với áp lực biên lợi nhuận xăng dầu. Đăng trên Simplywall.st.",
       "tag": "Logistics Thế giới",
-      "source": "Manifold Times",
-      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1SeGdrWEVadmNJQXdIa09HV0hFVFN1TFBVTllFcjRjdko0clJxbWhiVzFJVXVLaDNWRllvOGhGbHZobjdGcG5PeGM3MGhubndPSnRLbEJDblpNbWx2d2dEQzd1a0VDdjdHM05qelpsc0JrNjRGY0FN?oc=5",
-      "published_at": "Thu, 10 Sep 2026 05:23:02 GMT",
-      "id": "906d9788581eac618ee8"
+      "source": "simplywall.st",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNNU1fOXRIMVc4VWRScV95SVZmWFNEVmNxeC1sWUJpbk1TNkw2REJqREh5dzNpMWFGZDIwc1d5czVjX2ZVT2dCTTBKRkFTOUx5WGdfM1lrcWFrd1RCck02Z2RFbk1iUEQ4NWpXcXhUNGZfWDNoV2VjRHpWRXFZczNnU1l3Sks0OEQtdjE4Q0F6dkswbnRKR0RhNVBmRkc1Ry1iUmVwOUZnTzc4X254MDJ1VnpEUEw5dk1IZVFDX3JsU0lCRlB0OEF3R2MwM1hhS2NvRGfSAdIBQVVfeXFMTTVNXzl0SDFXOFVkUnFfeUlWZlhTRFZjcXgtbFlCaW5NUzZMNkRCakRIeXczaTFhRmQyMHNXeXM1Y19mVU9nQk0wSkZBUzlMeVhnXzNZa3Fha3dUQnJNNmdkRW5NYlBEODVqV3F4VDRmX1gzaFdlY0R6VkVxWXMzZ1NZd0pLNDhELXYxOENBenZLMG50SkdEYTVQZkZHNUctYlJlcDlGZ083OF9ueDAydVZ6RFBMOXZNSGVRQ19ybFNJQkZQdDhBd0djMDNYYUtjb0Rn?oc=5",
+      "published_at": "Sat, 12 Sep 2026 22:23:31 GMT",
+      "id": "7493d9015e40529385d5"
     },
     {
-      "title": "Cán cân El Niño có thể làm giảm lưu lượng tàu qua Cán khúc Panama",
-      "summary": "Cán cân El Niño có thể làm giảm lưu lượng tàu qua Cán khúc Panama. Báo cáo từ Al Jazeera.",
+      "title": "Why Francis Walsh III Recommends Preparing for Supply Chain Disruption Before It Hits - The Ritz Herald",
+      "summary": "Francis Walsh III khuyên chuẩn bị trước gián đoạn chuỗi cung ứng. Đăng trên The Ritz Herald.",
       "tag": "Logistics Thế giới",
-      "source": "aljazeera.com",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNazVVR0l6VjIwR0FkQ01ZVmFmYkwtenNFYVRMcTd2TERvb1A1UkRWbjhzV3JLSl9rRTlhRlBBOGZYOTVEbE1lbzdQenFHMWpyMUs5ajg0c19BNFRKazdPN05JME42OXgtVml5ODVIa2FpcThSTDl2SzhEZWh2SjRfZVB5eGtyZFd5NTJlSUN1bVNoUEVXeWJnTEVMWC1RbHdPS1ByVUpR0gGrAUFVX3lxTFBNdkJlV3R3aDVRNm5lMlFES1pyWDh3blRmM0JHZVV2SWVtN01XZ0RYNUlfS216WllzdGF0QWozSDIxWGpUVjB1M0duREI4TEUtZGxQdXAtMG8taXVlZkFyeVBvSVJUZmg1WmdvS2c0NFF1Q3g4ZDZYVEJFMzBRX0NoU0tpX3lrR2FsNUxzVldpZndObjQzaTJrYll1bkJ3Ul9xRTN0UTY1RTIzQQ?oc=5",
-      "published_at": "Tue, 08 Sep 2026 02:29:38 GMT",
-      "id": "5229aff629596180123b"
+      "source": "The Ritz Herald",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQVmFKaGVZV1dSR0xYTUZoUE1UZHlLSEZ2Y2daRGlkUi1nd3hORHQ5SHJiT1JDZnMxZ3doZVZSblFUMDFTUXdLREtjUEd6ZWc0TnAybmtnRXRabUFfYXBYRjVoNWUxUklxcE5sZlhrMU1Wc3pGV1dEXzFranJ0X3RGU3lmZERKaUZtQUJKUHlfVGVtenEtSTZtQUpTTHlnSjhBWGxYNkZBdXIwaFpmU1E?oc=5",
+      "published_at": "Sat, 12 Sep 2026 22:35:40 GMT",
+      "id": "e7ea6cae12cf04365889"
     }
   ],
   "gold": [
     {
-      "title": "Giá vàng hồi phục sau khi dầu thô và đồng USD giảm",
-      "summary": "Giá vàng hồi phục sau khi dầu thô và đồng USD giảm. Tin nhanh chứng khoán cập nhật.",
-      "tag": "Giá vàng",
-      "source": "Tin nhanh chứng khoán",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNX3RFUmhnSG5XQ1g5Nld5S0lGaDl6QlVjakV5NkJpT1N1QVlkQ2VnZEhuUlNwXzFmbDNUV04yQ3NVdHdkbS14aXEzWVhWc0wzXzBoLXc3Y2hBRVA1bm9xTXMxd0R1d0psRzIwaHFUQy1KTmJVRXdVdEhlbERCcG44YWtrSDVQbHdXQjdfMDItWU1IdDlPY0xCaUZ3MGhOVm5rNG5pOFNRMzJLNkgyNWZRcFAxcW5oOVVs0gG4AUFVX3lxTE1fdEVSaGdIbldDWDk2V3lLSUZoOXpCVWNqRXk2QmlPU3VBWWRDZWdkSG5SU3BfMWZsM1RXTjJDc1V0d2RtLXhpcTNZWFZzTDNfMGgtdzdjaEFFUDVub3FNczF3RHV3SmxHMjBocVRDLUpOYlVFd1V0SGVsREJwbjhha2tINVBsd1dCN18wMi1ZTUh0OU9jTEJpRncwaE5Wbms0bmk4U1EzMks2SDI1ZlFwUDFxbmg5VWw?oc=5",
-      "published_at": "Sat, 12 Sep 2026 05:35:18 GMT",
-      "id": "09f3de4d48a7b7816150"
-    },
-    {
-      "title": "Dự báo giá vàng tăng vào ngày 13/9",
-      "summary": "Dự báo giá vàng tăng vào ngày 13/9. Nguồn là doanhnghiephoinhap.vn.",
-      "tag": "Giá vàng",
-      "source": "doanhnghiephoinhap.vn",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPdUhDclVUNm5iZy1xeFhEbkxISXN0czYtNjNWNEpaRnFUQjg1MDk4cmljNzNPM2JsS2dRMzhVcUloWmFYcExKaVROX0JTZklheGZSMnBJNzBtVXJDN1dyY3pYM1pWdWEwY3lid1k1THFiaFNfM2dfUFRCT1VCdUZ2NlFRazNIX0ExUEdxQg?oc=5",
-      "published_at": "Sat, 12 Sep 2026 10:00:43 GMT",
-      "id": "1f34e23ae4bf1ee8028c"
-    },
-    {
-      "title": "Giá vàng tăng trở lại vào chiều ngày 12/9",
-      "summary": "Giá vàng tăng trở lại vào chiều ngày 12/9. Báo Quân đội nhân dân báo cáo.",
+      "title": "Giá vàng hôm nay (13-9): Đồng loạt tăng - Báo Quân đội nhân dân",
+      "summary": "Giá vàng tăng đồng loạt hôm nay. Bài viết trên Báo Quân đội nhân dân.",
       "tag": "Giá vàng",
       "source": "Báo Quân đội nhân dân",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOUlhSZXU4aHFONlZpa1YxYm4tRGo3aUg3Vl9LZ0lJcHl5WGZGQjdqaGlhSy1IT1pXRXRQNkRPZURZLVZsVXk5ODY2Q3V4cXpKUThmNG1LY2hTRmVEdUNZdTlNeUhYaWNxcnhNaDdqU1BLZmY3dUJNT1czb290M21lRDNaQ3Nqa19GOG1XenQ2TUpyN2lYMnJzWXdR?oc=5",
-      "published_at": "Sat, 12 Sep 2026 06:37:14 GMT",
-      "id": "f980230032d749f18b93"
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNU0VNRW9rQWZrOW5KMGw1VGs2ckVuUnZLR2hQbkxQR1ZSQ2RGMFl4a19XNEg3d1JaM0pJY3QyUGc3R1piMTdxMy1NaHpYalpQS0pjcWxQSmc5RVpITmYzNklpQ1A2bngyVzAwNlJwMTRwNnY3cmhnMDc1bktfNDhLYmpmRkI2eG8?oc=5",
+      "published_at": "Sat, 12 Sep 2026 23:03:29 GMT",
+      "id": "d1a7ae0443a833cb2074"
+    },
+    {
+      "title": "Cập nhật giá vàng sáng 13.9: Dự báo hướng đi giá vàng tuần tới - Laodong.vn",
+      "summary": "Cập nhật giá vàng sáng 13/9 và dự báo hướng đi tuần tới. Đăng trên Laodong.vn.",
+      "tag": "Giá vàng",
+      "source": "Laodong.vn",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPaHhNeTMweFFIMUhUY0xHcm9nRFEybFRWVWc2ckdialY0cm9XWGlfUG1WemZpQlFUS3dXWnNxSFB2aEJEOEp4eWQ4bThjRnNxcjRRUnRXRWxZZE5vb05EUGp0a1A5ZmtDMVRnU2lCMFU0ZGduQmMwNWhJa0ZRMTVJcXB1SEFOdks3NUZGODlaNWhxeDBOMjRESlpVc182ZFhfYV8wNHFfVndzQQ?oc=5",
+      "published_at": "Sat, 12 Sep 2026 23:57:29 GMT",
+      "id": "0924c5aa2bd7afade974"
+    },
+    {
+      "title": "Giá vàng hôm nay 13/9: Vàng SJC giao dịch ở mức 143 - 146 triệu đồng/lượng - VOV.VN",
+      "summary": "Giá vàng SJC giao dịch 143-146 triệu đồng/lượng hôm nay. Đăng trên VOV.VN.",
+      "tag": "Giá vàng",
+      "source": "VOV.VN",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQV3pZTkZDMDJoNlFTbi1BOWVtTE9iMnVqX0xKMEVBa3MybnB4RmhxLUE4VXF4UDBxbTFxaXcwX1Z4bDRwZkp3eW1lb3dldm1kY2NDWS1FTUE1c2hZdTJKajM3SW5iTnVmMDE0aTAtN1JXQk5qMmJ4ek9LUFZOdTdiSGxHYWFfU0FfVWVrbTFWVzdEbTN5eTM5SDd5dUFXWlpHaGF1cl9SdEozbjRJRTdZQg?oc=5",
+      "published_at": "Sat, 12 Sep 2026 22:10:00 GMT",
+      "id": "d96b9d61c633f8ae4781"
     }
   ],
   "silver": [
     {
-      "title": "Giá bạc tăng trong nước và thế giới cùng lúc",
-      "summary": "Giá bạc tăng trong nước và thế giới cùng lúc. Thời báo Tài chính Việt Nam cập nhật.",
+      "title": "Giá bạc hôm nay 13/9: Chịu sức ép từ kỳ vọng Fed tăng lãi suất - thuonghieucongluan.com.vn",
+      "summary": "Giá bạc chịu áp lực từ kỳ vọng Fed tăng lãi suất hôm nay. Đăng trên thuonghieucongluan.com.vn.",
+      "tag": "Giá bạc",
+      "source": "thuonghieucongluan.com.vn",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPWFY4TWdud3RVMEVkVWNMY1lTTGdPRlh5M0IzMm94RXlCZmFXZzg5S19rS21RN3JmZ0ZBQm5mRXpTWkgwVTVETVQ1ZVZPSGhKVXR6VHlWZk82Wk93MVlibmhZcWVvREJ3ZjQyM2NETDk2SENMY0wxOWduNUVMaW8tY04zekw3dEgycVZuRV9VSng4allKdFU4VFFlT0tjbW9EMHFTVnpzUTdXUGxF?oc=5",
+      "published_at": "Sat, 12 Sep 2026 23:20:00 GMT",
+      "id": "59c878fa1f19d57407ac"
+    },
+    {
+      "title": "Giá bạc hôm nay 13/9/2026: Biến động không ngừng - MoneyF",
+      "summary": "Giá bạc biến động liên tục hôm nay. Đăng trên MoneyF.",
+      "tag": "Giá bạc",
+      "source": "MoneyF",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE13dldPUWlFM0ZLa2xOSk9uZ1QzaW1aMTMzY3IyUlAyNmlGdEVzMDYya3pVSEJVWGxoWk03ZW9kQXFadXh0eWFiR2JjY0tHczluaGV5WGNSTnJsdlMwN1A0TGJOeUp0SWExekVGeDJneWFqNzYySE5fZHZwVVo?oc=5",
+      "published_at": "Sat, 12 Sep 2026 23:00:00 GMT",
+      "id": "3771053cd26a4cd846fb"
+    },
+    {
+      "title": "Ngày 12/9: Giá bạc trong nước và thế giới đồng loạt đảo chiều tăng - Thời báo Tài chính Việt Nam",
+      "summary": "Giá bạc trong nước và thế giới tăng đồng loạt ngày 12/9. Đăng trên Thời báo Tài chính Việt Nam.",
       "tag": "Giá bạc",
       "source": "Thời báo Tài chính Việt Nam",
       "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNc1E0Y2Y1ZWpfeUhmOTZxQTNHMlJMaWpFWWZzN2lzTzJLRTNEX2pMSUNIN3FmTTdySU5fQzZLdFFNWDN3eGdEaE93VTVOQXJ3VlRvTGFqMzRBY0pZRUJ5T1BEald0YUhidE5MaXg1Y0d5c2Vrekc0c25GWTJidVNXY0tTc3VucWFGOEFDR3g4ZGwta285cUpPOFd5NHJCdmJBOFhoZDk4aVZzaWRLOXZtdg?oc=5",
       "published_at": "Sat, 12 Sep 2026 07:08:52 GMT",
       "id": "59b373e52ad70ba50a40"
-    },
-    {
-      "title": "Giá bạc giảm trong nước nhưng tăng trên thị trường thế giới",
-      "summary": "Giá bạc giảm trong nước nhưng tăng trên thị trường thế giới. Nguồn doanhnghiephoinhap.vn.",
-      "tag": "Giá bạc",
-      "source": "doanhnghiephoinhap.vn",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOa3g5ZEFMbnJBWUdwLS1KTktOR21UbU9nMFdHb19DU1VIRmlfVDAwbnFLQmVjWnlQak5idG1aN2dMX3pOSWwwdUh0Y1J2X3VOVWhaUFViLUJSSHR6Vk9CMjBKLXduaTdULVRHYi1ZY2Q3YmtQenZnZnFfVklmWFpRVENfbmw4all6NnJVSnpOQ1BOYWxHSnJtN2dWUURvTUNqSnNXeGlLY1AtMjVx?oc=5",
-      "published_at": "Sat, 12 Sep 2026 01:30:35 GMT",
-      "id": "40c2601d219171cb6c1c"
-    },
-    {
-      "title": "Giá bạc dao động do lãi suất và nhu cầu công nghiệp",
-      "summary": "Giá bạc dao động do lãi suất và nhu cầu công nghiệp. Báo cáo từ Tạp chí điện tử Thương Trường.",
-      "tag": "Giá bạc",
-      "source": "Tạp chí điện tử Thương Trường",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNdm53QmM5UEtsdUNuS2QxbVNWdThabFpSTEZKcFNMY0pTLTVKcnpjcnpNcU5LS2I4YXRHRTlHX25sRFFfTW5fVGUwZWxkaTM4eEZPTFZPOF9pWEZWQjU4NFRxNmNFWWhqUjZBRzdKaTFwUVBOdV9ia2taMEhpY3lkRXAtOEMtaTZUUEVpTTZSZllsQTlFaTE2eFloVFMtVVFDSmJLZEI0OXJReDB6bnlmdHhhWQ?oc=5",
-      "published_at": "Sat, 12 Sep 2026 03:48:00 GMT",
-      "id": "032763956b8480747e10"
     }
   ],
   "stocks": [
     {
-      "title": "VN-Index giảm xuống 1.800 điểm, tạo vùng cản ngắn hạn",
-      "summary": "VN-Index giảm xuống 1.800 điểm, tạo vùng cản ngắn hạn. Tình hình thanh khoản hẹp ảnh hưởng thị trường.",
-      "tag": "VN-Index",
+      "title": "Công ty chứng khoán nhận định gì khi VN-Index thủng mốc 1800 điểm? - VnEconomy",
+      "summary": "Công ty chứng khoán phân tích tác động khi VN-Index thủng 1800 điểm. Bài viết được đăng trên VnEconomy.",
+      "tag": "VN-Index / Chứng khoán",
+      "source": "VnEconomy",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOOERDVWVDdGNFNXg5NUJKS1RkSU1qYUhzd3NUMkE4cnhhTGRDQWJvVlhhLWdJdWdFV2Z0azJPbWRvZElsMW04SzJ2Vk82NHVBX0dQUlM3bWJfeU5CV0xuVGM1V2tRbFg2VVFwRDFZSXU3UHQ1R1ZiSXJWS00zaGc3dXF5SnVkbUdfT1lLZDl2aUdzZWpE?oc=5",
+      "published_at": "Sat, 12 Sep 2026 10:31:10 GMT",
+      "id": "c90fc2920a4886df4d7c"
+    },
+    {
+      "title": "VIC, VHM cùng loạt cổ phiếu ngân hàng kéo VN-Index về dưới 1,800 điểm - Fili.vn",
+      "summary": "Cổ phiếu ngân hàng VIC, VHM làm VN-Index giảm dưới 1,800 điểm. Bài viết trên Fili.vn.",
+      "tag": "VN-Index / Cổ phiếu ngân hàng",
+      "source": "Fili.vn",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNWUJGcWw0Z21SWkVmWVpqZHpWa2ZJNXBUX0V6aXhMQTY3X29fckFNczlvbWZTOTNiX2hiclI4Mmo1Q0E4cTZzMDF1SjQ4VTJpTmludEdka3NuNGRFQm94eWVNN2pmcVBSYVFDck0yTGpiNFluc0Rra3p4VUhFYjdWazBVUjItbEFXLWxOQ2VBc0hwUkZuV3NlVE4weUpTWXBRY1hjeV8xWG1oVUE?oc=5",
+      "published_at": "Sat, 12 Sep 2026 12:28:00 GMT",
+      "id": "e56bad41106db5d826e6"
+    },
+    {
+      "title": "Thanh khoản co hẹp khiến VN-Index 1.800 điểm trở thành vùng cản ngắn hạn - Vietnam+ (VietnamPlus)",
+      "summary": "Thanh khoản hẹp tạo vùng cản ngắn hạn cho VN-Index 1,800 điểm. Được đăng trên VietnamPlus.",
+      "tag": "VN-Index / Thanh khoản",
       "source": "Vietnam+ (VietnamPlus)",
       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQY2xYeUo5QXRjWlhxb1ZHUmRWaTBmT1dOWUJnTHhLUmxtd20tQzZldFBNV2Y2aGN5RldpQWpoVm50cktQNFUyQUYydEt5eXE4bVEyODk2eFdBUkFSTHdUTWU0ZUlRcG02bGE1OGQ5WnZPNENRTDFubDlBSktIcjV5M1gxVTlUN0xlSWRfQXk1X0o3LTR4dFI1dzFIcTZ2N1NOUTdYTjNjSm5ZWFdEYzFyUEdqaWE?oc=5",
       "published_at": "Sat, 12 Sep 2026 04:13:18 GMT",
       "id": "6d0fd55444affa1cd42c"
-    },
-    {
-      "title": "Khối ngoại và doanh nghiệp bán ròng khiến VN-Index giảm hơn 57 điểm",
-      "summary": "Khối ngoại và doanh nghiệp bán ròng khiến VN-Index giảm hơn 57 điểm trong tuần. Báo Tuổi Trẻ.",
-      "tag": "VN-Index",
-      "source": "Báo Tuổi Trẻ",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQdEhHU043MHE4WVlWeTJSSE82YmF6WTVYR3hSWEhSamVtXzJoVncwd1otZXF1SEd0MHpDWEpsNUFOMkxad3ZDVTk0U0R3Sk5YMk9rQm9fZEhJUlkzVGJ3UHlacDVmbFNZRnd3cEo5OUhCaGgwMG1mRzczRktmSW1ySmFsYW1ScUE0OUtrTFg4ZEE4LUVfZzZiaUE0M0RDblhPQjRRNHBDWDAtdk9BOEUtNzZmaFM?oc=5",
-      "published_at": "Sat, 12 Sep 2026 02:52:00 GMT",
-      "id": "d48dbfbaeb2122b703f1"
-    },
-    {
-      "title": "Bộ Tài chính kêu gọi nhà đầu tư Anh tham gia thị trường chứng khoán Việt Nam",
-      "summary": "Bộ Tài chính kêu gọi nhà đầu tư Anh tham gia thị trường chứng khoán Việt Nam. Báo Dân trí.",
-      "tag": "VN-Index",
-      "source": "Báo Dân trí",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNLTREZ2QwcTJlbEY4WklpbjZIeWxMdno2emUwanYwNGJmNzYtMzVFQXpPa2pHc25XT3dqUVBoRXBHTmVmeGw5UnB1R2RiODBNS1BTM3B2eTR1NXBpNDFoMFJZNWFxMlE5TjZQRG9BR1BBV3YyTW56NnNPY1Q3My01R0dLOUdfWVl2c0c5LUhZTDE3cUZsWENIRktuNktQZ1YwUzlHYXF0dV9DckZGT3AySWRsUG1GSW5vZEprdUxIOC0wQQ?oc=5",
-      "published_at": "Sat, 12 Sep 2026 09:52:19 GMT",
-      "id": "60c436e1c48d1acb01a0"
     }
   ],
   "realestate": [
     {
-      "title": "Căn hộ TP.HCM đang hết thời khan hàng, giá cả đang thay đổi",
-      "summary": "Căn hộ TP.HCM đang hết thời khan hàng, giá cả đang thay đổi. CafeF báo cáo.",
+      "title": "Hết thời khan hàng, giá căn hộ TP.HCM thế nào? - CafeF",
+      "summary": "Giá căn hộ TP.HCM sau thời khan hàng. Đăng trên CafeF.",
       "tag": "Căn hộ",
       "source": "CafeF",
       "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQdTVSa0M4bmxaYWZucnY0WE5TUHdaejJCWXpPMXE2amtvdko5YWIwWExjS0l1eTlSU2daV1hVZVJUTnZ2TW5acFJFTG1fNEs3LWFsbTJiNTR5aGJFXzJneUZTeGp3MHdaLUN5dUo3XzNBWnN4NkktSDhaX3F5dUwtTVlmdjJ2UWx0ZTZz?oc=5",
@@ -252,26 +252,17 @@
       "id": "22bb0f5a4d8be4d7a5d6"
     },
     {
-      "title": "Doanh nghiệp bất động sản TP.HCM cảnh báo về phạt 300 triệu đồng khi nhận tiền mặt",
-      "summary": "Doanh nghiệp bất động sản TP.HCM cảnh báo về phạt 300 triệu đồng khi nhận tiền mặt. Báo Dân Việt.",
+      "title": "Doanh nghiệp bất động sản TP.HCM nói gì khi nhận tiền mặt có thể bị phạt 300 triệu đồng? - Báo Dân Việt",
+      "summary": "Doanh nghiệp bất động sản TP.HCM phản hồi khi nhận tiền mặt có thể bị phạt 300 triệu đồng. Đăng trên Báo Dân Việt.",
       "tag": "Căn hộ",
       "source": "Báo Dân Việt",
       "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPYTB5b2w1cERvQzNxR3JlcHBWcF84d2NTUHhEYlF5aWIzdk9Eb2FKWEp1ZGpoWEM0V3hTOWp0VU9UYUV2MllYb2FxQk5yMmo2Q1pxRGs5eXdYcHRad1IxZlZnVnc4OXFzZFdTa2pCZk81M1djdXg3T2V4UWN4SHNIdFdXQ194Umx1eU40VHBVT0h5V3hkX05BejBfRDl2aU9kdWVfYVFMMklQVllwTmJuRDRXRTZkdnRVVXhr?oc=5",
       "published_at": "Fri, 11 Sep 2026 02:38:27 GMT",
       "id": "7b741196249a133124db"
-    },
-    {
-      "title": "Thay đổi cách làm và hạ tầng TP.HCM tăng tốc nhờ lực đẩy tư nhân",
-      "summary": "Thay đổi cách làm và hạ tầng TP.HCM tăng tốc nhờ lực đẩy tư nhân. Báo Tuổi Trẻ.",
-      "tag": "Căn hộ",
-      "source": "Báo Tuổi Trẻ",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPTTRIRVNZS3dkUlpzRjYwUjVZUkdZaFBmbnVvRUMtdEVCTUtoZUVtQk5ob1d6M2lQa1RKVUNXSk92dkVnNExDNDhwRjU3Z1ZiV1JNUjY3YVFLeXhKSVI0VHNscEg3Yzk4c2g5UW1seVJ5cFJRQ0RsY3cyWTV4Y3dWanJWRTd6dE81Y0paYkt2RUt3VXAxRGRXTzJ0akI3RndBWjB5Q2dLV2JKYnh5?oc=5",
-      "published_at": "Thu, 10 Sep 2026 03:05:00 GMT",
-      "id": "4c710e062e64a162eafd"
     }
   ],
   "market_snapshot": {
-    "updated_at": "12/09/2026 18:53",
+    "updated_at": "13/09/2026 07:45",
     "gold": {
       "label": "Vàng thế giới",
       "value": "4,408.90",
@@ -284,7 +275,7 @@
       "source": "Yahoo Finance · COMEX",
       "source_url": "https://finance.yahoo.com/quote/GC%3DF",
       "updated_at": "12/09/2026 03:59",
-      "vnd_equivalent": "137.61 triệu đồng/lượng",
+      "vnd_equivalent": "137.55 triệu đồng/lượng",
       "conversion_note": "Quy đổi từ giá quốc tế; chưa gồm chênh lệch SJC, thuế và phí."
     },
     "silver": {
@@ -299,7 +290,7 @@
       "source": "Yahoo Finance · COMEX",
       "source_url": "https://finance.yahoo.com/quote/SI%3DF",
       "updated_at": "12/09/2026 03:59",
-      "vnd_equivalent": "54.26 triệu đồng/kg",
+      "vnd_equivalent": "54.23 triệu đồng/kg",
       "conversion_note": "Quy đổi từ giá quốc tế; chưa gồm thuế, phí và chênh lệch bán lẻ."
     },
     "vnindex": {
@@ -325,14 +316,14 @@
       "unit": "điểm",
       "source": "TradingView · dữ liệu trễ khoảng 15 phút",
       "source_url": "https://www.tradingview.com/symbols/HOSE-VN30/",
-      "updated_at": "12/09/2026 18:53"
+      "updated_at": "13/09/2026 07:45"
     },
     "disclaimer": "Giá Vàng/Bạc là chuẩn quốc tế COMEX; số VND là quy đổi tham khảo, không phải giá bán lẻ SJC. VN30 có thể trễ khoảng 15 phút."
   },
   "real_estate_market": {
-    "refresh_key": "2026-09-12",
-    "updated_at": "12/09/2026 00:04",
-    "next_update": "13/09/2026",
+    "refresh_key": "2026-09-13",
+    "updated_at": "13/09/2026 07:46",
+    "next_update": "14/09/2026",
     "methodology": "Trung bình mẫu được tính từ giá phổ biến của các dự án đại diện trên OneHousing; không phải giá giao dịch công chứng của toàn bộ khu vực. Hệ thống kiểm tra lại một lần mỗi ngày.",
     "city_benchmark": {
       "label": "Căn hộ sơ cấp khu trung tâm TP.HCM",
@@ -367,8 +358,8 @@
       {
         "area": "Thủ Đức · Quận 9 cũ",
         "sample_size": 1,
-        "average_price_billion": 2.97,
-        "average_price_per_sqm_million": 55.98,
+        "average_price_billion": 2.91,
+        "average_price_per_sqm_million": 55.68,
         "projects": [
           "Vinhomes Grand Park"
         ]
@@ -413,7 +404,7 @@
         "source": "OneHousing",
         "source_url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Chung-cu-Khang-Gia-Tan-Huong.500",
         "source_period": "9/2026",
-        "checked_at": "12/09/2026 00:04",
+        "checked_at": "13/09/2026 07:46",
         "is_fallback": false
       },
       {
@@ -435,7 +426,7 @@
         "source": "OneHousing",
         "source_url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Chung-cu-Melody-Residences.713",
         "source_period": "9/2026",
-        "checked_at": "12/09/2026 00:04",
+        "checked_at": "13/09/2026 07:46",
         "is_fallback": false
       },
       {
@@ -457,7 +448,7 @@
         "source": "OneHousing",
         "source_url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Chung-cu-IDICO-Tan-Phu.493",
         "source_period": "9/2026",
-        "checked_at": "12/09/2026 00:04",
+        "checked_at": "13/09/2026 07:46",
         "is_fallback": false
       },
       {
@@ -479,7 +470,7 @@
         "source": "OneHousing",
         "source_url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Chung-cu-Q7-Saigon-Riverside.355",
         "source_period": "9/2026",
-        "checked_at": "12/09/2026 00:04",
+        "checked_at": "13/09/2026 07:46",
         "is_fallback": false
       },
       {
@@ -501,7 +492,7 @@
         "source": "OneHousing",
         "source_url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Canh-Vien-3.644",
         "source_period": "9/2026",
-        "checked_at": "12/09/2026 00:04",
+        "checked_at": "13/09/2026 07:46",
         "is_fallback": false
       },
       {
@@ -509,21 +500,21 @@
         "area": "Thủ Đức · Quận 9 cũ",
         "tier": "Trung cấp – cao cấp",
         "group": "Hạng thường",
-        "typical_price_billion": 2.97,
-        "typical_price_per_sqm_million": 55.98,
+        "typical_price_billion": 2.91,
+        "typical_price_per_sqm_million": 55.68,
         "price_range_billion": [
-          1.35,
+          1.31,
           32.0
         ],
         "sqm_range_million": [
-          38.55,
+          36.81,
           331.19
         ],
-        "change_pct": -0.18,
+        "change_pct": -2.4,
         "source": "OneHousing",
         "source_url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Vinhomes-Grand-Park.1012",
         "source_period": "9/2026",
-        "checked_at": "12/09/2026 00:04",
+        "checked_at": "13/09/2026 07:46",
         "is_fallback": false
       },
       {
@@ -545,7 +536,7 @@
         "source": "OneHousing",
         "source_url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Masteri-Thao-Dien.946",
         "source_period": "9/2026",
-        "checked_at": "12/09/2026 00:04",
+        "checked_at": "13/09/2026 07:46",
         "is_fallback": false
       },
       {
@@ -567,7 +558,7 @@
         "source": "OneHousing",
         "source_url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Chung-cu-City-Garden.1075",
         "source_period": "9/2026",
-        "checked_at": "12/09/2026 00:04",
+        "checked_at": "13/09/2026 07:46",
         "is_fallback": false
       },
       {
@@ -589,7 +580,7 @@
         "source": "OneHousing",
         "source_url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Vinhomes-Central-Park.813",
         "source_period": "9/2026",
-        "checked_at": "12/09/2026 00:04",
+        "checked_at": "13/09/2026 07:46",
         "is_fallback": false
       }
     ],
@@ -672,8 +663,8 @@
     "disclaimer": "Dữ liệu chỉ để tham khảo, không phải định giá hay khuyến nghị đầu tư. Trước khi đặt cọc cần kiểm tra pháp lý, quy hoạch, phí bảo trì, phí quản lý và giá giao dịch thực tế."
   },
   "investment_overview": {
-    "updated_at": "12/09/2026 18:53",
-    "summary": "Tại mốc 12/09/2026 18:53, vàng quốc tế tăng +1.02%, bạc tăng +1.41%; VN-Index giảm -1.86% và VN30 giảm -2.03% so với phiên trước. Mốc tham khảo căn hộ sơ cấp khu trung tâm TP.HCM hiện ở 102 triệu đồng/m² (-1,2% QoQ). Hãy đọc từng chuyên mục để đối chiếu động lực giá, tin mới và rủi ro riêng của từng loại tài sản.",
+    "updated_at": "13/09/2026 07:45",
+    "summary": "Tại mốc 13/09/2026 07:45, vàng quốc tế tăng +1.02%, bạc tăng +1.41%; VN-Index giảm -1.86% và VN30 giảm -2.03% so với phiên trước. Mốc tham khảo căn hộ sơ cấp khu trung tâm TP.HCM hiện ở 102 triệu đồng/m² (-1,2% QoQ). Hãy đọc từng chuyên mục để đối chiếu động lực giá, tin mới và rủi ro riêng của từng loại tài sản.",
     "items": [
       {
         "key": "gold",
