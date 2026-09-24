@@ -83,7 +83,7 @@ SECTION_BATCHES = (
 )
 
 SLEEP_BETWEEN_BATCHES = 65
-MAX_COMPLETION_TOKENS_PER_BATCH = 2000
+MAX_COMPLETION_TOKENS_PER_BATCH = 4000
 
 
 SECTION_RULES = {
@@ -1905,7 +1905,7 @@ direction "insufficient", outlook "uncertain" và nói rõ phần nào còn thi�
                 # Groq Free tính cả prompt + phần trả lời vào giới hạn
                 # 8.000 TPM của model này. 2.700 token vẫn đủ cho
                 # JSON chi tiết, đồng thời chừa khoảng an toàn cho input.
-                max_completion_tokens=2700,
+                max_completion_tokens=4000,
                 response_format={"type": "json_object"},
             )
             content = response.choices[0].message.content
@@ -2017,6 +2017,12 @@ def main():
         history = update_history(data, previous_data)
 
         try:
+            print(
+                f"Nghỉ {SLEEP_BETWEEN_BATCHES} giây trước khi phân tích "
+                "xu hướng để không cộng dồn token cùng một phút...",
+                flush=True,
+            )
+            time.sleep(SLEEP_BETWEEN_BATCHES)
             data["trends"] = fetch_trends_from_groq(client, history)
         except Exception as trend_error:
             old_trends = previous_data.get("trends")
