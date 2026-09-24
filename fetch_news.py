@@ -2078,6 +2078,16 @@ def write_json_atomically(data, output_file=OUTPUT_FILE):
     temporary_file.replace(output_file)
 
 
+def section_list(article):
+    """Trả về danh sách chuyên mục của một bài, chấp nhận dữ liệu pool cũ."""
+    sections = article.get("sections")
+    if isinstance(sections, list) and sections:
+        return [s for s in sections if s]
+
+    section = article.get("section")
+    return [section] if section else []
+
+
 def build_pool(news_sources, edited_data=None):
     """Chuyển RSS thô thành danh sách bài cho pool.json.
 
@@ -2119,6 +2129,7 @@ def build_pool(news_sources, edited_data=None):
                 "url": url,
                 "published_at": raw.get("published_at", ""),
                 "section": section,
+                "sections": [section],
                 "first_seen_at": now_iso,
                 "edited": bool(edited),
             }
@@ -2149,6 +2160,14 @@ def update_pool(new_articles):
             if existing.get("edited") and not article.get("edited"):
                 article = existing
 
+            # Một bài có thể khớp nhiều truy vấn RSS (ví dụ vietnam và
+            # stocks cùng hỏi về VN-Index). Gộp lại thay vì để mục sau ghi
+            # đè mục trước, nếu không danh mục cá nhân hoá lọc theo chuyên
+            # mục sẽ mất trắng những bài đó.
+            article["sections"] = sorted(
+                set(section_list(existing)) | set(section_list(article))
+            )
+
         merged[article["id"]] = article
 
     cutoff = now - timedelta(days=POOL_RETENTION_DAYS)
@@ -2166,7 +2185,13 @@ def update_pool(new_articles):
         "retention_days": POOL_RETENTION_DAYS,
         "article_count": len(retained),
         "edited_count": edited_count,
-        "sections": sorted({article.get("section", "") for article in retained}),
+        "sections": sorted(
+            {
+                section
+                for article in retained
+                for section in section_list(article)
+            }
+        ),
         "disclaimer": (
             "Bài có edited=false chỉ gồm tiêu đề gốc từ RSS, chưa được biên "
             "tập sang tiếng Việt. Luôn đọc bài gốc theo url."
