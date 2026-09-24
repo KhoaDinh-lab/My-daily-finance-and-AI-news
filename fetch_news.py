@@ -30,6 +30,32 @@ OUTPUT_FILE = Path(__file__).with_name("data.json")
 HISTORY_FILE = Path(__file__).with_name("history.json")
 HISTORY_RETENTION_DAYS = 30
 
+POOL_FILE = Path(__file__).with_name("pool.json")
+POOL_RETENTION_DAYS = 14
+
+# Chuyên mục chỉ đi vào pool.json để phục vụ danh mục cá nhân hoá.
+# Không hiển thị trên bản tin chung và KHÔNG gửi cho Groq.
+POOL_ONLY_SECTIONS = (
+    "semiconductor",
+    "energy",
+    "trade_policy",
+    "fintech_vn",
+)
+
+# Số bài RSS tối đa gửi cho Groq ở mỗi chuyên mục.
+# Pool lấy nhiều hơn hẳn, nhưng phần dư KHÔNG bao giờ được gửi cho Groq:
+# gói Free chỉ cho 8.000 token/phút nên mở rộng kho tin phải miễn phí về token.
+GROQ_SAMPLE_LIMITS = {
+    "macro": 6,
+    "vietnam": 6,
+    "ai": 6,
+    "logistics": 20,
+    "gold": 7,
+    "silver": 7,
+    "stocks": 8,
+    "realestate": 8,
+}
+
 REQUIRED_SECTIONS = (
     "macro",
     "vietnam",
@@ -985,25 +1011,33 @@ def merge_articles(*article_groups, limit=8):
 
 
 def fetch_news_sources():
-    """Thu thập các nhóm tiêu đề mới trước khi gửi sang Groq."""
+    """Thu thập RSS cho cả bản tin chung lẫn kho tin cá nhân hoá.
+
+    Hàm này lấy NHIỀU hơn số bài mà bản tin chung cần. Toàn bộ kết quả đi vào
+    pool.json; chỉ phần đầu mỗi mục (theo GROQ_SAMPLE_LIMITS) mới được gửi cho
+    Groq qua cap_for_groq().
+    """
     sources = {
         "macro": fetch_google_news(
             "(Federal Reserve OR Fed OR US CPI OR US inflation) when:2d",
             "en-US",
             "US",
             "US:en",
+            limit=12,
         ),
         "vietnam": fetch_google_news(
             '("VN-Index" OR "USD/VND" OR NHNN OR "FDI Việt Nam") when:2d',
             "vi",
             "VN",
             "VN:vi",
+            limit=12,
         ),
         "ai": fetch_google_news(
             "(OpenAI OR Anthropic OR Gemini OR AI model OR AI chip) when:2d",
             "en-US",
             "US",
             "US:en",
+            limit=12,
         ),
         "logistics": merge_articles(
             fetch_google_news(
@@ -1013,7 +1047,7 @@ def fetch_news_sources():
                 "vi",
                 "VN",
                 "VN:vi",
-                limit=6,
+                limit=8,
             ),
             fetch_google_news(
                 '("global logistics" OR "container shipping" OR freight OR '
@@ -1022,7 +1056,7 @@ def fetch_news_sources():
                 "en-US",
                 "US",
                 "US:en",
-                limit=6,
+                limit=8,
             ),
             fetch_google_news_optional(
                 '("cảng trung chuyển quốc tế Cần Giờ" OR "cảng Cần Giờ" OR '
@@ -1031,7 +1065,7 @@ def fetch_news_sources():
                 "vi",
                 "VN",
                 "VN:vi",
-                limit=4,
+                limit=6,
             ),
             fetch_google_news_optional(
                 '("Thailand Land Bridge" OR "Kra Canal" OR "Thai Canal" OR '
@@ -1040,7 +1074,7 @@ def fetch_news_sources():
                 "en-US",
                 "US",
                 "US:en",
-                limit=4,
+                limit=6,
             ),
             fetch_google_news_optional(
                 '("Red Sea shipping" OR "Suez Canal" OR "Panama Canal" OR '
@@ -1048,9 +1082,9 @@ def fetch_news_sources():
                 "en-US",
                 "US",
                 "US:en",
-                limit=4,
+                limit=6,
             ),
-            limit=24,
+            limit=28,
         ),
         "gold": merge_articles(
             fetch_google_news(
@@ -1058,16 +1092,16 @@ def fetch_news_sources():
                 "vi",
                 "VN",
                 "VN:vi",
-                limit=5,
+                limit=7,
             ),
             fetch_google_news(
                 '(gold price OR gold market OR central bank gold) when:2d',
                 "en-US",
                 "US",
                 "US:en",
-                limit=4,
+                limit=6,
             ),
-            limit=7,
+            limit=12,
         ),
         "silver": merge_articles(
             fetch_google_news(
@@ -1075,16 +1109,16 @@ def fetch_news_sources():
                 "vi",
                 "VN",
                 "VN:vi",
-                limit=4,
+                limit=6,
             ),
             fetch_google_news(
                 '(silver price OR silver market OR industrial silver) when:3d',
                 "en-US",
                 "US",
                 "US:en",
-                limit=5,
+                limit=7,
             ),
-            limit=7,
+            limit=12,
         ),
         "stocks": fetch_google_news(
             '("VN30" OR "cổ phiếu VN30" OR "thị trường chứng khoán Việt Nam" '
@@ -1092,7 +1126,7 @@ def fetch_news_sources():
             "vi",
             "VN",
             "VN:vi",
-            limit=8,
+            limit=14,
         ),
         "realestate": fetch_google_news(
             '("bất động sản TP.HCM" OR "giá căn hộ TP.HCM" OR '
@@ -1101,15 +1135,105 @@ def fetch_news_sources():
             "vi",
             "VN",
             "VN:vi",
-            limit=8,
+            limit=14,
         ),
     }
+
+    # Các mục dưới đây CHỈ phục vụ danh mục cá nhân hoá trong pool.json.
+    # Dùng fetch_google_news_optional để một truy vấn rỗng không làm hỏng
+    # lần chạy của bản tin chung.
+    pool_only = {
+        "semiconductor": merge_articles(
+            fetch_google_news_optional(
+                '("bán dẫn" OR "chip bán dẫn" OR "nhà máy chip" OR '
+                '"đóng gói kiểm định" OR "vi mạch") when:3d',
+                "vi",
+                "VN",
+                "VN:vi",
+                limit=6,
+            ),
+            fetch_google_news_optional(
+                "(semiconductor OR foundry OR wafer OR \"chip fab\" OR "
+                '"chip export controls") when:3d',
+                "en-US",
+                "US",
+                "US:en",
+                limit=6,
+            ),
+            limit=10,
+        ),
+        "energy": merge_articles(
+            fetch_google_news_optional(
+                '("giá điện" OR "năng lượng tái tạo" OR "điện gió" OR '
+                '"điện mặt trời" OR "quy hoạch điện" OR LNG) when:3d',
+                "vi",
+                "VN",
+                "VN:vi",
+                limit=6,
+            ),
+            fetch_google_news_optional(
+                '("energy transition" OR "power grid" OR LNG OR '
+                '"renewable capacity") when:3d',
+                "en-US",
+                "US",
+                "US:en",
+                limit=5,
+            ),
+            limit=10,
+        ),
+        "trade_policy": merge_articles(
+            fetch_google_news_optional(
+                '("thuế quan" OR "hiệp định thương mại" OR "xuất khẩu Việt Nam" '
+                'OR "phòng vệ thương mại") when:3d',
+                "vi",
+                "VN",
+                "VN:vi",
+                limit=6,
+            ),
+            fetch_google_news_optional(
+                '(tariff OR "trade agreement" OR "export controls" OR '
+                '"trade deficit") when:3d',
+                "en-US",
+                "US",
+                "US:en",
+                limit=5,
+            ),
+            limit=10,
+        ),
+        "fintech_vn": fetch_google_news_optional(
+            '("ngân hàng số" OR fintech OR "thanh toán số" OR "ví điện tử" '
+            'OR "tín dụng Việt Nam") when:3d',
+            "vi",
+            "VN",
+            "VN:vi",
+            limit=10,
+        ),
+    }
+
+    for section, articles in pool_only.items():
+        if articles:
+            sources[section] = articles
 
     for articles in sources.values():
         for source_index, article in enumerate(articles):
             article["source_index"] = source_index
 
     return sources
+
+
+def cap_for_groq(news_sources):
+    """Cắt danh sách RSS xuống đúng số bài mà Groq được nhận.
+
+    Đây là điểm mấu chốt của P0: pool có thể phình to tuỳ ý mà đầu vào Groq
+    không đổi, nên không bao giờ vượt trần 8.000 token/phút của gói Free.
+
+    source_index được gán theo thứ tự trong fetch_news_sources() nên cắt phần
+    đầu danh sách vẫn giữ nguyên chỉ số hợp lệ.
+    """
+    capped = {}
+    for section, limit in GROQ_SAMPLE_LIMITS.items():
+        capped[section] = list(news_sources.get(section, []))[:limit]
+    return capped
 
 
 def get_vnindex_or_fallback(old_tickers):
@@ -1954,6 +2078,124 @@ def write_json_atomically(data, output_file=OUTPUT_FILE):
     temporary_file.replace(output_file)
 
 
+def build_pool(news_sources, edited_data=None):
+    """Chuyển RSS thô thành danh sách bài cho pool.json.
+
+    Bài nào đã được Groq biên tập sẽ có title_vi/summary và edited=True;
+    phần còn lại chỉ có tiêu đề gốc từ RSS (edited=False) — giao diện phải
+    nói rõ giới hạn này cho người dùng.
+    """
+    now_iso = datetime.now(
+        ZoneInfo("Asia/Ho_Chi_Minh")
+    ).isoformat(timespec="seconds")
+
+    edited_by_url = {}
+    for section in REQUIRED_SECTIONS:
+        for article in (edited_data or {}).get(section) or []:
+            if isinstance(article, dict) and article.get("url"):
+                edited_by_url[article["url"]] = article
+
+    articles = []
+    for section, raw_articles in news_sources.items():
+        for raw in raw_articles:
+            if not isinstance(raw, dict) or not raw.get("title"):
+                continue
+
+            url = raw.get("url", "")
+            edited = edited_by_url.get(url) or {}
+            article = {
+                "id": make_article_id(
+                    {
+                        "url": url,
+                        "source": raw.get("source", ""),
+                        "title": raw.get("title", ""),
+                    }
+                ),
+                "title": raw.get("title", ""),
+                "title_vi": edited.get("title", ""),
+                "summary": edited.get("summary", ""),
+                "tag": edited.get("tag", ""),
+                "source": raw.get("source", ""),
+                "url": url,
+                "published_at": raw.get("published_at", ""),
+                "section": section,
+                "first_seen_at": now_iso,
+                "edited": bool(edited),
+            }
+            articles.append(article)
+
+    return articles
+
+
+def update_pool(new_articles):
+    """Gộp bài mới vào pool.json, loại trùng theo id và giữ 14 ngày."""
+    now = datetime.now(ZoneInfo("Asia/Ho_Chi_Minh"))
+    pool_data = load_json_file(POOL_FILE, {"articles": []})
+
+    merged = {}
+    for article in list(pool_data.get("articles", [])) + list(new_articles):
+        if not isinstance(article, dict) or not article.get("title"):
+            continue
+
+        article = dict(article)
+        article["id"] = article.get("id") or make_article_id(article)
+        existing = merged.get(article["id"])
+
+        if existing:
+            # Giữ thời điểm nhìn thấy lần đầu và ưu tiên bản đã biên tập.
+            article["first_seen_at"] = (
+                existing.get("first_seen_at") or article.get("first_seen_at")
+            )
+            if existing.get("edited") and not article.get("edited"):
+                article = existing
+
+        merged[article["id"]] = article
+
+    cutoff = now - timedelta(days=POOL_RETENTION_DAYS)
+    retained = [
+        article
+        for article in merged.values()
+        if parse_article_time(article) >= cutoff
+    ]
+    retained.sort(key=parse_article_time, reverse=True)
+
+    edited_count = sum(1 for article in retained if article.get("edited"))
+
+    return {
+        "updated_at": now.strftime("%d/%m/%Y %H:%M"),
+        "retention_days": POOL_RETENTION_DAYS,
+        "article_count": len(retained),
+        "edited_count": edited_count,
+        "sections": sorted({article.get("section", "") for article in retained}),
+        "disclaimer": (
+            "Bài có edited=false chỉ gồm tiêu đề gốc từ RSS, chưa được biên "
+            "tập sang tiếng Việt. Luôn đọc bài gốc theo url."
+        ),
+        "articles": retained,
+    }
+
+
+def save_pool(news_sources, edited_data=None):
+    """Ghi pool.json và không bao giờ để lỗi pool làm hỏng lần chạy chính."""
+    try:
+        pool = update_pool(build_pool(news_sources, edited_data))
+        write_json_atomically(pool, POOL_FILE)
+        print(
+            f"Đã ghi pool.json: {pool['article_count']} bài "
+            f"({pool['edited_count']} bài đã biên tập).",
+            flush=True,
+        )
+        return pool
+    except Exception as pool_error:
+        print(
+            f"CẢNH BÁO: không ghi được pool.json: "
+            f"{type(pool_error).__name__}: {pool_error}",
+            file=sys.stderr,
+            flush=True,
+        )
+        return None
+
+
 def main():
     api_key = os.environ.get("GROQ_API_KEY", "").strip()
 
@@ -1996,6 +2238,21 @@ def main():
             flush=True,
         )
 
+        # Ghi pool NGAY từ RSS thô, trước khi gọi Groq. Nhờ vậy kho tin vẫn
+        # lớn lên kể cả khi AI thất bại hoàn toàn.
+        save_pool(news_sources)
+
+        # Groq chỉ nhận phần mẫu đã cắt; phần dư của pool không tốn token.
+        groq_sources = cap_for_groq(news_sources)
+        print(
+            "Mẫu gửi Groq: "
+            + ", ".join(
+                f"{section}={len(items)}"
+                for section, items in groq_sources.items()
+            ),
+            flush=True,
+        )
+
         client = Groq(
             api_key=api_key,
             default_headers={
@@ -2008,7 +2265,7 @@ def main():
             cpi,
             usd_vnd,
             vnindex_data,
-            news_sources,
+            groq_sources,
             previous_data,
         )
         data["market_snapshot"] = market_snapshot
@@ -2052,8 +2309,11 @@ def main():
         write_json_atomically(data)
         write_json_atomically(history, HISTORY_FILE)
 
+        # Ghi lại pool để đánh dấu những bài đã được Groq biên tập.
+        save_pool(news_sources, data)
+
         print(
-            "Đã cập nhật data.json và history.json thành công.",
+            "Đã cập nhật data.json, history.json và pool.json thành công.",
             flush=True,
         )
         return 0
