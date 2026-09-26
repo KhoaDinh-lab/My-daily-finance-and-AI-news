@@ -494,6 +494,26 @@
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; scroll-behavior:auto !important; transition-duration:.01ms !important; }
     }
+    .feed-chip-row { display:flex; flex-wrap:wrap; gap:10px; margin:18px 0 6px; }
+    .feed-chip { display:inline-flex; align-items:center; gap:8px; padding:9px 16px; border-radius:999px; border:1px solid rgba(255,255,255,.16); background:rgba(255,255,255,.04); color:var(--text); font:inherit; font-size:.9rem; cursor:pointer; transition:border-color .2s,background .2s; }
+    .feed-chip:hover { border-color:rgba(110,231,255,.5); background:rgba(110,231,255,.08); }
+    .feed-chip.active { border-color:var(--accent); background:rgba(110,231,255,.14); }
+    .feed-chip .feed-chip-x { opacity:.55; font-size:.85rem; }
+    .feed-chip .feed-chip-x:hover { opacity:1; }
+    .feed-empty { padding:34px 26px; border:1px dashed rgba(255,255,255,.18); border-radius:20px; text-align:center; color:var(--muted); }
+    .feed-note { margin:14px 0 0; padding:12px 16px; border-radius:14px; background:rgba(110,231,255,.07); border:1px solid rgba(110,231,255,.18); color:var(--muted); font-size:.88rem; line-height:1.55; }
+    .feed-chat-dialog { width:min(640px,calc(100% - 28px)); }
+    .feed-chat-log { display:flex; flex-direction:column; gap:12px; max-height:46vh; overflow-y:auto; padding:4px 2px; }
+    .feed-msg { padding:12px 16px; border-radius:16px; line-height:1.6; font-size:.94rem; max-width:88%; white-space:pre-wrap; }
+    .feed-msg.user { align-self:flex-end; background:rgba(110,231,255,.14); border:1px solid rgba(110,231,255,.22); }
+    .feed-msg.bot { align-self:flex-start; background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.1); }
+    .feed-preview { margin-top:14px; padding:14px 16px; border-radius:16px; border:1px solid rgba(255,255,255,.14); background:rgba(255,255,255,.03); }
+    .feed-preview h4 { margin:0 0 8px; font-size:.95rem; }
+    .feed-preview ul { margin:8px 0 0; padding-left:18px; color:var(--muted); font-size:.87rem; line-height:1.65; }
+    .feed-preview .feed-warn { color:#ffcf8b; }
+    .feed-chat-input { display:flex; gap:10px; margin-top:14px; }
+    .feed-chat-input textarea { flex:1; min-height:52px; max-height:140px; resize:vertical; padding:12px 14px; border-radius:14px; border:1px solid rgba(255,255,255,.16); background:rgba(255,255,255,.04); color:var(--text); font:inherit; font-size:.93rem; }
+    .feed-chat-actions { display:flex; gap:10px; flex-wrap:wrap; margin-top:14px; }
   </style>
 </head>
 <body>
@@ -553,6 +573,7 @@
         <button class="nav-btn" data-route="trends">Xu hướng</button>
         <button class="nav-btn pro-nav-btn" data-route="pro"><span class="pro-dot">◆</span> Pro</button>
         <button class="nav-btn" data-route="missed">Bỏ lỡ <span class="nav-count" id="missed-nav-count">0</span></button>
+        <button class="nav-btn" data-route="feeds">Danh mục của tôi</button>
       </nav>
       <button class="icon-btn" id="refresh-btn" aria-label="Yêu cầu cập nhật tin mới" title="Yêu cầu cập nhật tin mới">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 11a8.1 8.1 0 0 0-15.5-2M4 4v5h5M4 13a8.1 8.1 0 0 0 15.5 2M20 20v-5h-5"/></svg>
@@ -745,6 +766,23 @@
 
   <footer><div class="shell footer-inner"><span>© <span id="year"></span> The Daily Edge · Curated for Khoa · <a href="#pro">Founder Beta & minh bạch tài trợ</a></span><span>Dữ liệu: <a href="https://news.google.com/" target="_blank" rel="noopener">Google News RSS</a> · <a href="https://finance.yahoo.com/quote/%5EVNINDEX.VN/" target="_blank" rel="noopener">Yahoo Finance</a> · <a href="https://www.bls.gov/cpi/" target="_blank" rel="noopener">BLS</a> · <a href="https://onehousing.vn/" target="_blank" rel="noopener">OneHousing</a></span></div></footer>
 
+    <section class="view" data-view="feeds">
+      <div class="shell">
+        <header class="topic-header">
+          <span class="eyebrow">Danh mục cá nhân hoá</span>
+          <h1>Kho tin riêng<br>do bạn định nghĩa.</h1>
+          <p>Mô tả chủ đề bạn quan tâm bằng lời nói thường ngày. Hệ thống chuyển mô tả đó thành bộ lọc và tự quét kho tin mỗi ngày.</p>
+        </header>
+        <div class="feed-chip-row" id="feed-chips"></div>
+        <div class="feed-chat-actions">
+          <button class="soft-btn" type="button" id="feed-create-btn">＋ Tạo danh mục mới</button>
+        </div>
+        <div class="section-bar"><div><h2 id="feed-active-name">Chưa chọn danh mục</h2></div><span class="topic-count" id="feeds-count"></span></div>
+        <div class="news-grid" id="feeds-news"></div>
+        <p class="feed-note" id="feed-raw-note" hidden>ⓘ Tin trong danh mục riêng được lấy trực tiếp từ RSS. Bài gắn nhãn <strong>Tiêu đề gốc</strong> chưa được biên tập sang tiếng Việt và có thể là tiếng Anh — bấm vào bài để đọc nguồn gốc.</p>
+      </div>
+    </section>
+
   <dialog id="article-dialog">
     <div class="modal-scroll">
       <div class="modal-head"><button class="icon-btn" id="modal-close" aria-label="Đóng">✕</button></div>
@@ -755,6 +793,24 @@
         <p class="modal-summary" id="modal-summary"></p>
         <a class="source-link" id="modal-link" target="_blank" rel="noopener noreferrer">Đọc bài báo gốc ↗</a>
       </article>
+    </div>
+  </dialog>
+
+  <dialog id="feed-chat-dialog" class="feed-chat-dialog" aria-label="Tạo danh mục tin">
+    <div class="modal-head"><button class="icon-btn" id="feed-chat-close" aria-label="Đóng">✕</button></div>
+    <div class="modal-body">
+      <div class="modal-kicker">Danh mục cá nhân hoá</div>
+      <h2 id="feed-chat-title">Bạn muốn theo dõi chủ đề gì?</h2>
+      <div class="feed-chat-log" id="feed-chat-log"></div>
+      <div id="feed-chat-preview"></div>
+      <div class="feed-chip-row" id="feed-suggestions"></div>
+      <div class="feed-chat-input">
+        <textarea id="feed-chat-text" rows="2" placeholder="Ví dụ: tin về chuỗi cung ứng bán dẫn, nhất là phần ảnh hưởng tới Việt Nam, đừng có tin giá cổ phiếu"></textarea>
+      </div>
+      <div class="feed-chat-actions">
+        <button class="soft-btn" type="button" id="feed-chat-send">Gửi</button>
+        <button class="soft-btn" type="button" id="feed-chat-save" hidden>Lưu danh mục</button>
+      </div>
     </div>
   </dialog>
   <dialog id="update-dialog" class="update-dialog">
@@ -820,8 +876,8 @@
     const CONTENT_SECTIONS = ["macro", "vietnam", "ai", "logistics", "gold", "silver", "stocks", "realestate"];
     const TREND_SECTIONS = ["macro", "vietnam", "ai", "logistics"];
     const INVESTMENT_ROUTES = ["investment", "gold", "silver", "stocks", "realestate"];
-    const ROUTES = ["overview", "macro", "vietnam", "ai", "logistics", ...INVESTMENT_ROUTES, "trends", "pro", "missed"];
-    const SECTION_LABELS = { overview: "Tổng quan", macro: "Vĩ mô", vietnam: "Việt Nam", ai: "Trí tuệ nhân tạo", logistics: "Logistics", investment: "Tổng hợp đầu tư", gold: "Vàng", silver: "Bạc", stocks: "Cổ phiếu Việt Nam", realestate: "Bất động sản", trends: "Xu hướng", pro: "Daily Edge Pro", missed: "Bài bỏ lỡ" };
+    const ROUTES = ["overview", "macro", "vietnam", "ai", "logistics", ...INVESTMENT_ROUTES, "trends", "pro", "missed", "feeds"];
+    const SECTION_LABELS = { overview: "Tổng quan", macro: "Vĩ mô", vietnam: "Việt Nam", ai: "Trí tuệ nhân tạo", logistics: "Logistics", investment: "Tổng hợp đầu tư", gold: "Vàng", silver: "Bạc", stocks: "Cổ phiếu Việt Nam", realestate: "Bất động sản", trends: "Xu hướng", pro: "Daily Edge Pro", missed: "Bài bỏ lỡ", feeds: "Danh mục của tôi" };
     const PRODUCT_EVENTS = new Set(["pro_view", "pro_cta_click", "pro_interest_submitted", "sponsor_cta_click"]);
     let newsData = null;
     let historyData = { articles: [] };
@@ -1051,6 +1107,7 @@
       if (!user || activeUserId === user.id) return;
       activeUserId = user.id;
       currentUser = user;
+      void refreshFeedsAfterAuth();
       currentProgressKey = `${PROGRESS_KEY}:${user.id}`;
       const cachedProgress = loadProgress(currentProgressKey);
       const legacyOwnerKey = `${PROGRESS_KEY}:legacy-owner`;
@@ -1083,6 +1140,9 @@
     function lock() {
       activeUserId = "";
       currentUser = null;
+      userFeeds = [];
+      activeFeedId = null;
+      if (document.getElementById("feeds-news")) renderFeedsView();
       currentProfileName = "";
       currentProgressKey = PROGRESS_KEY;
       progress = loadProgress(PROGRESS_KEY);
@@ -1860,12 +1920,438 @@
           console.warn("Chưa tải được lịch sử", historyError);
         }
         renderData(newsData);
+        await loadPool();
+        await loadUserFeeds();
+        renderFeedsView();
         if (showNotice) showToast("Đã tải dữ liệu mới nhất.");
       } catch (error) {
         console.error(error);
         showToast("Chưa thể tải dữ liệu. Vui lòng thử lại sau.");
         CONTENT_SECTIONS.forEach(section => renderList(`${section}-news`, [], section));
       }
+    }
+
+
+    /* ============================================================
+       DANH MỤC TIN CÁ NHÂN HOÁ (P1)
+       AI chỉ chạy một lần để sinh bộ quy tắc lọc. Việc lọc và xếp
+       hạng tin chạy tại đây, trên trình duyệt, không tốn token.
+       ============================================================ */
+
+    const FEED_POOL_URL = "pool.json";
+    const COMPOSE_FEED_URL = `${SUPABASE_URL}/functions/v1/compose-feed`;
+    const FEED_SUGGESTIONS = [
+      "Bán dẫn và chuỗi cung ứng ảnh hưởng tới Việt Nam",
+      "Lãi suất FED và tỷ giá USD/VND",
+      "Cảng biển và giá cước vận tải",
+    ];
+
+    let poolArticles = [];
+    let userFeeds = [];
+    let activeFeedId = null;
+    let feedChatMessages = [];
+    let feedPendingSpec = null;
+
+    const feedNorm = text => String(text ?? "")
+      .normalize("NFD").replace(/[̀-ͯ]/g, "")
+      .replace(/đ/g, "d").replace(/Đ/g, "D")
+      .toLowerCase().replace(/[^a-z0-9\s]+/g, " ").replace(/\s+/g, " ").trim();
+
+    const feedRegexCache = Object.create(null);
+    function feedHasPhrase(haystack, keyword) {
+      const key = feedNorm(keyword);
+      if (!key) return false;
+      if (!feedRegexCache[key]) {
+        feedRegexCache[key] = new RegExp(
+          "(?:^|[^a-z0-9])" + key.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "(?:[^a-z0-9]|$)"
+        );
+      }
+      return feedRegexCache[key].test(haystack);
+    }
+
+    const FEED_SOURCE_TRUST = {
+      reuters: 1, bloomberg: 1, "financial times": 1, "wall street journal": .95,
+      cnbc: .9, techcrunch: .85, vnexpress: .9, "tuoi tre": .88, "thanh nien": .85,
+      vietnamnet: .82, "bao dau tu": .85, cafef: .8, "nguoi lao dong": .8, vtv: .85,
+    };
+    function feedSourceTrust(source) {
+      const s = feedNorm(source);
+      for (const name in FEED_SOURCE_TRUST) {
+        if (s.includes(feedNorm(name))) return FEED_SOURCE_TRUST[name];
+      }
+      return .65;
+    }
+
+    function feedSections(article) {
+      if (Array.isArray(article.sections) && article.sections.length) return article.sections;
+      return article.section ? [article.section] : [];
+    }
+
+    /** Điểm = 0.50·Match + 0.25·Freshness + 0.15·Trust + 0.15·Boost */
+    function scorePoolArticle(article, spec, nowMs) {
+      const titleNorm = feedNorm(article.title_vi || article.title);
+      const bodyNorm = feedNorm(`${article.summary || ""} ${article.tag || ""}`);
+      const allNorm = `${titleNorm} ${bodyNorm}`;
+
+      for (const bad of spec.exclude_keywords || []) {
+        if (feedHasPhrase(allNorm, bad)) return null;
+      }
+      const base = spec.base_categories;
+      if (Array.isArray(base) && base.length) {
+        if (!feedSections(article).some(s => base.includes(s))) return null;
+      }
+
+      const includes = spec.include_keywords || [];
+      if (!includes.length) return null;
+
+      let weighted = 0;
+      for (const kw of includes) {
+        if (feedHasPhrase(titleNorm, kw)) weighted += 2;
+        else if (feedHasPhrase(bodyNorm, kw)) weighted += 1;
+      }
+      if (!weighted) return null;
+      const match = Math.min(1, weighted / 6);
+
+      const boosts = spec.boost_keywords || [];
+      let boostHits = 0;
+      for (const b of boosts) if (feedHasPhrase(allNorm, b)) boostHits++;
+      const boost = boosts.length ? Math.min(1, boostHits / 2) : 0;
+
+      const stamp = Date.parse(article.published_at || article.first_seen_at || "");
+      const ageHours = Number.isNaN(stamp) ? 999 : Math.max(0, (nowMs - stamp) / 3600000);
+      const halfLife = spec.half_life_hours || 24;
+      const fresh = Math.exp(-ageHours / halfLife);
+
+      const w = spec.weights || { match: .5, fresh: .25, trust: .15, boost: .15 };
+      return w.match * match + w.fresh * fresh + w.trust * feedSourceTrust(article.source) + w.boost * boost;
+    }
+
+    /** Chuyển bài pool về đúng hình dạng mà makeCard/openArticle đang dùng. */
+    function poolToCard(article, score) {
+      const edited = Boolean(article.edited);
+      return {
+        id: article.id,
+        title: article.title_vi || article.title || "",
+        summary: edited
+          ? (article.summary || "")
+          : "Bài này được lấy trực tiếp từ RSS và chưa được biên tập sang tiếng Việt. Bấm “Đọc bài báo gốc” để xem nội dung đầy đủ.",
+        tag: edited ? (article.tag || "Danh mục riêng") : "Tiêu đề gốc",
+        source: article.source || "",
+        url: article.url || "",
+        published_at: article.published_at || article.first_seen_at || "",
+        section: feedSections(article)[0] || "macro",
+        _score: score,
+      };
+    }
+
+    function rankFeed(spec) {
+      const nowMs = Date.now();
+      const scored = [];
+      for (const article of poolArticles) {
+        const score = scorePoolArticle(article, spec, nowMs);
+        if (score !== null && score > 0) scored.push(poolToCard(article, score));
+      }
+      scored.sort((a, b) => b._score - a._score);
+      return scored.slice(0, spec.max_items_per_day || 12);
+    }
+
+    function countMatches(spec) {
+      const nowMs = Date.now();
+      let total = 0, fresh48 = 0;
+      for (const article of poolArticles) {
+        const score = scorePoolArticle(article, spec, nowMs);
+        if (score === null || score <= 0) continue;
+        total++;
+        const stamp = Date.parse(article.published_at || article.first_seen_at || "");
+        if (!Number.isNaN(stamp) && (nowMs - stamp) / 3600000 <= 48) fresh48++;
+      }
+      return { total, fresh48 };
+    }
+
+    async function loadPool() {
+      try {
+        const response = await fetch(`${FEED_POOL_URL}?v=${Date.now()}`, { cache: "no-store" });
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const pool = await response.json();
+        poolArticles = Array.isArray(pool.articles) ? pool.articles : [];
+      } catch (error) {
+        poolArticles = [];
+        console.warn("Không tải được pool.json:", error);
+      }
+    }
+
+    async function loadUserFeeds() {
+      if (!supabaseClient || !currentUser) { userFeeds = []; return; }
+      const { data, error } = await supabaseClient
+        .from("user_feeds").select("id,name,spec,is_active,sort_order,created_at")
+        .order("sort_order", { ascending: true }).order("created_at", { ascending: true });
+      if (error) { console.warn("Không tải được danh mục:", error.message); userFeeds = []; return; }
+      userFeeds = data || [];
+      if (activeFeedId && !userFeeds.some(f => f.id === activeFeedId)) activeFeedId = null;
+      if (!activeFeedId && userFeeds.length) activeFeedId = userFeeds[0].id;
+    }
+
+    function renderFeedChips() {
+      const row = $("#feed-chips");
+      if (!row) return;
+      row.replaceChildren();
+      userFeeds.forEach(feed => {
+        const chip = document.createElement("button");
+        chip.type = "button";
+        chip.className = `feed-chip${feed.id === activeFeedId ? " active" : ""}`;
+        const label = document.createElement("span");
+        label.textContent = feed.name;
+        const remove = document.createElement("span");
+        remove.className = "feed-chip-x";
+        remove.textContent = "✕";
+        remove.title = "Xoá danh mục";
+        remove.addEventListener("click", async event => {
+          event.stopPropagation();
+          if (!window.confirm(`Xoá danh mục “${feed.name}”?`)) return;
+          const { error } = await supabaseClient.from("user_feeds").delete().eq("id", feed.id);
+          if (error) { window.alert(`Không xoá được: ${error.message}`); return; }
+          if (activeFeedId === feed.id) activeFeedId = null;
+          await loadUserFeeds();
+          renderFeedsView();
+        });
+        chip.append(label, remove);
+        chip.addEventListener("click", () => { activeFeedId = feed.id; renderFeedsView(); });
+        row.append(chip);
+      });
+    }
+
+    function renderFeedsView() {
+      const grid = $("#feeds-news");
+      if (!grid) return;
+      renderFeedChips();
+
+      const nameEl = $("#feed-active-name");
+      const countEl = $("#feeds-count");
+      const note = $("#feed-raw-note");
+
+      if (!currentUser) {
+        grid.replaceChildren();
+        const box = document.createElement("div");
+        box.className = "feed-empty";
+        box.textContent = "Đăng nhập để tạo danh mục tin riêng của bạn.";
+        grid.append(box);
+        nameEl.textContent = "Chưa đăng nhập";
+        countEl.textContent = "";
+        note.hidden = true;
+        return;
+      }
+
+      const feed = userFeeds.find(f => f.id === activeFeedId);
+      if (!feed) {
+        grid.replaceChildren();
+        const box = document.createElement("div");
+        box.className = "feed-empty";
+        box.textContent = "Bạn chưa có danh mục nào. Bấm “Tạo danh mục mới” và mô tả chủ đề bạn quan tâm.";
+        grid.append(box);
+        nameEl.textContent = "Chưa có danh mục";
+        countEl.textContent = "";
+        note.hidden = true;
+        return;
+      }
+
+      const articles = rankFeed(feed.spec || {});
+      nameEl.textContent = feed.name;
+      countEl.textContent = poolArticles.length
+        ? `${articles.length} bài · quét ${poolArticles.length} tin`
+        : "Chưa tải được kho tin";
+      renderList("feeds-news", articles, "feeds",
+        "Danh mục này chưa khớp tin nào trong kho hiện tại. Thử tạo lại với từ khoá rộng hơn.");
+      note.hidden = !articles.some(a => a.tag === "Tiêu đề gốc");
+    }
+
+    /* ----------------------------------------- hội thoại tạo danh mục */
+
+    function feedChatPush(role, text) {
+      feedChatMessages.push({ role, content: text });
+      const log = $("#feed-chat-log");
+      const bubble = document.createElement("div");
+      bubble.className = `feed-msg ${role === "user" ? "user" : "bot"}`;
+      bubble.textContent = text;
+      log.append(bubble);
+      log.scrollTop = log.scrollHeight;
+    }
+
+    function openFeedChat() {
+      if (!currentUser) { $("#auth-dialog").showModal(); return; }
+      if (userFeeds.length >= 3) {
+        window.alert("Gói miễn phí cho phép tối đa 3 danh mục. Hãy xoá bớt một danh mục trước.");
+        return;
+      }
+      feedChatMessages = [];
+      feedPendingSpec = null;
+      $("#feed-chat-log").replaceChildren();
+      $("#feed-chat-preview").replaceChildren();
+      $("#feed-chat-text").value = "";
+      $("#feed-chat-save").hidden = true;
+
+      const suggestions = $("#feed-suggestions");
+      suggestions.replaceChildren();
+      FEED_SUGGESTIONS.forEach(text => {
+        const chip = document.createElement("button");
+        chip.type = "button";
+        chip.className = "feed-chip";
+        chip.textContent = text;
+        chip.addEventListener("click", () => { $("#feed-chat-text").value = text; });
+        suggestions.append(chip);
+      });
+
+      feedChatPush("assistant", "Bạn muốn theo dõi chủ đề gì? Cứ mô tả bằng lời nói thường ngày — ví dụ “tin về chuỗi cung ứng bán dẫn, nhất là phần ảnh hưởng tới Việt Nam, đừng có tin giá cổ phiếu”.");
+      $("#feed-chat-dialog").showModal();
+      document.body.style.overflow = "hidden";
+    }
+
+    function renderFeedPreview(name, spec, serverPreview) {
+      const box = $("#feed-chat-preview");
+      box.replaceChildren();
+      const local = poolArticles.length ? countMatches(spec) : null;
+      const stats = local || serverPreview || { total: 0, fresh48: 0 };
+
+      const card = document.createElement("div");
+      card.className = "feed-preview";
+      const heading = document.createElement("h4");
+      heading.textContent = `Danh mục: ${name}`;
+      card.append(heading);
+
+      const line = document.createElement("div");
+      const thin = stats.total < 5;
+      line.className = thin ? "feed-warn" : "";
+      line.textContent = poolArticles.length
+        ? `Khớp ${stats.total} tin trong kho (${stats.fresh48} tin còn mới dưới 48 giờ).`
+        : "Chưa tải được kho tin để chạy thử.";
+      card.append(line);
+
+      if (thin && poolArticles.length) {
+        const warn = document.createElement("div");
+        warn.className = "feed-warn";
+        warn.textContent = "Danh mục này khá hẹp. Bạn có thể mô tả rộng hơn rồi gửi lại.";
+        card.append(warn);
+      }
+
+      const preview = rankFeed(spec).slice(0, 3);
+      if (preview.length) {
+        const list = document.createElement("ul");
+        preview.forEach(article => {
+          const item = document.createElement("li");
+          item.textContent = `${article.title} — ${article.source}`;
+          list.append(item);
+        });
+        card.append(list);
+      }
+
+      const kw = document.createElement("ul");
+      const kwItem = document.createElement("li");
+      kwItem.textContent = `Từ khoá: ${(spec.include_keywords || []).join(", ")}`;
+      kw.append(kwItem);
+      if ((spec.exclude_keywords || []).length) {
+        const ex = document.createElement("li");
+        ex.textContent = `Loại trừ: ${spec.exclude_keywords.join(", ")}`;
+        kw.append(ex);
+      }
+      card.append(kw);
+      box.append(card);
+    }
+
+    async function sendFeedChat() {
+      const input = $("#feed-chat-text");
+      const text = input.value.trim();
+      if (!text) return;
+      const sendBtn = $("#feed-chat-send");
+      sendBtn.disabled = true;
+      sendBtn.textContent = "Đang xử lý…";
+      input.value = "";
+      feedChatPush("user", text);
+      $("#feed-suggestions").replaceChildren();
+
+      try {
+        const { data: sessionData } = await supabaseClient.auth.getSession();
+        const token = sessionData?.session?.access_token;
+        if (!token) throw new Error("Phiên đăng nhập đã hết hạn. Hãy đăng nhập lại.");
+
+        const response = await fetch(COMPOSE_FEED_URL, {
+          method: "POST",
+          headers: { "Authorization": `Bearer ${token}`, "Content-Type": "application/json" },
+          body: JSON.stringify({ messages: feedChatMessages }),
+        });
+        const payload = await response.json().catch(() => ({}));
+
+        if (!response.ok) {
+          feedChatPush("assistant", payload.message || "Chưa tạo được danh mục. Vui lòng thử lại sau ít phút.");
+          return;
+        }
+        if (payload.status === "needs_clarification") {
+          (payload.questions || ["Bạn có thể mô tả cụ thể hơn không?"])
+            .forEach(question => feedChatPush("assistant", question));
+          return;
+        }
+
+        feedPendingSpec = { name: payload.name, spec: payload.spec, prompt: text };
+        feedChatPush("assistant", `Đã dựng bộ lọc cho “${payload.name}”. Xem thử bên dưới, nếu ổn thì bấm Lưu danh mục.`);
+        renderFeedPreview(payload.name, payload.spec, payload.preview);
+        $("#feed-chat-save").hidden = false;
+      } catch (error) {
+        feedChatPush("assistant", error.message || "Có lỗi khi kết nối. Vui lòng thử lại.");
+      } finally {
+        sendBtn.disabled = false;
+        sendBtn.textContent = "Gửi";
+      }
+    }
+
+    async function saveFeed() {
+      if (!feedPendingSpec || !supabaseClient || !currentUser) return;
+      const btn = $("#feed-chat-save");
+      btn.disabled = true;
+      btn.textContent = "Đang lưu…";
+      try {
+        const { error } = await supabaseClient.from("user_feeds").insert({
+          user_id: currentUser.id,
+          name: feedPendingSpec.name,
+          spec: feedPendingSpec.spec,
+          source_prompt: feedPendingSpec.prompt.slice(0, 2000),
+          sort_order: userFeeds.length,
+        });
+        if (error) {
+          const quota = /FEED_QUOTA_EXCEEDED/.test(error.message);
+          window.alert(quota
+            ? "Gói miễn phí cho phép tối đa 3 danh mục. Hãy xoá bớt một danh mục trước."
+            : `Không lưu được: ${error.message}`);
+          return;
+        }
+        await loadUserFeeds();
+        const created = userFeeds.find(f => f.name === feedPendingSpec.name);
+        if (created) activeFeedId = created.id;
+        closeFeedChat();
+        renderFeedsView();
+        location.hash = "feeds";
+      } finally {
+        btn.disabled = false;
+        btn.textContent = "Lưu danh mục";
+      }
+    }
+
+    function closeFeedChat() {
+      $("#feed-chat-dialog").close();
+      document.body.style.overflow = "";
+    }
+
+    $("#feed-create-btn")?.addEventListener("click", openFeedChat);
+    $("#feed-chat-close")?.addEventListener("click", closeFeedChat);
+    $("#feed-chat-send")?.addEventListener("click", sendFeedChat);
+    $("#feed-chat-save")?.addEventListener("click", saveFeed);
+    $("#feed-chat-dialog")?.addEventListener("click", event => {
+      if (event.target === $("#feed-chat-dialog")) closeFeedChat();
+    });
+    $("#feed-chat-text")?.addEventListener("keydown", event => {
+      if (event.key === "Enter" && (event.metaKey || event.ctrlKey)) sendFeedChat();
+    });
+
+    async function refreshFeedsAfterAuth() {
+      await loadUserFeeds();
+      renderFeedsView();
     }
 
     function openArticle(article, section) {
