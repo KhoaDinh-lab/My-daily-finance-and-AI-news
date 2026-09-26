@@ -48,9 +48,44 @@ jobs:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: python fetch_news.py
 
+      - name: Cảnh báo nếu dữ liệu quá cũ
+        if: always()
+        run: |
+          python - <<'PY'
+          import json, os, sys
+          from datetime import datetime, timedelta
+
+          def age_hours(path, key="updated_at"):
+              try:
+                  with open(path, encoding="utf-8") as f:
+                      value = json.load(f).get(key, "")
+                  stamp = datetime.strptime(value, "%d/%m/%Y %H:%M")
+              except Exception as error:
+                  print(f"::warning::Không đọc được {path}: {error}")
+                  return None
+              return (datetime.utcnow() + timedelta(hours=7) - stamp).total_seconds() / 3600
+
+          for path, limit in (("data.json", 18), ("pool.json", 18)):
+              if not os.path.exists(path):
+                  print(f"::warning::Thiếu {path}")
+                  continue
+              hours = age_hours(path)
+              if hours is None:
+                  continue
+              print(f"{path}: cũ {hours:.1f} giờ")
+              if hours > limit:
+                  print(f"::warning::{path} đã cũ hơn {limit} giờ")
+
+          if os.path.exists("data.json"):
+              with open("data.json", encoding="utf-8") as f:
+                  stale = json.load(f).get("stale_sections") or []
+              if stale:
+                  print("::warning::Giữ dữ liệu cũ cho các mục: " + ", ".join(stale))
+          PY
+
       - name: Commit updated news data
         run: |
-          git add data.json history.json
+          git add data.json history.json pool.json
 
           if git diff --cached --quiet; then
             echo "data.json không thay đổi; không cần commit."
