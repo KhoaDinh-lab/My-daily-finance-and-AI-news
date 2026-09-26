@@ -60,18 +60,75 @@ REQUIRED_NEWS_FIELDS = (
 )
 
 # Tin mới được lấy từ RSS; Groq chỉ biên tập và tóm tắt.
+# 24/09/2026: Groq đã chuyển llama-3.3-70b-versatile và llama-3.1-8b-instant
+# sang gói Enterprise nên key gói Free nhận lỗi 404 model_not_found.
+# Hai model gpt-oss dưới đây nằm trong gói Free (30 RPM, 1K RPD, 8K TPM).
 MODELS_TO_TRY = (
-    "llama-3.3-70b-versatile",
+    "openai/gpt-oss-120b",
     "openai/gpt-oss-20b",
 )
 
 TREND_MODELS_TO_TRY = (
+    "openai/gpt-oss-120b",
     "openai/gpt-oss-20b",
-    "llama-3.1-8b-instant",
 )
 
+# Gói Free giới hạn 8.000 token/phút. Gửi cả 8 chuyên mục trong một request
+# tốn ~11.000 token nên chắc chắn dính 429. Vì vậy chia thành 3 lô nhỏ và
+# nghỉ giữa các lô để sang cửa sổ giới hạn mới.
+SECTION_BATCHES = (
+    ("macro", "vietnam", "ai"),
+    ("logistics",),
+    ("gold", "silver", "stocks", "realestate"),
+)
 
-SYSTEM_PROMPT = """
+SLEEP_BETWEEN_BATCHES = 65
+MAX_COMPLETION_TOKENS_PER_BATCH = 4000
+
+
+SECTION_RULES = {
+    "macro": "- macro: tối đa 3 tin về CPI, lãi suất FED và kinh tế Mỹ.",
+    "vietnam": "- vietnam: tối đa 3 tin về VN-Index, USD/VND, NHNN, FDI.",
+    "ai": "- ai: tối đa 3 tin về model mới, agentic AI, chip AI.",
+    "logistics": (
+        "- logistics: tối đa 6 tin, ưu tiên cân bằng ít nhất 2 tin Việt Nam\n"
+        "  và 2 tin thế giới khi danh sách nguồn có đủ tin phù hợp.\n"
+        "- Ưu tiên cảng biển, vận tải biển/hàng không/đường sắt, giá cước,\n"
+        "  hành lang thương mại, hạ tầng kho vận, gián đoạn chuỗi cung ứng\n"
+        "  và chính sách.\n"
+        "- Phải phân biệt rõ dự án đã phê duyệt, đang triển khai, đang nghiên\n"
+        "  cứu và mới chỉ là đề xuất. Không gọi Thailand Land Bridge là\n"
+        "  \"kênh đào Kra\"; không suy diễn rằng Cần Giờ sẽ nhận toàn bộ hoạt\n"
+        "  động cảng miền Nam nếu nguồn không nói.\n"
+        "- Không tự ghép quan hệ nhân quả giữa một dự án của Thái Lan và cảng\n"
+        "  Cần Giờ nếu tiêu đề RSS hoặc nguồn tin không đưa ra mối liên hệ đó."
+    ),
+    "gold": "- gold: tối đa 3 tin về giá vàng, nhu cầu trú ẩn, ngân hàng trung ương.",
+    "silver": "- silver: tối đa 3 tin về giá bạc và nhu cầu công nghiệp.",
+    "stocks": "- stocks: tối đa 3 tin về VN30, VN-Index, cổ phiếu Việt Nam.",
+    "realestate": "- realestate: tối đa 3 tin về căn hộ, nhà ở, pháp lý, hạ tầng.",
+}
+
+SECTION_TAG_HINT = {
+    "macro": "Vĩ mô / FED / Lạm phát",
+    "vietnam": "Việt Nam / Tỷ giá / Thị trường",
+    "ai": "Trí tuệ nhân tạo / Chip AI",
+    "logistics": "Logistics Việt Nam hoặc Logistics Thế giới",
+    "gold": "Giá vàng / Nhu cầu trú ẩn / Ngân hàng trung ương",
+    "silver": "Giá bạc / Nhu cầu công nghiệp",
+    "stocks": "VN30 / VN-Index / Cổ phiếu Việt Nam",
+    "realestate": "Căn hộ / Nhà ở / Pháp lý / Hạ tầng",
+}
+
+SECTION_SUMMARY_HINT = {
+    "logistics": (
+        "tóm tắt 2-3 câu tiếng Việt, nêu rõ địa điểm, trạng thái dự án và "
+        "tác động logistics nếu tiêu đề nguồn có thông tin"
+    ),
+}
+DEFAULT_SUMMARY_HINT = "tóm tắt 2-3 câu tiếng Việt"
+
+BASE_RULES = """
 Bạn là biên tập viên của website tin tức The Daily Edge.
 
 Nhiệm vụ:
@@ -82,96 +139,59 @@ Nhiệm vụ:
 - Mọi title, summary và tag PHẢI viết bằng tiếng Việt.
 - Giữ đúng source_index của tin RSS được chọn.
 - Nếu chưa tìm được một số liệu đáng tin cậy, ghi "Chưa có dữ liệu".
-- Các nhóm macro, vietnam, ai, gold, silver, stocks và realestate chọn tối đa
-  3 tin đáng chú ý. Riêng logistics chọn tối đa 6 tin, ưu tiên cân bằng ít
-  nhất 2 tin Việt Nam và 2 tin thế giới khi danh sách nguồn có đủ tin phù hợp.
-- Với logistics, ưu tiên cảng biển, vận tải biển/hàng không/đường sắt, giá cước,
-  hành lang thương mại, hạ tầng kho vận, gián đoạn chuỗi cung ứng và chính sách.
-- Phải phân biệt rõ dự án đã phê duyệt, đang triển khai, đang nghiên cứu và mới
-  chỉ là đề xuất. Không gọi Thailand Land Bridge là "kênh đào Kra"; không suy
-  diễn rằng Cần Giờ sẽ nhận toàn bộ hoạt động cảng miền Nam nếu nguồn không nói.
-- Không tự ghép quan hệ nhân quả giữa một dự án của Thái Lan và cảng Cần Giờ
-  nếu tiêu đề RSS hoặc nguồn tin không đưa ra mối liên hệ đó.
 
 Chỉ trả về một JSON object hợp lệ, không dùng Markdown và không thêm
 lời giải thích bên ngoài JSON.
-
-Cấu trúc bắt buộc:
-
-{
-  "updated_at": "thời gian cập nhật",
-  "tickers": {
-    "fed_rate": "giá trị hoặc Chưa có dữ liệu",
-    "cpi": "giá trị",
-    "vnindex": "giá trị",
-    "usd_vnd": "giá trị"
-  },
-  "macro": [
-    {
-      "source_index": 0,
-      "title": "tiêu đề tiếng Việt",
-      "summary": "tóm tắt 2 câu tiếng Việt",
-      "tag": "chủ đề tiếng Việt"
-    }
-  ],
-  "vietnam": [
-    {
-      "source_index": 0,
-      "title": "tiêu đề tiếng Việt",
-      "summary": "tóm tắt 2 câu tiếng Việt",
-      "tag": "chủ đề tiếng Việt"
-    }
-  ],
-  "ai": [
-    {
-      "source_index": 0,
-      "title": "tiêu đề tiếng Việt",
-      "summary": "tóm tắt 2 câu tiếng Việt",
-      "tag": "chủ đề tiếng Việt"
-    }
-  ],
-  "logistics": [
-    {
-      "source_index": 0,
-      "title": "tiêu đề tiếng Việt",
-      "summary": "tóm tắt 2-3 câu tiếng Việt, nêu rõ địa điểm, trạng thái dự án và tác động logistics nếu tiêu đề nguồn có thông tin",
-      "tag": "Logistics Việt Nam hoặc Logistics Thế giới"
-    }
-  ],
-  "gold": [
-    {
-      "source_index": 0,
-      "title": "tiêu đề tiếng Việt",
-      "summary": "tóm tắt 2-3 câu tiếng Việt",
-      "tag": "Giá vàng / Nhu cầu trú ẩn / Ngân hàng trung ương"
-    }
-  ],
-  "silver": [
-    {
-      "source_index": 0,
-      "title": "tiêu đề tiếng Việt",
-      "summary": "tóm tắt 2-3 câu tiếng Việt",
-      "tag": "Giá bạc / Nhu cầu công nghiệp"
-    }
-  ],
-  "stocks": [
-    {
-      "source_index": 0,
-      "title": "tiêu đề tiếng Việt",
-      "summary": "tóm tắt 2-3 câu tiếng Việt",
-      "tag": "VN30 / VN-Index / Cổ phiếu Việt Nam"
-    }
-  ],
-  "realestate": [
-    {
-      "source_index": 0,
-      "title": "tiêu đề tiếng Việt",
-      "summary": "tóm tắt 2 câu tiếng Việt",
-      "tag": "Căn hộ / Nhà ở / Pháp lý / Hạ tầng"
-    }
-  ]
-}
 """
+
+TICKERS_BLOCK = """  "tickers": {
+    "fed_rate": "giá trị hoặc Chưa có dữ liệu"
+  },
+"""
+
+
+def build_system_prompt(sections, include_tickers=False):
+    """Dựng prompt chỉ chứa quy tắc và cấu trúc JSON của các mục trong lô.
+
+    Gửi cả 8 mục tốn ~1.205 token chỉ riêng phần prompt; tách theo lô giúp
+    mỗi request nằm gọn dưới trần 8.000 token/phút của gói Free.
+    """
+    rules = "\n".join(
+        SECTION_RULES[section] for section in sections if section in SECTION_RULES
+    )
+
+    json_parts = []
+    for section in sections:
+        summary_hint = SECTION_SUMMARY_HINT.get(section, DEFAULT_SUMMARY_HINT)
+        json_parts.append(
+            '  "%s": [\n'
+            '    {\n'
+            '      "source_index": 0,\n'
+            '      "title": "tiêu đề tiếng Việt",\n'
+            '      "summary": "%s",\n'
+            '      "tag": "%s"\n'
+            '    }\n'
+            '  ]' % (section, summary_hint, SECTION_TAG_HINT.get(section, "Bản tin"))
+        )
+
+    structure = "{\n"
+    if include_tickers:
+        structure += TICKERS_BLOCK
+    structure += ",\n".join(json_parts)
+    structure += "\n}"
+
+    return "%s\nQuy tắc cho các mục trong lượt này:\n%s\n\nCấu trúc bắt buộc:\n\n%s\n" % (
+        BASE_RULES,
+        rules,
+        structure,
+    )
+
+
+# Giữ lại tên cũ cho tương thích; không còn dùng trong luồng chính.
+SYSTEM_PROMPT = build_system_prompt(
+    ("macro", "vietnam", "ai", "logistics", "gold", "silver", "stocks", "realestate"),
+    include_tickers=True,
+)
 
 
 ONEHOUSING_PROJECTS = (
@@ -1310,9 +1330,8 @@ def extract_json(raw_text):
     return result
 
 
-def validate_news_data(data):
-    """Ngăn phản hồi thiếu dữ liệu ghi đè lên data.json đang hoạt động."""
-    tickers = data.get("tickers")
+def validate_tickers(tickers):
+    """Kiểm tra riêng phần chỉ số; thiếu chỉ số là lỗi nghiêm trọng."""
     if not isinstance(tickers, dict):
         raise ValueError("Thiếu mục tickers.")
 
@@ -1320,6 +1339,48 @@ def validate_news_data(data):
         value = tickers.get(ticker)
         if not isinstance(value, str) or not value.strip():
             raise ValueError(f"Ticker {ticker} không hợp lệ.")
+
+
+def section_is_valid(section, articles):
+    """Trả về True nếu mục này dùng được, thay vì ném lỗi giết cả lần chạy.
+
+    Trước 24/09/2026 chỉ cần MỘT mục rỗng là toàn bộ lần chạy thất bại và
+    data.json không được cập nhật, kể cả khi 7 mục còn lại hoàn toàn tốt.
+    """
+    if not isinstance(articles, list) or not articles:
+        print(
+            f"CẢNH BÁO: mục {section} không có bài viết; sẽ giữ dữ liệu cũ.",
+            file=sys.stderr,
+            flush=True,
+        )
+        return False
+
+    for index, article in enumerate(articles, start=1):
+        if not isinstance(article, dict):
+            print(
+                f"CẢNH BÁO: {section}[{index}] không phải object; bỏ mục này.",
+                file=sys.stderr,
+                flush=True,
+            )
+            return False
+
+        for field in REQUIRED_NEWS_FIELDS:
+            value = article.get(field)
+            if not isinstance(value, str) or not value.strip():
+                print(
+                    f"CẢNH BÁO: {section}[{index}] thiếu trường {field}; "
+                    "bỏ mục này.",
+                    file=sys.stderr,
+                    flush=True,
+                )
+                return False
+
+    return True
+
+
+def validate_news_data(data):
+    """Bản nghiêm ngặt, giữ lại cho các lệnh gọi cũ và kiểm thử."""
+    validate_tickers(data.get("tickers"))
 
     for section in REQUIRED_SECTIONS:
         articles = data.get(section)
@@ -1339,38 +1400,63 @@ def validate_news_data(data):
                     )
 
 
-def attach_source_metadata(data, news_sources):
-    """Gắn nguồn, link và thời gian thật từ RSS vào bài Groq đã chọn."""
-    for section in REQUIRED_SECTIONS:
+def attach_source_metadata(data, news_sources, sections=None):
+    """Gắn nguồn, link và thời gian thật từ RSS vào bài Groq đã chọn.
+
+    Bài nào có source_index sai sẽ bị loại bỏ thay vì làm hỏng cả lô, vì
+    source_index sai nghĩa là AI bịa chỉ số chứ không phải dữ liệu RSS hỏng.
+    """
+    for section in (sections or REQUIRED_SECTIONS):
         source_articles = news_sources.get(section, [])
         selected_articles = data.get(section, [])
 
         if not isinstance(selected_articles, list):
-            raise ValueError(f"Mục {section} không phải danh sách.")
+            print(
+                f"CẢNH BÁO: mục {section} không phải danh sách; bỏ qua.",
+                file=sys.stderr,
+                flush=True,
+            )
+            data[section] = []
+            continue
 
+        kept = []
         for position, article in enumerate(selected_articles, start=1):
+            if not isinstance(article, dict):
+                continue
+
             source_index = article.pop("source_index", None)
             if not isinstance(source_index, int):
-                raise ValueError(
-                    f"{section}[{position}] thiếu source_index hợp lệ."
+                print(
+                    f"CẢNH BÁO: {section}[{position}] thiếu source_index; bỏ bài.",
+                    file=sys.stderr,
+                    flush=True,
                 )
+                continue
+
             if source_index < 0 or source_index >= len(source_articles):
-                raise ValueError(
-                    f"{section}[{position}] có source_index ngoài phạm vi."
+                print(
+                    f"CẢNH BÁO: {section}[{position}] có source_index ngoài "
+                    "phạm vi; bỏ bài.",
+                    file=sys.stderr,
+                    flush=True,
                 )
+                continue
 
             original = source_articles[source_index]
             article["source"] = original["source"]
             article["url"] = original["url"]
             article["published_at"] = original["published_at"]
             article["id"] = make_article_id(article)
+            kept.append(article)
+
+        data[section] = kept
 
 
-def fetch_news_from_groq(client, cpi, usd_vnd, vnindex_data, news_sources):
-    vietnam_time = datetime.now(
-        ZoneInfo("Asia/Ho_Chi_Minh")
-    ).strftime("%d/%m/%Y %H:%M")
-
+def request_batch_from_groq(
+    client, model_name, sections, news_sources, vietnam_time,
+    cpi, usd_vnd, vnindex_data, include_tickers,
+):
+    """Gọi Groq cho ĐÚNG một lô chuyên mục và trả về JSON đã gắn nguồn."""
     compact_sources = {
         section: [
             {
@@ -1379,29 +1465,28 @@ def fetch_news_from_groq(client, cpi, usd_vnd, vnindex_data, news_sources):
                 "source": article["source"],
                 "published_at": article["published_at"],
             }
-            for article in articles
+            for article in news_sources.get(section, [])
         ]
-        for section, articles in news_sources.items()
+        for section in sections
     }
+
+    ticker_note = ""
+    if include_tickers:
+        ticker_note = (
+            "\nCác số liệu dưới đây đã lấy từ API, KHÔNG được thay đổi:\n"
+            f"- CPI Mỹ theo năm: {cpi}\n"
+            f"- Tỷ giá tham khảo USD/VND: {usd_vnd}\n"
+            f"- VN-Index: {vnindex_data['vnindex']}\n"
+            "\nVới fed_rate: chỉ điền nếu có nguồn đáng tin cậy, nếu không "
+            'ghi "Chưa có dữ liệu".\n'
+        )
 
     user_prompt = f"""
 Thời gian hiện tại tại Việt Nam: {vietnam_time}.
 
 Hãy biên tập bản tin từ đúng danh sách tiêu đề RSS dưới đây.
 Không tự tìm thêm hoặc thêm chi tiết không có trong tiêu đề.
-
-Các số liệu đã được lấy trực tiếp từ API dữ liệu:
-- CPI Mỹ theo năm: {cpi}
-- Tỷ giá tham khảo USD/VND: {usd_vnd}
-- VN-Index: {vnindex_data['vnindex']}
-- Thay đổi VN-Index: {vnindex_data['vnindex_change']} ({vnindex_data['vnindex_change_pct']})
-
-Không tự thay đổi các số liệu trên.
-
-Đối với fed_rate:
-- Chỉ điền số liệu nếu tìm được nguồn mới và đáng tin cậy.
-- Nếu không chắc chắn, ghi "Chưa có dữ liệu".
-
+{ticker_note}
 Danh sách tiêu đề RSS:
 {json.dumps(compact_sources, ensure_ascii=False)}
 
@@ -1410,83 +1495,170 @@ Giữ nguyên source_index của từng tin được chọn.
 Trả về đúng JSON theo cấu trúc được yêu cầu.
 """
 
+    response = client.chat.completions.create(
+        model=model_name,
+        messages=[
+            {
+                "role": "system",
+                "content": build_system_prompt(sections, include_tickers),
+            },
+            {"role": "user", "content": user_prompt},
+        ],
+        temperature=0.1,
+        max_completion_tokens=MAX_COMPLETION_TOKENS_PER_BATCH,
+        response_format={"type": "json_object"},
+    )
+
+    content = response.choices[0].message.content
+    if not content:
+        raise ValueError("Groq trả về nội dung rỗng.")
+
+    batch_data = extract_json(content)
+    attach_source_metadata(batch_data, news_sources, sections)
+    return batch_data
+
+
+def fetch_news_from_groq(
+    client, cpi, usd_vnd, vnindex_data, news_sources, previous_data=None,
+):
+    """Biên tập bản tin theo từng lô để không vượt trần 8.000 token/phút.
+
+    Mỗi lô thất bại chỉ làm mất các mục của lô đó; các mục còn lại vẫn được
+    cập nhật, và mục thiếu sẽ lấy lại nội dung cũ kèm thời gian cũ.
+    """
+    vietnam_time = datetime.now(
+        ZoneInfo("Asia/Ho_Chi_Minh")
+    ).strftime("%d/%m/%Y %H:%M")
+
+    previous_data = previous_data or {}
+    data = {"tickers": {}}
+    good_sections = []
+    stale_sections = []
     errors = []
 
-    for model_name in MODELS_TO_TRY:
-        for attempt in range(1, 4):
+    for batch_index, sections in enumerate(SECTION_BATCHES):
+        include_tickers = batch_index == 0
+
+        if batch_index > 0:
             print(
-                f"Đang gọi Groq model: {model_name} (lần {attempt}/3)...",
+                f"Nghỉ {SLEEP_BETWEEN_BATCHES} giây để sang cửa sổ giới hạn "
+                "token mới...",
                 flush=True,
             )
+            time.sleep(SLEEP_BETWEEN_BATCHES)
 
-            try:
-                response = client.chat.completions.create(
-                    model=model_name,
-                    messages=[
-                        {
-                            "role": "system",
-                            "content": SYSTEM_PROMPT,
-                        },
-                        {
-                            "role": "user",
-                            "content": user_prompt,
-                        },
-                    ],
-                    temperature=0.1,
-                    max_completion_tokens=4300,
-                    response_format={"type": "json_object"},
-                )
+        batch_done = False
 
-                content = response.choices[0].message.content
-                if not content:
-                    raise ValueError("Groq trả về nội dung rỗng.")
+        for model_name in MODELS_TO_TRY:
+            if batch_done:
+                break
 
-                data = extract_json(content)
-
-                # Luôn dùng dữ liệu trực tiếp từ API cho các chỉ số này.
-                data.setdefault("tickers", {})
-                data["tickers"]["cpi"] = cpi
-                data["tickers"]["usd_vnd"] = usd_vnd
-                data["tickers"].update(vnindex_data)
-                data["updated_at"] = vietnam_time
-
-                attach_source_metadata(data, news_sources)
-                validate_news_data(data)
-
+            for attempt in range(1, 3):
+                label = "+".join(sections)
                 print(
-                    f"Groq model {model_name} trả về dữ liệu hợp lệ.",
+                    f"Lô {batch_index + 1}/{len(SECTION_BATCHES)} ({label}) "
+                    f"— model {model_name}, lần {attempt}/2...",
                     flush=True,
                 )
-                return data
 
-            except Exception as error:
-                detail = f"{type(error).__name__}: {error}"
+                try:
+                    batch_data = request_batch_from_groq(
+                        client, model_name, sections, news_sources,
+                        vietnam_time, cpi, usd_vnd, vnindex_data,
+                        include_tickers,
+                    )
 
-                # Free tier đôi lúc hết giới hạn token theo phút. Groq thường
-                # yêu cầu chờ vài giây, vì vậy thử lại cùng model trước.
-                is_rate_limit = "429" in detail or "RateLimit" in detail
-                if is_rate_limit and attempt < 3:
-                    wait_seconds = attempt * 10
+                    if include_tickers:
+                        fed_rate = (batch_data.get("tickers") or {}).get(
+                            "fed_rate"
+                        )
+                        data["tickers"]["fed_rate"] = (
+                            fed_rate
+                            if isinstance(fed_rate, str) and fed_rate.strip()
+                            else "Chưa có dữ liệu"
+                        )
+
+                    for section in sections:
+                        articles = batch_data.get(section)
+                        if section_is_valid(section, articles):
+                            data[section] = articles
+                            good_sections.append(section)
+
+                    batch_done = True
+                    break
+
+                except Exception as error:
+                    detail = f"{type(error).__name__}: {error}"
+                    is_rate_limit = "429" in detail or "RateLimit" in detail
+
+                    if is_rate_limit and attempt < 2:
+                        print(
+                            f"Groq giới hạn token; chờ {SLEEP_BETWEEN_BATCHES} "
+                            "giây rồi thử lại...",
+                            file=sys.stderr,
+                            flush=True,
+                        )
+                        time.sleep(SLEEP_BETWEEN_BATCHES)
+                        continue
+
+                    errors.append(f"lô {label} / {model_name}: {detail}")
                     print(
-                        f"Groq đang giới hạn tạm thời; chờ {wait_seconds} "
-                        "giây rồi thử lại...",
+                        f"Lô {label} với {model_name} thất bại: {detail}",
                         file=sys.stderr,
                         flush=True,
                     )
-                    time.sleep(wait_seconds)
-                    continue
+                    break
 
-                errors.append(f"{model_name}: {detail}")
-                print(
-                    f"Model {model_name} thất bại: {detail}",
-                    file=sys.stderr,
-                    flush=True,
-                )
-                break
+    # Mục nào không lấy được thì giữ nguyên nội dung cũ thay vì bỏ trống.
+    for section in REQUIRED_SECTIONS:
+        if section in data:
+            continue
 
-    raise RuntimeError(
-        "Tất cả Groq model đều thất bại:\n- " + "\n- ".join(errors)
+        old_articles = previous_data.get(section)
+        if isinstance(old_articles, list) and old_articles:
+            data[section] = old_articles
+            stale_sections.append(section)
+        else:
+            data[section] = []
+
+    if len(good_sections) * 2 < len(REQUIRED_SECTIONS):
+        raise RuntimeError(
+            "Quá nửa số chuyên mục thất bại nên không ghi đè data.json:\n- "
+            + "\n- ".join(errors or ["không rõ nguyên nhân"])
+        )
+
+    data["tickers"].setdefault("fed_rate", "Chưa có dữ liệu")
+    data["tickers"]["cpi"] = cpi
+    data["tickers"]["usd_vnd"] = usd_vnd
+    data["tickers"].update(vnindex_data)
+    data["updated_at"] = vietnam_time
+
+    validate_tickers(data["tickers"])
+
+    if stale_sections:
+        data["stale_sections"] = stale_sections
+        print(
+            "CẢNH BÁO: giữ dữ liệu cũ cho các mục: "
+            + ", ".join(stale_sections),
+            file=sys.stderr,
+            flush=True,
+        )
+
+    print(
+        f"Đã cập nhật {len(good_sections)}/{len(REQUIRED_SECTIONS)} chuyên mục "
+        f"mới: {', '.join(good_sections)}",
+        flush=True,
     )
+
+    if errors:
+        print(
+            "Một số lô gặp lỗi nhưng lần chạy vẫn tiếp tục:\n- "
+            + "\n- ".join(errors),
+            file=sys.stderr,
+            flush=True,
+        )
+
+    return data
 
 
 def make_empty_trend(label, article_count=0):
@@ -1733,7 +1905,7 @@ direction "insufficient", outlook "uncertain" và nói rõ phần nào còn thi�
                 # Groq Free tính cả prompt + phần trả lời vào giới hạn
                 # 8.000 TPM của model này. 2.700 token vẫn đủ cho
                 # JSON chi tiết, đồng thời chừa khoảng an toàn cho input.
-                max_completion_tokens=2700,
+                max_completion_tokens=4000,
                 response_format={"type": "json_object"},
             )
             content = response.choices[0].message.content
@@ -1837,6 +2009,7 @@ def main():
             usd_vnd,
             vnindex_data,
             news_sources,
+            previous_data,
         )
         data["market_snapshot"] = market_snapshot
         data["real_estate_market"] = fetch_real_estate_market(previous_data)
@@ -1844,6 +2017,12 @@ def main():
         history = update_history(data, previous_data)
 
         try:
+            print(
+                f"Nghỉ {SLEEP_BETWEEN_BATCHES} giây trước khi phân tích "
+                "xu hướng để không cộng dồn token cùng một phút...",
+                flush=True,
+            )
+            time.sleep(SLEEP_BETWEEN_BATCHES)
             data["trends"] = fetch_trends_from_groq(client, history)
         except Exception as trend_error:
             old_trends = previous_data.get("trends")
