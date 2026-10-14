@@ -1,7 +1,7 @@
 {
   "tickers": {
     "fed_rate": "Chưa có dữ liệu",
-    "cpi": "3.4%",
+    "cpi": "3.7%",
     "usd_vnd": "25,897",
     "vnindex": "1,704.87",
     "vnindex_change": "-14.55",
@@ -12,66 +12,75 @@
   },
   "macro": [
     {
-      "title": "Giá tiêu dùng tăng 3,7% so với cùng kỳ năm trước trong tháng 9 khi giá xăng tăng vọt",
-      "summary": "Chỉ số CPI của Mỹ tăng 3,7% hàng năm trong tháng 9, mức tăng chủ yếu do giá xăng leo thang. Dữ liệu này cho thấy áp lực lạm phát vẫn còn mạnh.",
-      "tag": "Vĩ mô / Lạm phát",
+      "title": "Dự báo tăng lãi suất Fed trở nên chặt chẽ khi lạm phát tăng cao",
+      "summary": "Theo Reuters, Cục Dự trữ Liên bang Mỹ có khả năng sẽ tăng lãi suất do áp lực lạm phát đang gia tăng. Bài viết nhấn mạnh môi trường kinh tế đang trở nên khó khăn hơn cho các quyết định tiền tệ.",
+      "tag": "Vĩ mô / FED / Lạm phát",
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPMjl1ZWZGd2lIRXg1US1hUjNacTVDN2o5S2lIcXpCdnZ1VHBXcEpqOHV5SzJJZHJrT3RxYjdrRjRrRU03eHNGTTFRMnVCVEdZa0VfLU9BeFdSeTE1aFRrc3ZRampyOFVTczZRbWk0azFBakVndUJ1X0NjVmJmV1JmeXNXSlFkNzF0NUZKTUUyUnlHWi1sOXFpVHV5NnVvcDA?oc=5",
+      "published_at": "Wed, 14 Oct 2026 14:22:26 GMT",
+      "id": "fdadce39339e52e54e8d"
+    },
+    {
+      "title": "Báo cáo CPI: Lạm phát tăng 3,7% trong tháng 9 do giá nhiên liệu tăng",
+      "summary": "The New York Times báo cáo rằng chỉ số giá tiêu dùng của Mỹ đã tăng 3,7% so với cùng kỳ năm trước trong tháng 9, phần lớn do giá nhiên liệu tăng mạnh. Đây là mức tăng cao hơn dự đoán và cho thấy áp lực lạm phát vẫn còn mạnh.",
+      "tag": "Vĩ mô / FED / Lạm phát",
+      "source": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOVXRrRmpmSC1sM1BwYWdHVzBVbzZRemV3N04yeEdCUV85anBMemFQSXFyMUotV3FLNzdUazB3aWF4ck9fZXlYbTlfUUJUVlhJUkNyTHkyTWZ1R3JIWnJBMFlEMUxCX0VYV2x5R2w1cGF1SVpEc2pFZnJkSWhxMXFLTFEzR050dw?oc=5",
+      "published_at": "Wed, 14 Oct 2026 17:03:21 GMT",
+      "id": "817deacbca3c9c2809d5"
+    },
+    {
+      "title": "Giá tiêu dùng tăng 3,7% hàng năm trong tháng 9 khi giá xăng bốc hỏa",
+      "summary": "CNBC đưa tin rằng giá tiêu dùng ở Mỹ đã tăng 3,7% so với năm trước trong tháng 9, chủ yếu do giá xăng leo thang. Sự tăng giá này làm tăng áp lực lạm phát và có thể ảnh hưởng đến chính sách tiền tệ.",
+      "tag": "Vĩ mô / FED / Lạm phát",
       "source": "CNBC",
       "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1IZEUyWDE5aTVyU1VTMEhhNW9LV3pZdUkwcFI4WVlIOEhHUzBmUTZGbUlWTDVfN05zdzhFTlR4RERqUHROMDJ2T3dCN2I0UDI2dmZhOTBVTVRIYVlIYjRKQ2RZcjdNQWdWTTkyV0owQU1Xekt4U2ZHUFc4NnPSAYIBQVVfeXFMT3U1UnZTdHN4U2tIM1lZcHlGRGZLUXNaYjhDTHl4bllqdzY3ek9XYl9ZdzNBaUdJQjNndF9HSm1yci15X3ZnMEdaazNzMjVTZ204TzJ1cFJEOE81bUF0RFBJWTR6RWF2YU9BWm1PMnhTVGNWVnc5bkxNWlRpT0RuU2t2Zw?oc=5",
       "published_at": "Wed, 14 Oct 2026 12:31:19 GMT",
       "id": "7f4f32875fc81282886c"
-    },
-    {
-      "title": "Việc tăng lãi suất Fed có khả năng cao hơn sau dữ liệu lạm phát",
-      "summary": "Sau khi dữ liệu lạm phát công bố, các nhà phân tích dự đoán khả năng Fed sẽ tăng lãi suất trong thời gian tới. Điều này phản ánh lo ngại về mức giá tiêu dùng đang tăng.",
-      "tag": "Vĩ mô / FED / Lạm phát",
-      "source": "Reuters",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPMjl1ZWZGd2lIRXg1US1hUjNacTVDN2o5S2lIcXpCdnZ1VHBXcEpqOHV5SzJJZHJrT3RxYjdrRjRrRU03eHNGTTFRMnVCVEdZa0VfLU9BeFdSeTE1aFRrc3ZRampyOFVTczZRbWk0azFBakVndUJ1X0NjVmJmV1JmeXNXSlFkNzF0NUZKTUUyUnlHWi1sOXFpVHV5NnVvcDA?oc=5",
-      "published_at": "Wed, 14 Oct 2026 12:41:43 GMT",
-      "id": "fdadce39339e52e54e8d"
-    },
-    {
-      "title": "Vàng ổn định khi nhận xét của quan chức Fed làm giảm kỳ vọng tăng lãi suất",
-      "summary": "Giá vàng duy trì mức ổn định sau khi một quan chức Fed phát biểu, khiến thị trường giảm kỳ vọng về việc tăng lãi suất. Điều này hỗ trợ giá vàng trong bối cảnh lạm phát cao.",
-      "tag": "Vĩ mô / FED / Thị trường",
-      "source": "Bloomberg.com",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQazViUHl2SmRiSUdDb0dNelo2Y2JjdkNLOG40Q0FpMnFBZ1JPNUNBc3pMeGlWbE5CQlUwcEVJWE93WmlJRkZTbzllQ1pfNV9HYXVHLUV2YVdkWW1TMWVJTElsNklvSzVYdTZPXzhIV0JHdHBCQzhhcklUSHhQaTFXUUNjNVlZTVZQNWd0UHM5LTlwRmpobUdiR1RiWDhTYUNTUGloY256S1l2blk0M0JZ?oc=5",
-      "published_at": "Wed, 14 Oct 2026 09:16:57 GMT",
-      "id": "929c1b297bdb8aadc7cc"
     }
   ],
   "vietnam": [
     {
-      "title": "Cổ phiếu trụ “phá đáy”, VN-Index rơi về sát mốc 1700 điểm",
-      "summary": "VN-Index giảm gần mức 1700 điểm, các cổ phiếu trụ chính đang tìm đáy. Động thái này phản ánh áp lực bán trên thị trường nội địa.",
+      "title": "VN-Index tiếp tục giảm, kiểm định ngưỡng 1700 điểm - VnEconomy",
+      "summary": "VN-Index tiếp tục xu hướng giảm và đang kiểm tra mức hỗ trợ quanh mức 1.700 điểm. Động thái này phản ánh áp lực bán ra từ các cổ phiếu trụ cột.",
       "tag": "Việt Nam / Thị trường / VN-Index",
       "source": "VnEconomy",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOd20zd05uMXJpalNmYjZFQmI3b0FmNkFleEtPTVBCSTFBek13MmJINkxLWnhKdUNYeTdLdDFkWUZCVktNbGJQbG1iZEhCbGRfdFFVODRrUnM3dXdTR1JBcTJGMmZQUUhHcW9IU3JnX1dQSHJaLVZRTW40cmVpWkdBaXd2WWV3QQ?oc=5",
-      "published_at": "Wed, 14 Oct 2026 08:29:37 GMT",
-      "id": "e70ca899c9c2c8c46450"
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE15a1RVNlB1d2l4VEV5dkhwQXFWS1RFdFdoN0U0SERDd2hWRm15XzlJMEpZWlp4dTNyTk9HZGJuc2p1dHUySm5WemZ1czFWZ0FycHgzdFgyUW9VaHZtMXAwZ1FCQjhlbGlFd0t4eG5ZRzV0akhUUmF5TFJ1U3c0SEk?oc=5",
+      "published_at": "Wed, 14 Oct 2026 15:48:02 GMT",
+      "id": "3a835be7ad81c9c296b0"
     },
     {
-      "title": "Chứng khoán ngày 14/10: VN-Index lùi sát mốc 1.700 điểm, dòng tiền phân hóa",
-      "summary": "VN-Index tiếp tục giảm tới gần 1.700 điểm, dòng tiền thị trường cho thấy sự phân hóa giữa các nhóm cổ phiếu. Nhà đầu tư đang cân nhắc vị thế trong bối cảnh biến động.",
-      "tag": "Việt Nam / Thị trường / VN-Index",
-      "source": "Thời báo Tài chính Việt Nam",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNanR3Q0NwM2ZYY25EdXBVcnBwZ1l2WmY4emJtQ1hfMXdxN0VEc3VGS3F2RjZzc0lnSk1xRTNCODY4LTJIYWhneW9oOG9oUHNsZkQyeG9DODVBYjg1X3FWM0hLRkNwdEpCSHR5WnRaT1ZaeHVRNzZCYkIySUw0ZDFzd1Q5N3h5eE9xa1FRRllZNkhjVEZpYmc3NUczQ2QtS19SZ0hBdV9vWEh4VmhpLW43ZU5sZjJMaWF3NkRV?oc=5",
-      "published_at": "Wed, 14 Oct 2026 10:06:23 GMT",
-      "id": "6ed3fce3f9ebfc9ed4e2"
-    },
-    {
-      "title": "VN-Index giảm về sát 1.700 điểm, cổ phiếu thép “nổi sóng”",
-      "summary": "VN-Index giảm tới mức gần 1.700 điểm, trong khi cổ phiếu ngành thép tăng mạnh, tạo ra sự chênh lệch giữa các ngành. Thị trường chứng khoán đang có xu hướng phân tán lợi nhuận.",
+      "title": "VN-Index giảm về sát 1.700 điểm, cổ phiếu thép 'nổi sóng' - Tuổi Trẻ",
+      "summary": "Theo Tuổi Trẻ, VN-Index giảm xuống gần mức 1.700 điểm, trong khi cổ phiếu ngành thép ghi nhận mức tăng mạnh. Sự chênh lệch này cho thấy sự phân hóa trong các ngành.",
       "tag": "Việt Nam / Thị trường / VN-Index",
       "source": "Tuổi Trẻ",
       "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNdzM5TTRKTTBwcjNDbDlwTmJib29XclExVTNjSUlQeXR3OVoyMkRBY2k3WmtOVlUtbWtjRlRjOExQRVkwcmthRnBpV0tIdTdmc2JHQ0JVQld1TmJGc0NmZzJtT1h0S2VpOHhIdmkxeWlpeXhES1Z0ZDdEMXFUV3NMT2Y5UnhHMTBBd1l1by1vUlNnWURhXzVNQkVjTQ?oc=5",
       "published_at": "Wed, 14 Oct 2026 09:11:00 GMT",
       "id": "1b78269ece7b6b18d9e1"
+    },
+    {
+      "title": "Áp lực từ cổ phiếu trụ kéo VN-Index về sát 1.700 điểm - Tạp chí Kinh tế - Tài chính Online",
+      "summary": "Bài viết của Tạp chí Kinh tế cho biết áp lực bán từ các cổ phiếu trụ cột đã đẩy VN-Index về mức gần 1.700 điểm. Thị trường đang trong giai đoạn điều chỉnh.",
+      "tag": "Việt Nam / Thị trường / VN-Index",
+      "source": "Tạp chí Kinh tế - Tài chính Online",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNZ2VheEZETC1DbVlyNHd5cTNBTWgyRzJZZFhNNmtwb2YzdWNqdmtzYWlPNG9SVWNMMkRhWDAzY0k2VHR3aDNfT2dEdnVNbWlWUVNUdml3NUVyd1lmWk0tWE1KZWJpZW9wR3BRNGoxRGQ0eFZvZ0puY1dXSkY0c2dyUjFuRmZhUllBem5BeGFRZzZpRDkwUTBXenNHSTJIdw?oc=5",
+      "published_at": "Wed, 14 Oct 2026 12:22:35 GMT",
+      "id": "b75b20c604ad95025d1d"
     }
   ],
   "ai": [
     {
-      "title": "Đơn đặt hàng mạnh của ASML làm giảm lo ngại về việc bùng nổ chi tiêu AI đang chững lại",
-      "summary": "ASML nhận được lượng đơn đặt hàng lớn, giảm bớt lo ngại rằng nhu cầu chi tiêu cho AI sẽ giảm. Điều này cho thấy nhu cầu về chip AI vẫn còn mạnh.",
+      "title": "Cổ phiếu chip AI ít người biết, không phải Nvidia hay Micron, có thể là người thắng lớn nhất năm 2027 - The Motley Fool",
+      "summary": "The Motley Fool đề cập đến một cổ phiếu chip AI ít được chú ý, không phải của Nvidia hay Micron, nhưng tiềm năng trở thành người chiến thắng lớn nhất vào năm 2027. Bài viết nhấn mạnh cơ hội tăng trưởng mạnh mẽ trong lĩnh vực AI.",
+      "tag": "Trí tuệ nhân tạo / Chip AI",
+      "source": "The Motley Fool",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxObzZ2NU5fcG1WbFdrOFpUMF9NWFRibEhqclowaW1QVk1rMGFaZFhnRmt2WmVvdi1WMnNlRXpsamdSSmNDWng0S2x2cXplZE5aZWFQZG5mLUN4MzNVYXlWMzBHQ0dYREd0LVRIOGowM1YtYTUwWjhpUDExdDk1Xy1wY1lsa1E5STJva19iaFdpWkpiaDVuYWRNOA?oc=5",
+      "published_at": "Wed, 14 Oct 2026 15:30:00 GMT",
+      "id": "a4bd291820494695d963"
+    },
+    {
+      "title": "Đơn đặt hàng mạnh mẽ của ASML làm giảm lo ngại về việc bùng nổ chi tiêu AI sắp cạn - Reuters",
+      "summary": "Reuters báo rằng ASML nhận được lượng đơn đặt hàng lớn, giúp xoa dịu lo ngại rằng đợt bùng nổ chi tiêu cho AI đang chững lại. Điều này cho thấy nhu cầu về thiết bị sản xuất chip AI vẫn còn mạnh.",
       "tag": "Trí tuệ nhân tạo / Chip AI",
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOZFZsa19tQTZzTmpjeDVDenFPTGdxSTJVS1k5bTNrakxDWEtUelY1SWlDdnhNZDVoUmY1dkhoWXdJMWQtS1pjR3drMndqc0kxT00zVkM1bUIyRXM3X011cGhMaUNvbXdtUzVaNUhWWEMzOEN5Q0luZEQ3MzE5M2J2N2h3Mko4eUg3NkZJY2pBbG03UzRwVGs5MVl4dWxWbjNJeVN0OA?oc=5",
@@ -79,46 +88,37 @@
       "id": "28bd04304b5fe18569f4"
     },
     {
-      "title": "Nhà cung cấp máy móc chip ASML tăng dự báo lần thứ ba nhờ nhu cầu AI bùng nổ",
-      "summary": "ASML nâng dự báo doanh thu lần thứ ba nhờ nhu cầu AI tăng mạnh, phản ánh xu hướng đầu tư vào chip AI. Công ty kỳ vọng tiếp tục hưởng lợi từ xu hướng này.",
+      "title": "NVIDIA và các nhà lãnh đạo bán dẫn thúc đẩy AI trong thiết kế và sản xuất chip cho các nhà máy định nghĩa AI - NVIDIA Newsroom",
+      "summary": "NVIDIA Newsroom công bố rằng công ty cùng các đối tác trong ngành bán dẫn đang tiến bộ trong việc tích hợp AI vào quá trình thiết kế và sản xuất chip, nhằm đáp ứng nhu cầu của các nhà máy sản xuất chip định nghĩa AI. Sự hợp tác này hứa hẹn nâng cao hiệu suất và khả năng sáng tạo.",
       "tag": "Trí tuệ nhân tạo / Chip AI",
-      "source": "WSJ",
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQWHp0Zks1SnAwS1Y3RWhMSHNRUlVtTGJhb3duY1o0NWFycWQyUkNad2NIMm01aUlUM1lVX1lSS0lNYzQtVnBWTGZlc3RvcDZYQzUzNGRqZFRWOVNUSDJ1MVRnR19nZ280Tl80eERkdXJydU9DakFsbUVYYlIybnh4ZUY0YmJnV1lVTmhFRHZKNjlSR3o4S3lfeVc3akVEUm5vRnpodTZCUFB6MDExeXhyRWRmQXItVzlFVzBxTkJyMWtQV28?oc=5",
-      "published_at": "Wed, 14 Oct 2026 07:29:00 GMT",
-      "id": "54a3d71772a936d888cb"
-    },
-    {
-      "title": "Bùng nổ chip nhớ AI gặp lo ngại mới: cạnh tranh quá mức đối với các nhà chơi chủ chốt",
-      "summary": "Khi thị trường chip nhớ AI phát triển nhanh, các công ty hàng đầu phải đối mặt với áp lực cạnh tranh gay gắt. Sự cạnh tranh này có thể ảnh hưởng đến lợi nhuận của các nhà sản xuất chính.",
-      "tag": "Trí tuệ nhân tạo / Chip AI",
-      "source": "Business Insider",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNOW1YUlpCYXZPTVBIUGlEaDVmLUNpUWcxY3NLNkpNaUg3YlhMeEZaa2Y5bDJmOUUzNWR1UXBEcENWY2t0MG4ybkpjWEZYbHpHNW45Z2hFNnZ1LTBCRE1VTEJVem5IUC1TQzFvVDl0UklWc3FPSldmN2UxVzZDaWRsaHU0M1lUSUZ1bVduazZZZjhPN0tnV2ZlRnZnT0RVXzRyQnN0eVNxaUJ0Tm5RUUhUaHBlNWQ2QQ?oc=5",
-      "published_at": "Wed, 14 Oct 2026 09:50:00 GMT",
-      "id": "fe13f51ee5a7640c9a62"
+      "source": "NVIDIA Newsroom",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQY0JQSW1rVk16Vk96aEt1QzRJeHNUNXZfclVRVlBFdmhhQ09HS2N3YUlfRnRTejgtdGkwc040QWdHbXkyVXFJcW1uaTdZdV9EMUo0ZDN6cnFiOWxneTlidVpIYmljSHJkTVJaNmhUTDRwb2czQXNtN00taFQ5MkhBZVlITUN6QTBYcUVrdV8tQXFtcDJ2d2EwRjVONU1VdGRCNUhRRnBUbUp1UFRfMmNqaWFJMVdRVXRLa2UzTF9yVmhnM0VadXk3TzRSTjJMZGJn?oc=5",
+      "published_at": "Wed, 14 Oct 2026 16:18:44 GMT",
+      "id": "12fcd5a11418b6bf9db6"
     }
   ],
   "logistics": [
     {
-      "title": "Mở rộng không gian logistics, động lực mới cho chuỗi cung ứng và xuất nhập khẩu Việt Nam",
-      "summary": "Bộ Công Thương đề ra kế hoạch mở rộng các khu vực lưu trữ và trung tâm phân phối trên toàn quốc, nhằm tăng năng lực xử lý hàng hóa và giảm thời gian giao nhận. Dự án đang trong giai đoạn triển khai, dự kiến sẽ thúc đẩy chuỗi cung ứng và xuất nhập khẩu Việt Nam.",
+      "title": "Tân Cảng Sài Gòn đẩy mạnh kết nối logistics Việt Nam - Campuchia",
+      "summary": "Tân Cảng Sài Gòn đang tăng cường kết nối logistics giữa Việt Nam và Campuchia. Sự đẩy mạnh này nhằm cải thiện luồng hàng hóa và hợp tác khu vực.",
       "tag": "Logistics Việt Nam",
-      "source": "Thương hiệu và Pháp luật",
-      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOYmotd1pyUXFrUG84alZqTFBXOFNOcmhZN3U0cXk1Q2dyY2RuaDNzeWc3ems0OE04SGVzMTNNZlBtcmFCMEJMMVZkek1TcjJXaG0wdzRibTdpZVd5U3h4aUJidkxORFJfeEZxbTE0YlJSWUctcF8zSkVXWWczX2V1Y3E2cTFhZGRpUWV2OTEzXzZnT2kwamMzUVlfS25uZlVkLVpubzVwTXFjUlJZd3NNV3g5eUxiZ1JXbDAycXlxZ2hSNzJKVi1ZYUV1SQ?oc=5",
-      "published_at": "Mon, 12 Oct 2026 10:06:00 GMT",
-      "id": "20fa211890a1c12d9c7b"
+      "source": "Tạp chí Kinh tế - Tài chính Online",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOUmdGTG1iY003WEUwUnZkZ25veUkyY1RFM2NYakhtSmYwMkFRYTRDczFzamE5V252V2c5UE1ZZWhGdHlsYmhBVWI3Vl9zQk1JT05rcHdubXlsd0xRMnpKMTBESnBHYTl1eUxFcmplTG5UREFBRUxscDA5VUljbFdsd2FtZXllVWdFUTNMNGJHc3ZNNUhyaUJaZ0dXX3pqX0VCR2xxd1gyYVVRdw?oc=5",
+      "published_at": "Wed, 14 Oct 2026 12:24:03 GMT",
+      "id": "341608bbd85a26c372d0"
     },
     {
-      "title": "Dự thảo Luật Bưu chính (sửa đổi): Làm rõ ranh giới với vận tải, logistics",
-      "summary": "Bộ Thông tin và Truyền thông công bố dự thảo sửa đổi Luật Bưu chính, làm rõ ranh giới hoạt động giữa bưu chính, vận tải và logistics. Dự thảo đang được thảo luận tại Quốc hội, nếu thông qua sẽ tạo khung pháp lý mới cho các doanh nghiệp logistics.",
+      "title": "Rong ruổi phương Nam: Dấu ấn cảng biển Việt Nam",
+      "summary": "Chương trình 'Rong ruổi phương Nam' giới thiệu các cảng biển Việt Nam, nhấn mạnh dấu ấn và vai trò của chúng trong chuỗi cung ứng quốc gia. Nội dung tập trung vào tiềm năng phát triển của các cảng miền Nam.",
       "tag": "Logistics Việt Nam",
-      "source": "Vietnam.vn",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOWks2N0ZaQmZsZU9raEhfSG82ZHdCRnBjTWhwbXJCSlRDRUVmWEl4S25faWJzb0tkZDNfWTAwOWhYMVhVZ3RsQlRKanhhMHdjVmNJOHByVXV1NlJkSFMzLVIwano2RlhnTXhrV0Ftc2JGUldob29UQ0RVc2JFRnRMeEFwSVdnZ3Jpdy0yc0Q2RjM4SWI2VV9J?oc=5",
-      "published_at": "Wed, 14 Oct 2026 11:23:27 GMT",
-      "id": "57cd6d603db0214e3a44"
+      "source": "VTVgo",
+      "url": "https://news.google.com/rss/articles/CBMiQEFVX3lxTE5jVnpDNkZ3cHcxLUVoSlZSc2lCTHBMWUtfc085Rml0emhub1haYVZKY1c3cTNlVm9GQjV2ZTBpZXI?oc=5",
+      "published_at": "Mon, 12 Oct 2026 00:00:00 GMT",
+      "id": "501b0338e95ed752a047"
     },
     {
       "title": "Mở khai thác bến chung giữa hai cảng khu vực Cái Mép-Thị Vải",
-      "summary": "Cảng Cái Mép và Thị Vải khai thác bến chung đầu tiên, cho phép tàu container cập bến tại cả hai cảng đồng thời. Dự án đang trong giai đoạn khai thác thử nghiệm, hứa hẹn tăng hiệu suất và giảm chi phí vận chuyển nội địa.",
+      "summary": "Hai cảng khu vực Cái Mép và Thị Vải đã mở khai thác bến chung, tạo điều kiện cho việc xử lý hàng hóa đồng thời. Việc khai thác bến chung giúp nâng cao hiệu quả hoạt động cảng.",
       "tag": "Logistics Việt Nam",
       "source": "Báo Quân đội nhân dân",
       "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNOWkzOWx3OTFJa1dkZGQ0QWxaLUdRek5RMHp4UmlKLVJhTV9TNS1qbER6RFg5MmxZLWQ3REZrVmU5emNPVUtDbk1FQkdNeUpsOEVRQm1VVkJzeWNIZ2pqY2pfcUZfemdRN3RvelFVUlFpd2Q4SURUMExYNUlmejBUWGdFUlZKODhncmtzVkxGWW90SGtyUmRTWG5oSWpPeWZWUUhEc0pycw?oc=5",
@@ -126,17 +126,8 @@
       "id": "197bb8b67050d66db476"
     },
     {
-      "title": "Hai cảng biển Cái Mép-Thị Vải lần đầu vận hành chung bến cảng",
-      "summary": "Hai cảng biển Cái Mép và Thị Vải chính thức vận hành chung bến cảng, tạo ra một hệ thống cảng liên kết. Việc này giúp tối ưu hoá luồng hàng hóa, giảm thời gian quay vòng tàu và nâng cao năng lực xử lý cảng.",
-      "tag": "Logistics Việt Nam",
-      "source": "Vietnam+ (VietnamPlus)",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNcVdaMHhOZUs4cGZRcFllbnJUMTlESU5zMEYyaGR0dWJzVk9ST01qNkcta2pGWXNQVTRhUzRKYnJFZ0lIRFU0ZVo3UUxId3dITkJGUEZ0RUtfZVVHc29MUjdDVkl4ejNzS2xOeUE3alZCM3ZwNkdGUlduOURwLTFtX1k5Vm82WGZNSkg1Yzc5VERJN2QzX2cxbGtKcjE5M3pVYTY0WThwVQ?oc=5",
-      "published_at": "Fri, 09 Oct 2026 07:14:05 GMT",
-      "id": "fea60b764062e055f79c"
-    },
-    {
-      "title": "Chỉ số Dịch vụ Vận tải Hàng hóa (TSI) tháng 8/2026 giảm 0,4% so với tháng 7/2026 và giảm 3,0% so với tháng 8/2025",
-      "summary": "Theo Cục Thống kê Giao thông Hoa Kỳ, chỉ số TSI tháng 8/2026 giảm 0,4% so với tháng trước và 3,0% so với cùng kỳ năm ngoái, phản ánh mức giảm khối lượng vận chuyển. Sự sụt giảm này cho thấy áp lực giảm nhu cầu vận tải trong bối cảnh kinh tế toàn cầu chậm lại.",
+      "title": "Chỉ số Dịch vụ Vận tải Hàng hóa tháng 8/2026 giảm 0,4% so với tháng 7/2026 và giảm 3,0% so với tháng 8/2025",
+      "summary": "Chỉ số Dịch vụ Vận tải Hàng hóa (TSI) tháng 8/2026 giảm 0,4% so với tháng 7/2026 và giảm 3,0% so với cùng kỳ năm 2025, theo Cục Thống kê Giao thông (BTS). Sự sụt giảm này phản ánh xu hướng giảm trong hoạt động vận tải hàng hóa.",
       "tag": "Logistics Thế giới",
       "source": "Bureau of Transportation Statistics (BTS) (.gov)",
       "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQTkltVGNPcUtqSTFJdlZQWjdqbFVqX19Qbk5ZVUZqNmE4UzZCbThNVmlDa2hkbXlxUkFHSXlXN0VkVGotb2c3OTdOSWtQdVlCOERNa1dvV2tKTFEtWlJQdUlPRnIzV2h2Ml9kMXNab0lTRkpCcHBjT1VMaE9aTkd3bFl0YjJreEdVYkhaRG1fM1FBR203ZkxEQ0c1R1hpZHI0TmhMS2FqU3JWX0tGNzQzb3N1UlB2LW9JLWcw?oc=5",
@@ -144,19 +135,28 @@
       "id": "cc8836b4b68dc9753420"
     },
     {
-      "title": "BYD mở rộng đội tàu vận chuyển điện (EV) khi chiến tranh làm gián đoạn chi phí vận tải và các tuyến thương mại chính",
-      "summary": "Nhà sản xuất BYD công bố mở rộng đội tàu vận chuyển điện (EV) nhằm đáp ứng nhu cầu giảm phát thải. Khi các cuộc xung đột làm gián đoạn các tuyến thương mại quan trọng, việc sử dụng tàu EV giúp giảm chi phí nhiên liệu và tăng tính bền vững cho chuỗi cung ứng toàn cầu.",
+      "title": "Cảng Wilmington nhận khoản tài trợ liên bang để mở rộng năng lực, Rouzer khen ngợi đầu tư",
+      "summary": "Cảng Wilmington được cấp khoản tài trợ liên bang để mở rộng năng lực xử lý. Đại biểu David Rouzer đã ca ngợi khoản đầu tư này, cho thấy cam kết hỗ trợ hạ tầng cảng.",
       "tag": "Logistics Thế giới",
-      "source": "Rest of World",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1yeVVvSnZRTWRDQWFOQlRzdUxmeDY0Z2lkdWl2Q2RRZXNGVEJILTZNUURhNFA0YzZMNWJtYnRtQmVITnFvWkkxVmNScEdLQ3Mxc2pwZTZSNzdJb2tTQXZhWkJUSzVkM21HM090UWxxeDQ?oc=5",
-      "published_at": "Wed, 14 Oct 2026 10:06:55 GMT",
-      "id": "d7da878adf29f1e93cf8"
+      "source": "Representative David Rouzer (.gov)",
+      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE5EVmtYQXVoSTVWNUZIamRLMW1uenlYeFJoc2dOY2VPSUFLajNwT05hS0o0anMwYzBfNUpuLVYwT1phVVBkQ3hyWEZUUFRsTkFmaUw3eGtxc0lodFVDMVBqODN5bFpISmctNEV0aHVVVngzZXM?oc=5",
+      "published_at": "Wed, 14 Oct 2026 13:18:20 GMT",
+      "id": "c51db01060ea56df64fe"
+    },
+    {
+      "title": "Xe đạp bị tàu chở hàng đâm, người đi xe chết",
+      "summary": "Một tai nạn giao thông đã xảy ra khi một người đi xe đạp bị tàu chở hàng va chạm và tử vong. Sự cố này nêu bật các vấn đề an toàn trên đường sắt vận tải hàng hóa.",
+      "tag": "Logistics Thế giới",
+      "source": "KY3",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE51b1lsLW5QSVlybTBqVFNtaUJ0RzFYVEVWbVB2UDRvTElPczFRSmRxT04zdEhTQUwyLXdsM2M2UDNrMGdIWlZrUHYzdngzU1dVTWFRNWhiM0lfM0RpZXBjNWZWVHVpNmE1NXdSV1l1cjRETFlyZjNOZtIBjAFBVV95cUxPT1VmYVoyeVJfMUlZT091b3p6aXFhNDhQXzhiUm5xZG1DNlVSZmFOdHNmQVN6a091bGM1ajV0WGFLd3NUbWJUd0ZwaDlLQlo2RnJSc3RiZUtWMTlEN0tUM0tZeWlRRlRnUmlTeHRTWlRROGpSbmJicHBNc19fMFZfcHdla3JuTHlRUFcwSQ?oc=5",
+      "published_at": "Wed, 14 Oct 2026 14:32:00 GMT",
+      "id": "34a317d0e6c5f9ebcf31"
     }
   ],
   "gold": [
     {
-      "title": "Giá vàng chốt phiên 14/10: Giảm mạnh, chênh lệch với thế giới gần 12 triệu đồng",
-      "summary": "Vào ngày 14/10, giá vàng đã chốt phiên giảm mạnh. Mức chênh lệch so với giá thế giới gần 12 triệu đồng.",
+      "title": "Giá vàng chốt phiên 14.10: Giảm mạnh, chênh lệch với thế giới gần 12 triệu đồng - Laodong.vn",
+      "summary": "Vào ngày 14/10, giá vàng kết thúc phiên giao dịch giảm mạnh, chênh lệch so với mức giá thế giới khoảng 12 triệu đồng.",
       "tag": "Giá vàng",
       "source": "Laodong.vn",
       "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNOUtCWmcza0RTeUJmTVpSQnpEa0V2dkEwRV9qX2ZON3ZnMmtzdy01dURac3lVQnQ3dVhEVy1fQWwycHBqMmtxT0N6MmdST2pPOXBxeUlhbVVhV0ltekhiWVpjS0QzUVJ2U2g0UWIyZ0oya29Fa0sxajVSa3NvU1BEcWsyaUVqWUZnTC1XeWdVdjE3R1VoOVVSMVJYZTJSdlVrei1LMUtlUy1XSjRnVGtmSHdoQk9mUVNxTjNVd3VvSQ?oc=5",
@@ -164,37 +164,28 @@
       "id": "cb2c31e84b699f4e4af2"
     },
     {
-      "title": "Dự báo giá vàng ngày 15/10/2026: Đà giảm chưa dừng?",
-      "summary": "Các chuyên gia dự báo giá vàng sẽ tiếp tục giảm vào ngày 15/10. Đà giảm chưa có dấu hiệu chấm dứt.",
+      "title": "Lạm phát Mỹ tăng vượt dự báo, giá vàng giảm sâu - Tuổi Trẻ",
+      "summary": "Lạm phát ở Mỹ tăng cao hơn dự báo, dẫn đến giá vàng giảm mạnh.",
       "tag": "Giá vàng",
-      "source": "Tạp chí Doanh nghiệp và Hội nhập",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPUkxydUN1UG9IbzMxeThldjY0WDZtUC10amFTSFZ4Y2NpbGpYcllGZ2dCT1B4bkZuU05qa2hjWHBFdG12T3Fya3ZZV0RZSG5IMXBSazdZaEtuSVFUNDNUa0U3OXVXSFBEWWpxZnRLM29lRzQta3RvS0gtZDhHU0VTZlpmX0pmeDZnMFRyalA0S1NTOWV5U2o2Qw?oc=5",
-      "published_at": "Wed, 14 Oct 2026 10:00:13 GMT",
-      "id": "7e78228faac972ea80b2"
+      "source": "Tuổi Trẻ",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPZGpJUExxUGxaRlh4Ykpmc3FFZGJMb25ZQlVKQlBwdTJURF9lTnNnZ1VrVmMzSXU5ZG1oT2EzS3ZVYzQzVm16VlQyRnBZd0NTenAzdV85Z2J6V1JLcTdzQ0xrREhOU1V4Z1EtSXNNdEJYMWlldERuUzZuUWJPZWlaNDNNNEtXRjRQUjFGSk4zOUpVUQ?oc=5",
+      "published_at": "Wed, 14 Oct 2026 16:47:00 GMT",
+      "id": "f2764b224d9254e058d4"
     },
     {
-      "title": "Giá vàng hôm nay (chiều 14/10): Giảm mạnh",
-      "summary": "Vào chiều ngày 14/10, giá vàng tiếp tục giảm mạnh. Xu hướng giảm được ghi nhận trong phiên giao dịch.",
+      "title": "Giá vàng hôm nay 15/10/2026 'sụt hố', nhịp giảm chỉ là bước lùi kỹ thuật để gom hàng, cần làm gì để đón đầu xu hướng? - Báo Thế giới và Việt Nam",
+      "summary": "Vào ngày 15/10/2026, giá vàng giảm sâu, được mô tả là 'sụt hố', giảm chỉ là điều chỉnh kỹ thuật nhằm gom hàng, kèm lời khuyên về cách đối phó.",
       "tag": "Giá vàng",
-      "source": "Báo Quân đội nhân dân",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNeE1RdGw2ZWhNNVpRVDMwSjhfc3cyNmNVTUFkVmFRcFcxRGdDV0dZaEozWklTemdZS2dRM2VWaWYxVmNoTkV2SlVuZ3FRTVdCNDc3RnZ0ZmkwVEN3QnVEX0tJbmlZTklCZzRhTFJUT1VmTnRzU3paYzM4SzhKaW1icUtZYzZhdVNsV2c?oc=5",
-      "published_at": "Wed, 14 Oct 2026 06:35:40 GMT",
-      "id": "253e1cf2c5d8126ee452"
+      "source": "Báo Thế giới và Việt Nam",
+      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPOVJhWkYxTlp5QlBNNGRlazZEQWwzZFNqZldOMENqWmFRVEFiaGMybXVxVndmQmtzTG5wUjBzbEZpLWd2ME1TWGY1dFFGQUtMX203Y1ZuSkNaOFFSY09rcTRzcDlMR1ZycExBRW5ZYVBlX2hxenJNN0p1dVljRVdEOXJnSk4zRDRkZXF5dUx2UzJFLXBhU24zejVveGdqV0ZtTUNzNndLQ3RMOVZaT1hZZXpEdy1UdGZnOVNka2RsME1fMkVEbzdaRkhkX2xkWWswLWdZWW16MkFibXR3eHc?oc=5",
+      "published_at": "Wed, 14 Oct 2026 14:36:15 GMT",
+      "id": "92f44f161989c8301a27"
     }
   ],
   "silver": [
     {
-      "title": "Giá bạc hôm nay: Giá bạc trong nước và thế giới tiếp tục giảm",
-      "summary": "Giá bạc trong nước và trên thị trường quốc tế đang tiếp tục giảm. Xu hướng giảm được ghi nhận trong ngày hôm nay.",
-      "tag": "Giá bạc",
-      "source": "Tin tức 24h",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQYWxTRXlPdDhNam9YUEVlbkp4TmJ1aUJsNmRlNUVIWTVZSjFMVDF5YmV6ZzNuRm5NVkdGTEhMLXRLQnVVQmxhUEQ5VkQ3Y193d0g2OUl5b1cwSWZhZ0hKaHNKLXZuQjhnOHpEcjVnMnhtY25vc0RqQjFTZkZEWG9LczQtM3drc2NOakxLbW1xdlUzS3d3U0JGOHNRQVVMdGVtMHJ5SXpLRlJRZ3V5RUg2bXNn?oc=5",
-      "published_at": "Wed, 14 Oct 2026 07:50:16 GMT",
-      "id": "a0bb89c8c5283748cb9f"
-    },
-    {
-      "title": "Biến động giá bạc 14/10: Bạc trong nước giảm đến 1,1 triệu đồng/kg",
-      "summary": "Vào ngày 14/10, giá bạc trong nước giảm tới 1,1 triệu đồng mỗi kilogram. Đây là một biến động đáng chú ý trên thị trường bạc.",
+      "title": "Biến động giá bạc 14.10: Bạc trong nước giảm đến 1,1 triệu đồng/kg - Laodong.vn",
+      "summary": "Ngày 14/10, giá bạc trong nước giảm mạnh, mức giảm khoảng 1,1 triệu đồng mỗi kilogram.",
       "tag": "Giá bạc",
       "source": "Laodong.vn",
       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOVEJEZG0tLVBHOUppWlIybHVzUWFzdW52TlA4WXgwT3Y5ZkkxeWhqRmQycW5jOTRUTFlJbkxuWmo3Nk03SWVoVGgzdHVLaHhxWW5TV0pHNElkUWtpWFJOTV9XNENmdVV0SEFkcElkZFhLLTVrV18xR0xHRjE1U1NTUW93MTg5YTVqMVhMQ1RkeGpIR0NiV25tTnZBWFo2UWhWYlVTSGx6VGhFelpF?oc=5",
@@ -202,66 +193,75 @@
       "id": "08bfae0ac675d61f0542"
     },
     {
-      "title": "Ngày 14/10, giá bạc giảm sâu, thị trường chờ báo cáo lạm phát tại Mỹ",
-      "summary": "Giá bạc giảm sâu vào ngày 14/10. Thị trường đang chờ kết quả báo cáo lạm phát của Mỹ để đánh giá tiếp diễn.",
+      "title": "Ngày 14/10, giá bạc giảm sâu, thị trường chờ báo cáo lạm phát tại Mỹ - Báo Nhân Dân điện tử",
+      "summary": "Vào ngày 14/10, giá bạc giảm sâu khi thị trường đang chờ kết quả báo cáo lạm phát của Mỹ.",
       "tag": "Giá bạc",
       "source": "Báo Nhân Dân điện tử",
       "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOY3dzNTlYQ3Fac3h5b3VCZVVjcmFTYVdkZ210UGp4V1g4N0JXcjdzbi03dE9QbGdLdjFiTWtEWDl0QUxkYThpYVBpckt3N0toaHJ4M2NtOTBXdExvVVJRN1pVXzJzTGpEWHZkVktZaUZHMlNjMmNlVmlfYUNpRWt2WGZHNUYyRjcwUGZrT1lnYjN5d2g5bkxoR2N5UkQ5aVZxanc?oc=5",
       "published_at": "Wed, 14 Oct 2026 02:43:11 GMT",
       "id": "0510a949a85991374f32"
+    },
+    {
+      "title": "Giá bạc hiện tại vào ngày thứ Tư, 14/10/2026 - Fortune",
+      "summary": "Bản tin cung cấp mức giá hiện tại của bạc vào ngày 14/10/2026.",
+      "tag": "Giá bạc",
+      "source": "Fortune",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9xaWdzTGs3ME5ReUFBSkVKQXdWS3lxMzdPZVdvMzA3dWxNRmNjRFJGZ0tyeDhLcW92eS1pX3dtb2hIRC0xZXY3b0ZzbThsUkxJd3BIb19CZVIzUDJ4MF9nNXRHbXFfUHh4Y3FxckFlZGE?oc=5",
+      "published_at": "Wed, 14 Oct 2026 15:33:54 GMT",
+      "id": "6788f23d9cb5fc6faf96"
     }
   ],
   "stocks": [
     {
-      "title": "Cổ phiếu trụ “phá đáy”, VN-Index rơi về sát mốc 1700 điểm",
-      "summary": "Các cổ phiếu trụ đã phá đáy, khiến VN-Index giảm xuống gần mức 1700 điểm. Động thái này phản ánh áp lực bán trên thị trường.",
+      "title": "VN-Index tiếp tục giảm, kiểm định ngưỡng 1700 điểm - VnEconomy",
+      "summary": "VN-Index tiếp tục xu hướng giảm và đang kiểm tra mức ngưỡng 1700 điểm.",
       "tag": "VN-Index",
       "source": "VnEconomy",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOd20zd05uMXJpalNmYjZFQmI3b0FmNkFleEtPTVBCSTFBek13MmJINkxLWnhKdUNYeTdLdDFkWUZCVktNbGJQbG1iZEhCbGRfdFFVODRrUnM3dXdTR1JBcTJGMmZQUUhHcW9IU3JnX1dQSHJaLVZRTW40cmVpWkdBaXd2WWV3QQ?oc=5",
-      "published_at": "Wed, 14 Oct 2026 08:29:37 GMT",
-      "id": "e70ca899c9c2c8c46450"
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE15a1RVNlB1d2l4VEV5dkhwQXFWS1RFdFdoN0U0SERDd2hWRm15XzlJMEpZWlp4dTNyTk9HZGJuc2p1dHUySm5WemZ1czFWZ0FycHgzdFgyUW9VaHZtMXAwZ1FCQjhlbGlFd0t4eG5ZRzV0akhUUmF5TFJ1U3c0SEk?oc=5",
+      "published_at": "Wed, 14 Oct 2026 15:48:02 GMT",
+      "id": "3a835be7ad81c9c296b0"
     },
     {
-      "title": "Chứng khoán ngày 14/10: VN-Index lùi sát mốc 1.700 điểm, dòng tiền phân hóa",
-      "summary": "Vào ngày 14/10, VN-Index giảm xuống gần mức 1.700 điểm. Dòng tiền trên thị trường chứng khoán cho thấy xu hướng phân hóa.",
+      "title": "VN-Index giảm về sát 1.700 điểm, cổ phiếu thép 'nổi sóng' - Tuổi Trẻ",
+      "summary": "VN-Index giảm xuống gần mức 1.700 điểm, trong khi cổ phiếu ngành thép ghi tăng mạnh.",
       "tag": "VN-Index",
-      "source": "Thời báo Tài chính Việt Nam",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNanR3Q0NwM2ZYY25EdXBVcnBwZ1l2WmY4emJtQ1hfMXdxN0VEc3VGS3F2RjZzc0lnSk1xRTNCODY4LTJIYWhneW9oOG9oUHNsZkQyeG9DODVBYjg1X3FWM0hLRkNwdEpCSHR5WnRaT1ZaeHVRNzZCYkIySUw0ZDFzd1Q5N3h5eE9xa1FRRllZNkhjVEZpYmc3NUczQ2QtS19SZ0hBdV9vWEh4VmhpLW43ZU5sZjJMaWF3NkRV?oc=5",
-      "published_at": "Wed, 14 Oct 2026 10:06:23 GMT",
-      "id": "6ed3fce3f9ebfc9ed4e2"
+      "source": "Tuổi Trẻ",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNdzM5TTRKTTBwcjNDbDlwTmJib29XclExVTNjSUlQeXR3OVoyMkRBY2k3WmtOVlUtbWtjRlRjOExQRVkwcmthRnBpV0tIdTdmc2JHQ0JVQld1TmJGc0NmZzJtT1h0S2VpOHhIdmkxeWlpeXhES1Z0ZDdEMXFUV3NMT2Y5UnhHMTBBd1l1by1vUlNnWURhXzVNQkVjTQ?oc=5",
+      "published_at": "Wed, 14 Oct 2026 09:11:00 GMT",
+      "id": "1b78269ece7b6b18d9e1"
     },
     {
-      "title": "Chứng khoán phiên 14/10: Cổ phiếu nhà Vin chịu sức ép, VN-Index suýt mất mốc 1.700",
-      "summary": "Trong phiên giao dịch ngày 14/10, cổ phiếu nhà Vin bị áp lực giảm. VN-Index suýt mất mức 1.700 điểm.",
+      "title": "Lý do VN-Index giảm 6 phiên liên tiếp, nhà đầu tư chán nản - Báo Dân trí",
+      "summary": "Báo cáo phân tích lý do VN-Index đã giảm trong 6 phiên liên tiếp, khiến nhà đầu tư cảm thấy chán nản.",
       "tag": "VN-Index",
-      "source": "baodautu",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNLS1vWkt3TkxCQkYxVmVTclRwUTRDOXVoNWFEdVc4dFVWbHRGLTBTa2Ryb3JibXFfT0t5TUVWX3dIdmNmSmpqR09mMUNHOERZSWZhMWhTRW9zcGR4YWZtdDdYa0ZCN1hXbC0zM2NBeHAycVlvSExKaGZ0SmhSci03Y0lrUnM3ZzlnTUlfWnF3TTZ3Q2kyUnFpbmpiU2FEaHhHY0liUmJDMU1qZkRmUzRLYQ?oc=5",
-      "published_at": "Wed, 14 Oct 2026 09:22:00 GMT",
-      "id": "42090c2ba66731ec814f"
+      "source": "Báo Dân trí",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPNkFjWTg3aUtXam5EVkU2cjV6aWRIcVljRGxPVXJkbXdrS1JmVjZRQlE4QTlEVVMtZ2ZwNmZkMTYyRFo3UmhLbE1fQUpLZnF2TEV4VXpvWmlKV3lpYzJ4WXEzVGs0SHBNbGFlWkRTV3ZfLXJRVHRWWWpCLVhaNTl2c3c1aGZycFJGZHlOZWZ5dzd1ZUJKUnJnNzZqYzZORkhaUWQ4VHpmSk5OMG4ybTV5OXdR?oc=5",
+      "published_at": "Wed, 14 Oct 2026 08:55:48 GMT",
+      "id": "416426d44225cd2a82d7"
     }
   ],
   "realestate": [
     {
-      "title": "Bất động sản TP.HCM kỳ vọng đường vành đai",
-      "summary": "Thị trường bất động sản TP.HCM đang kỳ vọng vào việc xây dựng đường vành đai. Dự án này có thể ảnh hưởng đến giá và cung cấp bất động sản.",
+      "title": "Giá chưa phải tất cả, hạ tầng đang định hình 'cuộc chơi' bất động sản TP. HCM - nguoiquansat.vn",
+      "summary": "Bài viết nhấn mạnh rằng ngoài giá, hạ tầng đang đóng vai trò quyết định trong thị trường bất động sản TP.HCM.",
       "tag": "Hạ tầng",
-      "source": "Tin nhanh chứng khoán",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNR3lrQ0s4UXduOTNrdVcwNm5SRGFVZ08tWGNkSEJfMW9Nb2pLSkxCSG9vTkFRV1dQTkVtMEdtUVpTcXR3bmFBZS1qZGF1ek9ZemNqbkgwLXVtTkNYdEVrLXQ1U01UWlNIV0M2TUFEUHVRUjZTQ1NqLWIyTHJRNFFUR2NvbE8yNWZxamFFQzdFNUsyQdIBkgFBVV95cUxNR3lrQ0s4UXduOTNrdVcwNm5SRGFVZ08tWGNkSEJfMW9Nb2pLSkxCSG9vTkFRV1dQTkVtMEdtUVpTcXR3bmFBZS1qZGF1ek9ZemNqbkgwLXVtTkNYdEVrLXQ1U01UWlNIV0M2TUFEUHVRUjZTQ1NqLWIyTHJRNFFUR2NvbE8yNWZxamFFQzdFNUsyQQ?oc=5",
-      "published_at": "Tue, 13 Oct 2026 23:57:37 GMT",
-      "id": "313a752951236467593c"
+      "source": "nguoiquansat.vn",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPcjlxYWdWdzEwUUxjOW1CYXFJTjBiaG1mR0lsMEx0WVM3MWwxSWlMY2ZNbnZjZjNlQnZuMzF4T1RteW1jNy1Zb21ZUG5HNi03TU1USHB4bjd6NzVQNGJhZnZHRk1YNlUwdC16X1loQmxmQ1B3Sjg4VDBxUGhyRGVEcjVtdFcxaFZMWV94djU2YmkzSkQxaWNTQ0JweUFMN1BxVGNGejNLV1JQUDdzLVE?oc=5",
+      "published_at": "Wed, 14 Oct 2026 12:00:01 GMT",
+      "id": "ea2b2bdae097383e9f63"
     },
     {
-      "title": "Sức mua bất động sản TP.HCM lao dốc, giá thứ cấp giảm sâu vì áp lực lãi vay",
-      "summary": "Sức mua bất động sản tại TP.HCM đang giảm mạnh, khiến giá bất động sản thứ cấp giảm sâu. Nguyên nhân là do áp lực lãi vay tăng cao.",
-      "tag": "Nhà ở",
-      "source": "Báo Dân Việt",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQZ1NKMF9aeXh6emtnUGpqenJFdmVLb0t6QzM3eHAtV3d6NEtoYmt5djVLTXBERXBTNE1VMFpLNmU3aXVmakRVaGpXMzdmeWhwZUMxZDk4ZXp0WkIySEhlR3pfSGNOWXNadFlwbHVMWEhDZ0lldnJ1Ml9sWlh3RlBTREdGYlFMenliV1BYWElwOG9ONHFKTDdBaDRqT2xzVFZlcXJvUWZ6X3BRdw?oc=5",
-      "published_at": "Wed, 14 Oct 2026 09:53:52 GMT",
-      "id": "5230df17d9f6b3bf671e"
+      "title": "Giá căn hộ TPHCM gần Metro tăng 2,4 lần - Nhịp sống kinh doanh",
+      "summary": "Giá căn hộ gần các dự án Metro ở TP.HCM đã tăng gấp 2,4 lần so với trước đây.",
+      "tag": "Căn hộ",
+      "source": "Nhịp sống kinh doanh",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPUTRIRXlJVjd1QXJ5bHVxZF9Nb2d5SEFpa0RFekUwS2xzSmJESWdTZmlfTWJFRGpjbDdpZkw5WHNDLUl1VllOWjNDN05ILXFPTkpNWG1MNDdudUM0ak5Jc01uVmNJM0Zpak9EQklkVmVPV3J3YVQ0UVY3aVNBX3pXUGRjVUt1UQ?oc=5",
+      "published_at": "Wed, 14 Oct 2026 15:20:14 GMT",
+      "id": "f57c8811b8f6886dc703"
     },
     {
-      "title": "Bất động sản TP.HCM 9 tháng thu 322.000 tỷ đồng, Thành phố cam kết vượt chỉ tiêu nhà ở xã hội",
-      "summary": "Trong 9 tháng, bất động sản TP.HCM thu được 322.000 tỷ đồng. Thành phố cam kết vượt chỉ tiêu nhà ở xã hội.",
+      "title": "Bất động sản TP.HCM 9 tháng thu 322.000 tỷ đồng, Thành phố cam kết vượt chỉ tiêu nhà ở xã hội - Báo Dân Việt",
+      "summary": "Trong 9 tháng đầu năm, doanh thu bất động sản TP.HCM đạt 322.000 tỷ đồng, và thành phố cam kết vượt chỉ tiêu nhà ở xã hội.",
       "tag": "Nhà ở",
       "source": "Báo Dân Việt",
       "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNU2ZHakl2M20tNmlrR1FYRTJYRm93MEticFMzaE9JbjF0cWI0ZGJtSWZEMFhKWTZjWVc0YmEzQ01LYWIyeEtPcF9WN3dNRllTUGNMQlZJQld3WlR1V0RRYjkwbG82Y2h1dW9WTjFJdVN3TENMM3NTTnFPbG5pazBPaWJJUGFhUllGUnlZMXV1UllQc292ZFdxRVQ0ay0xZ0J0R24tWm1DTzR2Wkc0c1NRWUkxb2ZSMS1VN3NYQlpfQ18?oc=5",
@@ -269,37 +269,37 @@
       "id": "b1d6058511fd9ac72e56"
     }
   ],
-  "updated_at": "14/10/2026 20:14",
+  "updated_at": "15/10/2026 01:06",
   "market_snapshot": {
-    "updated_at": "14/10/2026 20:14",
+    "updated_at": "15/10/2026 01:06",
     "gold": {
       "label": "Vàng thế giới",
-      "value": "4,106.70",
-      "numeric_value": 4106.7,
+      "value": "4,104.60",
+      "numeric_value": 4104.6,
       "previous_close": "4,177.30",
-      "change": "-70.60",
-      "change_pct": "-1.69%",
+      "change": "-72.70",
+      "change_pct": "-1.74%",
       "direction": "down",
       "unit": "USD/oz",
       "source": "Yahoo Finance · COMEX",
       "source_url": "https://finance.yahoo.com/quote/GC%3DF",
-      "updated_at": "14/10/2026 20:04",
-      "vnd_equivalent": "128.22 triệu đồng/lượng",
+      "updated_at": "15/10/2026 00:56",
+      "vnd_equivalent": "128.16 triệu đồng/lượng",
       "conversion_note": "Quy đổi từ giá quốc tế; chưa gồm chênh lệch SJC, thuế và phí."
     },
     "silver": {
       "label": "Bạc thế giới",
-      "value": "57.06",
-      "numeric_value": 57.065,
+      "value": "55.73",
+      "numeric_value": 55.73,
       "previous_close": "59.16",
-      "change": "-2.10",
-      "change_pct": "-3.54%",
+      "change": "-3.43",
+      "change_pct": "-5.80%",
       "direction": "down",
       "unit": "USD/oz",
       "source": "Yahoo Finance · COMEX",
       "source_url": "https://finance.yahoo.com/quote/SI%3DF",
-      "updated_at": "14/10/2026 20:04",
-      "vnd_equivalent": "47.51 triệu đồng/kg",
+      "updated_at": "15/10/2026 00:56",
+      "vnd_equivalent": "46.40 triệu đồng/kg",
       "conversion_note": "Quy đổi từ giá quốc tế; chưa gồm thuế, phí và chênh lệch bán lẻ."
     },
     "vnindex": {
@@ -325,14 +325,14 @@
       "unit": "điểm",
       "source": "TradingView · dữ liệu trễ khoảng 15 phút",
       "source_url": "https://www.tradingview.com/symbols/HOSE-VN30/",
-      "updated_at": "14/10/2026 20:14"
+      "updated_at": "15/10/2026 01:06"
     },
     "disclaimer": "Giá Vàng/Bạc là chuẩn quốc tế COMEX; số VND là quy đổi tham khảo, không phải giá bán lẻ SJC. VN30 có thể trễ khoảng 15 phút."
   },
   "real_estate_market": {
-    "refresh_key": "2026-10-14",
-    "updated_at": "14/10/2026 02:57",
-    "next_update": "15/10/2026",
+    "refresh_key": "2026-10-15",
+    "updated_at": "15/10/2026 01:09",
+    "next_update": "16/10/2026",
     "methodology": "Trung bình mẫu được tính từ giá phổ biến của các dự án đại diện trên OneHousing; không phải giá giao dịch công chứng của toàn bộ khu vực. Hệ thống kiểm tra lại một lần mỗi ngày.",
     "city_benchmark": {
       "label": "Căn hộ sơ cấp khu trung tâm TP.HCM",
@@ -413,7 +413,7 @@
         "source": "OneHousing",
         "source_url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Chung-cu-Khang-Gia-Tan-Huong.500",
         "source_period": "10/2026",
-        "checked_at": "14/10/2026 02:57",
+        "checked_at": "15/10/2026 01:09",
         "is_fallback": false
       },
       {
@@ -435,7 +435,7 @@
         "source": "OneHousing",
         "source_url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Chung-cu-Melody-Residences.713",
         "source_period": "10/2026",
-        "checked_at": "14/10/2026 02:57",
+        "checked_at": "15/10/2026 01:09",
         "is_fallback": false
       },
       {
@@ -457,7 +457,7 @@
         "source": "OneHousing",
         "source_url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Chung-cu-IDICO-Tan-Phu.493",
         "source_period": "10/2026",
-        "checked_at": "14/10/2026 02:57",
+        "checked_at": "15/10/2026 01:09",
         "is_fallback": false
       },
       {
@@ -479,7 +479,7 @@
         "source": "OneHousing",
         "source_url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Chung-cu-Q7-Saigon-Riverside.355",
         "source_period": "10/2026",
-        "checked_at": "14/10/2026 02:57",
+        "checked_at": "15/10/2026 01:09",
         "is_fallback": false
       },
       {
@@ -501,7 +501,7 @@
         "source": "OneHousing",
         "source_url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Canh-Vien-3.644",
         "source_period": "10/2026",
-        "checked_at": "14/10/2026 02:57",
+        "checked_at": "15/10/2026 01:09",
         "is_fallback": false
       },
       {
@@ -523,7 +523,7 @@
         "source": "OneHousing",
         "source_url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Vinhomes-Grand-Park.1012",
         "source_period": "10/2026",
-        "checked_at": "14/10/2026 02:57",
+        "checked_at": "15/10/2026 01:09",
         "is_fallback": false
       },
       {
@@ -545,7 +545,7 @@
         "source": "OneHousing",
         "source_url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Masteri-Thao-Dien.946",
         "source_period": "10/2026",
-        "checked_at": "14/10/2026 02:57",
+        "checked_at": "15/10/2026 01:09",
         "is_fallback": false
       },
       {
@@ -567,7 +567,7 @@
         "source": "OneHousing",
         "source_url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Chung-cu-City-Garden.1075",
         "source_period": "10/2026",
-        "checked_at": "14/10/2026 02:57",
+        "checked_at": "15/10/2026 01:09",
         "is_fallback": false
       },
       {
@@ -589,7 +589,7 @@
         "source": "OneHousing",
         "source_url": "https://onehousing.vn/phan-tich/du-an/can-ho-chung-cu-du-an-Vinhomes-Central-Park.813",
         "source_period": "10/2026",
-        "checked_at": "14/10/2026 02:57",
+        "checked_at": "15/10/2026 01:09",
         "is_fallback": false
       }
     ],
@@ -672,18 +672,18 @@
     "disclaimer": "Dữ liệu chỉ để tham khảo, không phải định giá hay khuyến nghị đầu tư. Trước khi đặt cọc cần kiểm tra pháp lý, quy hoạch, phí bảo trì, phí quản lý và giá giao dịch thực tế."
   },
   "investment_overview": {
-    "updated_at": "14/10/2026 20:14",
-    "summary": "Tại mốc 14/10/2026 20:14, vàng quốc tế giảm -1.69%, bạc giảm -3.54%; VN-Index giảm -0.85% và VN30 giảm -0.46% so với phiên trước. Mốc tham khảo căn hộ sơ cấp khu trung tâm TP.HCM hiện ở 102 triệu đồng/m² (-1,2% QoQ). Hãy đọc từng chuyên mục để đối chiếu động lực giá, tin mới và rủi ro riêng của từng loại tài sản.",
+    "updated_at": "15/10/2026 01:06",
+    "summary": "Tại mốc 15/10/2026 01:06, vàng quốc tế giảm -1.74%, bạc giảm -5.80%; VN-Index giảm -0.85% và VN30 giảm -0.46% so với phiên trước. Mốc tham khảo căn hộ sơ cấp khu trung tâm TP.HCM hiện ở 102 triệu đồng/m² (-1,2% QoQ). Hãy đọc từng chuyên mục để đối chiếu động lực giá, tin mới và rủi ro riêng của từng loại tài sản.",
     "items": [
       {
         "key": "gold",
         "label": "Vàng",
-        "status": "giảm -1.69%"
+        "status": "giảm -1.74%"
       },
       {
         "key": "silver",
         "label": "Bạc",
-        "status": "giảm -3.54%"
+        "status": "giảm -5.80%"
       },
       {
         "key": "stocks",
@@ -703,190 +703,213 @@
       "label": "Toàn cảnh",
       "direction": "mixed",
       "confidence": 70,
-      "summary": "Cục Fed đang cân nhắc tăng lãi suất do CPI 3,7% và dữ liệu lạm phát mạnh, trong khi thị trường chứng khoán Việt Nam vẫn phân tán và giá vàng ổn định. Các tín hiệu ngắn hạn cho thấy lạm phát vẫn cao, Fed có thể tăng lãi suất sớm, nhưng thị trường vẫn chưa quyết định. Dài hạn, lạm phát có thể giảm dần nhưng vẫn ở mức cao, Fed có thể duy trì chính sách thắt chặt.",
+      "summary": "Trong tuần qua, lạm phát Mỹ vẫn chịu áp lực tăng do giá nhiên liệu, khiến các nhà hoạch định chính sách tiền tệ có xu hướng thắt chặt. Tuy nhiên, dự báo CPI giảm nhẹ và nhận định của một quan chức Fed cho thấy kỳ vọng lạm phát có thể ổn định, tạo ra tín hiệu hỗ trợ cho thị trường tài chính. Ở Việt Nam, VN-Index đang trong giai đoạn điều chỉnh dưới áp lực bán từ các cổ phiếu trụ, trong khi tỷ giá USD/VND duy trì mức ổn định nhưng có dấu hiệu tăng nhẹ. Ngành AI tiếp tục thu hút đơn đặt hàng mạnh mẽ, đặc biệt từ ASML, nhưng cạnh tranh và lo ngại chi tiêu AI gây biến động. Logistics đang có các dự án mở rộng cảng và đầu tư hạ tầng, nhưng chỉ số dịch vụ vận tải hàng hóa giảm, phản ánh áp lực ngắn hạn trên chuỗi cung ứng.",
       "short_term": {
         "horizon": "1-4 tuần",
         "outlook": "mixed",
-        "summary": "Trong 1-4 tuần tới, Fed có thể duy trì hoặc tăng lãi suất nếu CPI tiếp tục cao; thị trường chứng khoán Việt Nam có thể giữ mức ổn định hoặc giảm nhẹ do sự phân tán ngành. Điều kiện thay đổi là dữ liệu CPI giảm hoặc Fed giảm kỳ vọng tăng lãi suất."
+        "summary": "Nếu CPI tháng 10 cho thấy mức tăng cao hơn dự báo, Fed có thể duy trì hoặc tăng lãi suất, kéo dài áp lực lạm phát. VN-Index có thể tiếp tục giảm nếu không có dòng tiền hỗ trợ, trong khi USD/VND có khả năng tăng nhẹ do lãi suất Mỹ cao hơn. AI sẽ tiếp tục nhận được đơn đặt hàng lớn, nhưng bất ổn về cạnh tranh có thể làm giá cổ phiếu dao động. Logistics sẽ chịu ảnh hưởng từ giảm chỉ số dịch vụ vận tải, nhưng các dự án mở rộng cảng có thể tạo đà tăng trong tuần tới."
       },
       "long_term": {
         "horizon": "3-12 tháng",
         "outlook": "mixed",
-        "summary": "Trong 3-12 tháng, lạm phát có thể giảm dần nhưng vẫn vượt mục tiêu 2%; Fed có thể duy trì lãi suất cao. Thị trường Việt Nam sẽ phụ thuộc vào xu hướng lạm phát toàn cầu và chính sách tiền tệ nội địa. Rủi ro là lạm phát kéo dài hoặc Fed giảm lãi suất nhanh."
+        "summary": "Trong dài hạn, nếu lạm phát Mỹ duy trì mức cao, Fed có thể tiếp tục chuỗi tăng lãi suất, gây áp lực lên các thị trường tài chính toàn cầu. VN-Index có thể phục hồi nếu nền kinh tế trong nước tăng trưởng và dòng vốn ngoại nhập tăng, nhưng rủi ro từ biến động tiền tệ và lãi suất vẫn tồn tại. Ngành AI dự kiến sẽ mở rộng mạnh mẽ nhờ nhu cầu chip AI, nhưng cạnh tranh từ Trung Quốc và các lo ngại chi tiêu có thể làm giảm tốc độ tăng trưởng. Logistics sẽ được hưởng lợi từ các dự án hạ tầng và đầu tư cảng, nhưng cần giải quyết giảm chỉ số dịch vụ vận tải và chi phí năng lượng để duy trì đà tăng."
       },
       "drivers": [
         {
-          "text": "Chính sách tiền tệ Fed",
+          "text": "Lạm phát Mỹ tăng do giá nhiên liệu",
           "article_ids": [
-            "fdadce39339e52e54e8d",
-            "31c66803cd793d977886",
-            "d79587617f35f25696b3"
+            "817deacbca3c9c2809d5",
+            "7f4f32875fc81282886c"
           ]
         },
         {
-          "text": "Dữ liệu CPI và lạm phát",
+          "text": "Fed thắt chặt tiền tệ",
           "article_ids": [
-            "7f4f32875fc81282886c",
-            "45dd9c3fcf8d243656ae",
-            "2d1b7d08bb4ee5b00518"
+            "fdadce39339e52e54e8d",
+            "31c66803cd793d977886",
+            "4de9eca5eb9cf980cc36"
+          ]
+        },
+        {
+          "text": "VN-Index áp lực điều chỉnh",
+          "article_ids": [
+            "b75b20c604ad95025d1d",
+            "7ebc87f88b1751afe2a3"
+          ]
+        },
+        {
+          "text": "Nhu cầu chip AI tăng mạnh",
+          "article_ids": [
+            "54a3d71772a936d888cb",
+            "28bd04304b5fe18569f4"
+          ]
+        },
+        {
+          "text": "Đầu tư hạ tầng logistics",
+          "article_ids": [
+            "341608bbd85a26c372d0",
+            "c51db01060ea56df64fe"
           ]
         }
       ],
       "watch_next": [
-        "Dự báo CPI tháng 10",
-        "Biên bản cuộc họp Fed",
-        "Dữ liệu lạm phát tháng 10"
+        "Kết quả CPI tháng 10 và phản ứng Fed",
+        "Mức hỗ trợ và kháng cự của VN-Index",
+        "Lượng đơn đặt hàng AI chip và xu hướng cạnh tranh"
       ],
       "article_count": 48
     },
     "sections": {
       "macro": {
         "label": "Vĩ mô",
-        "direction": "mixed",
-        "confidence": 80,
-        "summary": "CPI 3,7% và dữ liệu lạm phát mạnh khiến Fed cân nhắc tăng lãi suất. Các quan chức Fed nhấn mạnh cần thắt chặt nhanh để kiểm soát lạm phát, trong khi một quan chức giảm kỳ vọng tăng lãi suất, làm giá vàng ổn định. Thị trường tài chính đang theo dõi sát dữ liệu CPI và quyết định của Fed.",
+        "direction": "up",
+        "confidence": 75,
+        "summary": "CPI tháng 9 cho thấy lạm phát tăng 3,7% nhờ giá nhiên liệu, vượt dự báo và tạo áp lực lên Fed. Reuters và CNBC đưa tin Fed có khả năng tăng lãi suất để kiềm chế lạm phát, trong khi một số dự báo cho thấy tốc độ lạm phát có thể giảm nhẹ. Các quan chức Fed như Waller và Hammack nhấn mạnh việc duy trì chính sách thắt chặt, nhưng cũng có tín hiệu ổn định từ một quan chức Fed khiến giá vàng không biến động.",
         "short_term": {
           "horizon": "1-4 tuần",
           "outlook": "mixed",
-          "summary": "Trong 1-4 tuần tới, Fed có thể duy trì hoặc tăng lãi suất nếu CPI tiếp tục cao; dữ liệu CPI tháng 10 sẽ quyết định hướng đi."
+          "summary": "Nếu dữ liệu CPI tháng 10 cho thấy mức tăng cao hơn dự báo, Fed có thể duy trì hoặc tăng lãi suất, kéo dài áp lực lạm phát. Ngược lại, nếu CPI giảm, thị trường có thể kỳ vọng giảm tốc độ tăng lãi suất, hỗ trợ các tài sản rủi ro."
         },
         "long_term": {
           "horizon": "3-12 tháng",
           "outlook": "mixed",
-          "summary": "Trong 3-12 tháng, lạm phát có thể giảm dần nhưng vẫn cao, Fed có thể duy trì lãi suất cao. Rủi ro là lạm phát kéo dài hoặc Fed giảm lãi suất nhanh."
+          "summary": "IMF dự báo lạm phát Mỹ sẽ tăng trong năm 2026 trước khi giảm vào năm tới, cho thấy áp lực lạm phát có thể kéo dài. Nếu Fed tiếp tục thắt chặt, chi phí vay sẽ cao, ảnh hưởng đến tiêu dùng và đầu tư. Ngược lại, nếu lạm phát giảm ổn định, Fed có thể dừng tăng lãi suất, tạo môi trường tài chính thuận lợi hơn."
         },
         "drivers": [
           {
-            "text": "CPI 3,7%",
+            "text": "CPI tăng mạnh",
             "article_ids": [
+              "817deacbca3c9c2809d5",
               "7f4f32875fc81282886c"
             ]
           },
           {
-            "text": "Quan chức Fed giảm kỳ vọng tăng lãi suất",
+            "text": "Fed thắt chặt tiền tệ",
             "article_ids": [
-              "929c1b297bdb8aadc7cc"
+              "fdadce39339e52e54e8d",
+              "31c66803cd793d977886",
+              "4de9eca5eb9cf980cc36"
             ]
           }
         ],
         "watch_next": [
-          "CPI tháng 10",
-          "Biên bản cuộc họp Fed",
-          "Dự báo lạm phát 2026"
+          "Báo cáo CPI tháng 10",
+          "Tuyên bố chính sách của Fed"
         ],
         "article_count": 12
       },
       "vietnam": {
         "label": "Việt Nam",
-        "direction": "mixed",
-        "confidence": 60,
-        "summary": "VN-Index gần 1700 điểm, cổ phiếu thép tăng mạnh tạo chênh lệch ngành. Tỷ giá USD/VND ổn định quanh 25,9, nhưng đồng USD đang tăng do chính sách Fed thận trọng. Thị trường vẫn thận trọng, chưa có động lực tăng mạnh.",
+        "direction": "down",
+        "confidence": 70,
+        "summary": "VN-Index đang trong giai đoạn điều chỉnh, dao động quanh 1.720-1.735 điểm và chưa tìm được động lực tăng, do áp lực bán từ các cổ phiếu trụ. Đồng USD/VND duy trì mức 25,886-25,897 đồng, với xu hướng tăng nhẹ do chính sách tiền tệ thận trọng của Fed. Các quyết định về ngoại hối và LDR của NHNN cũng tạo ra môi trường tài chính ổn định nhưng chưa đủ để kích thích thị trường chứng khoán.",
         "short_term": {
           "horizon": "1-4 tuần",
-          "outlook": "mixed",
-          "summary": "Trong 1-4 tuần tới, VN-Index có thể giữ mức ổn định hoặc giảm nhẹ do sự phân tán ngành; đồng USD có thể tiếp tục tăng nếu Fed duy trì chính sách thắt chặt."
+          "outlook": "negative",
+          "summary": "Nếu không có dòng tiền ngoại nhập hoặc hỗ trợ chính sách tài khóa, VN-Index có khả năng tiếp tục giảm hoặc duy trì mức điều chỉnh. Tỷ giá USD/VND có thể tăng nhẹ nếu lãi suất Mỹ duy trì cao, gây áp lực lên các doanh nghiệp nhập khẩu."
         },
         "long_term": {
           "horizon": "3-12 tháng",
           "outlook": "mixed",
-          "summary": "Trong 3-12 tháng, VN-Index phụ thuộc vào xu hướng lạm phát toàn cầu và chính sách tiền tệ nội địa. Nếu Fed duy trì lãi suất cao, đồng USD sẽ mạnh, ảnh hưởng đến xuất khẩu."
+          "summary": "Trong dài hạn, nếu nền kinh tế Việt Nam duy trì tăng trưởng và các dự án hạ tầng được thực hiện, VN-Index có thể hồi phục. Tuy nhiên, rủi ro từ biến động tiền tệ và lãi suất toàn cầu vẫn là yếu tố tiêu cực."
         },
         "drivers": [
           {
-            "text": "Tỷ giá USD/VND",
+            "text": "Áp lực bán cổ phiếu trụ",
             "article_ids": [
-              "2560a832f38aa7d75b76",
-              "30107b577f108a7d2325"
+              "b75b20c604ad95025d1d",
+              "7ebc87f88b1751afe2a3"
             ]
           },
           {
-            "text": "Hiệu suất ngành thép",
+            "text": "USD/VND ổn định nhưng có xu hướng tăng",
             "article_ids": [
-              "1b78269ece7b6b18d9e1"
+              "2560a832f38aa7d75b76",
+              "bb62de26e1e0759590d5"
             ]
           }
         ],
         "watch_next": [
-          "Dự báo CPI tháng 10",
-          "Quyết định chính sách tiền tệ nội địa",
-          "Tin tức ngành thép"
+          "Dữ liệu giao dịch VN-Index tuần tới",
+          "Biến động tỷ giá USD/VND"
         ],
         "article_count": 12
       },
       "ai": {
         "label": "Trí tuệ nhân tạo",
         "direction": "mixed",
-        "confidence": 75,
-        "summary": "Nhu cầu chip AI vẫn mạnh với ASML nhận đơn đặt hàng lớn và Microsoft ra mắt chip nội bộ. Tuy nhiên, cạnh tranh từ Trung Quốc và lo ngại chi tiêu AI làm giảm cổ phiếu chip. Thị trường AI đang chuyển đổi, nhưng vẫn có rủi ro về chi phí và cạnh tranh.",
+        "confidence": 80,
+        "summary": "Nhu cầu chip AI đang bùng nổ, với ASML nhận được đơn đặt hàng mạnh mẽ và nâng dự báo doanh thu. Tuy nhiên, cạnh tranh từ Trung Quốc và lo ngại chi tiêu AI đã khiến một số cổ phiếu chip giảm. Microsoft công bố chip nội bộ, tạo ra áp lực cạnh tranh cho Nvidia. Các nhà đầu tư đang cân nhắc giữa tiềm năng tăng trưởng dài hạn và rủi ro ngắn hạn do biến động thị trường.",
         "short_term": {
           "horizon": "1-4 tuần",
           "outlook": "mixed",
-          "summary": "Trong 1-4 tuần tới, cổ phiếu chip có thể tiếp tục dao động do tin tức về đơn đặt hàng ASML và Microsoft. Nếu chi tiêu AI giảm, cổ phiếu chip có thể giảm."
+          "summary": "Nếu các đơn đặt hàng AI tiếp tục tăng, cổ phiếu chip có thể hồi phục. Ngược lại, nếu lo ngại chi tiêu AI và cạnh tranh từ Trung Quốc gia tăng, giá cổ phiếu có thể giảm."
         },
         "long_term": {
           "horizon": "3-12 tháng",
-          "outlook": "mixed",
-          "summary": "Trong 3-12 tháng, nhu cầu chip AI có thể tăng do ứng dụng rộng rãi, nhưng cạnh tranh và chi phí có thể làm giảm lợi nhuận. Rủi ro là chi tiêu AI giảm do chi phí cao."
+          "outlook": "positive",
+          "summary": "Trong 12 tháng tới, xu hướng đầu tư vào hạ tầng AI và nhu cầu chip cao sẽ tiếp tục thúc đẩy doanh thu cho các nhà sản xuất như ASML và Nvidia. Rủi ro chính là sự can thiệp của chính phủ và cạnh tranh giá từ các nhà sản xuất Trung Quốc."
         },
         "drivers": [
           {
-            "text": "Đơn đặt hàng ASML",
+            "text": "Đơn đặt hàng mạnh mẽ của ASML",
             "article_ids": [
-              "28bd04304b5fe18569f4"
+              "28bd04304b5fe18569f4",
+              "54a3d71772a936d888cb"
             ]
           },
           {
-            "text": "Chiến lược chip nội bộ của Microsoft",
+            "text": "Cạnh tranh và lo ngại chi tiêu AI",
             "article_ids": [
-              "a7f9d8ba2d720a436311"
+              "130e342db268bb055352",
+              "bf85c00017ab893f3758"
             ]
           }
         ],
         "watch_next": [
-          "Kết quả báo cáo ASML",
-          "Ra mắt chip mới của Microsoft",
-          "Tin tức cạnh tranh chip AI"
+          "Báo cáo doanh thu quý của các công ty chip AI",
+          "Thông tin về quy định công nghệ AI ở Trung Quốc"
         ],
         "article_count": 12
       },
       "logistics": {
         "label": "Logistics",
         "direction": "mixed",
-        "confidence": 70,
-        "summary": "Chỉ số TSI giảm 0,4% tháng 8/2026, phản ánh nhu cầu vận tải giảm. Các vấn đề như tắc nghẽn cảng, quy định mới và chi phí nhiên liệu tăng làm tăng chi phí logistics. Tuy nhiên, BYD mở rộng tàu EV và các dự án giao hàng bằng đường thủy có thể giảm chi phí trong dài hạn.",
+        "confidence": 65,
+        "summary": "Các dự án mở rộng cảng như Tân Cảng Sài Gòn và tài trợ liên bang cho cảng Wilmington cho thấy xu hướng đầu tư hạ tầng mạnh mẽ. Tuy nhiên, chỉ số dịch vụ vận tải hàng hóa giảm 0,4% so với tháng trước và 3% so với cùng kỳ năm ngoái, phản ánh áp lực ngắn hạn trên chuỗi cung ứng. Giá cước vận chuyển dầu Urals tăng kỷ lục cũng làm tăng chi phí logistics toàn cầu.",
         "short_term": {
           "horizon": "1-4 tuần",
           "outlook": "mixed",
-          "summary": "Trong 1-4 tuần tới, khối lượng vận tải có thể tiếp tục giảm do TSI giảm và chi phí nhiên liệu tăng. Các công ty logistics có thể điều chỉnh giá cước."
+          "summary": "Nếu các dự án mở rộng cảng tiến triển nhanh, khả năng giảm tắc nghẽn và tăng năng suất sẽ hỗ trợ thị trường logistics. Ngược lại, giảm chỉ số dịch vụ vận tải và giá cước năng lượng cao có thể kéo dài áp lực chi phí."
         },
         "long_term": {
           "horizon": "3-12 tháng",
-          "outlook": "mixed",
-          "summary": "Trong 3-12 tháng, cải thiện hạ tầng và quy định mới có thể giảm chi phí logistics, nhưng tắc nghẽn cảng và chi phí nhiên liệu vẫn là rủi ro. Rủi ro là chi phí tăng nhanh hơn nhu cầu."
+          "outlook": "positive",
+          "summary": "Đầu tư hạ tầng cảng và các sáng kiến như giao hàng bằng đường thủy ở New York sẽ nâng cao hiệu quả chuỗi cung ứng, giảm chi phí và thời gian vận chuyển. Rủi ro chính là biến động năng lượng và các rào cản thương mại."
         },
         "drivers": [
           {
-            "text": "Chỉ số TSI giảm",
+            "text": "Mở rộng cảng và đầu tư hạ tầng",
             "article_ids": [
-              "cc8836b4b68dc9753420"
+              "341608bbd85a26c372d0",
+              "c51db01060ea56df64fe"
             ]
           },
           {
-            "text": "Tắc nghẽn cảng Tây Phi",
+            "text": "Chỉ số dịch vụ vận tải giảm",
             "article_ids": [
-              "876737808e6b4c08eee0"
+              "cc8836b4b68dc9753420"
             ]
           }
         ],
         "watch_next": [
-          "TSI tháng 9",
-          "Cập nhật tình trạng cảng Tây Phi",
-          "Quy định mới về bưu chính và logistics"
+          "Báo cáo chỉ số dịch vụ vận tải tháng tới",
+          "Tiến độ dự án mở rộng cảng"
         ],
         "article_count": 12
       }
     },
-    "generated_at": "14/10/2026 20:17",
+    "generated_at": "15/10/2026 01:10",
     "window_days": 7,
     "disclaimer": "Phân tích do AI tổng hợp từ các bài báo đã lưu, không phải tư vấn đầu tư."
   }
