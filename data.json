@@ -2,7 +2,7 @@
   "tickers": {
     "fed_rate": "Chưa có dữ liệu",
     "cpi": "3.7%",
-    "usd_vnd": "25,847",
+    "usd_vnd": "25,831",
     "vnindex": "1,760.63",
     "vnindex_change": "+21.96",
     "vnindex_change_pct": "+1.26%",
@@ -12,8 +12,17 @@
   },
   "macro": [
     {
+      "title": "Lạm phát Mỹ không tăng hay giảm đáng kể, nhưng người tiêu dùng vẫn ổn",
+      "summary": "Bài viết cho biết lạm phát ở Mỹ vẫn duy trì mức ổn định, không có xu hướng tăng mạnh hay giảm sâu. Người tiêu dùng vẫn duy trì chi tiêu mà không bị ảnh hưởng lớn.",
+      "tag": "Vĩ mô / FED / Lạm phát",
+      "source": "The Overshoot",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5qN0xzTlFoQTBld3pORlF4RW5NVVgzdmxXR3NadW1NZUpHckN4WURXTHZuc2dUZ0s0RVRaWUtQa1haZ0VsN0gyWW9SYk80aXVNUlk4UHpPUXVmc2l1UHV1aFVoaVhiRXBJaER5RHJR?oc=5",
+      "published_at": "Thu, 22 Oct 2026 21:08:06 GMT",
+      "id": "dca946c66daa8cdcf253"
+    },
+    {
       "title": "Lạm phát dai dẳng đang thử thách quyết tâm của Fed",
-      "summary": "Bài viết đề cập việc lạm phát kéo dài đang đặt ra thách thức cho quyết tâm của Cục Dự trữ Liên bang Mỹ. Điều này có thể ảnh hưởng đến các quyết định chính sách tiền tệ trong thời gian tới.",
+      "summary": "Bài viết phân tích cách lạm phát kéo dài đặt áp lực lên Cục Dự trữ Liên bang trong việc quyết định chính sách tiền tệ. Fed phải cân nhắc giữa việc kiềm chế lạm phát và hỗ trợ tăng trưởng.",
       "tag": "Vĩ mô / FED / Lạm phát",
       "source": "Bloomberg.com",
       "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPQkUxWWNmVENYWHNyd3ZtSlV1SGVPSGpFdXl0dm5GWHpVVktsMi1wZ3RmdG4xdkV4SUpmaVMxLTFhQkpDLUs0VDdWOXZnVGZidXVZRGdkOUFNS0E4Tmd2Z3VLZ0wyUjY3SGptbjZnLWp5TUVJekdodHdId0trTWFWUTZQT09YVWluWkdCNFBIaFhfYjZRQkRfNEVRS21PV181TlQyaklJNVM1Qm8?oc=5",
@@ -21,57 +30,57 @@
       "id": "7d2f738fed0bada57d2d"
     },
     {
-      "title": "Dữ liệu lạm phát mới mang tin xấu cho Chủ tịch Fed Kevin Warsh và thị trường chứng khoán",
-      "summary": "Các số liệu lạm phát mới nhất được cho là không thuận lợi cho Chủ tịch Fed Kevin Warsh. Đồng thời, chúng có thể gây áp lực tiêu cực lên thị trường chứng khoán.",
+      "title": "Fed nhận tín hiệu lạm phát mới từ doanh nghiệp Mỹ",
+      "summary": "Theo báo cáo, các doanh nghiệp Mỹ cung cấp dữ liệu mới cho thấy áp lực lạm phát vẫn còn tồn tại. Fed có thể dựa vào những tín hiệu này để điều chỉnh lãi suất.",
       "tag": "Vĩ mô / FED / Lạm phát",
-      "source": "The Motley Fool",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPQUhJdWYzN2t5ZVFabzhzLVVhakFaQ2xWUHVxV21uZ0Z4U0FLX0FDSk9RdzFkSkZzNjZ3X1lObHRMWnhRM3dnTUFDNXpfWTJieWdIeXVyWVVwdnAwVy1zNDYwSFk3LWh2dDRBM2YtZkhhOVNtcVBsLXY1U3lwNGp4LWVfWm90OXdzc1pQc1RkYnJwUFVBaFE?oc=5",
-      "published_at": "Thu, 22 Oct 2026 09:23:00 GMT",
-      "id": "72438f2c131e1743d057"
-    },
-    {
-      "title": "Vàng giảm xuống mức thấp nhất hơn hai tuần khi giá dầu tăng gây lo ngại lạm phát",
-      "summary": "Giá vàng đã tụt xuống mức thấp nhất trong hơn hai tuần qua. Sự tăng giá dầu đang làm dấy lên lo ngại về áp lực lạm phát.",
-      "tag": "Vĩ mô / FED / Lạm phát",
-      "source": "CNBC",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxObWJKYU5TYWtkeUpGRDFJXzlRYVZZbERKVmJWYmVNdzRfdDg5cnlINkI1ZDlFSi1acXc1UW5tYTVGT1FnalVqUmpTdG9Jck1qN1BSU2hCSkVQM1pkUXZaQmx1MVZIdm8wZDIwdTJMbHA3U01heUJ5Q0hrM3lxeFhkbWllTnA4Q2tCWHhWaGZTZjhUSFQ0dGFWenNYNUdQM1AtaGNN0gGoAUFVX3lxTE1vRnBLcjVWQXZFcGtrMExoemFzRGgtZ2R4QVBlNWluU2o2RVJoblE1eVkzS05Pb0tGWnBjcmEyczhjMWtETTFhVVVtNHdCbndpS2xaMGVIeFhPazhPMzFaLWUxemV6VUdLalVFZkU5c0lTdjQxUWNKa1JnX2F3UkE2elJ4YWlGNC1aclFzcWdlZWlrZkRBUTdWMHlDMzE1bm9rMUpVWDR1MQ?oc=5",
-      "published_at": "Thu, 22 Oct 2026 10:26:11 GMT",
-      "id": "c73fa6e533275048449a"
+      "source": "Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNeVNBVnpVdkszUXUyZHdhYk40LThqODFQRHFpT1NMcWN3NXlmRTE2QnA3WmtvQ2ZlNERQQk5fVW1WMV9QTTQyN3VCOHVTRzd5di1uWUlKandpa2dpeDJEVUVOWDBQMy1RN0o1c3hHMlRpVTZqQWFsVkhPTnljNWlWNDcxWTlHRDZqa2hDWDdQdUFKLU1JUWlVVUdFaXU?oc=5",
+      "published_at": "Wed, 21 Oct 2026 20:36:57 GMT",
+      "id": "36429e5f30d01aa7fb23"
     }
   ],
   "vietnam": [
     {
-      "title": "VN‑Index tăng 20 điểm nhờ lực đẩy từ cổ phiếu Vingroup",
-      "summary": "VN‑Index đã tăng 20 điểm nhờ sự tăng giá của cổ phiếu Vingroup. Động lực này giúp chỉ số thị trường chứng khoán Việt Nam tiếp tục lên dốc.",
+      "title": "VN-Index tăng mạnh, hướng đến kháng cự 1800 điểm",
+      "summary": "VN-Index đã tăng mạnh, tiến gần mức kháng cự 1.800 điểm. Chỉ số hiện đang ở 1.760,63, cho thấy xu hướng tăng tiếp tục.",
       "tag": "Việt Nam / Tỷ giá / Thị trường",
-      "source": "thitruongtaichinhtiente.vn",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOTUtxY21lZl9QTkpRdmZieml2ZTN6ZG1jcFJROGl5YXZCQkVaQkhvLXFDU1RlN1FRQkEtV2swWmZpWHBjNU53T1Bua2tVNXJYdEUxYXhNR1pTREpCb0s3VXBSQ3V2TFE4dUU5XzRRT3A0NDJTa1pPN3g5X19KOGZDMG1TZS1rRXFfNkxtaGFwRlhlWUZObkJHYUpLTDROU0RpanRaRjB3?oc=5",
-      "published_at": "Thu, 22 Oct 2026 13:04:01 GMT",
-      "id": "1e8c64b4eae3f2e5dad9"
+      "source": "VnEconomy",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9ESW5TV1dNcjVwR2E5cmcxZjVJcURaVHV3Q0hQdXJrQVlseGJoblF6RnZXNE5od0RyLXlWaWQ5dGJpSHBhbi1QUmF6dDkwWFF1MWZ6OE12OVNLZUhWR2ZvVGotMVJ3UmFOVWp1VFlreFdUb3RfdHp2dEdOam0?oc=5",
+      "published_at": "Fri, 23 Oct 2026 00:19:27 GMT",
+      "id": "c12d1a731d3ff1842fee"
     },
     {
-      "title": "VN‑Index thăng hoa hơn 22 điểm dù thị trường châu Á giảm mạnh",
-      "summary": "VN‑Index đã tăng hơn 22 điểm trong khi các thị trường châu Á đang giảm mạnh. Điều này cho thấy sức mạnh nội địa của thị trường chứng khoán Việt Nam.",
+      "title": "Tỷ giá ngoại tệ, tỷ giá USD/VND hôm nay 23/10: Tình hình Pháp và đầu tư AI tại Mỹ tác động trái chiều đến đồng USD",
+      "summary": "Ngày 23/10, tỷ giá USD/VND được niêm yết ở mức 25.831 đồng. Các yếu tố quốc tế như tình hình Pháp và đầu tư AI tại Mỹ ảnh hưởng đến đồng USD.",
+      "tag": "Việt Nam / Tỷ giá / Thị trường",
+      "source": "Báo Thế giới và Việt Nam",
+      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxQX3M3WHBkRWNqVjhKSzFyVU11UW5DRm5rNjhJR25tVWsxdDdFZUh5M0UyYm9LaExUQWhjcHh4VVM1d05sMElQbk90ZWpMQ2RwLTJ1R1lXUlVSd1dFQnZQa0RJVmVBWVFVWlZNeDA5OHhqSnludlkwUlNxVDBKc1paLVVEVk92aVRlNWRKUUJPajRkaFNYcm43ejI4U2twcHplS3lMV2hSejZSMy1KVWVVMXpSZ3duZ1hXMjZ1bkpWeWtPcWdNQ2R2OWd6d0x3R2tPTF9WSEhDYjJjODBxTDZteUNkcEFWYnJ4cUE?oc=5",
+      "published_at": "Fri, 23 Oct 2026 01:02:10 GMT",
+      "id": "4b76c975d28b2fab9255"
+    },
+    {
+      "title": "VN-Index thăng hoa hơn 22 điểm dù chứng khoán châu Á đỏ lửa",
+      "summary": "VN-Index tăng hơn 22 điểm trong khi thị trường châu Á đang giảm mạnh. Điều này cho thấy sức mạnh nội địa của thị trường chứng khoán Việt Nam.",
       "tag": "Việt Nam / Tỷ giá / Thị trường",
       "source": "Tuổi Trẻ",
       "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPOWgteTRxWEl1N3JXYnN4RFlfbWxFdTE2OHJSUnkycklHVFYzWUh3MGhrMUFjMThTUEpPYU5yVmR6UkpzUncwcG5mZVJuUnktVVJsZXp5S2lpZE9oY1VDTVlCYjhBUEdRX20wekhqcXhEZDNhcW5ZRUxtX0liUmc4bS14Wl8wdlZIQk44enVKV21UWVdFRldZbDYtWF9UTWxzZ1Nv?oc=5",
       "published_at": "Thu, 22 Oct 2026 08:43:00 GMT",
       "id": "1365b2fdf3adf2ed6113"
-    },
-    {
-      "title": "Chứng khoán ngày 22/10: VN‑Index tiếp tục tăng mạnh nhưng dòng tiền vẫn phân hóa",
-      "summary": "Vào ngày 22/10, VN‑Index tiếp tục tăng mạnh. Tuy nhiên, dòng tiền trên thị trường vẫn còn phân hóa giữa các nhóm cổ phiếu.",
-      "tag": "Việt Nam / Tỷ giá / Thị trường",
-      "source": "Thời báo Tài chính Việt Nam",
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOcXZ6eUdEenA0amh6cFlzd1ItZlVWRHFhcDlobVhyUldWNVZIZm9fTWlEbmczOFdVYTN0MTZBak5NRGljMmxEQUNJb3EtWGRUQ2Q5LVRKbjlZdHRzd2JYT1NIdWhoUnk4MHFXRnFHRlU4Z1VxZE5UZ2I4bFliRW5jVlE5Z1hmWXBNTkhtR245T2tRWjdKdFlURFpZeGltYW9YSU1hMEdMNDhvaGhOZE85bEV4N3VHZThKQUh5VjhyMGlsTjQ?oc=5",
-      "published_at": "Thu, 22 Oct 2026 10:39:20 GMT",
-      "id": "a7686421db391c140ef8"
     }
   ],
   "ai": [
     {
-      "title": "Cổ phiếu Meta và chip giảm khi giao dịch AI chịu áp lực: AlphaCheck",
-      "summary": "Cổ phiếu của Meta và các công ty chip đã giảm trong bối cảnh giao dịch liên quan đến AI gặp áp lực. Phân tích này được đưa ra bởi AlphaCheck.",
+      "title": "Chip AI của Google có thể trở thành doanh nghiệp trị giá 75 tỷ USD",
+      "summary": "Bài viết dự báo chip AI của Google có tiềm năng tạo ra doanh thu 75 tỷ USD. Điều này sẽ củng cố vị thế của Google trong lĩnh vực phần cứng AI.",
+      "tag": "Trí tuệ nhân tạo / Chip AI",
+      "source": "TheStreet",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxORUhjMHhGTklBWS1seUNHMmlFbHVwS2dPWG4xLW52Y0xoNUdRZWlQX0cwdm4tc3ZzZ29tYjluR2ZQVHA0TVFwSWpqbWQtM1lNMXdZYXFCX2NBem5DWkg5SnY0bWpYaFBvZ29LZjl1aWZfT25uZ210ZXRGQlhMSUk5YTg5N2E0N3hHVXlN?oc=5",
+      "published_at": "Fri, 23 Oct 2026 00:07:00 GMT",
+      "id": "cde418b3e103d6fa69f6"
+    },
+    {
+      "title": "Cổ phiếu Meta và chip giảm khi giao dịch AI chịu áp lực",
+      "summary": "Theo AlphaCheck, cổ phiếu của Meta và các công ty sản xuất chip đang giảm do áp lực trên thị trường AI. Nhà đầu tư đang thận trọng trong bối cảnh giá trị AI bị điều chỉnh.",
       "tag": "Trí tuệ nhân tạo / Chip AI",
       "source": "Yahoo Finance",
       "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQZ2ZfdGdfS21jbGZ2WDZCX241bWs2RTFmdnRFY1FCQVdsS0VLOTdFNk1relhYdHAxT3VrdUY1RzhfdlFtbGRkV3o5MzZVeG93WkxfNzFxczIxWDJOVEZEN0o2eXJiQUN2eGQxRUdNMkEtZm52RUdZTmFmdGJnVEl2YjV3djlkVzExVnJQMFMwRWM5eldrdFRiNnFHQVFQUzhUZWFYOVN0Wlk1Zk96aWdEQ2thRDM2NDVKRFZwNnB0QWdUMGhCQkRtUQ?oc=5",
@@ -79,28 +88,19 @@
       "id": "6b325ecffae8470e0d40"
     },
     {
-      "title": "‘Cơn ác mộng của Jensen’: Huawei, DeepSeek thu hẹp khoảng cách hệ sinh thái chip AI so với Nvidia",
-      "summary": "Huawei và DeepSeek đang thu hẹp khoảng cách trong hệ sinh thái chip AI so với Nvidia. Sự tiến bộ này được mô tả như một cơn ác mộng đối với Jensen Huang của Nvidia.",
+      "title": "Tại sao Nvidia cần CoreWeave",
+      "summary": "Bài viết giải thích nhu cầu của Nvidia trong việc hợp tác với CoreWeave để mở rộng khả năng tính toán AI. Sự hợp tác này có thể tăng cường hạ tầng đám mây AI.",
       "tag": "Trí tuệ nhân tạo / Chip AI",
-      "source": "South China Morning Post",
-      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNMUwwNEw5d0lLX3hlYkpFR1lpRk1MX2JRa2hvLV9yb2hrTEpQa3JoZUlEREQ1bXhhN1c3QjQ1R0VhR0thb2Y5RVhsbEl1R2QybFBTdV9wWVEwYnpWQUt1c21hUFllUHVwby1sdDdfLUpQOFRncGNhTjFmemdwTnBrWHl4RzM2YUJsa1laTTAwd0s0Yzdka05BdWs1THdDR0dQSl9iM1h2bTNFZjlQa1VLSjBIemhKVlFlMUdObmNnendOdzZhY1HSAcYBQVVfeXFMT2p3ejZwUXUzRVB3Z1llbkNYbkR0bnc2Q0xINVJFdF9CZlZXcG5pYnNCbXp3YkR3NF9DN3dZUkR1MTA5UEd6OXhNV2t6azhoTTJSSGJaTWxLaERiMmNRT0E0ektNb2tsRjNvX1duSTRRWkhkYUQ5cjlHbmZWMHFMRDRGYTVrdmtBZVR3NHVOYkI4QklBeHFCTHFqY29CdHptaUZ4MS00a3ZmUkJONVktSjdWcWpPN2tTRWdpcnZwRGpNRkFfVWJB?oc=5",
-      "published_at": "Thu, 22 Oct 2026 12:00:14 GMT",
-      "id": "8c80c1187c820466d1e1"
-    },
-    {
-      "title": "Blackstone hỗ trợ giao dịch nợ 18 tỷ USD cho chip AI của Anthropic",
-      "summary": "Blackstone đang hỗ trợ một giao dịch nợ trị giá 18 tỷ USD cho các chip AI của Anthropic. Đầu tư này nhằm thúc đẩy phát triển công nghệ AI của công ty.",
-      "tag": "Trí tuệ nhân tạo / Chip AI",
-      "source": "Dealroom",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOelhDcmZoVXJtSkd6Z3pQdk5VZTBKOXJaNVM3U1RWd1VDbDg2a1RzS3dLd0JHcUJnVlZQcncyQjE4TloyR0xPZ2tDSTJLMmlWQWVoNHMzRmVHR0RKNkVWLVk3emhNY0NiNkNTWUNGUjhmUTdnY3BMRFF3Q1R0REU5N1U3SnRJd3I0TUtRWEFPV1htV00?oc=5",
-      "published_at": "Thu, 22 Oct 2026 17:51:32 GMT",
-      "id": "93d963e36a1752cf1cd7"
+      "source": "WSJ",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFA3SFFrQkZQazVtd2tRMURid2JEVVNGTHltNEFjZThqcHFCWHZtczZ1eG9nbVRsMVJhaE9haWlxSXJQUmFndXpXb3gySWMyeWpxcHZ6RHM5X0RBQWhhaFdpUkFHbWxhSmtabzNsc2tHeGY?oc=5",
+      "published_at": "Thu, 22 Oct 2026 23:04:39 GMT",
+      "id": "cc7785e04df37df7331f"
     }
   ],
   "logistics": [
     {
-      "title": "Cuộc đua kết nối của những ông lớn cảng biển Việt Nam",
-      "summary": "Các tập đoàn lớn trong ngành cảng biển Việt Nam đang tranh nhau mở rộng và liên kết mạng lưới cảng để thu hút lưu lượng hàng hóa. Cuộc đua này nhằm nâng cao năng lực xử lý và cải thiện hiệu quả chuỗi cung ứng nội địa.",
+      "title": "Cuộc đua kết nối của các cảng biển lớn Việt Nam",
+      "summary": "Bài viết đề cập đến cuộc cạnh tranh giữa các cảng biển lớn của Việt Nam trong việc nâng cao kết nối hạ tầng cảng. Cuộc đua này nhằm cải thiện hiệu suất và khả năng xử lý hàng hóa, góp phần thúc đẩy logistics quốc nội.",
       "tag": "Logistics Việt Nam",
       "source": "TheLEADER",
       "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNa055dldXWnBkOHFZYnZYamZxRVQ1ZUNzdEgyT3RlcFRWRGpvNTlHajVSNVEwRWdOOU1VNDN3R1pZRDljSGYxd0doalhDUTdfaWVYNnZxLTZhZTN4RWNNWFluM19BRE5LM043WmdwWDN1NmpqcWdPUzV1SmN2ZTBSdGFoelFncTh5UXBXX3RFOA?oc=5",
@@ -108,17 +108,17 @@
       "id": "d2f64007139485e00dac"
     },
     {
-      "title": "Sân bay Gia Bình tham gia Routes World 2026, kết nối mạng lưới hàng không toàn cầu",
-      "summary": "Sân bay Gia Bình sẽ tham gia sự kiện Routes World 2026, qua đó mở rộng kết nối mạng lưới hàng không toàn cầu. Sự tham gia hứa hẹn tăng cường khả năng vận chuyển hàng không và thu hút thêm lưu lượng cargo và hành khách.",
+      "title": "Thanh Hóa: Tăng cường công tác quản lý giá cước vận tải trên địa bàn",
+      "summary": "Tỉnh Thanh Hóa đang tăng cường công tác quản lý giá cước vận tải trên địa bàn. Biện pháp này nhằm ổn định chi phí vận chuyển và hỗ trợ hoạt động logistics địa phương.",
       "tag": "Logistics Việt Nam",
-      "source": "Laodong.vn",
-      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNV0hkdXd4YU4tcTlXUU5OYm4zRVJ1T0NVYmxxY2pIeEJSczlnVWt0dTVQd0dlOGd3T2JRQ2FEVXBscGZVM3phU2hUSWd4cDg1SHE5ZDlkNF9KMjUzTUNWWlQzZS1sRkx6SWFuZ2xaVGdCU2pnNnBjdDlzbTQ2Z3p3Y05XX24zZmFPcGFfUEpZX3dUbnA3ZnFsWUpEMEpaMXRZN3dHNVRWMDIyNEgzbVA2S2hXTWtfdFlNdDdlcHhkb0M?oc=5",
-      "published_at": "Thu, 22 Oct 2026 04:30:00 GMT",
-      "id": "805a71793f11a7b81548"
+      "source": "banduong.vn",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQZWZwc2J5SFd4ZkpMYWQ3aElBTTh3T0R3UkVCZ0FJSVVPWmtiM0FLVkdkeTh6bk84aWwwNFlCWU5xWmNlMk9rV24yd29fM3hZSkxYRW9UVFlWUlYxV2JOOUtEeHgtdndYUlpVZTZuSGp2Yll6czBNSExtb1VLOHI3RDVMWUNGZVB4cXVZY29oSUNtTHRKZkN3X2phMURFdnkz?oc=5",
+      "published_at": "Wed, 21 Oct 2026 14:19:00 GMT",
+      "id": "d0c4310baf6f593a3e85"
     },
     {
       "title": "VinaCapital và A.P. Moller Capital ký biên bản ghi nhớ tìm hiểu cơ hội đầu tư vào hạ tầng logistics tại Việt Nam",
-      "summary": "VinaCapital và A.P. Moller Capital đã ký biên bản ghi nhớ để khảo sát các cơ hội đầu tư vào hạ tầng logistics tại Việt Nam. Mối quan hệ này có thể đưa nguồn vốn FDI vào các dự án cảng, kho bãi và các giải pháp logistics, hỗ trợ nâng cấp hệ thống vận tải.",
+      "summary": "VinaCapital và A.P. Moller Capital đã ký biên bản ghi nhớ để khảo sát cơ hội đầu tư vào hạ tầng logistics tại Việt Nam. Sự hợp tác này có thể mang lại nguồn vốn và công nghệ mới cho phát triển các dự án logistics trong nước.",
       "tag": "Logistics Việt Nam",
       "source": "baodautu",
       "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxORDZvMzhJZU1BV3E0Q09JNXhSenFyX1d5Vi1lbmRqX0R4ZHFlWE5tWjMzdG5WUGZhLWFwRDNCU2hhV0xaZnJPb19VWXUwdDh3ZmRpbXNROTh5VWNNeVhxcXZoYWRYMU9DYTN6TEhlQXpYb3czd0FfODExUlRQRzlEN1NnQmtxVW5fdjJLVThxVXBWNEFwNWJ0UFQtZi1JRTZROEk1VGpRazN0Q0N2WS13cEM3eDRnZXhHdUlNZHdmMWcxbW1ER2dkNDJyZVlOc1N0TklrSWxOMHdxQ00?oc=5",
@@ -126,66 +126,75 @@
       "id": "7a586306abe1d29464dd"
     },
     {
-      "title": "Mở khai thác bến chung giữa hai cảng khu vực Cái Mép-Thị Vải",
-      "summary": "Hai cảng khu vực Cái Mép và Thị Vải đã khởi công khai thác bến chung, dự án đang trong giai đoạn triển khai. Việc tích hợp bến cảng này nhằm tăng năng lực khai thác và tối ưu luồng hàng, giảm thời gian chờ tại cảng.",
-      "tag": "Logistics Việt Nam",
-      "source": "Báo Quân đội nhân dân",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNOWkzOWx3OTFJa1dkZGQ0QWxaLUdRek5RMHp4UmlKLVJhTV9TNS1qbER6RFg5MmxZLWQ3REZrVmU5emNPVUtDbk1FQkdNeUpsOEVRQm1VVkJzeWNIZ2pqY2pfcUZfemdRN3RvelFVUlFpd2Q4SURUMExYNUlmejBUWGdFUlZKODhncmtzVkxGWW90SGtyUmRTWG5oSWpPeWZWUUhEc0pycw?oc=5",
-      "published_at": "Fri, 09 Oct 2026 07:00:00 GMT",
-      "id": "197bb8b67050d66db476"
+      "title": "Sự tăng trưởng ở Đông Nam Á tạo ra nhu cầu mới cho logistics toàn cầu",
+      "summary": "Sự tăng trưởng kinh tế ở khu vực Đông Nam Á đang tạo ra nhu cầu mới cho chuỗi cung ứng và dịch vụ logistics toàn cầu. Các doanh nghiệp quốc tế cần điều chỉnh chiến lược để đáp ứng nhu cầu mở rộng này.",
+      "tag": "Logistics Thế giới",
+      "source": "Global Atlanta",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxObkhoWDZBS2x1c1V3cnBfaHN0SEJWSVg2UldiTDlycGNUTUNPYmtmcHB2SlBrN2RzYmJ1Y2NpbUhpOUNTT3RZNWV1V3p3RG5CSUNkX2VNR29QSHV2cGh2aFVRQ2N0dDNxRm1vM0czR0VLcm1nLWJYUWxqMDZzMk9tdXp1MlYxTzBVM1BuTDhR?oc=5",
+      "published_at": "Thu, 22 Oct 2026 20:04:30 GMT",
+      "id": "376817a2ae629515adc5"
     },
     {
-      "title": "Chi phí vận chuyển biển tăng làm tăng giá ngũ cốc Mỹ",
-      "summary": "Chi phí vận chuyển hàng hóa bằng đường biển đang tăng, làm tăng giá ngũ cốc xuất khẩu của Hoa Kỳ. Sự tăng giá này có thể ảnh hưởng đến chuỗi cung ứng lương thực toàn cầu.",
+      "title": "Vận chuyển dầu thô Mỹ-Á châu gặp cú sốc vận tải",
+      "summary": "Vận chuyển dầu thô giữa Hoa Kỳ và châu Á đang gặp cú sốc về chi phí vận tải. Tình trạng này ảnh hưởng đến chuỗi cung ứng năng lượng và làm tăng chi phí logistics cho các nhà nhập khẩu.",
       "tag": "Logistics Thế giới",
-      "source": "RFD-TV",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBTUzBWRnhNeE5IUmNwU2lwdjlkVzRRVEVUeVhJMmdrOENaWkNUcU5UTW1VWGNKS3RLbDN1Y3NhQVl5dy1meEJUNjB4TlUtWmRVYVpvX2V1ODRqdjZ6ZVJWNTQwNEZaSTlKZDZVMEZ1a0xFUUY5dEN1Sw?oc=5",
-      "published_at": "Thu, 22 Oct 2026 15:02:40 GMT",
-      "id": "2f43402147e062a401f5"
+      "source": "Transport Topics",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1JcHk3emVfdTNyUzBWbkRWcV9iWm5rcks5ejBxRU1jNWt6Mm1iMUtEbnB3TjJHTUJ4b1VXSlBXYzZFbFBLM1Mwd2lLVWV0WjBDTWxMU18zNExZcy1ZVlpXTlJMeHo5R1lhWFAw?oc=5",
+      "published_at": "Thu, 22 Oct 2026 21:00:00 GMT",
+      "id": "dad49472796dcbf96c00"
     },
     {
-      "title": "Freight xuyên biên giới Bắc Mỹ đạt 160,6 tỷ USD trong tháng 8, tăng 22,6% so với cùng kỳ năm trước",
-      "summary": "Freight xuyên biên giới ở Bắc Mỹ đạt 160,6 tỷ USD trong tháng 8, tăng 22,6% so với cùng kỳ năm trước. Sự gia tăng này phản ánh nhu cầu vận chuyển hàng hóa mạnh mẽ và có thể kéo dài áp lực lên hạ tầng giao thông.",
+      "title": "Hội nghị F3 dự báo: AI, xe tải tự lái và công nghệ vận tải chiếm vị trí trung tâm",
+      "summary": "Hội nghị F3 dự kiến sẽ tập trung vào trí tuệ nhân tạo, xe tải tự lái và các công nghệ vận tải mới. Những xu hướng này hứa hẹn thay đổi cách thức vận chuyển hàng hóa và nâng cao hiệu quả logistics.",
       "tag": "Logistics Thế giới",
-      "source": "American Journal of Transportation",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNd0t5cXBDRVAtdUZIZFRTd1cyZkRURzBsZF9PcmtqbUs5SVhZWmI1aDZUSHJZN3RseVpsdWw3TElJd1ZQc1lrSmZVOXBQak5hQWo4emwyYVk2TnRkRldSOTVnZ05TZUpGaXFYMlJ5TE9neEItTjFiM1hMb3l2QTZldEd2T2xoOGhhV1lSb0pidU9tbGYxMmhTSEdMdHJqZTE3ci1hcWRCbGpfOFc3bEhfeWZGNzhHZ1Y5OFJwX3hUZ3h5dw?oc=5",
-      "published_at": "Thu, 22 Oct 2026 15:30:00 GMT",
-      "id": "bb0d907e7f855986191c"
+      "source": "FreightWaves",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQMU1URkdHbkw0SVMwSW41UFVNc3paTVNrOWhiMjZYSDEwck5vd2hzSjNMd2t5OHdEdzlLYkp0Y0FrUHRGNnpTcUc0M0lJMHRBWTRhWUlBLXo4cjZ6WlI1UjdJeTRfbWpHZ1IxbW9YOVlnNjdaSlRGQ2lNSjVfUHhheWRxdTQ3bG80bEJ4TTh4MlMtVjQ1U3B0RzRSbkRRc0tESDdnTkhxcmYzN0FN?oc=5",
+      "published_at": "Thu, 22 Oct 2026 19:02:37 GMT",
+      "id": "49e0bf5019b94718f9dd"
     }
   ],
   "gold": [
     {
-      "title": "Giá vàng chốt phiên 22.10: Một thương hiệu tiếp đà giảm giá vàng nhẫn",
-      "summary": "Vào ngày 22/10, giá vàng kết thúc phiên giao dịch giảm tiếp, theo một thương hiệu, giá vàng nhẫn đã có xu hướng giảm. Thị trường vàng trong nước ghi nhận mức giảm này.",
+      "title": "Cập nhật giá vàng sáng 23/10: Vàng giảm sâu, ngân hàng lớn dự báo lạc quan",
+      "summary": "Vào sáng ngày 23/10, giá vàng giảm sâu. Ngân hàng lớn đưa ra dự báo lạc quan về thị trường vàng.",
       "tag": "Giá vàng",
       "source": "Laodong.vn",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPaVJXMzROa18yRFhlZkQzWTBXcGV2QjhBTlRYaFdaQnFDUTc5cDBTNXY4Ym43bXJQVmQ5S0VGWjVJOU1HSkJvQ1RtSFRrMVdNNXg3VUpyNUZWN0NLTnFyWHR1blhraXNySGZ0TFEzTzJjc0FhTFNzN3VGVWZRV2x0NW1qNWI3RmlIZnJsVHIzNWYzVDBxeDBOQmFYeEJZM0t3NE1FTUdHTDZOVHNncmNxaFVSRQ?oc=5",
-      "published_at": "Thu, 22 Oct 2026 12:15:56 GMT",
-      "id": "bf34cec31f530b62e430"
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPM2R0d2pMVmZTV1l5d0MyNmpWT0FCa3hkNm5KaHA2M2U5ZUJ1Z0dKVzdFa0NZQ21fSEFzR2drVm4yZl9FTENfTWxlaUQxLWw2TnhZWDVtMENJZFpkZmNwaDlYX3UxRkpJejNsUmtqOGN6aU5rZ1E2dkRSclRTQ1ZsQ09oa25QYmNKbkFvTXFfNkZIeHdvUXNOYlZHSk0xQnVSbGpSQl9zeDd3SzBjQ3BRbVh4UHZXOGFC?oc=5",
+      "published_at": "Thu, 22 Oct 2026 23:10:00 GMT",
+      "id": "84d69b8430765ecb1e42"
     },
     {
-      "title": "Giá vàng hôm nay 23/10/2026 giảm nhanh, tiếp tục hướng về đáy, lý do 10 tháng liên tiếp Nga bán vàng dự trữ?",
-      "summary": "Ngày 23/10, giá vàng giảm nhanh và tiếp tục xu hướng đi xuống, có khả năng hướng về mức đáy. Nguyên nhân có thể liên quan đến việc Nga bán vàng dự trữ trong 10 tháng liên tiếp.",
+      "title": "Giá vàng “bốc hơi” hơn 100 USD/oz vì mối lo lạm phát cao dai dẳng",
+      "summary": "Giá vàng giảm hơn 100 USD mỗi ounce do lo ngại lạm phát cao kéo dài. Sự sụt giảm này phản ánh áp lực lạm phát dai dẳng trên thị trường.",
       "tag": "Giá vàng",
-      "source": "Vietnam.vn",
-      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOU213N3EwOGtQSkZ6V01xVFo5dWloZlhTYVI3UVdTY2paUDA5aWc4aUt0QWE4TXdHWDg1NFN4bVJYdFR6VkdUYzlqc2R3OTl4MGV5NllGRnlTZURqYnFzdlFxSl8tb0RqNzhkQ0FidDZRLXdFdENNUE5XRDJMaW9Vc1BHTnI4YWYwUGNlZjV0a21aMHhpM2xRV1JLd0NNZmxwbnZ3OUppQVd0QnVmSnpQU2NrQi1PSjMtY3VlcjAyM0czVTlxY1pJ?oc=5",
-      "published_at": "Thu, 22 Oct 2026 15:28:52 GMT",
-      "id": "62e23840c2f982e8e332"
+      "source": "VnEconomy",
+      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQd0g0QWpjNXVKVk1ENV9wMWs3M0lfU3prbFQ4Nk96NzFjWWREYWUwbHo3Zl9felB2b1d2NkZlejhnRHRYeUlzbUVWa0hQUjJXTWFqZzZic2pOTjJKdzlzVDlFeFg2eFBfbVc5REZJREZWZ2NaV1Z4NWRncEJmNGliUWpWVEZ2SFlpcGRXdk5YZ1k?oc=5",
+      "published_at": "Fri, 23 Oct 2026 00:19:40 GMT",
+      "id": "3b8a4a2913ee2c8b987d"
     },
     {
-      "title": "Giá vàng hôm nay ngày 22/10: Giá vàng đi ngang",
-      "summary": "Vào ngày 22/10, giá vàng duy trì mức ổn định, không có biến động đáng kể. Thị trường vàng trong nước ghi nhận giá đi ngang trong ngày.",
+      "title": "Giá vàng hôm nay ngày 23/10: Giá vàng thế giới lao dốc, xuống thấp nhất 2 tháng",
+      "summary": "Vào ngày 23/10, giá vàng thế giới giảm mạnh, chạm mức thấp nhất trong hai tháng. Xu hướng giảm này cho thấy áp lực bán ra trên thị trường vàng toàn cầu.",
       "tag": "Giá vàng",
-      "source": "Tin nhanh chứng khoán",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQQzZqSG1mSjltaml1SThfaWhuVWJDdlFJVFhEcU84WlVOaWVFMElxTXpWR2RINGtkSF92RDJva0x3ek5nZEo3R3IxcWVFUVlmcV9tM1JfTWpLVGg2cTZ1OTNIa0FDcU5WWUdFUl95cVEtYVhSVkpjV0ptT243N2VhNTNwbnJ1SldYWU51bWZjQWo4cTg2dXfSAZYBQVVfeXFMUEM2akhtZko5bWppdUk4X2loblViQ3ZRSVRYRHFPOFpVTmllRTBJcU16VkdkSDRrZEhfdkQyb2tMd3pOZ2RKN0dyMXFlRVFZZnFfbTNSX01qS1RoNnE2dTkzSGtBQ3FOVllHRVJfeXFRLWFYUlZKY1dKbU9uNzdlYTUzcG5ydUpXWFlOdW1mY0FqOHE4NnV3?oc=5",
-      "published_at": "Thu, 22 Oct 2026 03:20:03 GMT",
-      "id": "5ef9b1557164dc19ca04"
+      "source": "VnExpress",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQMVNKdXNmcE05LTk0QjJ5a2c1NXo3TWZLcHk1b2NrZ1phWXZGOTR3czRDbmhGckpwN3ZyZjVOZlhfbF9MeTNYdUo5SXgzOFYzalMyaFl1Y25EM0puVV9FY2lTay1nLW1FZGxBUVV0LVp3dkYxcWtvUW95S2cybmxUX01MM24wSk5VRUd0Vw?oc=5",
+      "published_at": "Fri, 23 Oct 2026 00:32:54 GMT",
+      "id": "9a92696f4c2a56eaf4c5"
     }
   ],
   "silver": [
     {
+      "title": "Giá bạc hôm nay 23/10/2026: Quay đầu giảm mạnh",
+      "summary": "Vào ngày 23/10/2026, giá bạc quay đầu giảm mạnh. Sự giảm giá này được ghi nhận trong báo cáo thị trường bạc.",
+      "tag": "Giá bạc",
+      "source": "Báo Công Thương",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNbmdKNE1WeUxoenhvQm1CUm1KTWN3a0hGQ1AxZnFZSFhHazFlaG8xSzV3VDlZNWhldGtyMFhYcWhTamZ2SGFQZHFDRUV4R3UwZE9jLWVqR2NmTlUyYWRKLXZGX3pfaDdoWHhqSGdmandKYzFYOGhoWDBfanZpSUp0c2E3VWxHUQ?oc=5",
+      "published_at": "Thu, 22 Oct 2026 23:23:34 GMT",
+      "id": "1a81272640aa5cf66bc0"
+    },
+    {
       "title": "Giá bạc hôm nay: Giá bạc trong nước giảm gần 1 triệu đồng/kg",
-      "summary": "Giá bạc trong nước hôm nay giảm gần 1 triệu đồng mỗi kilogram. Sự giảm giá này phản ánh áp lực giảm trên thị trường nội địa.",
+      "summary": "Giá bạc trong nước giảm gần 1 triệu đồng mỗi kilogram. Đây là mức giảm đáng chú ý trong ngày hôm nay.",
       "tag": "Giá bạc",
       "source": "VOV.VN",
       "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPSWlNa3pOQzhLaGxQVFJpdWVIcGFwQVZtWk1uZWtUVnlIYVFSeFQxM0hmOXg2S0p5OEJoQjFGY002aUVnNno1dlRZVU9EM3lKUXFkN2laZDlfSGp0OF80cjQwekVUNlh3VlloVzJfa3ZxSTh4eUdJM05FeFYxWFBDS0tYOVlqN1hxM2xxb3BOb0tkc05tNGEwZ1hfd3hsS0xvNkE?oc=5",
@@ -193,57 +202,48 @@
       "id": "3c4304ead4eacd71b035"
     },
     {
-      "title": "Biến động giá bạc 22.10: Giảm sâu, chịu nhiều sức ép",
-      "summary": "Ngày 22/10, giá bạc trải qua biến động giảm sâu do chịu áp lực mạnh. Thị trường bạc đang gặp nhiều khó khăn.",
+      "title": "Biến động giá bạc 22/10: Giảm sâu, chịu nhiều sức ép",
+      "summary": "Vào ngày 22/10, giá bạc biến động và giảm sâu. Thị trường bạc chịu nhiều sức ép khiến giá tiếp tục giảm.",
       "tag": "Giá bạc",
       "source": "Laodong.vn",
       "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNcDJSZHdfcDkzR253eTZPenlad05nUWRNSTc1SzRkUkZlWk9EUzVlNks4ZU5rTG5IdWhjMEI1X2VVYW5ybDN6MEZ3WkVfNGNlYTAyMlk1QlBRSW1jSzVhcmVoRHRQV3p1NU1YdHpkeXZqOEd5SFk3c1BWSkMweVA2ejBuSjBTMDA1Q3ZoQzJoTmx1aTIxTWRnM2V2MA?oc=5",
       "published_at": "Thu, 22 Oct 2026 02:49:05 GMT",
       "id": "735f36ac7312e7850b17"
-    },
-    {
-      "title": "Giá bạc quay đầu giảm, nhà đầu tư chờ tín hiệu từ FED",
-      "summary": "Giá bạc đã chuyển sang xu hướng giảm và nhà đầu tư đang chờ tín hiệu từ Cục Dự trữ Liên bang Mỹ (FED). Sự chờ đợi này ảnh hưởng đến quyết định giao dịch.",
-      "tag": "Giá bạc",
-      "source": "thitruongtaichinhtiente.vn",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQSlNSN2dfeV96Wjg3TlRtT2U2VEJ6eVo5elNJaHM5OHd6Q1RCbFJOZnZFcHluTXlFMVJuVDI5Y0lPOVF5dkQ0VEVlcm5abloxZF9BU1M1RXZVY2tURGhSbGR4YTJSZzJfeExrNGJESzhYWG9UY0pKeURHRHZ1eDF5VDdFN2RqMzR1ZVNYbkY0LWtidl9DNHZveHZZNEd5Tmc?oc=5",
-      "published_at": "Thu, 22 Oct 2026 02:35:01 GMT",
-      "id": "1979548de1772bee8682"
     }
   ],
   "stocks": [
     {
-      "title": "VN-Index thăng hoa hơn 22 điểm dù chứng khoán châu Á đỏ lửa",
-      "summary": "VN-Index tăng hơn 22 điểm trong khi các thị trường chứng khoán châu Á đang giảm mạnh. Sự tăng này cho thấy sức mạnh nội địa.",
+      "title": "VN-Index tăng mạnh, hướng đến kháng cự 1800 điểm",
+      "summary": "VN-Index tăng mạnh và đang tiến gần mức kháng cự 1800 điểm. Động lực tăng giá cho thấy sức mua trên thị trường chứng khoán.",
       "tag": "VN-Index",
-      "source": "Tuổi Trẻ",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPOWgteTRxWEl1N3JXYnN4RFlfbWxFdTE2OHJSUnkycklHVFYzWUh3MGhrMUFjMThTUEpPYU5yVmR6UkpzUncwcG5mZVJuUnktVVJsZXp5S2lpZE9oY1VDTVlCYjhBUEdRX20wekhqcXhEZDNhcW5ZRUxtX0liUmc4bS14Wl8wdlZIQk44enVKV21UWVdFRldZbDYtWF9UTWxzZ1Nv?oc=5",
-      "published_at": "Thu, 22 Oct 2026 08:43:00 GMT",
-      "id": "1365b2fdf3adf2ed6113"
+      "source": "VnEconomy",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE9ESW5TV1dNcjVwR2E5cmcxZjVJcURaVHV3Q0hQdXJrQVlseGJoblF6RnZXNE5od0RyLXlWaWQ5dGJpSHBhbi1QUmF6dDkwWFF1MWZ6OE12OVNLZUhWR2ZvVGotMVJ3UmFOVWp1VFlreFdUb3RfdHp2dEdOam0?oc=5",
+      "published_at": "Fri, 23 Oct 2026 00:19:27 GMT",
+      "id": "c12d1a731d3ff1842fee"
     },
     {
-      "title": "Chứng khoán ngày 22/10: VN-Index tiếp tục tăng mạnh nhưng dòng tiền vẫn phân hóa",
-      "summary": "Vào ngày 22/10, VN-Index tiếp tục tăng mạnh, tuy nhiên dòng tiền trên thị trường vẫn có sự phân hóa. Điều này cho thấy sự chênh lệch trong luồng vốn.",
+      "title": "VN-Index tăng 20 điểm nhờ lực đẩy từ cổ phiếu họ Vingroup",
+      "summary": "VN-Index tăng 20 điểm nhờ lực đẩy từ cổ phiếu Vingroup. Sự tăng này phản ánh ảnh hưởng tích cực của nhóm Vingroup lên chỉ số.",
       "tag": "VN-Index",
-      "source": "Thời báo Tài chính Việt Nam",
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOcXZ6eUdEenA0amh6cFlzd1ItZlVWRHFhcDlobVhyUldWNVZIZm9fTWlEbmczOFdVYTN0MTZBak5NRGljMmxEQUNJb3EtWGRUQ2Q5LVRKbjlZdHRzd2JYT1NIdWhoUnk4MHFXRnFHRlU4Z1VxZE5UZ2I4bFliRW5jVlE5Z1hmWXBNTkhtR245T2tRWjdKdFlURFpZeGltYW9YSU1hMEdMNDhvaGhOZE85bEV4N3VHZThKQUh5VjhyMGlsTjQ?oc=5",
-      "published_at": "Thu, 22 Oct 2026 10:39:20 GMT",
-      "id": "a7686421db391c140ef8"
+      "source": "thitruongtaichinhtiente.vn",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOTUtxY21lZl9QTkpRdmZieml2ZTN6ZG1jcFJROGl5YXZCQkVaQkhvLXFDU1RlN1FRQkEtV2swWmZpWHBjNU53T1Bua2tVNXJYdEUxYXhNR1pTREpCb0s3VXBSQ3V2TFE4dUU5XzRRT3A0NDJTa1pPN3g5X19KOGZDMG1TZS1rRXFfNkxtaGFwRlhlWUZObkJHYUpLTDROU0RpanRaRjB3?oc=5",
+      "published_at": "Thu, 22 Oct 2026 13:04:01 GMT",
+      "id": "1e8c64b4eae3f2e5dad9"
     },
     {
-      "title": "VN-Index bứt phá gần 70 điểm, vì sao tài khoản vẫn âm?",
-      "summary": "VN-Index bứt phá gần 70 điểm, nhưng nhiều nhà đầu tư vẫn gặp tài khoản âm. Nguyên nhân có thể liên quan đến vị thế giao dịch trước đó.",
+      "title": "Một chỉ báo quan trọng hé lộ khả năng VN-Index bước vào “sóng mới”",
+      "summary": "Một chỉ báo quan trọng cho thấy VN-Index có khả năng bước vào “sóng mới”. Dự báo này gợi ý xu hướng tăng tiếp tục cho chỉ số.",
       "tag": "VN-Index",
       "source": "CafeF",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNZC1HZDhGMnpCWGhFQ01fWVlZdFRkMkRLWDZteTY4dFgzajRoS1lnWXVNQ29KTWhjNy02dTlfbTFTUXE2a0Etd1hiQ3ZINFFMSUlhUWZjSnVHRUtHTUtKR2J2VEtkSGV5NkVEbTgwdWRoSlZaVlFuM3ZrQ3hjMnM5M05oRmNYbFhvdlVzT0VuelBMbkFaT2Rz?oc=5",
-      "published_at": "Thu, 22 Oct 2026 11:33:00 GMT",
-      "id": "9d6dc15dd1b2b9b6b6bf"
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOcW9hbk5hUll0NHpIcHI1X3hUMnhMQ3R4anQyLU53MTdGYnI1WHEyVTl6VDh6RjlwY1NZV2VGMVA0dU1RY1d2TXNOVzhVMnBnVGJWSmcybDFybjNTZndUa25OeUhGREFoV2x4blNDdU0tMHp3TUk2VXpKekh2dktFc3NRX2Vid0V6Nlo2bEh4YnB3UkxPOVVpdVRmbXRUWkUzTUNDY051aw?oc=5",
+      "published_at": "Thu, 22 Oct 2026 17:02:00 GMT",
+      "id": "81696dacd252d0901f38"
     }
   ],
   "realestate": [
     {
       "title": "TP.HCM: Căn hộ gần metro tăng giá mạnh",
-      "summary": "Tại TP.HCM, các căn hộ nằm gần tuyến metro đang tăng giá mạnh. Sự tăng giá này phản ánh giá trị gia tăng do tiện ích giao thông.",
+      "summary": "Tại TP.HCM, các căn hộ gần tuyến metro đang tăng giá mạnh. Sự tăng giá này phản ánh nhu cầu cao đối với bất động sản gần hạ tầng giao thông.",
       "tag": "Căn hộ",
       "source": "Tin nhanh chứng khoán",
       "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNMml2bVZIZXhkaEl3ajRHbzBfYzF0V1ZzcEduemFBaTBMTjZteWkxNTJFeHFDNUFFVGxVc01mOUNNaFNpTGw4cDA4SkpQdTZTMDNsX240clp6ZGh0NWkzekdlV3lTTVBZT3ZvNWRDV0pNMjFJbDR4OXJGX2k2QTR1NDFzTzNaWVF5WjRn0gGLAUFVX3lxTE0yaXZtVkhleGRoSXdqNEdvMF9jMXRXVnNwR256YUFpMExONm15aTE1MkV4cUM1QUVUbFVzTWY5Q01oU2lMbDhwMDhKSlB1NlMwM2xfbjRyWnpkaHQ1aTN6R2VXeVNNUFlPdm81ZENXSk0yMUlsNHg5ckZfaTZBNHU0MXNPM1pZUXlaNGc?oc=5",
@@ -251,55 +251,55 @@
       "id": "7c8964e65e99006da324"
     },
     {
-      "title": "Đề xuất phát triển nhà ở giá 60-70 triệu đồng/m2 tại đô thị lớn",
-      "summary": "Một đề xuất mới đề nghị phát triển nhà ở với mức giá 60-70 triệu đồng mỗi mét vuông tại các đô thị lớn. Mục tiêu là cung cấp nhà ở giá vừa phải cho người dân.",
-      "tag": "Nhà ở",
-      "source": "Znews",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNaVF1a1hxbkQxUUtiOVphLUpnMlk4YkRTVWcwc2VfeWJBWUxrRnJ0aHB3R01nd1lfamRwdEVPZVZFY2JNTFhCUFdLdnpCQ3pmMWZFMXY2N3QxbThxVUNFTFhkU0p5dWNYcVEyZ05lN3gwMXNURk4xUmZHbi16cmg5QklxMUVPa0Rja0xSbGFPYkVBRWNWNnF4VGstVVM?oc=5",
-      "published_at": "Thu, 22 Oct 2026 12:22:54 GMT",
-      "id": "9325df35268849114faa"
-    },
-    {
       "title": "Metro có phải 'đũa thần' cho thị trường bất động sản TP.HCM?",
-      "summary": "Bài viết đặt câu hỏi liệu hệ thống metro có trở thành 'đũa thần' cho thị trường bất động sản TP.HCM. Đánh giá tiềm năng của hạ tầng giao thông trong việc thúc đẩy giá bất động sản.",
+      "summary": "Bài viết đặt câu hỏi liệu metro có phải là “đũa thần” cho thị trường bất động sản TP.HCM hay không. Nội dung tập trung vào ảnh hưởng của hạ tầng metro đến giá bất động sản.",
       "tag": "Hạ tầng",
       "source": "tin.skydoor.net",
       "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQdi05eDZmNk92NUJvcFRhU1JNSHhaZktKajFpcHBZckVLd204QUpfOVJjZW5BLUFNZ0Rvc0IzSXl4NGs0THpiamNKanFCWVd3a05hN1RzZlVtTWRnM2hpZHQ2MlkteHhnOThNTzZIeVNEWkJMQVEySF9aLTBMcGNERDMtam1JUXU2cFBkTGx6UDItSzZtTWpiZG5WaUxHSVVENFlB?oc=5",
       "published_at": "Tue, 20 Oct 2026 03:11:15 GMT",
       "id": "375e6b60e7ff59904d3b"
+    },
+    {
+      "title": "Đề xuất phát triển nhà ở giá 60-70 triệu đồng/m2 tại đô thị lớn",
+      "summary": "Đề xuất phát triển nhà ở với mức giá 60-70 triệu đồng mỗi mét vuông cho các đô thị lớn. Mục tiêu là cung cấp nhà ở giá phải chăng cho người dân.",
+      "tag": "Nhà ở",
+      "source": "Znews",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNaVF1a1hxbkQxUUtiOVphLUpnMlk4YkRTVWcwc2VfeWJBWUxrRnJ0aHB3R01nd1lfamRwdEVPZVZFY2JNTFhCUFdLdnpCQ3pmMWZFMXY2N3QxbThxVUNFTFhkU0p5dWNYcVEyZ05lN3gwMXNURk4xUmZHbi16cmg5QklxMUVPa0Rja0xSbGFPYkVBRWNWNnF4VGstVVM?oc=5",
+      "published_at": "Thu, 22 Oct 2026 12:22:54 GMT",
+      "id": "9325df35268849114faa"
     }
   ],
-  "updated_at": "23/10/2026 01:06",
+  "updated_at": "23/10/2026 08:22",
   "market_snapshot": {
-    "updated_at": "23/10/2026 01:06",
+    "updated_at": "23/10/2026 08:21",
     "gold": {
       "label": "Vàng thế giới",
-      "value": "4,062.80",
-      "numeric_value": 4062.8,
+      "value": "4,027.40",
+      "numeric_value": 4027.4,
       "previous_close": "4,150.00",
-      "change": "-87.20",
-      "change_pct": "-2.10%",
+      "change": "-122.60",
+      "change_pct": "-2.95%",
       "direction": "down",
       "unit": "USD/oz",
       "source": "Yahoo Finance · COMEX",
       "source_url": "https://finance.yahoo.com/quote/GC%3DF",
-      "updated_at": "23/10/2026 00:56",
-      "vnd_equivalent": "126.61 triệu đồng/lượng",
+      "updated_at": "23/10/2026 08:11",
+      "vnd_equivalent": "125.43 triệu đồng/lượng",
       "conversion_note": "Quy đổi từ giá quốc tế; chưa gồm chênh lệch SJC, thuế và phí."
     },
     "silver": {
       "label": "Bạc thế giới",
-      "value": "55.04",
-      "numeric_value": 55.04,
+      "value": "54.33",
+      "numeric_value": 54.33,
       "previous_close": "57.42",
-      "change": "-2.38",
-      "change_pct": "-4.15%",
+      "change": "-3.09",
+      "change_pct": "-5.38%",
       "direction": "down",
       "unit": "USD/oz",
       "source": "Yahoo Finance · COMEX",
       "source_url": "https://finance.yahoo.com/quote/SI%3DF",
-      "updated_at": "23/10/2026 00:56",
-      "vnd_equivalent": "45.74 triệu đồng/kg",
+      "updated_at": "23/10/2026 08:11",
+      "vnd_equivalent": "45.12 triệu đồng/kg",
       "conversion_note": "Quy đổi từ giá quốc tế; chưa gồm thuế, phí và chênh lệch bán lẻ."
     },
     "vnindex": {
@@ -325,7 +325,7 @@
       "unit": "điểm",
       "source": "TradingView · dữ liệu trễ khoảng 15 phút",
       "source_url": "https://www.tradingview.com/symbols/HOSE-VN30/",
-      "updated_at": "23/10/2026 01:06"
+      "updated_at": "23/10/2026 08:21"
     },
     "disclaimer": "Giá Vàng/Bạc là chuẩn quốc tế COMEX; số VND là quy đổi tham khảo, không phải giá bán lẻ SJC. VN30 có thể trễ khoảng 15 phút."
   },
@@ -672,18 +672,18 @@
     "disclaimer": "Dữ liệu chỉ để tham khảo, không phải định giá hay khuyến nghị đầu tư. Trước khi đặt cọc cần kiểm tra pháp lý, quy hoạch, phí bảo trì, phí quản lý và giá giao dịch thực tế."
   },
   "investment_overview": {
-    "updated_at": "23/10/2026 01:06",
-    "summary": "Tại mốc 23/10/2026 01:06, vàng quốc tế giảm -2.10%, bạc giảm -4.15%; VN-Index tăng +1.26% và VN30 tăng +0.66% so với phiên trước. Mốc tham khảo căn hộ sơ cấp khu trung tâm TP.HCM hiện ở 102 triệu đồng/m² (-1,2% QoQ). Hãy đọc từng chuyên mục để đối chiếu động lực giá, tin mới và rủi ro riêng của từng loại tài sản.",
+    "updated_at": "23/10/2026 08:21",
+    "summary": "Tại mốc 23/10/2026 08:21, vàng quốc tế giảm -2.95%, bạc giảm -5.38%; VN-Index tăng +1.26% và VN30 tăng +0.66% so với phiên trước. Mốc tham khảo căn hộ sơ cấp khu trung tâm TP.HCM hiện ở 102 triệu đồng/m² (-1,2% QoQ). Hãy đọc từng chuyên mục để đối chiếu động lực giá, tin mới và rủi ro riêng của từng loại tài sản.",
     "items": [
       {
         "key": "gold",
         "label": "Vàng",
-        "status": "giảm -2.10%"
+        "status": "giảm -2.95%"
       },
       {
         "key": "silver",
         "label": "Bạc",
-        "status": "giảm -4.15%"
+        "status": "giảm -5.38%"
       },
       {
         "key": "stocks",
@@ -702,56 +702,37 @@
     "overall": {
       "label": "Toàn cảnh",
       "direction": "mixed",
-      "confidence": 65,
-      "summary": "Lạm phát vẫn cao, Fed có xu hướng tăng lãi suất vào tháng 12 nhưng giữ nguyên trong tháng 10, tạo áp lực lên thị trường tài chính. Giá vàng giảm do lo ngại lạm phát dầu, trong khi lợi suất trái phiếu 10 năm giảm vì dữ liệu nhà ở yếu. Đầu tư AI đang tạo áp lực lạm phát mới, nhưng vẫn chưa đủ dữ liệu để xác định tác động dài hạn. Thị trường chứng khoán Việt Nam tăng nhẹ nhưng vẫn thận trọng, đồng USD suy yếu nhẹ. Tổng thể, các tín hiệu ngắn hạn mâu thuẫn, dẫn đến bức tranh chung là hỗn hợp.",
+      "confidence": 70,
+      "summary": "Lạm phát Mỹ ổn định nhưng Fed vẫn dự kiến tăng lãi suất vào tháng 12, tạo áp lực lên thị trường tài chính. Giá vàng giảm dưới mức hai tuần, trong khi giá dầu tăng, làm tăng lo ngại lạm phát. Đồng USD giảm nhẹ so với VND, đồng thời VN-Index tăng, cho thấy sức mạnh nội địa. Các công ty chip AI đang phát triển nhưng cổ phiếu chịu áp lực, trong khi logistics chứng kiến tăng trưởng mạnh. Tình hình tổng thể là hỗn hợp, với các yếu tố khẳng định và chống lại nhau.",
       "short_term": {
         "horizon": "1-4 tuần",
         "outlook": "mixed",
-        "summary": "Trong 1-4 tuần tới, Fed có thể giữ nguyên lãi suất trong cuộc họp tháng 10, nhưng các nhà đầu tư vẫn theo dõi dữ liệu lạm phát mới và giá dầu. Giá vàng có thể tiếp tục giảm nếu lạm phát không giảm, trong khi lợi suất trái phiếu có thể duy trì mức thấp do yếu tố bất động sản. Thị trường VN-Index có thể duy trì mức tăng nhẹ nếu đồng USD tiếp tục suy yếu. Điều kiện thay đổi: dữ liệu lạm phát giảm mạnh hoặc Fed quyết định tăng lãi suất sớm."
+        "summary": "Trong 1-4 tuần tới, Fed có thể giữ lãi suất ổn định trong khi chuẩn bị tăng vào tháng 12. Giá dầu có thể tiếp tục dao động, ảnh hưởng đến lạm phát và giá vàng. Đồng USD có thể tiếp tục giảm nhẹ, hỗ trợ VN-Index. Các công ty chip AI sẽ tiếp tục chịu áp lực giá cổ phiếu, trong khi logistics sẽ tận dụng nhu cầu tăng cao."
       },
       "long_term": {
         "horizon": "3-12 tháng",
         "outlook": "mixed",
-        "summary": "Trong 3-12 tháng tới, Fed có thể tiếp tục tăng lãi suất nếu lạm phát kéo dài, dẫn đến áp lực lên thị trường tài chính và giảm giá cổ phiếu. Nếu AI tiếp tục tạo áp lực lạm phát, Fed có thể điều chỉnh chính sách tiền tệ. Thị trường VN-Index có thể ổn định hoặc giảm nếu lạm phát và lãi suất tăng. Rủi ro lớn là lạm phát không giảm, dẫn đến chính sách tiền tệ khắt khe hơn."
+        "summary": "Trong 3-12 tháng tới, Fed có thể duy trì chu kỳ tăng lãi suất nếu lạm phát kéo dài, làm giảm sức mua và ảnh hưởng đến thị trường tài chính. Giá dầu có thể ổn định hoặc tăng, ảnh hưởng đến chi phí logistics và lạm phát. Công nghệ AI sẽ tiếp tục phát triển, nhưng cạnh tranh trong chip có thể làm giảm giá cổ phiếu. Logistics sẽ tiếp tục tăng trưởng nhờ nhu cầu thương mại, nhưng chi phí vận chuyển có thể tăng."
       },
       "drivers": [
         {
-          "text": "Chính sách tiền tệ Fed",
+          "text": "Động lực logistics",
           "article_ids": [
-            "72438f2c131e1743d057",
-            "d7d7c020272c4f8c04ef",
-            "efbb1f9d4f0b89b02156",
-            "b52142bf5ff7579b3bb0"
-          ]
-        },
-        {
-          "text": "Lạm phát và giá dầu",
-          "article_ids": [
-            "72438f2c131e1743d057",
-            "0c639d429a58b7d47ce9",
-            "e7c7a0deb88260c56138"
-          ]
-        },
-        {
-          "text": "Đầu tư AI và lạm phát",
-          "article_ids": [
-            "46ac24f661552b30fc4b",
-            "a2db82eb001f358c9569"
-          ]
-        },
-        {
-          "text": "Thị trường VN-Index và USD/VND",
-          "article_ids": [
-            "6163c47ae4643bd1bc84",
-            "b6e864854d6b19ffd12d",
-            "44ea2e86be3ca9d0c9c9"
+            "dad49472796dcbf96c00",
+            "376817a2ae629515adc5",
+            "49e0bf5019b94718f9dd",
+            "bb0d907e7f855986191c",
+            "805a71793f11a7b81548",
+            "f112d9692b63ff3c5712",
+            "9a0bdb372ce5e19d8457",
+            "b79605a6b030f16b28d7"
           ]
         }
       ],
       "watch_next": [
-        "Dữ liệu lạm phát tháng 10",
-        "Cuộc họp Fed tháng 10",
-        "Giá dầu và lạm phát"
+        "Sự kiện họp Fed tháng 10 và dữ liệu lạm phát tiếp theo",
+        "Biến động giá dầu và ảnh hưởng tới lạm phát",
+        "Tình hình giá cổ phiếu chip AI và các công nghệ mới"
       ],
       "article_count": 48
     },
@@ -760,47 +741,22 @@
         "label": "Vĩ mô",
         "direction": "mixed",
         "confidence": 70,
-        "summary": "Dữ liệu lạm phát mới cho thấy áp lực tăng giá vẫn cao, khiến Fed có thể tăng lãi suất lần nữa vào tháng 12. Giá vàng giảm do lo ngại lạm phát dầu, trong khi lợi suất trái phiếu 10 năm giảm vì dữ liệu nhà ở yếu. Đầu tư AI đang tạo áp lực lạm phát mới, nhưng Fed vẫn chưa quyết định thay đổi chính sách. Các tín hiệu ngắn hạn mâu thuẫn, dẫn đến bức tranh hỗn hợp.",
+        "summary": "Lạm phát Mỹ ổn định nhưng Fed vẫn dự kiến tăng lãi suất vào tháng 12, tạo áp lực lên thị trường tài chính. Giá vàng giảm dưới mức hai tuần, trong khi giá dầu tăng, làm tăng lo ngại lạm phát. Các báo cáo doanh nghiệp cho thấy áp lực lạm phát vẫn tồn tại, khiến Fed cân nhắc điều chỉnh chính sách. Tình hình lạm phát không tăng mạnh nhưng vẫn gây lo ngại cho thị trường tài chính.",
         "short_term": {
           "horizon": "1-4 tuần",
           "outlook": "mixed",
-          "summary": "Trong 1-4 tuần tới, Fed có thể giữ nguyên lãi suất trong cuộc họp tháng 10, nhưng các nhà đầu tư vẫn theo dõi dữ liệu lạm phát mới và giá dầu. Giá vàng có thể tiếp tục giảm nếu lạm phát không giảm, trong khi lợi suất trái phiếu có thể duy trì mức thấp do yếu tố bất động sản. Điều kiện thay đổi: dữ liệu lạm phát giảm mạnh hoặc Fed quyết định tăng lãi suất sớm."
+          "summary": "Trong 1-4 tuần tới, Fed có thể giữ lãi suất ổn định trong khi chuẩn bị tăng vào tháng 12. Giá dầu có thể tiếp tục dao động, ảnh hưởng đến lạm phát và giá vàng. Các báo cáo doanh nghiệp tiếp tục cung cấp tín hiệu lạm phát mới, làm tăng áp lực lên thị trường."
         },
         "long_term": {
           "horizon": "3-12 tháng",
           "outlook": "mixed",
-          "summary": "Trong 3-12 tháng tới, Fed có thể tiếp tục tăng lãi suất nếu lạm phát kéo dài, dẫn đến áp lực lên thị trường tài chính và giảm giá cổ phiếu. Nếu AI tiếp tục tạo áp lực lạm phát, Fed có thể điều chỉnh chính sách tiền tệ. Rủi ro lớn là lạm phát không giảm, dẫn đến chính sách tiền tệ khắt khe hơn."
+          "summary": "Trong 3-12 tháng tới, Fed có thể duy trì chu kỳ tăng lãi suất nếu lạm phát kéo dài, làm giảm sức mua và ảnh hưởng đến thị trường tài chính. Giá dầu có thể ổn định hoặc tăng, ảnh hưởng đến chi phí logistics và lạm phát. Các công nghệ mới và dữ liệu doanh nghiệp sẽ tiếp tục cung cấp tín hiệu lạm phát."
         },
-        "drivers": [
-          {
-            "text": "Chính sách tiền tệ Fed",
-            "article_ids": [
-              "72438f2c131e1743d057",
-              "d7d7c020272c4f8c04ef",
-              "efbb1f9d4f0b89b02156",
-              "b52142bf5ff7579b3bb0"
-            ]
-          },
-          {
-            "text": "Lạm phát và giá dầu",
-            "article_ids": [
-              "72438f2c131e1743d057",
-              "0c639d429a58b7d47ce9",
-              "e7c7a0deb88260c56138"
-            ]
-          },
-          {
-            "text": "Đầu tư AI và lạm phát",
-            "article_ids": [
-              "46ac24f661552b30fc4b",
-              "a2db82eb001f358c9569"
-            ]
-          }
-        ],
+        "drivers": [],
         "watch_next": [
-          "Dữ liệu lạm phát tháng 10",
-          "Cuộc họp Fed tháng 10",
-          "Giá dầu và lạm phát"
+          "Dữ liệu lạm phát mới từ doanh nghiệp",
+          "Biến động giá dầu",
+          "Kết quả họp Fed tháng 10"
         ],
         "article_count": 12
       },
@@ -808,44 +764,22 @@
         "label": "Việt Nam",
         "direction": "mixed",
         "confidence": 60,
-        "summary": "VN-Index tăng gần 70 điểm hai phiên nhưng nhà đầu tư vẫn thận trọng. Đồng USD giảm nhẹ do lo ngại lạm phát tăng trở lại, đồng thời NHNN yêu cầu giảm lãi suất cho vay. Thị trường chứng khoán Việt Nam có xu hướng ổn định nhưng chưa đạt mức mạnh. Các tín hiệu ngắn hạn mâu thuẫn, dẫn đến bức tranh hỗn hợp.",
+        "summary": "Đồng USD giảm nhẹ so với VND, đồng thời VN-Index tăng, cho thấy sức mạnh nội địa. Ngân hàng Nhà nước yêu cầu giảm lãi suất, hỗ trợ tăng trưởng kinh tế. Thị trường chứng khoán Việt Nam tăng điểm trong khi thị trường châu Á giảm mạnh. Tình hình lạm phát nội địa vẫn ổn định, nhưng các yếu tố ngoại vi có thể ảnh hưởng.",
         "short_term": {
           "horizon": "1-4 tuần",
           "outlook": "mixed",
-          "summary": "Trong 1-4 tuần tới, VN-Index có thể duy trì mức tăng nhẹ nếu đồng USD tiếp tục suy yếu. NHNN có thể tiếp tục giảm lãi suất để hỗ trợ kinh tế. Nếu dữ liệu lạm phát tăng mạnh, thị trường có thể giảm. Điều kiện thay đổi: dữ liệu lạm phát giảm hoặc đồng USD mạnh."
+          "summary": "Trong 1-4 tuần tới, đồng USD có thể tiếp tục giảm nhẹ, hỗ trợ VN-Index. Ngân hàng Nhà nước có thể tiếp tục điều chỉnh lãi suất để duy trì ổn định. Thị trường chứng khoán Việt Nam có thể tiếp tục tăng điểm, nhưng tâm lý nhà đầu tư vẫn thận trọng."
         },
         "long_term": {
           "horizon": "3-12 tháng",
           "outlook": "mixed",
-          "summary": "Trong 3-12 tháng tới, VN-Index có thể ổn định hoặc giảm nếu lạm phát và lãi suất tăng. NHNN có thể điều chỉnh chính sách tiền tệ tùy theo tình hình kinh tế. Rủi ro lớn là lạm phát không giảm, dẫn đến chính sách tiền tệ khắt khe hơn."
+          "summary": "Trong 3-12 tháng tới, chính sách tiền tệ của Ngân hàng Nhà nước sẽ tiếp tục ảnh hưởng đến lãi suất và thị trường tài chính. VN-Index có thể duy trì xu hướng tăng nếu nền kinh tế nội địa ổn định. Các yếu tố ngoại vi như lạm phát toàn cầu và giá dầu có thể tác động đến thị trường."
         },
-        "drivers": [
-          {
-            "text": "Chính sách tiền tệ NHNN",
-            "article_ids": [
-              "44ea2e86be3ca9d0c9c9",
-              "3a6f623c9fdad1a85851"
-            ]
-          },
-          {
-            "text": "Tỷ giá USD/VND",
-            "article_ids": [
-              "b6e864854d6b19ffd12d",
-              "6da377b6bf73746e0b37"
-            ]
-          },
-          {
-            "text": "VN-Index",
-            "article_ids": [
-              "6163c47ae4643bd1bc84",
-              "53ebaeb2e79f4699364a"
-            ]
-          }
-        ],
+        "drivers": [],
         "watch_next": [
-          "Dữ liệu lạm phát tháng 10",
-          "Tỷ giá USD/VND",
-          "Chính sách NHNN"
+          "Biến động tỷ giá USD/VND",
+          "Chính sách lãi suất của Ngân hàng Nhà nước",
+          "Tình hình VN-Index"
         ],
         "article_count": 12
       },
@@ -853,94 +787,50 @@
         "label": "Trí tuệ nhân tạo",
         "direction": "mixed",
         "confidence": 65,
-        "summary": "Nhu cầu chip AI tăng mạnh, Nvidia vẫn giữ vị thế thống trị nhưng đối thủ mới như Huawei, DeepSeek và CXMT đang thu hẹp khoảng cách. Chi phí đầu tư vào chip AI tăng, ảnh hưởng đến lợi nhuận của các công ty như Tesla. Đầu tư AI đang tạo áp lực lạm phát mới, nhưng vẫn chưa đủ dữ liệu để xác định tác động dài hạn. Các tín hiệu ngắn hạn mâu thuẫn, dẫn đến bức tranh hỗn hợp.",
+        "summary": "Các công ty chip AI như Google, Nvidia, Anthropic đang phát triển công nghệ mới, nhưng cổ phiếu chip chịu áp lực giá. Các công ty AI đang đầu tư mạnh vào chip, nhưng chi phí tăng có thể làm giảm lợi nhuận. Thị trường AI đang chuyển sang các chip tùy chỉnh, tạo ra cạnh tranh. Công nghệ AI tiếp tục phát triển, nhưng giá cổ phiếu có thể dao động.",
         "short_term": {
           "horizon": "1-4 tuần",
           "outlook": "mixed",
-          "summary": "Trong 1-4 tuần tới, nhu cầu chip AI có thể tiếp tục tăng, nhưng chi phí đầu tư cũng tăng. Nvidia có thể duy trì giá cao, nhưng đối thủ mới có thể giảm giá. Nếu chi phí tăng mạnh, lợi nhuận của các công ty AI có thể giảm. Điều kiện thay đổi: sự ra mắt chip mới hoặc thay đổi chi phí sản xuất."
+          "summary": "Trong 1-4 tuần tới, các công ty chip AI sẽ tiếp tục đầu tư mạnh vào công nghệ mới. Cổ phiếu chip có thể chịu áp lực giá do chi phí tăng. Thị trường AI sẽ tiếp tục theo dõi các công nghệ mới và giá cổ phiếu."
         },
         "long_term": {
           "horizon": "3-12 tháng",
           "outlook": "mixed",
-          "summary": "Trong 3-12 tháng tới, thị trường chip AI có thể mở rộng nếu nhu cầu AI tăng mạnh. Nếu chi phí sản xuất giảm, giá chip có thể giảm, ảnh hưởng đến lợi nhuận. Rủi ro lớn là chi phí tăng hoặc cạnh tranh mạnh, làm giảm lợi nhuận."
+          "summary": "Trong 3-12 tháng tới, công nghệ AI sẽ tiếp tục phát triển, nhưng cạnh tranh trong chip có thể làm giảm giá cổ phiếu. Các công ty AI có thể tăng chi phí đầu tư, ảnh hưởng đến lợi nhuận. Thị trường sẽ tiếp tục theo dõi các công nghệ mới và xu hướng giá cổ phiếu."
         },
-        "drivers": [
-          {
-            "text": "Nhu cầu chip AI",
-            "article_ids": [
-              "6632a4fc51d21f83ba21",
-              "7ba404cece2383cf101f"
-            ]
-          },
-          {
-            "text": "Đối thủ Nvidia",
-            "article_ids": [
-              "9b03b4ffb64475c4de7b",
-              "8c80c1187c820466d1e1"
-            ]
-          },
-          {
-            "text": "Chi phí đầu tư chip AI",
-            "article_ids": [
-              "907e169877521e143128",
-              "9e5e467ae465c901800c"
-            ]
-          }
-        ],
+        "drivers": [],
         "watch_next": [
-          "Ra mắt chip mới",
-          "Thị trường chip AI",
-          "Chi phí sản xuất"
+          "Ra mắt chip mới của Nvidia và Google",
+          "Biến động giá cổ phiếu chip AI",
+          "Xu hướng đầu tư AI"
         ],
         "article_count": 12
       },
       "logistics": {
         "label": "Logistics",
         "direction": "up",
-        "confidence": 70,
-        "summary": "Khối lượng vận tải xuyên biên giới Bắc Mỹ tăng 22,6% so với cùng kỳ năm trước, đồng thời các công ty đường sắt như Norfolk Southern và CSX ghi nhận lợi nhuận cao hơn. Giá cước vận tải biển biến động, thu hút đầu tư vào lĩnh vực hàng hải. Các dự án hạ tầng logistics tại Việt Nam và Bắc Mỹ đang được triển khai, tăng năng lực và tốc độ chuyển hàng. Các tín hiệu ngắn hạn cho thấy tăng trưởng, nhưng vẫn cần theo dõi biến động giá cước và khối lượng hàng.",
+        "confidence": 75,
+        "summary": "Vận tải xuyên biên giới Bắc Mỹ tăng mạnh, giá trị hàng hóa đạt 160,6 tỷ USD trong tháng 8. Chi phí vận chuyển biển tăng, làm tăng giá ngũ cốc Mỹ. Nhu cầu logistics tăng do tăng trưởng kinh tế Đông Nam Á và nhu cầu thương mại toàn cầu. Các công ty logistics như Norfolk Southern, CSX và DSV đang ghi nhận lợi nhuận vượt dự báo.",
         "short_term": {
           "horizon": "1-4 tuần",
           "outlook": "positive",
-          "summary": "Trong 1-4 tuần tới, khối lượng vận tải xuyên biên giới Bắc Mỹ có thể tiếp tục tăng, đồng thời lợi nhuận của các công ty đường sắt có thể duy trì mức cao. Giá cước vận tải biển có thể biến động do nhu cầu và cung cấp tàu. Nếu khối lượng tăng mạnh, lợi nhuận của các công ty logistics có thể tăng. Điều kiện thay đổi: biến động giá dầu hoặc chính sách vận tải."
+          "summary": "Trong 1-4 tuần tới, nhu cầu vận tải xuyên biên giới sẽ tiếp tục tăng, hỗ trợ lợi nhuận của các công ty logistics. Chi phí vận chuyển biển có thể tiếp tục tăng, ảnh hưởng đến giá hàng hóa. Các công ty logistics sẽ tận dụng nhu cầu tăng cao."
         },
         "long_term": {
           "horizon": "3-12 tháng",
           "outlook": "positive",
-          "summary": "Trong 3-12 tháng tới, nhu cầu vận tải xuyên biên giới có thể duy trì tăng, thúc đẩy lợi nhuận của các công ty đường sắt và hàng hải. Các dự án hạ tầng logistics tại Việt Nam có thể tăng cường năng lực, hỗ trợ chuỗi cung ứng. Rủi ro lớn là biến động giá dầu hoặc chính sách vận tải có thể ảnh hưởng đến chi phí."
+          "summary": "Trong 3-12 tháng tới, nhu cầu logistics sẽ tiếp tục tăng do tăng trưởng kinh tế và nhu cầu thương mại. Chi phí vận chuyển có thể tăng, nhưng công ty logistics có thể tăng giá cước để bù đắp. Các công ty logistics sẽ tiếp tục mở rộng mạng lưới và đầu tư hạ tầng."
         },
-        "drivers": [
-          {
-            "text": "Khối lượng vận tải xuyên biên giới",
-            "article_ids": [
-              "b79605a6b030f16b28d7",
-              "d0c4310baf6f593a3e85"
-            ]
-          },
-          {
-            "text": "Lợi nhuận công ty đường sắt",
-            "article_ids": [
-              "b33bcb719ad46fdab9b3",
-              "9a0bdb372ce5e19d8457"
-            ]
-          },
-          {
-            "text": "Giá cước vận tải biển",
-            "article_ids": [
-              "b3a93bd0c2ab5b8597ff",
-              "e6f2782956a39f86b58c"
-            ]
-          }
-        ],
+        "drivers": [],
         "watch_next": [
-          "Khối lượng vận tải xuyên biên giới",
-          "Giá cước vận tải biển",
-          "Dự án hạ tầng logistics"
+          "Biến động chi phí vận chuyển biển",
+          "Nhu cầu vận tải xuyên biên giới",
+          "Dự án hạ tầng logistics mới"
         ],
         "article_count": 12
       }
     },
-    "generated_at": "22/10/2026 20:25",
+    "generated_at": "23/10/2026 08:25",
     "window_days": 7,
     "disclaimer": "Phân tích do AI tổng hợp từ các bài báo đã lưu, không phải tư vấn đầu tư."
   }
