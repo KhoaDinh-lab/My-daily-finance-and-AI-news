@@ -1,8 +1,8 @@
 {
-  "updated_at": "20/11/2026 04:46",
+  "updated_at": "20/11/2026 10:59",
   "retention_days": 14,
-  "article_count": 2572,
-  "edited_count": 570,
+  "article_count": 2566,
+  "edited_count": 568,
   "sections": [
     "ai",
     "energy",
@@ -19,6 +19,940 @@
   ],
   "disclaimer": "Bài có edited=false chỉ gồm tiêu đề gốc từ RSS, chưa được biên tập sang tiếng Việt. Luôn đọc bài gốc theo url.",
   "articles": [
+    {
+      "id": "9d368ddcaf43a85fceed",
+      "title": "Thị trường ngày 20/11: VN-Index giảm phiên thứ ba liên tiếp, vàng thế giới lao dốc - HTV",
+      "title_vi": "Thị trường ngày 20/11: VN-Index giảm ba phiên liên tiếp, giá vàng thế giới giảm mạnh",
+      "summary": "Vào ngày 20/11, VN-Index tiếp tục giảm, đánh dấu ba phiên giảm liên tiếp, đồng thời giá vàng trên thị trường quốc tế đang giảm mạnh.",
+      "tag": "Việt Nam / Thị trường",
+      "source": "HTV",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxORl8zMDlVNzc2VVpsbXVVZFg1RXdCM0ZPV1c4cXBFREdYYTZkRzc2TThKM19EdFo4RmFTNmxUZjBUbU56TVlLcUMwQk16aHFxVWdBR2FQWjdRMXl1VGR6M190Z0wxVGRtaVZ2OFdCN280d3k2M0s5TzJfcWRNV21DYkpUSmluRy1rY1FPeEM3WG5RZlI5SDBLbWI2QzYtVFhlX3RrS0R4TkNQUQ?oc=5",
+      "published_at": "Fri, 20 Nov 2026 03:48:00 GMT",
+      "section": "stocks",
+      "sections": [
+        "stocks",
+        "vietnam"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": true
+    },
+    {
+      "id": "f34365804d47966940f7",
+      "title": "Giá vàng hôm nay 20/11/2026: SJC giảm còn 129,2 - 134,2... - Báo Lâm Đồng",
+      "title_vi": "",
+      "summary": "",
+      "tag": "",
+      "source": "Báo Lâm Đồng",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPN2NfUFVyc2xWcEFjMzN5NkduaERYWkNmWFg4cTdNRy0wWk9aa1NLMWdfdnhFQWg4SklPcUg4Q1VaeHd2dTl5cUFvOGZEcWV1Q2hRNTltMmJfT042Zk1oeHB6OG1wcTB1SXhQWW1mTHQ1aE9QZUtJNVJVYTRiQXRsQUJHV3E3bzd2d01ROVZCd0VzNlpPLVRTcS1FSm53cUk?oc=5",
+      "published_at": "Fri, 20 Nov 2026 03:39:59 GMT",
+      "section": "gold",
+      "sections": [
+        "gold"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": false
+    },
+    {
+      "id": "c5c53678b251a18315cd",
+      "title": "Sáng 20/11: Giá bạc thế giới giảm sâu - Báo Nhân Dân điện tử",
+      "title_vi": "Sáng 20/11: Giá bạc thế giới giảm sâu",
+      "summary": "Sáng ngày 20/11, giá bạc trên thị trường quốc tế giảm sâu. Sự giảm giá này có thể ảnh hưởng đến giá bạc trong nước.",
+      "tag": "Giá bạc",
+      "source": "Báo Nhân Dân điện tử",
+      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9yRUp5WjRSYWNBOGRCc2hqc280Wkd5RmlGSjZjeURUUHdndmdReUFUU2VMTVg2cDVBTHV5RERwMnRfVEFaVzRZZTdGdnZ4Z2d1T2Q4OVkySWZvWm1ZRE5YSzRrVE1pMXJlNWwtN1Nlek1oazY5YnhETEdYOA?oc=5",
+      "published_at": "Fri, 20 Nov 2026 03:25:12 GMT",
+      "section": "silver",
+      "sections": [
+        "silver"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": true
+    },
+    {
+      "id": "0fbf42afe279f74e9a8d",
+      "title": "GEG có thêm dự án điện mặt trời tại Huế - Nhadautu.vn",
+      "title_vi": "",
+      "summary": "",
+      "tag": "",
+      "source": "Nhadautu.vn",
+      "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBobTZmaS1hRnVPdUttbmx1dTJZWnpDOUZVVWZzYm1McXlaSFBwS3FUR05KZmpoNml0XzlKN09UNy1tNDhkb1kyOVVxd0lIYWJ5cTZTZ0lxRlNWX1VLUzVsZklrVDJ0V25hbTNqaXZHUU5lYk84cHZwMzJoQ0E?oc=5",
+      "published_at": "Fri, 20 Nov 2026 03:22:39 GMT",
+      "section": "energy",
+      "sections": [
+        "energy"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": false
+    },
+    {
+      "id": "85432a629186905b0e6a",
+      "title": "Giá vàng hôm nay 20.11: Vàng nhẫn tiếp đà giảm gần 4 triệu đồng/lượng - Laodong.vn",
+      "title_vi": "Giá vàng hôm nay 20.11: Vàng nhẫn tiếp đà giảm gần 4 triệu đồng/lượng",
+      "summary": "Vào ngày 20/11, giá vàng nhẫn tiếp tục giảm, mức giảm gần 4 triệu đồng mỗi lượng. Xu hướng giảm này phản ánh áp lực trên thị trường vàng trong nước.",
+      "tag": "Giá vàng",
+      "source": "Laodong.vn",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOeHNib2RsX1lkbzdjdXZORlh4Y2xDNmNTakJQQ0NFUGwya2tWLTBXU3lhNHBxYy05QXUxeVRmb0s2WXNTMjlrWUdVd3p4LXBGWDVlRU4zUTdxYVduWk1jMnFObmFsWHRnVndzdnFJWjhkVFJqcl92SDRZdzREcU1yNmdsQkhjcnBNcEM1RUY1MjBETlNWZDFubDlNSnBXRmxRNkhqUkNfMU5EbktRVVZON3V3?oc=5",
+      "published_at": "Fri, 20 Nov 2026 03:22:28 GMT",
+      "section": "gold",
+      "sections": [
+        "gold"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": true
+    },
+    {
+      "id": "8de2cfdaf753dbc2b177",
+      "title": "Điện mặt trời mái nhà giúp doanh nghiệp giảm chi phí - Báo Nông nghiệp và Môi trường",
+      "title_vi": "",
+      "summary": "",
+      "tag": "",
+      "source": "Báo Nông nghiệp và Môi trường",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNTDRxeVRYSTU3YXJxOU51QXRxVTJpWUpEdDJ1T3FVak1QTWtWNEtkUWoxY3Iyd3MwRks5TTFpc1RwUHZjZS05eFoyVnduekRKLXBQTUNlbzlFTXY2YXJHWVU5bTZ6UkpnSnA1TUtvYmRlZ2s5OEIyMkRzZkdNRjdJTzVyMEhFWU1fdVQxQUpubjBIQ20xdVJkcjFYTzI?oc=5",
+      "published_at": "Fri, 20 Nov 2026 03:03:48 GMT",
+      "section": "energy",
+      "sections": [
+        "energy"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": false
+    },
+    {
+      "id": "862b823d19cdbc480ac2",
+      "title": "Nhịp đập Thị trường 20/11: VN-Index lùi sâu, dòng tiền ngoại tiếp tục thoát khỏi thị trường - Fili.vn",
+      "title_vi": "Nhịp đập Thị trường 20/11: VN-Index lùi sâu, dòng tiền ngoại tiếp tục thoát khỏi thị trường",
+      "summary": "Vào ngày 20/11, VN-Index tiếp tục lùi sâu và dòng tiền ngoại tiếp tục rút khỏi thị trường. Xu hướng này cho thấy tâm lý tiêu cực của nhà đầu tư nước ngoài.",
+      "tag": "VN-Index",
+      "source": "Fili.vn",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPWEF5XzY0NDFXNmpwMnZ5Nm1jOUh2QVhqQVZCcUVUQks2YjJOQ01RZDFMRWZRUEtRYloyNzZQM2I3QU5SN0NVd3ZyV2huWktGRG1mZlJaSlRmTnk4Tlp6cUV5alRlbkd1ZEtlQkluZFFOVmZ2RUpWMzIzYUkxaUpOTVFMdVJhZGRVcmJwRTc3b1lTcTdWd0J6NUNISkxZVTZkeEY4cHFKWV9OU05VYmhaOGNpWGZxalotcTZabElMX25acV9TN0dDVA?oc=5",
+      "published_at": "Fri, 20 Nov 2026 03:01:00 GMT",
+      "section": "stocks",
+      "sections": [
+        "stocks",
+        "vietnam"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": true
+    },
+    {
+      "id": "41baf1a51bdf6408effd",
+      "title": "Giá bạc hôm nay: Giá bạc trong nước giảm hơn 2,5 triệu đồng/kg - VOV.VN",
+      "title_vi": "",
+      "summary": "",
+      "tag": "",
+      "source": "VOV.VN",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxORl9rR0NNSE5BWVRza3pBam11Um53X2hpYWFDekIzdVc0VzBfSy12RndPaFhSXzhObUZENC05SjhlSzIzUXBMRlJCXzQzY0RiSzVQV2JQOG5JVXdOVURzRmNVbVEwNEpfbEU4R2I2d09nVHRXTzVxaDBoOFRnMHp0ZFFmZ0MyaWRhdksyLV9EenFZemx1UG1kY1dFUHBRcS15MlE?oc=5",
+      "published_at": "Fri, 20 Nov 2026 03:00:00 GMT",
+      "section": "silver",
+      "sections": [
+        "silver"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": false
+    },
+    {
+      "id": "57e90328ae8e92b8a508",
+      "title": "Thanh Hoá phê duyệt Đề án “Đào tạo nguồn nhân lực ngành công nghiệp bán dẫn phục vụ phát triển kinh tế - xã hội - Báo Thanh Hóa",
+      "title_vi": "",
+      "summary": "",
+      "tag": "",
+      "source": "Báo Thanh Hóa",
+      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNWk1yQnNhMXY4X1lkNnlMb2Q3dnRiUmUtSTlzRXJTWkJxMk9ac1ZBMVVSQ3hyVnhKeUVWMEN6SW1DOUswYUxsV3lsZUhtRmFJQWtoMVRvZ1JiNWJoekxNdXV6UzlNNUZ5c0FqeHNTQXVNY3pqT3VsNE0xcmM4dWwtQU1JSVFtRzlJMFdzblJFelNYaGowYWZCY2t6ckk4ZjhHQzZHbVZVTXB6dzh0X2t4cC1KYVllaDIzZUxUc1M1d0d6eHBpSGZsOTRvU2N0cWptSXRYWGRLT1hxQQ?oc=5",
+      "published_at": "Fri, 20 Nov 2026 02:58:00 GMT",
+      "section": "semiconductor",
+      "sections": [
+        "semiconductor"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": false
+    },
+    {
+      "id": "58e59038f66a6d673812",
+      "title": "Feds release brazen heist video, charge 14 in alleged $22.5M California freight train theft ring - Fox News",
+      "title_vi": "Cơ quan liên bang Mỹ công bố video vụ cướp tàu chở hàng ở California, truy tố 14 người",
+      "summary": "Cơ quan liên bang Mỹ công bố video vụ cướp táo bạo và truy tố 14 người trong vụ trộm hàng hoá trị giá 22,5 triệu USD từ các tàu chở hàng ở California. Vụ việc làm dấy lên lo ngại về an ninh chuỗi cung ứng và vận tải đường sắt tại Mỹ.",
+      "tag": "Logistics Thế giới",
+      "source": "Fox News",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNS01ONnAwWVFSU21wb3YyMGhuTVFZcEFhT3R5eWRYY3U0ZEt3WmJIZ3hzSC1DT0EyUUNRZWRUQzRaaEJxYTR6OTRhV3RzRFZwMzBDcGlPcjZGd2NjdlpOUjhRN1RZNFI3SXptVjBNMGVnemVYdkc2MkNvWEwwODg0UGQ0cHFKdzdlME1hVkJSa3pfSk1mQi1DNWdwenE2VkVtNzMteWVqZzIxT2xzX2NXQTM1b1hZbTQ5UlHSAb8BQVVfeXFMT29fZzBWaDRNOW1ELU9VUm9qcmw2OUdvQWF2ZHBIRTlOYmJtNjB6a29qUnpzWnZkb29vTkVKZnpSSEFIQ3JOa1gteVdVQkxMSU9DTTFEQUQ0M25qamN1bkVMMzBGOHhKeXFpVmVSQWR6cXVWVFdpMS1mTVA1bHl1TFBDTTJQX19JXzZCeVhXbHFJYldyNDlzTmJUUzhqeHRWaVJxeGV3WmhGRGI3Y1Fta2xjX21tbjM2MXVRXy1pTUE?oc=5",
+      "published_at": "Fri, 20 Nov 2026 02:55:27 GMT",
+      "section": "logistics",
+      "sections": [
+        "logistics"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": true
+    },
+    {
+      "id": "034eb6c090f8502a617c",
+      "title": "AI Cloud CEO Hits ‘Rock Bottom’ in Race to Survive Chip Crisis - Bloomberg.com",
+      "title_vi": "Giám đốc AI Cloud cho biết công ty đang ở mức ‘đáy nhất’ trong cuộc đua sinh tồn khủng hoảng chip",
+      "summary": "Giám đốc điều hành của AI Cloud cho biết công ty đang gặp khó khăn nghiêm trọng, đạt mức đáy trong cuộc tranh đấu để vượt qua khủng hoảng nguồn cung chip AI.",
+      "tag": "Trí tuệ nhân tạo / Chip AI",
+      "source": "Bloomberg.com",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOXzdYX3ZjQXUzLVNFb21XSHhaMm15bnQ1TzdjR1JKakNPc01QU2gzRFlsYWRtSDJoVzBNNVpKWFBTUTlzZTBrYnNtYldYQm40T0ZzM2pERzBXSzZzb2tuTGE1TVA2ZEN5WUpuWXd2Ty1ZMmNTWUlITjQyYmFvSU14Q2NMS0xIdUxfcGVlOUpzSkZpMlptczBEazJsM2tsTDZpX2xDZVBmcTFkb2RfNlV1RA?oc=5",
+      "published_at": "Fri, 20 Nov 2026 02:48:00 GMT",
+      "section": "ai",
+      "sections": [
+        "ai"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": true
+    },
+    {
+      "id": "d62791c39bc48d493e6a",
+      "title": "Vingroup và nhiều doanh nghiệp tăng tốc đầu tư năng lượng tái tạo - Tạp chí Doanh nhân trẻ",
+      "title_vi": "",
+      "summary": "",
+      "tag": "",
+      "source": "Tạp chí Doanh nhân trẻ",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOd2JwcWlWOVQzbkpqbUtEenpsb0g5VGpINm5tVzB1X1J0ek9fS3dIbWVoVk8wanZmRHZMem5hTkZBeUpjdXFJQnZtT3QwMnJGc2pqRm4xbEoxVjRianh3LUV5UW5PSDZaOVI4Y0d2VmhSYWhqdHFrdjB2dVBiMy1jdGxEYmZMSklFRnFtZGRxa2tPekUzZUZ0OW9FTm9XZUdCeEl3QnhYUUVDMEY1?oc=5",
+      "published_at": "Fri, 20 Nov 2026 02:47:00 GMT",
+      "section": "energy",
+      "sections": [
+        "energy"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": false
+    },
+    {
+      "id": "55480a855c237ef97a73",
+      "title": "Giá vàng giảm rất mạnh, chênh thế giới hơn 22 triệu đồng/lượng - Báo Tiền Phong",
+      "title_vi": "Giá vàng giảm rất mạnh, chênh thế giới hơn 22 triệu đồng/lượng",
+      "summary": "Giá vàng trong nước giảm mạnh, chênh lệch so với giá thế giới vượt quá 22 triệu đồng mỗi lượng. Sự chênh lệch này cho thấy áp lực giảm giá mạnh trên thị trường nội địa.",
+      "tag": "Giá vàng",
+      "source": "Báo Tiền Phong",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNWmNuNDNNVVNfTUMzZmtUQldnenFGUC1ZNloxRjkzeXBYaU16ZlFkbWpKY2p6Z1ppUzBOTWtiTXlFQmFTVEVjUU5PTVFLUDBORFNEVUsycy1TaXJicmFKcnNKOWpmY1NVdVJ1cHY4cWtsMk4tc2VqUk56ZlFVVFFOUjJ2WXRxcnFibXZHX3psU0JBTmlPS0RDN2JURjhXdw?oc=5",
+      "published_at": "Fri, 20 Nov 2026 02:39:41 GMT",
+      "section": "gold",
+      "sections": [
+        "gold"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": true
+    },
+    {
+      "id": "466d3fb320b1c45641c6",
+      "title": "Biến động giá bạc 20.11: Bạc trong nước giảm đến 2,9 triệu đồng/kg - Laodong.vn",
+      "title_vi": "Biến động giá bạc 20.11: Bạc trong nước giảm đến 2,9 triệu đồng/kg",
+      "summary": "Vào ngày 20/11, giá bạc trong nước giảm tới 2,9 triệu đồng mỗi kilogram. Sự biến động này phản ánh áp lực giảm giá trên thị trường bạc nội địa.",
+      "tag": "Giá bạc",
+      "source": "Laodong.vn",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPX3d0cHpBM2x6SlBVWUlLVlFMNnFlM3VicFRlRGxfNmJYS0p5REhpTWFkeGNDdHczRnJBSUk0T3lQWEs3eEh0T1VkZEg2c2h5YXlPQ3JOUzVQRklkM1lSZmlVWDNsaXM4a1d5SjdqTVZtVXUzZGpRM1BXMDV1NGlETldtQW0zRDB5azNqNy00Y2JEcndkMVdtRkxObTVvN1lGemgxRi1SVF9uR0RX?oc=5",
+      "published_at": "Fri, 20 Nov 2026 02:36:36 GMT",
+      "section": "silver",
+      "sections": [
+        "silver"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": true
+    },
+    {
+      "id": "bae7188f94e12f114753",
+      "title": "5 cổ phiếu VN30 cùng về sát đáy gần nhất, có mã mất hơn một nửa giá trị - VietnamBiz",
+      "title_vi": "",
+      "summary": "",
+      "tag": "",
+      "source": "VietnamBiz",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQbTUwY2J0SEg4QzlUMURMQVlvU3Y2VHpmXzZSNUV2MHhrZF9Ra1VsS0ViWHlIUGV0SWxUVUFPUnR2NHlncTdDNmxPZ1RLYmxmOFBBWXVBa1AxVUJJZklaLXIzRlQ3clFSSjJ2Q2NYWEFBTEpKaXpBRXJuZjRwSkhlc0xlc09TTmNvSS1WWjJ3SXpCU3hkRF9GR1E5OVVydWJvTGJISHRNTG1zN2JmZklUMXRrYw?oc=5",
+      "published_at": "Fri, 20 Nov 2026 02:34:00 GMT",
+      "section": "stocks",
+      "sections": [
+        "stocks"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": false
+    },
+    {
+      "id": "d54bef6f741352d8bd08",
+      "title": "VN-Index mất mốc 1.700 điểm, khối ngoại tiếp tục bán ròng gần 1.000 tỷ đồng - Báo Công Lý",
+      "title_vi": "VN-Index mất mốc 1.700 điểm, khối ngoại tiếp tục bán ròng gần 1.000 tỷ đồng",
+      "summary": "VN-Index đã giảm xuống dưới mức 1.700 điểm, trong khi khối ngoại tiếp tục bán ròng gần 1.000 tỷ đồng. Áp lực bán ra này làm chỉ số tiếp tục giảm.",
+      "tag": "VN-Index",
+      "source": "Báo Công Lý",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNNXpZMlBNeVRydVZMTG95cUxhUVRRazQyRUNHTFVMLVVvR0ttQzNtX0ZfU3BEbldCcUxHM3ZDQVNMSjhlZ0FjbUpvQjljSDl3OVZrQlUxeFo5WklCOWdSckpwZGJFUURRSFZJVDE4V3pPN1dlN05kZzlQUkxvNHo0QWtVWWJ5ODJDX2d6cS1RS05heWdzREtYSXpDd3lZMkhRVWpFRGlaOEJkNEU?oc=5",
+      "published_at": "Fri, 20 Nov 2026 02:33:26 GMT",
+      "section": "stocks",
+      "sections": [
+        "stocks",
+        "vietnam"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": true
+    },
+    {
+      "id": "8ff65895cf151d369f3e",
+      "title": "Ngày 20/11: Giá bạc nối dài đà giảm - Thời báo Tài chính Việt Nam",
+      "title_vi": "Ngày 20/11: Giá bạc nối dài đà giảm",
+      "summary": "Ngày 20/11, giá bạc tiếp tục giảm, duy trì xu hướng giảm trong thời gian gần đây. Thị trường bạc đang chịu áp lực giảm giá liên tục.",
+      "tag": "Giá bạc",
+      "source": "Thời báo Tài chính Việt Nam",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNSnlzNmFwdndGZjJ6U094MW44RkNBbXVjZ05XX2pMSXAtbF9wTjQwNzFGUlMtTU94OXU0ajdJZGxlZHVGNXRyV000Wk9YOXlUeWp3SXVNbE85c2tWMlBHTy1zTlp1QjAzSk9fSDBPdTFzc2RoM2lkb2gtVXR1eC1oaDJyMVo1Y00?oc=5",
+      "published_at": "Fri, 20 Nov 2026 02:32:19 GMT",
+      "section": "silver",
+      "sections": [
+        "silver"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": true
+    },
+    {
+      "id": "3f32a72d0dda21e3b909",
+      "title": "Giá vàng hôm nay 20/11: Vàng trong nước và thế giới giảm sâu - VOV.VN",
+      "title_vi": "",
+      "summary": "",
+      "tag": "",
+      "source": "VOV.VN",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPY0tmRlcyOGtqMGVLZVJlTHExbDNxbTFVQmMzek1ETVl4R09VN1AyNEdfX2dHS0FVa3lINjhTQ1N6bTBLZXd6RVlzcm9yQUxhVE9oak1DZWhmS01IanhfcHM2ckxPNlh4RDAwbDBsaXZHSm1JamVCSFQxeWhUbzZTTUpCZWFLamZRM0tFWE9EbDAwYmZWbXdsTzRmOGMyZDM4UUE?oc=5",
+      "published_at": "Fri, 20 Nov 2026 02:30:00 GMT",
+      "section": "gold",
+      "sections": [
+        "gold"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": false
+    },
+    {
+      "id": "71999bcfab2fcaf9e07e",
+      "title": "Áp hệ số K, tiền sử dụng đất có thể tăng: Làm gì để giá nhà bớt áp lực? - CafeF",
+      "title_vi": "",
+      "summary": "",
+      "tag": "",
+      "source": "CafeF",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNQW01TnpZNDFuWUVGelBIcnRSbDZrSTNMYWxtLUlYb0dvSjZIOXBoNmlmQkFjTV92Y0ZmaHpFTnpjZ1ctbWdVMFVUYWhPU0RjcUtNd1ByOFNTUXNoWVpBRXZKLXpGQWhtRFlWc0ZWUWxtb1N6ZUZMSmlkRnYtRDNmeVlNQUNqUlFZWjVkX19JQVdQeTV2Z0o4cElwWWRUTkduOEVrRERyWEw5UnBG?oc=5",
+      "published_at": "Fri, 20 Nov 2026 02:18:00 GMT",
+      "section": "realestate",
+      "sections": [
+        "realestate"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": false
+    },
+    {
+      "id": "92b545117f31bcd8dd66",
+      "title": "Dollar near 19-month peak as AI jitters sap risk appetite - KFGO",
+      "title_vi": "",
+      "summary": "",
+      "tag": "",
+      "source": "KFGO",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOMDdPS1ROSVozU3ozMVg2Y2FTMFotODhhVllpbFZGX25Cdm10UkdENWxYRUFsQ2pjSmlNcUtON2x2QlE1aWdER2QyN2tORTFTTGtFUE5TVVdIMEl4RVJzWjQ1VlJCakpRUVVQYW5HNnVLQWRxelNSbXp2R0o1QlVwU3JmMFJZdWk0V0VvTmM2OA?oc=5",
+      "published_at": "Fri, 20 Nov 2026 02:08:36 GMT",
+      "section": "macro",
+      "sections": [
+        "macro"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": false
+    },
+    {
+      "id": "1e76735460e652c05d55",
+      "title": "Gold futures sink below $3,700 as 5% yields pull money out of bullion - Kitco",
+      "title_vi": "",
+      "summary": "",
+      "tag": "",
+      "source": "Kitco",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQSlJNYXNXZkw3b1RUbHlCY0hkVHF0OEFjQnpaMDlNc2dYREpHTUpVSHdiVTFsMHlYbXFjX3RhX0VFN3Z5WFZSUFBtRUplVUs3TWx3SWk1UmJYTDk0LWxQOFhIaU1JNS1hQm9QaDlSalNLU1JkRDd5QU9YUHZyTEsxalNySWo0YVUwVkNjZE55SXplYkJMOVJHQkIySk5YM05rV1Bj?oc=5",
+      "published_at": "Fri, 20 Nov 2026 02:05:02 GMT",
+      "section": "gold",
+      "sections": [
+        "gold"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": false
+    },
+    {
+      "id": "37414f86b092cd4e61cf",
+      "title": "Đề xuất hỗ trợ đến 10 triệu đồng cho hộ lắp điện mặt trời mái nhà - Báo Thanh Hóa",
+      "title_vi": "",
+      "summary": "",
+      "tag": "",
+      "source": "Báo Thanh Hóa",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxObWpNV1VrZHZYNThYOWlZNWhTODlHQlVycHJmVUFIU0h2RG5HUjc2VHJBU2libmt6VXdIWHZldU4wZmdQZlVrYU8zSVBpQ2pIaC0tZEZ6S2JlY3Y2ajhlZ2pjZGhvc2ZxNV9IalRqYW1KelYxZlpyX3Azdjh5VVBGQWpickxkVDJWOUdpUXBUX25DakRhOVVBUE50MlZCUGhO?oc=5",
+      "published_at": "Fri, 20 Nov 2026 02:04:00 GMT",
+      "section": "energy",
+      "sections": [
+        "energy"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": false
+    },
+    {
+      "id": "9561fa26c1cdaf78ef3c",
+      "title": "Giá vàng sáng 20/11: Vàng nhẫn giảm tới 3 triệu đồng/lượng, SJC giữ mốc 136,2 triệu đồng - Báo Công Lý",
+      "title_vi": "",
+      "summary": "",
+      "tag": "",
+      "source": "Báo Công Lý",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPQ3hSVHY0MktOY0pBemFNVXJSSjlhN2tzQXZNdkdGTW1Rbk8zNzlTaEkydDM4ZENXR1hmc0N3VDRLaENoXzFQTllCY0FyU3VTOWlpeHpySk9YdjZQajdleDE3Q3kyRTJXMC16NkF1N1E2OVFQMjk2eHBVZnZIM0dUM2tJTWljXzhvTU9mbi00WG5VSFlOYVlLR3JIY1NrX1B5cVpZc016TXpBZkRXSWFPekFzZktaZzg0bmJR?oc=5",
+      "published_at": "Fri, 20 Nov 2026 01:56:33 GMT",
+      "section": "gold",
+      "sections": [
+        "gold"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": false
+    },
+    {
+      "id": "6b870f582809e686259f",
+      "title": "Gold, Silver Plunge Further Amid Fed Rate Hike Concerns: Buy The Dip Or Brace For More Pain? - TradingView",
+      "title_vi": "",
+      "summary": "",
+      "tag": "",
+      "source": "TradingView",
+      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNSmowR2VCNGluZG9tbC1IOEw5SGJzdlF5Z2UxVThsNG1ocU1TNkJJb2VmNW1KeEZubGQ5VWxUbTZiUHlRdHh2M1BWeEpjS3NRNjlyRVM0QU5ieHVfME1EdEl2X3lGVl9aZmMwa0hrTDhpT0FnQnBpeUtyclcxLXctRGJQUUpXNXFwVVdydEZnSG5BYzB4MEMzd1BuOFJ6dFBsYUZmSDN6TGpKRGphMkJKcjU3Q0Y5SS1VSk1Nd1JDaUJDZWYyU1RBZ3oycTdFR3VfRnNHVVdlV0dab2NGbjVLdlZpOTM?oc=5",
+      "published_at": "Fri, 20 Nov 2026 01:51:00 GMT",
+      "section": "silver",
+      "sections": [
+        "silver"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": false
+    },
+    {
+      "id": "96545c2a7ff089b953a0",
+      "title": "US approved nearly 900,000 Nvidia and AMD AI chips for China. Raises more questions than answers. - investingLive",
+      "title_vi": "",
+      "summary": "",
+      "tag": "",
+      "source": "investingLive",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPRDlYQ1M4U2NVMEl4VTRnSGJZY1Nhck12YzZ2aHZ3ZUtlUV8zay11QU1VRktvNGpwT094aHFaVFFRdll5b2hrYVR3MkwtSkJlUjZmdDBBcWVJNHhNb2dQRWFGdnRUWjhDZ1hFX2JEMzh6bncwa3lOT3ppdWlYYTUtaE04VS1kR0k1bkFpUlFqaHljcmVzMUF2TXNDNndVQTRuYzJabXV2U2RxRDNXdUNaOVlRMEJJdGFZakVFY1RoUTdmNnlVdHc?oc=5",
+      "published_at": "Fri, 20 Nov 2026 01:50:39 GMT",
+      "section": "ai",
+      "sections": [
+        "ai"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": false
+    },
+    {
+      "id": "94b237caf089fd7dcfbf",
+      "title": "Chuẩn hóa hạ tầng logistics theo tiêu chí phân hạng mới - VnEconomy",
+      "title_vi": "Chuẩn hoá hạ tầng logistics theo tiêu chí phân hạng mới",
+      "summary": "VnEconomy báo cáo việc chuẩn hoá hạ tầng logistics dựa trên tiêu chí phân hạng mới, nhằm nâng cao hiệu quả và đồng bộ hoá các tiêu chuẩn trên toàn quốc. Việc này dự kiến cải thiện năng suất và tính cạnh tranh của hệ thống logistics Việt Nam.",
+      "tag": "Logistics Việt Nam",
+      "source": "VnEconomy",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNbzFfTjJpRzBWS0FlY18yMmgzMVU5eGp0dFdZNkFnUkJTZ3VMVzQydDA4dnlyN0pfdVpNcnJfSkcwajRwSC12QjVKMTlpczNra1lqOW1pQ2JSMDRKTGczWXhlN19wckRxM2d2TlptbzJRMzgyeHJWem41N3hWcEtwTVRoZVJBVGM?oc=5",
+      "published_at": "Fri, 20 Nov 2026 01:49:51 GMT",
+      "section": "logistics",
+      "sections": [
+        "logistics"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": true
+    },
+    {
+      "id": "309717e5e1a43b2242ea",
+      "title": "Người thầy ngành Công Thương và hành trình ươm mầm những kỹ sư vi mạch - Vietnam.vn",
+      "title_vi": "",
+      "summary": "",
+      "tag": "",
+      "source": "Vietnam.vn",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQV3piLTkxMkZmZGpQTnlDLUJkTnFLaUt0Q05kaE1rN243VUt0cklOWnRDWnQ2emJFcVhvdXA5OEsydEhuVHlLdkNrdzN4aWRiYXg0UGlnaUlUeXNGZUZkNG5OZTNiSldwa0pBWFk1SWpGSS1XR09qcC1rcTl1a3R0d0hKdk91T3dPYl9pcTZwVFFFQnRubGFkWA?oc=5",
+      "published_at": "Fri, 20 Nov 2026 01:43:23 GMT",
+      "section": "semiconductor",
+      "sections": [
+        "semiconductor"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": false
+    },
+    {
+      "id": "a7b9ec18d98932963902",
+      "title": "Hạ tầng tăng tốc, loạt dự án bất động sản ở Đồng Nai hưởng lợi - CafeLand",
+      "title_vi": "",
+      "summary": "",
+      "tag": "",
+      "source": "CafeLand",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPNjhtUTdTbTZfWlhjR1lCeDNnN0FTaXduRTVsSldXMVlHSm51UEFHSTUxbW8wb2hzMm1uQkRWMThvUzJHQUxqcTRIUXFDRkllYktXbnFoTTFZYlp0OURfTlNmZncwaW1GSXZlNUsxTG9MSDV5bUZNTVlHa2FGNk9tSEFzQW5kMnFvckk0dXV5V21FZ3Byb1hJbndxVllQNXlVWno4?oc=5",
+      "published_at": "Fri, 20 Nov 2026 01:30:00 GMT",
+      "section": "realestate",
+      "sections": [
+        "realestate"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": false
+    },
+    {
+      "id": "e921be27e66092f84db7",
+      "title": "Học viện Kỹ thuật và Công nghệ an ninh nâng cao năng lực đào tạo, từng bước làm chủ và ứng dụng công nghệ mới - dangcongsan.vn",
+      "title_vi": "",
+      "summary": "",
+      "tag": "",
+      "source": "dangcongsan.vn",
+      "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxPaV9ndXVWVkd5TFBiQVdYSXlhUFlidVN1YUMzWGlGV1V3Ym1GNXVvUUlfakpCSjZZRU13aGp4ZmdVUTIyLWV0bUZIc1NaQUx0eGt3eC1WaHJ3S3JlZkVIWkpNQTZITUZldFFuX20yd0x5czZFbjZ3ci1oRzJuUlZwQlpOcG5jMmxHWG1BNGdBLW5qLUUySGpTVFZ1dHVwVG5KMlotRE1BVmtlNUk2NVhTX2d5YVpVNWRteVpGTW56NlNwZ3cxU1FyUm16eFFnUnZEN1NIVXZlN203VEI2TWZtakJ5dFBNbm9iUFJlcWp5OWZLTS1NeUE?oc=5",
+      "published_at": "Fri, 20 Nov 2026 01:21:32 GMT",
+      "section": "semiconductor",
+      "sections": [
+        "semiconductor"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": false
+    },
+    {
+      "id": "c0bc5bc2dbac6c0b6d7e",
+      "title": "U.S. approved nearly 900,000 AI chip sales to China - The San Joaquin Valley Sun",
+      "title_vi": "",
+      "summary": "",
+      "tag": "",
+      "source": "The San Joaquin Valley Sun",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBrTG1iVFA2SlFKU1l4UENmV3JBNFpybUs4ZUNlMDhYZkhPNkF1NmJucFU3TGlPSjBfUC1RTjRLazVYVjljMDkxdEdMOEdoOFFMbFM5SjhPRGtJVG0zWFdBekk0REJMNmJJOVdHMDBJNFc2eGpzWnhNdHg5QU5xZw?oc=5",
+      "published_at": "Fri, 20 Nov 2026 01:18:02 GMT",
+      "section": "ai",
+      "sections": [
+        "ai"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": false
+    },
+    {
+      "id": "14830d3c98dbc67d706d",
+      "title": "Trước giờ giao dịch 20.11: VN-Index chịu áp lực sau khi mất mốc 1.700 điểm - Bloomberg Businessweek Vietnam",
+      "title_vi": "Trước giờ giao dịch 20.11: VN-Index chịu áp lực sau khi mất mốc 1.700 điểm",
+      "summary": "Trước phiên giao dịch ngày 20/11, VN-Index đang chịu áp lực giảm sau khi mất mốc 1.700 điểm. Các nhà đầu tư đang theo dõi diễn biến để đưa ra quyết định.",
+      "tag": "VN-Index",
+      "source": "Bloomberg Businessweek Vietnam",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNUTV5NERwR085YVdINkhmOV91RF8yQXdlVGNQRmNmTEFmMUJVNThneDJpMXJxbHY2czMxci0yWGw3VW8xUEMyN1B0MW56NVpiYlVrLTRES1NjcVE2WWdyMnpYQ3JqN0M4Qmh2Rk5yNHlpX0YtVENwQWpuR1VycXZfOC1lcmk2N0RjbFFuejNOV2xVYzg2M2NKcWo1MlA1Zw?oc=5",
+      "published_at": "Fri, 20 Nov 2026 01:15:00 GMT",
+      "section": "stocks",
+      "sections": [
+        "stocks",
+        "vietnam"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": true
+    },
+    {
+      "id": "05888f4ed2eaa61cb952",
+      "title": "Nvidia Asked to Sell Chips to Companies Tied to Chinese Military and Megaspeed - The New York Times",
+      "title_vi": "",
+      "summary": "",
+      "tag": "",
+      "source": "The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPUVRIQ2VxbEYxSjhPenZGVUItLXdSQzJhMzdMQjVSaDB2aXlsMUdhVk44aTRRZzY1bllnTGJRdmVXLVZsaG5KZW5EclNCUjNHT0FiRDEtZ2Nqb05BaG9Nc2hvR0xneFpWUzNJNk5CQ3IyU1ZMTGMwMWNWM3RsNGlLenpaS1Z4ZUkwYk5yVl9ialFDRzk1?oc=5",
+      "published_at": "Fri, 20 Nov 2026 01:13:37 GMT",
+      "section": "ai",
+      "sections": [
+        "ai"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": false
+    },
+    {
+      "id": "88b231f9d249dbedf712",
+      "title": "As Micron construction progresses, Central N.Y. looks to semiconductor future - NY State of Politics",
+      "title_vi": "",
+      "summary": "",
+      "tag": "",
+      "source": "NY State of Politics",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQTUlIOE9xX25BX3pST2xaNVFaSThEXzRwdE5DVTczZUt0bTBIbmQ3UFRsU1FPRnpmaHMzbjhZVlRWTkVkSkpROGNXV0JlcGd3OFFORzR3U2ZTTmVVM3Itc2JUS0NlUXF6WWJKSVBkWmJXNGpta2RSWnZxa0ZMTHZUaHRJM0E3V1JTY2FLdFNCQkJRVFdRbVowU2pDdXhvT3Zvaml1b0JyM3FCcF9x?oc=5",
+      "published_at": "Fri, 20 Nov 2026 01:00:00 GMT",
+      "section": "semiconductor",
+      "sections": [
+        "semiconductor"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": false
+    },
+    {
+      "id": "e7700b480c060edcf02a",
+      "title": "Giá vàng 20-11: Vàng thế giới rơi sát 3.600 USD, cảnh báo còn giảm thêm - Báo Tuổi Trẻ",
+      "title_vi": "Giá vàng 20-11: Vàng thế giới rơi sát 3.600 USD, cảnh báo còn giảm thêm",
+      "summary": "Ngày 20/11, giá vàng trên thị trường quốc tế giảm xuống gần mức 3.600 USD một ounce. Các chuyên gia cảnh báo khả năng giá tiếp tục giảm trong thời gian tới.",
+      "tag": "Giá vàng",
+      "source": "Báo Tuổi Trẻ",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPaG1Ld1Q1OF9FTHBmcjBmRFk2UGlMSTFsMXJLb3lydkQySUVRSHAxUmtFZVVfZF82am5XSndKWVBQSi0wUGpqbFl4NERITVFXMmRLNE5aTzVqMEdUNHFUeE8wOGRyU3JNMXJ5cTlkSnpTUXNIeTJpWjlUQXFkdmxKdlpvQ1VkUlBCWUpVMi1DR1ZHZWpOZ0d3akxwc1NNa1Y3V2wyZXZhODBYS0JGc1pB?oc=5",
+      "published_at": "Fri, 20 Nov 2026 00:32:00 GMT",
+      "section": "gold",
+      "sections": [
+        "gold"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": true
+    },
+    {
+      "id": "02655ab9edd4651bf005",
+      "title": "California subpoenas Nvidia as questions about CEO affair, AI chips mount - Los Angeles Times",
+      "title_vi": "California triệu tập Nvidia khi các câu hỏi về vụ affair của CEO và chip AI tăng lên",
+      "summary": "Tòa án California đã ra lệnh triệu tập Nvidia để trả lời các câu hỏi liên quan đến vụ affair của CEO và việc cung cấp chip AI, theo Los Angeles Times.",
+      "tag": "Trí tuệ nhân tạo / Chip AI",
+      "source": "Los Angeles Times",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPUlI2V2VNMGV2S3F0ekpsVE45V2Vael9kX0dQZFROUnkzUXo2VzBUbmJUMndfNlRqellfbk9WdHI2ZmhZOVpyWDhRaFREM1M0RmtrS2JFRmVsdm9aUWczSjZXRTAzbE9yalotejdxM19SRnVUM2czNVVXbjNxRHhuS0tLTjVsM3JsR0xSUF92bDdUSjllZExQQTVQM3JMNW5mQkhXYTNXZGhWTmJyeVpmYXJpVVJhR0NjTXA3a0ZTMzFsZw?oc=5",
+      "published_at": "Fri, 20 Nov 2026 00:27:46 GMT",
+      "section": "ai",
+      "sections": [
+        "ai"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": true
+    },
+    {
+      "id": "0b0b82ef23130f75bf4b",
+      "title": "How the Bipartisan Permitting Bill Could Drive Up Natural Gas Exports - Inside Climate News",
+      "title_vi": "",
+      "summary": "",
+      "tag": "",
+      "source": "Inside Climate News",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPeC0zWFFsazR1U08zTmhXb0s5OGw4aUlObklXa0hFOGpyczFvcEpYMHhkazNjRDktRElTN2EzVXkxd3VHeC1BLVhBOHYwRjNHVUhqT3ZHcnZzTUR5VVI1enZIamd6YmtQWm4zQlZXM0VPSGRRX0xHUXZBeTdIcjI1YkhJYXdVYUZjR25wenR3b0N3aFY0dXc?oc=5",
+      "published_at": "Fri, 20 Nov 2026 00:09:32 GMT",
+      "section": "energy",
+      "sections": [
+        "energy"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": false
+    },
+    {
+      "id": "37ac57abc34db3e0283e",
+      "title": "Giá vàng thế giới hôm nay 20/11 tiếp tục lao dốc, xuống gần 3.600 USD/ounce - VIETTIMES",
+      "title_vi": "",
+      "summary": "",
+      "tag": "",
+      "source": "VIETTIMES",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOLWtjUEFENHVRQlBLSXB2Y0tuUGxqekRTU2dlRXpPN0hMSG1GUG91TGlLd3NwMkE4SDVKaXl3MjJ2NzZrdWc3TmUzd1BLMnN4Y1ZoZVR6WUJESXBSR05EaTRmNHl4WkhaWGVNQmF5THJJaHBwT1I2YjNDOFVpYzVOS0wyUFhDSlplSDFXVkNpRnJFQWxLbF9uTUREeEtVRHVxbUFxcFRoZG5icFA1?oc=5",
+      "published_at": "Fri, 20 Nov 2026 00:04:19 GMT",
+      "section": "gold",
+      "sections": [
+        "gold"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": false
+    },
+    {
+      "id": "84767ad1a5409f93c558",
+      "title": "Giá bạc hôm nay 20/11: Bạc tiếp tục giảm, áp lực từ Fed gia tăng - Thuonghieucongluan.com.vn",
+      "title_vi": "",
+      "summary": "",
+      "tag": "",
+      "source": "Thuonghieucongluan.com.vn",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNQzItNnpWQWFzaGh4aE1jWEdSM2xBaWVVU0Jya2RqRmFoN3hJU2dfM2VkWVAxQk5GWXN5dk1USmtMVEF5eTAwQS1Qb3J0Qkc5TV9nZmNPWmJQMm5oN20zb3NYRmliaENHUUwtTXRCdnJZQ0VhSEFfQ3ZEQVIyU19sLW15VVU5ZFVlNHo0ZEdRZUF2TXRLRXRFVDNFMDhuTlhFRGRqVXRqVzBBeVVpaUE?oc=5",
+      "published_at": "Thu, 19 Nov 2026 23:56:00 GMT",
+      "section": "silver",
+      "sections": [
+        "silver"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": false
+    },
+    {
+      "id": "63283b6ea73d53269f71",
+      "title": "Penn State unveils new semiconductor research capabilities - Semiconductor Today",
+      "title_vi": "",
+      "summary": "",
+      "tag": "",
+      "source": "Semiconductor Today",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOX1BOZGFfeGg5TmkzX3BTVWt2SVByaG84d0Vad1lSeXF5VU91Wm9VblRtWVlVUWlqc0p6d3ZrNDVRYVZhcmxad3lrcm5Ic1AzRUhPaGQtNlc4THdUV1NqU2NVaVN1emVOUXZWbmEzX1BjY29oLVpRQjM5U2NHNi1JZW1YcVY?oc=5",
+      "published_at": "Thu, 19 Nov 2026 23:53:34 GMT",
+      "section": "semiconductor",
+      "sections": [
+        "semiconductor"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": false
+    },
+    {
+      "id": "a0d90820f1f63f15220a",
+      "title": "ABBANK được vinh danh ngân hàng dẫn đầu phát triển mạng lưới thanh toán VietQRPay và VietQRGlobal - Thuonghieucongluan.com.vn",
+      "title_vi": "",
+      "summary": "",
+      "tag": "",
+      "source": "Thuonghieucongluan.com.vn",
+      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPdHdlc1o1eS1WYjExVEtVdERUOWtfLWhMb3VwZ0xKbG1hbDIyeVRmU0pKQUhSdklnNkt6cFA1amFxQjczQXpDWDBJTEhVVHRwRDBDX1VMNHRfQl9RekMtVmY1UlR3WFNJaFpoYWJKcnRxbURfRXpadVVMVEVrcmFlZG51aFJCSl8tRWRlTEZFVVJqVjZnbV9pa2lYYUpjeFFLN2MtcW9WcGdIbkJ4WXQ3VU5MTGNzZHdubXpMcUJLSXhaaFlMcU93WEo0bEJqTFQwbmlpdGY5M19EaEht?oc=5",
+      "published_at": "Thu, 19 Nov 2026 23:44:00 GMT",
+      "section": "fintech_vn",
+      "sections": [
+        "fintech_vn"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": false
+    },
+    {
+      "id": "8983abbe42821dfcc5d5",
+      "title": "Tăng tốc lắp điện mặt trời mái nhà - Báo Thanh Niên",
+      "title_vi": "",
+      "summary": "",
+      "tag": "",
+      "source": "Báo Thanh Niên",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPN2FmUVdtcmRfdjB5WHV4bkp0OUVfU0owY0dPaDBiNW9pVGpLY2hqR3lDR1RqaTA0WWJ6d2VkSUV3SFEwa2JkV2N6MkdvN1BfQjFEekZjdmVJaHNEZ1gxY2Zqak1NTmNNMHlNQklUTnN4WDhwZUVZeHpwaGQyV1IyNmxDY1Q?oc=5",
+      "published_at": "Thu, 19 Nov 2026 23:43:00 GMT",
+      "section": "energy",
+      "sections": [
+        "energy"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": false
+    },
+    {
+      "id": "9720db0295f6493a8443",
+      "title": "AI is fueling \"disturbingly high\" inflation, Chicago Fed president says - CBS News",
+      "title_vi": "",
+      "summary": "",
+      "tag": "",
+      "source": "CBS News",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFAtc000b2liZk51bUdmbnBlRkNnUml0NHB6NzlyWlZ2YmxUN0JBMy16UUZzVGhUcU1mYnk1UTRwSml3VkxUY1Nkb0lOb1MtVHg3RzN6ZENveGc1STFhYzVielJiOUFfRGtDMlBDTTIwTE1YNnB3cU5B?oc=5",
+      "published_at": "Thu, 19 Nov 2026 23:38:00 GMT",
+      "section": "macro",
+      "sections": [
+        "macro"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": false
+    },
+    {
+      "id": "fcf14eafb28ce6ad977d",
+      "title": "Thanh tra NHNN chỉ ra nhiều vi phạm tại một chi nhánh của VIB - Báo Nông nghiệp và Môi trường",
+      "title_vi": "",
+      "summary": "",
+      "tag": "",
+      "source": "Báo Nông nghiệp và Môi trường",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPYmVMYUZlN0ozQThMSVlIWFkyT2FCTDdkM2o2ejZGX09Rb3JGdExEZkpSQjdFU0FFNEdFYllGNWt0MjZvQnlCNGlrcTdvcDR1c2JTRWJRQXFfdEZFTVhUMmxRa2JlWHMzeVdGQWJoYjNfVVpBVERrTjlYRDc3LWV1WHhXWGNWcTlBdHQ4NllfUDF0cDZaWkM0VmdZeEJtLTlKZkpKSTJjbDk?oc=5",
+      "published_at": "Thu, 19 Nov 2026 23:28:31 GMT",
+      "section": "vietnam",
+      "sections": [
+        "vietnam"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": false
+    },
+    {
+      "id": "e608d66bfdafa238a5de",
+      "title": "EMAGAZINE: Thị trường chứng khoán Việt Nam sau 30 năm nhìn từ nhu cầu vốn của doanh nghiệp - Tạp chí Kinh tế - Tài chính Online",
+      "title_vi": "",
+      "summary": "",
+      "tag": "",
+      "source": "Tạp chí Kinh tế - Tài chính Online",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQanl5OUkxdWM5Y1ExbXZJbUtsaEQzV3lFc0F4UXI0WTVVa1NDZjhBbzdDNTFXajRkdFhtWEVpRHBLSnNLaXNLaVF2c1ZrLXU1anNpMnI0d3pQQjRyUGdIREpSamQ4emFBY1NETGljXzMyZzNOQ1p4S2JLS1phTG96MjBTZ1lGdDVtQ3lrTVJyQ2Rua0N3TGhjMDdRc2JYSXZFa2hMdHB4a3J4YUxFbWJKNjJCd1JsejFFWFpvV2pubk1FRmJvY3cxWm1CSVM0dw?oc=5",
+      "published_at": "Thu, 19 Nov 2026 23:25:44 GMT",
+      "section": "stocks",
+      "sections": [
+        "stocks"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": false
+    },
+    {
+      "id": "4c511bd4db1ffc334664",
+      "title": "Nhận định chứng khoán 20/11: VN-Index có thể tiếp tục kiểm định vùng 1.680 điểm - VOV.VN",
+      "title_vi": "Nhận định chứng khoán 20/11: VN-Index có thể tiếp tục kiểm định vùng 1.680 điểm",
+      "summary": "Các chuyên gia dự báo VN-Index có khả năng duy trì trong khu vực quanh 1.680 điểm trong thời gian tới, sau khi đã mất mốc 1.700 điểm.",
+      "tag": "Việt Nam / Thị trường",
+      "source": "VOV.VN",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQakY4MlJVS2lfMUs1OFd3aXNEd056X2RmS2pxZnNLTDFpSGlHc01xRk9SQ3hqb0J1MUFSMVphLWttOG9jdTA4eGQ3b1FwZVByNW9XZ3RyQVZWcUdwbE1iTU45Mnd1Nk8zamx4aWRvLUY3SmxxX1R5YjRCQkQwU3NqekhrMVRJdDJHYmZFTkdUUndPWlVybklJbng4UHdqT2RiSG40WExtaTZRbWFZT1hXTmFIazl1OWdC?oc=5",
+      "published_at": "Thu, 19 Nov 2026 23:15:00 GMT",
+      "section": "stocks",
+      "sections": [
+        "stocks",
+        "vietnam"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": true
+    },
+    {
+      "id": "c53a4af929f7aef0de0c",
+      "title": "Hàng xuất khẩu Việt Nam trước sức ép từ những chuẩn SPS mới - Thuonghieucongluan.com.vn",
+      "title_vi": "",
+      "summary": "",
+      "tag": "",
+      "source": "Thuonghieucongluan.com.vn",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPb3N4em1CUENTZTBXNWJPNzlkLVNHTkU5bXdSMjNnaHlQT1oybHRfNUV6dUc3dVAyM3ljLTJ3MHI0R3pOdTRzWW9IWFMxUm0yUXhlUjVZZjhmVkk4dFpuS1VXdWF4T0duX3dUQkFNNXA1SzE0MjMtWHpqRkE3b0MzcXpfR0d5R1dOUWFiLUNSaDlkaXdYVEc0cFc0bGEyNVQzQXdtNS1TTEthdw?oc=5",
+      "published_at": "Thu, 19 Nov 2026 23:09:00 GMT",
+      "section": "trade_policy",
+      "sections": [
+        "trade_policy"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": false
+    },
+    {
+      "id": "19157bd7c27540aa5cf2",
+      "title": "Proposed right-of-way authorizations for Alaska LNG project draw skepticism - Alaska Beacon",
+      "title_vi": "",
+      "summary": "",
+      "tag": "",
+      "source": "Alaska Beacon",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPeUp1d0V1ZXVaQXhwYnNIN2p2UHV0REdsOUtCZ1RNU3NWV0lZaUNPblB4SFlGVUFzY1h1dFNhajVyeFBGZVRnWjdBUmhwM0x4Yk1JZ3hodlRpVER4dkZrWXpWTGwtcmlieFNDdV9ub2dkMmNydWlRdU1McTFqT19kS3Btb0g4ZjJlWEVxOUsxN040MnpJaFdla3dTNUQyb0h2T19mZ2xSa3NtZGVsTTBmLWhR?oc=5",
+      "published_at": "Thu, 19 Nov 2026 23:07:28 GMT",
+      "section": "energy",
+      "sections": [
+        "energy"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": false
+    },
+    {
+      "id": "3b57c50cd7c12e26bfa0",
+      "title": "California subpoenas Nvidia as questions about CEO affair, AI chips mount - Yahoo Finance",
+      "title_vi": "",
+      "summary": "",
+      "tag": "",
+      "source": "Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNRE83Skw0eUhuWjU4Q3hPMmNUb0JENWpsLWlReEpPYURSTmpISU5fMlpjTE50YUNFVWlyTVdwb0R5RFU5dUw4UmRSQjNpa1AtaFNNbHZJUUxHaFB5TkhPUkdiVTdXOEd6X2hSRzhwNm1SSmdlTC1YT2NRSjdIQ2hWb0VlUG5OcmNMUWNWOG1Jd3UyUUhkSWRlQmY2VE91UHU2Xzd0V0dYSTk?oc=5",
+      "published_at": "Thu, 19 Nov 2026 23:04:44 GMT",
+      "section": "ai",
+      "sections": [
+        "ai"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": false
+    },
+    {
+      "id": "57fffe7aa7f62c2b0764",
+      "title": "Canada sees little US movement on tariff relief, sources say - Reuters",
+      "title_vi": "",
+      "summary": "",
+      "tag": "",
+      "source": "Reuters",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQNl8xcFNUUzg5MHNEdmx3QmtiV2hJRXhEVW9ETVVSYnBJTFFDLXcxOEgyVUJWdUVsOXk4S0JKaDRoN1BIQk15UzBBWjdrQ3EzWi1BV2VLRHdCX1Rvdm9hRHg2VWRvNDF0QmpvaF9WZzFrS2VFMXY3VXgxNHpzYjA3cGF1QzRHd2RGNjlmZ285eHZHNUM3S2FIUnF6R2cycnVCbzdqZWRvbWJ6ZzlYR2IwNGdR?oc=5",
+      "published_at": "Thu, 19 Nov 2026 23:02:16 GMT",
+      "section": "trade_policy",
+      "sections": [
+        "trade_policy"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": false
+    },
+    {
+      "id": "db23e6c8c8f7bc51eafb",
+      "title": "Chứng khoán ngày 20/11: Tận dụng nhịp hồi để cơ cấu danh mục - Thuonghieucongluan.com.vn",
+      "title_vi": "",
+      "summary": "",
+      "tag": "",
+      "source": "Thuonghieucongluan.com.vn",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNbnFlRzNhbmVFUm1FZkxia0VFX3hXVmxRRE5rOUFXdVAwYndDQlBneVAtbFpuNVA4ejZlSXVzOHk3SkxzME43c1dETC1Sc0prMWJ6dzZMVjl5MTl1TXFOcGlkelRTYVFpZjhUS1o2bXRPS2wxZnpNSkI2THY3ejRrQ3p4Z0xvaTdDbUdjSXdqWUFXamJwS1JKcW9IX2o4dnVlWVo3ZEhXVndSZw?oc=5",
+      "published_at": "Thu, 19 Nov 2026 22:54:00 GMT",
+      "section": "stocks",
+      "sections": [
+        "stocks",
+        "vietnam"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": false
+    },
+    {
+      "id": "b84575efa2d19a6761f8",
+      "title": "Walmart Earnings: Digital and Distribution Scale Lifts Margins Despite Freight Woes - Morningstar",
+      "title_vi": "",
+      "summary": "",
+      "tag": "",
+      "source": "Morningstar",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQTHVKZ3ZpY0FtZzFVUEFkczBzMmdmM1p0d3RQb2s4dmgwZnloRktiaTM5TTJFYXpJTE5odDI3TnRXRWFZSS13WFVYb0pHZ0NpYVJ3R080N2lONGpXdjVXa29sTU9KRlFtNmNuaFhZWmNXSjRDUE81cVRVajRjTHI0dm9JYklrM0tjQjRRZjFhSTluUG1qdDZUc0llcHJtLS1tRG9YWGEyZFJPNEFKQ0RvSjg2bw?oc=5",
+      "published_at": "Thu, 19 Nov 2026 22:37:34 GMT",
+      "section": "logistics",
+      "sections": [
+        "logistics"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": false
+    },
+    {
+      "id": "d2f904e23895088b7eb0",
+      "title": "This Beaten-Down Semiconductor Stock Could Soar in 2027 - The Motley Fool",
+      "title_vi": "",
+      "summary": "",
+      "tag": "",
+      "source": "The Motley Fool",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOdFFOVGFzMEMtWmhwZzV0QXhiWE5GOTFkRTFoc09xOEEzazhZMHNuYzlYU2ZFeTZ2ZjBkcTQydjVvRmlCakllaUszazY1OTljOVZ5aTBHdGNXQ3V0WVQyVm1ldjVrMnZrSEp2Qm5RSExHZlZJWGxLcXRaOElNWFFpTFJJQTZKQlF3bnZPa2JKM3dRNVZHa0Itc1JQakp1a0E?oc=5",
+      "published_at": "Thu, 19 Nov 2026 22:25:02 GMT",
+      "section": "semiconductor",
+      "sections": [
+        "semiconductor"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": false
+    },
+    {
+      "id": "8e1f14a864f7f3be1666",
+      "title": "Harbor Freight’s Member Deals Have Wrench and Socket Sets Way Below Retail - Gear Patrol",
+      "title_vi": "",
+      "summary": "",
+      "tag": "",
+      "source": "Gear Patrol",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5Nd3lldnNwSF9nRjN5SEZBcDktWW9BREEyb1NEb2oyZXJWanEzQWZZNzJTQTZNV3UtRnJybUwtOEdhajRMT3pFSWtwekF5UFJkc1VoallpSzFuSjVTeGNzMlU2LTAtTFE0TWx5VS1vUFgyZlFqQ3A1Vkl4cXZFUQ?oc=5",
+      "published_at": "Thu, 19 Nov 2026 22:22:09 GMT",
+      "section": "logistics",
+      "sections": [
+        "logistics"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": false
+    },
+    {
+      "id": "0da7c6fa819cd9f45be7",
+      "title": "US signed off on sales of nearly 900,000 AI chips to China in six months - Al Jazeera",
+      "title_vi": "",
+      "summary": "",
+      "tag": "",
+      "source": "Al Jazeera",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNblFuUDdEWUg1ZWIwNTZNbHlaYmNJZzVIZWw4ZzlJQnBnWUdFOHRLVXlPb0Yzb04ybzlTWG81Vk5NcERaTFF3emJvQjU3emdyMEIzQnQ4TUZ5NXl5eWVVYnhWODVoR01nRjJiX3RTWkZqQm9NbzFsdklxN3QxRVFsVHhVZXBwUHI0blg3T0p6QzJfQVhQaDNTRF9EMEF2VUYzdkFTNnZQRE80SGVfMDBOQVg0ZmZlVlHSAbwBQVVfeXFMUFIzdGJGR3ZPOHVNc2c3cmROaWtaUFhhSE55NkQ4YVVvQVhjU3o0MTBqT25XTzZYUF90alpxMk1ROWxpTFl6Mm83YXhhQW5uOHZqczF3VGRlcTRUNWdWeUVaMmQ4eGVrQ3RtVXFvZzl5aWx5OTBoNV9ybG5QMzBNTGRHcF9wWmZIYjMwc0JPUmhyM3A1VGJWMmxvUG9mT1UwZnRZZlFGS1o3ekgxZUxQY1pxWHhXc2lYU24wUDY?oc=5",
+      "published_at": "Thu, 19 Nov 2026 22:05:55 GMT",
+      "section": "ai",
+      "sections": [
+        "ai"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": false
+    },
+    {
+      "id": "1506ac5dc13b81d22827",
+      "title": "Palmer Field geoexchange facility to advance campus energy transition - The University Record",
+      "title_vi": "",
+      "summary": "",
+      "tag": "",
+      "source": "The University Record",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNZWt6My15WTFvVFAzN2hKalhvX2ZEVXNjMFRaWWltSmpmTGtva1BBMmxQbkF3UzZ0Wm1BcTh5OGtFOGhvclBRN191VmFRSnBzRDRhTHR1QkdyeTBjU1BfN1ZoRGY5WTFRNUFCZWZWRHJYTTFfU19BNktoQ2dxdThKejFQUUlSLVpsckVTZG5OTUFZU05hc1JNZEVRNTRvdnpSbDhqOUl1SQ?oc=5",
+      "published_at": "Thu, 19 Nov 2026 22:03:22 GMT",
+      "section": "energy",
+      "sections": [
+        "energy"
+      ],
+      "first_seen_at": "2026-11-20T04:42:48+07:00",
+      "edited": false
+    },
+    {
+      "id": "eb850b67e5657d549edd",
+      "title": "Gold falls below $3,650, silver tumbles as Fed rate concerns pressure metals - Kitco PM Report - Kitco",
+      "title_vi": "",
+      "summary": "",
+      "tag": "",
+      "source": "Kitco",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQRlpVQ2czMnU5WnpBbm5Nc0VXMlRlMmU3ZnROX2UzXy1mTVlSSGZVcG01NWl6al94MzY3UFl4WGdyNEZocmdibEZtcm9lSU14NURNZnFQakJOaGoxQ0dSSVEyT0REU0pLc0VkZHAzQ1lWMkVPazhXRlZwQkVpNHFINS1GOWZ2dlBZTlMwNkZrdi12YzFOVnJEU0RRRDZqU2hsSFE0NnlDXy1pd1dmWTV1d3p6NVJxSzA?oc=5",
+      "published_at": "Thu, 19 Nov 2026 21:55:28 GMT",
+      "section": "silver",
+      "sections": [
+        "silver"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": false
+    },
+    {
+      "id": "8316c16c3ecf45ebd24a",
+      "title": "13 accused of stealing $22.5 million in Nikes, other products from freight trains - Los Angeles Daily News",
+      "title_vi": "",
+      "summary": "",
+      "tag": "",
+      "source": "Los Angeles Daily News",
+      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOcm5KX3NQd1h0dFdBX3prQk5Tb09QbjRZN0FrU0JZNDJab2lWOVZ0cHJfbzBnXy10TUVGc2djTF9DdnZIdXFZdndvMGNic0U0RE4wUjhaYXBQNDZRMnh4WkR5bGpxb1pJUEQ5VjRWUE9nZHpkZzBnVFhlQ21iekZScU9pcUhYdGtuNGJoWmNlbjZDdHNSUnFpX1VXWmg2c0Y2MnVxZEZuSm1QZlhza0V6ZmtsUVVjaGt4?oc=5",
+      "published_at": "Thu, 19 Nov 2026 21:52:34 GMT",
+      "section": "logistics",
+      "sections": [
+        "logistics"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": false
+    },
+    {
+      "id": "8ba47b586397934ec471",
+      "title": "Trump administration approved shipment of nearly 900,000 AI chips to China - The Hill",
+      "title_vi": "",
+      "summary": "",
+      "tag": "",
+      "source": "The Hill",
+      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPU21ybUlsOHNXaXhtcDgwZDhSUHZVNVZNaW9ycDJVQThjcHFwc2IwbS1fN3czVHJnMksyZEpadmh6R2gyQU5lWlZOdUVfSzdoUHN5ZVZJMXFNWkZFTE51enRlOU9RVzZjeHpBUHBSSFVhT0R2RHNpRFVZazcxdFM3ctIBhgFBVV95cUxNQmd1aDAzVWFnVmNtRmZfU1k3V1ZvLUNUd2hPWmNoclBMZWh6Q0RDb2d0eTNJRDRNUnZfUm56aGZXVGo4SHc4VlFiT3E4b3lvRUtvMWwzQ2kyZ3pFR1BENjFlLTFvbFJOWi1jdzlxdVFJMFZCTVllNV9CRnQwaDhzcWxVSjExQQ?oc=5",
+      "published_at": "Thu, 19 Nov 2026 21:49:00 GMT",
+      "section": "ai",
+      "sections": [
+        "ai"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": false
+    },
     {
       "id": "3d4495a8a9fc41dfb5b8",
       "title": "US signed off on sales of nearly 900,000 AI chips to China in six months, committee says - Reuters",
@@ -52,17 +986,17 @@
       "edited": false
     },
     {
-      "id": "1506ac5dc13b81d22827",
-      "title": "Palmer Field geoexchange facility to advance campus energy transition - The University Record",
+      "id": "cbfd4b6ec668fc550284",
+      "title": "Chip Stocks Waver On Anthropic IPO, AI Prospects, AMD Short - Investor's Business Daily",
       "title_vi": "",
       "summary": "",
       "tag": "",
-      "source": "The University Record",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNZWt6My15WTFvVFAzN2hKalhvX2ZEVXNjMFRaWWltSmpmTGtva1BBMmxQbkF3UzZ0Wm1BcTh5OGtFOGhvclBRN191VmFRSnBzRDRhTHR1QkdyeTBjU1BfN1ZoRGY5WTFRNUFCZWZWRHJYTTFfU19BNktoQ2dxdThKejFQUUlSLVpsckVTZG5OTUFZU05hc1JNZEVRNTRvdnpSbDhqOUl1SQ?oc=5",
-      "published_at": "Thu, 19 Nov 2026 21:33:13 GMT",
-      "section": "energy",
+      "source": "Investor's Business Daily",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPZDZkYi1fNnBMVHB5T2tERlpvMGNYX2R3V2ZXSFc0OUtTZjV2aHdVTmliR083eFJRUDlsakN3WGd4Tm80akR0amZ1SjY5WlNTZFZzdXY3cTc5ZExUZXZpZlAwUlpLU1hzREd1MVBoNmtVRGFQenp0TDdRRjltR21qOWVrQi1uM3F0?oc=5",
+      "published_at": "Thu, 19 Nov 2026 21:18:00 GMT",
+      "section": "ai",
       "sections": [
-        "energy"
+        "ai"
       ],
       "first_seen_at": "2026-11-20T04:42:48+07:00",
       "edited": false
@@ -113,6 +1047,22 @@
         "ai"
       ],
       "first_seen_at": "2026-11-20T04:42:48+07:00",
+      "edited": false
+    },
+    {
+      "id": "9596a30929eeec6ac2c5",
+      "title": "Gold Price Hits 14 Month Low as Fed Rate Hike Fears Strengthen US Dollar - Investing News Network",
+      "title_vi": "",
+      "summary": "",
+      "tag": "",
+      "source": "Investing News Network",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE11NzllaXVoVklUY3hXdWNpNGZYNUh1Q2NsMVpPdGxGWDBHOEZJTEdmdlZ6V1JhY3hSbXVlN3ZIbDYyMEgwNk9ISldEdlFwbzRwZXZMN09rNjBsaFlCMlkw?oc=5",
+      "published_at": "Thu, 19 Nov 2026 20:50:00 GMT",
+      "section": "gold",
+      "sections": [
+        "gold"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
       "edited": false
     },
     {
@@ -198,8 +1148,8 @@
     {
       "id": "6b50dca1c383d886468d",
       "title": "Commerce approved sales of more than 879,000 AI chips to Chinese companies, Rep. Mast says - CNBC",
-      "title_vi": "Bộ Thương mại phê duyệt bán hơn 879.000 chip AI cho các công ty Trung Quốc, theo đại biểu Mast",
-      "summary": "Bộ Thương mại Hoa Kỳ đã cho phép xuất khẩu hơn 879.000 chip AI cho các doanh nghiệp Trung Quốc. Đại biểu Mast công bố thông tin này trong một buổi họp.",
+      "title_vi": "Thương vụ bán hơn 879.000 chip AI cho các công ty Trung Quốc được Bộ Thương mại phê duyệt, Rep. Mast cho biết",
+      "summary": "Bộ Thương mại Hoa Kỳ đã cho phép bán hơn 879.000 chip AI cho các công ty Trung Quốc, theo lời đại biểu Rep. Mast. Đây là một quyết định thương mại quan trọng liên quan đến công nghệ AI.",
       "tag": "Trí tuệ nhân tạo / Chip AI",
       "source": "CNBC",
       "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1TbEk0NDY0UEtDbGFEY3hpX0lQWXY4RUMzNllqWllsTmQ5Wl8xeXpFVTdmQmpvX3hLZXkxUWpabzBaUHFieXkydmFtODZxVnctTDBZTkhYWHFDVWlsZF9HYTE1Q0NoQzdEWmtZLXRkdENBRjNVOG1zSGNwUHg3UdIBgwFBVV95cUxPalZ2a1NfTW5MM3ItZWxEbmlRODJpc0FwVE5KSmExazY4WlhGMEotZ1htWTduNVB1S0JibUVMSnVwc3BjSzBzdVFhdVdSc1NSMElhd3NNQ3laXzRiU2JkRmRHMkFjZlVWeTQ1dWtRcHFzTF96dlV0R3lreFhENWZUcGtUWQ?oc=5",
@@ -278,8 +1228,8 @@
     {
       "id": "02e426e25b2fff313eae",
       "title": "J.P. Morgan sees Fed rate hikes at next three meetings as inflation persists - Reuters",
-      "title_vi": "J.P. Morgan dự đoán Fed sẽ tăng lãi suất trong ba cuộc họp tới khi lạm phát vẫn còn cao",
-      "summary": "J.P. Morgan cho rằng Fed sẽ thực hiện các đợt tăng lãi suất trong ba cuộc họp tiếp theo do áp lực lạm phát vẫn tồn tại. Điều này phản ánh lo ngại về việc duy trì mức giá ổn định.",
+      "title_vi": "J.P. Morgan dự đoán Fed sẽ tăng lãi suất trong ba cuộc họp tới khi lạm phát vẫn cao",
+      "summary": "J.P. Morgan cho rằng Cục Dự trữ Liên bang có khả năng tăng lãi suất trong ba cuộc họp tới do lạm phát vẫn duy trì mức cao. Dự báo này dựa trên tình hình kinh tế hiện tại.",
       "tag": "Vĩ mô / FED / Lạm phát",
       "source": "Reuters",
       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNWkZwc3MzeGxPMldOWGxwZnk4UFBSWGtfVC1pTnBnQXVRZzBrNTBzdGxCc05WSU5KNjVoTk1XSm82Q2UxSms1WnhkT05tTG5xU3JULWRtUTVOSlpmeXgyNTFWRVVOX1BTS3ZNaDZEendqbkJJNXlMSndLb0JiQjJ0dEhnMWs3bm5RX0hDNTZ4SVlaamJTU2ZDZVJ1VG8ycVpNdXR3NFdKMHhDVjdlUWMyWmhwVQ?oc=5",
@@ -347,7 +1297,7 @@
       "tag": "",
       "source": "Oil & Gas Journal",
       "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNVUxBV3lHRy1fUnRCZXNhS3hzYU9uMTRvUXRkQWE3YlliVnE3TlNmb0JjclNsVG5XWkJmY2czRWVGWWxWdUpjUGdrcXF1U3RPV0lwRWhkNFN6VUpwRUtyTW1iVk84ek5uUEFFWE14NnF4LVJEZHItWDBuSmZXZ1diQThVWndMdE1waVdRckp1SElrTGFXVTFsaTM1V3NUUjA2TnlLUTBPS1JZTUx3c3dSVlUyU0tsOXFITzZxaUpyMml4dlFVdVFGNkJZbF9jZ1U?oc=5",
-      "published_at": "Thu, 19 Nov 2026 17:49:11 GMT",
+      "published_at": "Thu, 19 Nov 2026 17:53:41 GMT",
       "section": "energy",
       "sections": [
         "energy"
@@ -383,22 +1333,6 @@
       "section": "macro",
       "sections": [
         "macro"
-      ],
-      "first_seen_at": "2026-11-20T04:42:48+07:00",
-      "edited": false
-    },
-    {
-      "id": "cbfd4b6ec668fc550284",
-      "title": "Chip Stocks Waver On Anthropic IPO, AI Prospects - Investor's Business Daily",
-      "title_vi": "",
-      "summary": "",
-      "tag": "",
-      "source": "Investor's Business Daily",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPZDZkYi1fNnBMVHB5T2tERlpvMGNYX2R3V2ZXSFc0OUtTZjV2aHdVTmliR083eFJRUDlsakN3WGd4Tm80akR0amZ1SjY5WlNTZFZzdXY3cTc5ZExUZXZpZlAwUlpLU1hzREd1MVBoNmtVRGFQenp0TDdRRjltR21qOWVrQi1uM3F0?oc=5",
-      "published_at": "Thu, 19 Nov 2026 17:26:00 GMT",
-      "section": "ai",
-      "sections": [
-        "ai"
       ],
       "first_seen_at": "2026-11-20T04:42:48+07:00",
       "edited": false
@@ -500,6 +1434,22 @@
       "edited": false
     },
     {
+      "id": "66f408c911c36ad99ce0",
+      "title": "Gold Price Today on November 19, 2026 - USA Today",
+      "title_vi": "",
+      "summary": "",
+      "tag": "",
+      "source": "USA Today",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQcGUtdW1DVmpMQ0VCMjhNRHl4cTk5SVJhMG9nelA4a01zU1VYTnlSRi1YQjlrRDdJYmZwNlVrZnd3aTVCcnVVNEJhdUJQVWMzVjFtcjJPaU0tYlV6dHhXd00zTzRrWGNTQ2FUQ3JLSGlaMWJpYjV3b21iZVlGRE9hLWVBRVdLaE1jWmo5VWJFM3RqZHdSNzZCUUtVN3ktN3lMMWN3?oc=5",
+      "published_at": "Thu, 19 Nov 2026 17:09:00 GMT",
+      "section": "gold",
+      "sections": [
+        "gold"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": false
+    },
+    {
       "id": "31f9154ce0eff56a0c41",
       "title": "Alibaba Earnings Show AI Is the Stock’s Best Hope, and Biggest Danger - Barron's",
       "title_vi": "Báo cáo lợi nhuận Alibaba cho thấy AI là hy vọng lớn nhất và rủi ro lớn nhất của cổ phiếu",
@@ -518,8 +1468,8 @@
     {
       "id": "db36d4cedcac99ff2979",
       "title": "Einride targets 2028 for growth of autonomous freight on highways - Trucking Dive",
-      "title_vi": "Einride đặt mục tiêu năm 2028 cho sự tăng trưởng của vận tải tự động trên các xa lộ",
-      "summary": "Công ty công nghệ Einride đặt mục tiêu mở rộng dịch vụ vận tải tự động trên các xa lộ đến năm 2028; dự án đang trong giai đoạn phát triển và thử nghiệm. Nếu thành công, sẽ giảm chi phí và tăng hiệu quả trong logistics toàn cầu.",
+      "title_vi": "Einride đặt mục tiêu 2028 cho tăng trưởng vận tải tự động trên đường cao tốc",
+      "summary": "Công ty Einride đặt mục tiêu mở rộng dịch vụ vận tải hàng hóa tự động trên các tuyến đường cao tốc vào năm 2028. Công nghệ này hứa hẹn giảm chi phí vận chuyển và nâng cao hiệu quả logistics toàn cầu.",
       "tag": "Logistics Thế giới",
       "source": "Trucking Dive",
       "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPaklfQkhyN2twMWpESURuMlhWNTJKT1VMalV2cWlXNXktOW9GX2Z3Z1pHTHFjSFFUVUpIc3VzZU8zRzEtMjF0ZC1ieDZtV3dTaVoxQV9oNXdkNF9zUUtVTUM5ZER3Z1FZemRuMW9MQXVCcjZfakQ5TnpKSWY2eGRFTUtUTlNGQnRzTFZ2UGl6cVFEYTZVeXpVZGVGT1NJOVRUUk1Ed3oyNGIzRE0?oc=5",
@@ -545,6 +1495,22 @@
         "trade_policy"
       ],
       "first_seen_at": "2026-11-19T23:59:17+07:00",
+      "edited": false
+    },
+    {
+      "id": "7594e72483b0141e0262",
+      "title": "GTA 6: PS5 vs PS5 Pro, Xbox Series X and Series S: Which Console Plays Best? - Digital Foundry",
+      "title_vi": "",
+      "summary": "",
+      "tag": "",
+      "source": "Digital Foundry",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNTE0zeFhWdWdtOHc2RUlOQ2puR2VyTnVOZjhpVlVQZjg2NWNEWGc5RkE4eS1hU0gtLXNoOUVvRGxpeFF2WFFPV3QxbjRYaUpqTmVuVHlpUXQ4M1d6LW1wQnM4aS03NERYRXRIYW9RMlVNZ2Rra3E1YXd5SFBySmgtcFoza0hDUE80Ym5ValdoWFR0dzdvV1JxLTh5eUlzTC1kQmRLaEY4b3hKVGFCWWpuWkR3?oc=5",
+      "published_at": "Thu, 19 Nov 2026 16:41:33 GMT",
+      "section": "semiconductor",
+      "sections": [
+        "semiconductor"
+      ],
+      "first_seen_at": "2026-11-19T11:03:02+07:00",
       "edited": false
     },
     {
@@ -582,9 +1548,9 @@
     {
       "id": "515ef6885603b5ad7bdc",
       "title": "‘Almost all’ Fed policymakers say hikes are likely - Taipei Times",
-      "title_vi": "Hầu hết các nhà hoạch định chính sách Fed cho rằng việc tăng lãi suất là khả thi",
-      "summary": "Đa số các nhà hoạch định chính sách của Fed cho rằng các đợt tăng lãi suất sẽ tiếp tục. Điều này cho thấy xu hướng thắt chặt chính sách tiền tệ vẫn đang được duy trì.",
-      "tag": "Vĩ mô / FED / Lạm phát",
+      "title_vi": "‘Hầu hết’ các nhà hoạch định chính sách Fed cho rằng việc tăng lãi suất là khả thi",
+      "summary": "Theo Taipei Times, đa số các nhà quyết định của Fed cho rằng các đợt tăng lãi suất tiếp theo vẫn có khả năng xảy ra trong bối cảnh kinh tế Mỹ. Họ nhấn mạnh tầm quan trọng của việc kiềm chế lạm phát.",
+      "tag": "Vĩ mô / FED",
       "source": "Taipei Times",
       "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBNcFF4Q2FvYUQyOWEtNkNneU1qcnd2aG0waXRRVURkQWhqeVFLUjhuMjkyZFh0MGh5VGs0b0tnbndsZEdwSk93Q1B1VktXbDR2dVJVUTMwSnp4TE45Q0JReVp6S3R1MGdISTdieUZrYnZHYzhlclE?oc=5",
       "published_at": "Thu, 19 Nov 2026 16:00:00 GMT",
@@ -790,8 +1756,8 @@
     {
       "id": "df4d2727ad229d70093c",
       "title": "Asia-Europe pre-Lunar New Year peak hits amid poor reliability, port congestion - Journal of Commerce",
-      "title_vi": "Đỉnh tải Asia‑Châu Âu trước Tết Nguyên Đán tăng lên trong bối cảnh độ tin cậy kém và tắc nghẽn cảng",
-      "summary": "Trước Tết Nguyên Đán, luồng hàng Asia‑Châu Âu đạt đỉnh trong bối cảnh độ tin cậy kém và tắc nghẽn cảng, làm chậm lưu thông hàng hoá và tăng chi phí vận chuyển toàn cầu. Điều này ảnh hưởng đến các tuyến thương mại quan trọng giữa hai khu vực.",
+      "title_vi": "Asia‑Europe pre‑Lunar New Year peak hits amid poor reliability, port congestion",
+      "summary": "Giao thương châu Á‑Châu Âu trước Tết Nguyên Đán đạt đỉnh nhưng chịu ảnh hưởng bởi độ tin cậy kém và tắc nghẽn cảng, gây chậm trễ trong chuỗi cung ứng toàn cầu. Tình trạng này làm tăng chi phí và rủi ro cho các nhà vận chuyển quốc tế.",
       "tag": "Logistics Thế giới",
       "source": "Journal of Commerce",
       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOaGl4QkpxcjNPXzFiazBrVFBwTlV0dmRUZ1pBSE1zbzk4czM4b2EwZzYzOFdqVjNieXVfVy0teXRqMzNPOU55bGM4NGxwOVlWSDZQRkhMelR6NC03V0JiR2lFanZFTjhTN0ZKbGIzaDBxLUh3TjAwREw0TzVVM1Zjc0ZORTdOQU4wY3Q0VE9lVFNVSWllQkpLTlBsWTlQbjU0eGlkNVkySHZIb1BUS1VKQUFsT1k?oc=5",
@@ -1151,7 +2117,7 @@
       "tag": "",
       "source": "Fortune",
       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9hR1VENy0yd3BKTjNIYVVvLUptUWxJZ3pVcVVLeDkyMk15V0xqekxrYVpIOF9peHJCQUFESV9MbzZNbFdyLUNKSXIxNVpxaGFWbjBxR1p0cTMyaFlHcVdSUTlBWlVZMnRTZGJEUE1jTWo?oc=5",
-      "published_at": "Thu, 19 Nov 2026 12:02:10 GMT",
+      "published_at": "Thu, 19 Nov 2026 12:00:00 GMT",
       "section": "silver",
       "sections": [
         "silver"
@@ -2405,8 +3371,8 @@
     {
       "id": "8a7b43796d9db30d093e",
       "title": "Thị trường nhà ở TP.HCM mở rộng cửa đón khách ngoại - Thế giới tiếp thị",
-      "title_vi": "Thị trường nhà ở TP.HCM mở rộng cửa đón khách ngoại - Thế giới tiếp thị",
-      "summary": "Thị trường nhà ở tại TP.HCM đang mở rộng để thu hút khách hàng nước ngoài. Các dự án bất động sản đang hướng tới nhu cầu của người mua quốc tế.",
+      "title_vi": "Thị trường nhà ở TP.HCM mở rộng cửa đón khách ngoại",
+      "summary": "Thị trường nhà ở tại TP.HCM đang mở rộng để thu hút khách hàng nước ngoài. Sự mở rộng này hứa hẹn tăng nhu cầu và giao dịch bất động sản.",
       "tag": "Nhà ở",
       "source": "Thế giới tiếp thị",
       "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPOHZEMjFZYnZiemVIdE13NTRHTXRFd0JvWkRTYlNpMnlMbVVyWk9hd2dlUExOelU0NnVvNGQzSzg0SXFpeXZEV1hrN1VhVGk2R2V6bjFLRGVRUy05cldQOXlOWWJtQXloUDYzOWgxU1JDaDdOczVyejgtcS1ILV9uUDRmZnFiRkhGaHJRVlJDMmp1ZDJNMVlRQ3l5dGRJLXM?oc=5",
@@ -2570,7 +3536,7 @@
       "id": "0bfe6dedc05a1cb6dbb9",
       "title": "Nghịch lý bất động sản TP. HCM: Thu hơn 373.000 tỷ, tỷ lệ hấp thụ chỉ 27% - nguoiquansat.vn",
       "title_vi": "Nghịch lý bất động sản TP. HCM: Thu hơn 373.000 tỷ, tỷ lệ hấp thụ chỉ 27%",
-      "summary": "Nghịch lý bất động sản TP.HCM cho thấy thu nhập hơn 373.000 tỷ đồng nhưng tỷ lệ hấp thụ chỉ đạt 27%.",
+      "summary": "Bất động sản TP.HCM thu được hơn 373.000 tỷ đồng nhưng tỷ lệ hấp thụ chỉ đạt 27%. Tình trạng này cho thấy sự mất cân bằng giữa cung và cầu.",
       "tag": "Nhà ở",
       "source": "nguoiquansat.vn",
       "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPTXNTRFRXdUI2X1BxdTlVM01CUUJwaTg5clh1RkFyWldIdVY0RDFlSGFsWUFMT25fc3cyNHdVSlA5RmpMSEJra2ZIU3pjbGVid3IySHotX25hRmNTOUhGYU92bTVEN0FaZXBZbTlKN2wyNzVwMEU2R3NIX1B2WUhoby1NdHNDdFZ4c1ZyTTFtUnI0dDdHcnp6X2FMS3hNaEo4ODFlRmhlX1U?oc=5",
@@ -2585,8 +3551,8 @@
     {
       "id": "981986b1819db03cac38",
       "title": "Thách thức lớn nhất của thị trường nhà ở TP HCM - Việt Nam Mới",
-      "title_vi": "Thách thức lớn nhất của thị trường nhà ở TP HCM - Việt Nam Mới",
-      "summary": "Bài viết nêu ra thách thức lớn nhất mà thị trường nhà ở TP.HCM đang đối mặt. Những khó khăn này ảnh hưởng đến sự phát triển và cung cấp nhà ở.",
+      "title_vi": "Thách thức lớn nhất của thị trường nhà ở TP HCM",
+      "summary": "Bài viết nêu ra thách thức lớn nhất mà thị trường nhà ở TP.HCM đang đối mặt. Các vấn đề này ảnh hưởng đến sự phát triển và cung cấp nhà ở.",
       "tag": "Nhà ở",
       "source": "Việt Nam Mới",
       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPN1FFY3JydnBYR241XzRXYTZjSmV5MkRIZERpTjFZWUJjY1l5Ni1wcVJTQjB2ZTV5amp3ZGdYcFNjSU0tSDZYaDdaS1lyWWphNkVBRk9DRjZxaktCQmY4cmZXdXJ3cThTSTJ6VmZIM3JEWk5Hek5fMzQwbGMwS1VIMkx3SGVpQzc5TDB2Tm01eHlQZ285?oc=5",
@@ -4091,22 +5057,6 @@
       "edited": true
     },
     {
-      "id": "7594e72483b0141e0262",
-      "title": "GTA 6: PS5 vs PS5 Pro, Xbox Series X and Series S: Which Console Plays Best? - Digital Foundry",
-      "title_vi": "",
-      "summary": "",
-      "tag": "",
-      "source": "Digital Foundry",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNTE0zeFhWdWdtOHc2RUlOQ2puR2VyTnVOZjhpVlVQZjg2NWNEWGc5RkE4eS1hU0gtLXNoOUVvRGxpeFF2WFFPV3QxbjRYaUpqTmVuVHlpUXQ4M1d6LW1wQnM4aS03NERYRXRIYW9RMlVNZ2Rra3E1YXd5SFBySmgtcFoza0hDUE80Ym5ValdoWFR0dzdvV1JxLTh5eUlzTC1kQmRLaEY4b3hKVGFCWWpuWkR3?oc=5",
-      "published_at": "Wed, 18 Nov 2026 13:38:00 GMT",
-      "section": "semiconductor",
-      "sections": [
-        "semiconductor"
-      ],
-      "first_seen_at": "2026-11-19T11:03:02+07:00",
-      "edited": false
-    },
-    {
       "id": "35b461ab876d7d2b8abe",
       "title": "Báo cáo ngày 18/11/2026: VN-Index tiếp tục hướng đến 1,670 trong các phiên tới - Chứng khoán Pinetree",
       "title_vi": "",
@@ -4302,9 +5252,9 @@
     {
       "id": "fd9cc1e535d8641e5529",
       "title": "Fed’s Waller says central bank may need to ‘shock people’ with half-point rate hike - CNBC",
-      "title_vi": "Waller của Fed cho biết ngân hàng trung ương có thể cần tăng lãi suất nửa điểm để gây “cú sốc” cho thị trường",
-      "summary": "Thành viên Fed Waller cho rằng có khả năng cần một đợt tăng lãi suất nửa điểm nhằm tạo cú sốc cho người dân. Ông nhấn mạnh đây là biện pháp để kiềm chế lạm phát đang kéo dài.",
-      "tag": "Vĩ mô / FED / Lạm phát",
+      "title_vi": "Waller của Fed cho rằng ngân hàng trung ương có thể cần ‘đánh sốc’ thị trường bằng đợt tăng lãi suất nửa điểm",
+      "summary": "Waller cho biết Fed có thể thực hiện tăng lãi suất 0,5% để gây bất ngờ cho thị trường nhằm kiểm soát lạm phát. Đây là biện pháp có thể được áp dụng trong thời gian tới.",
+      "tag": "Vĩ mô / FED",
       "source": "CNBC",
       "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQQ0FXYWthQmJLZi05SXhQR1o2akNmbUo4WFAyUWVjbjdkNmdwWi05clFGakpLMEFkSi1oS2ljalM2N2NyclZWTE9temNQMTJjZk9EQTYwZUJiMVlPcE1zQzA4eE5OU0tNQTg5QU5fU3k4bGIxM2NIVVFGZUZzRlR6VXEwVjBLNmvSAYwBQVVfeXFMUDZSczNSbHAxcjNFa1FMNWU3STJRUVBRV0x6SjhFVFRBdGNqSFhqMGl5bGtMSkN0YzQyWUpWLVppMmxpQWNFbFF4VmY0eE5feTJ5UVotZnNPYVdEdXhzWWVmaTk3YmdXNGdtRHlRN1RqeElDMXBEbkw4Z1hyWWxnM3hBWm9MME5Xbm5MNU0?oc=5",
       "published_at": "Wed, 18 Nov 2026 12:20:11 GMT",
@@ -7669,6 +8619,22 @@
       "edited": false
     },
     {
+      "id": "2239adc928293838d3f8",
+      "title": "SACOMBANK: Từ nội lực công nghệ đến bứt phá thanh toán số - Tạp chí Kinh tế chứng khoán Việt Nam",
+      "title_vi": "",
+      "summary": "",
+      "tag": "",
+      "source": "Tạp chí Kinh tế chứng khoán Việt Nam",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNRHNuV3FzNTFxV2RHejFVdVByY25SeHZXOEZxQWtOeUZYckQ5VnR2ZHg4dk5nSTktb2E5Wm90WjR0d3JaTjVsWlJuNzhZUi1OSkwwZzlodHRlQ3A3c2JjSVl3ekJGeHQyWXRrNDBaV045RTIyWG9QT2hoMFlzMDNXb2U1bVZqdENyMG1fNw?oc=5",
+      "published_at": "Tue, 17 Nov 2026 10:29:00 GMT",
+      "section": "fintech_vn",
+      "sections": [
+        "fintech_vn"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
+      "edited": false
+    },
+    {
       "id": "858ae2569a204b13d9f7",
       "title": "Nvidia creates committee to oversee compliance with US chip export controls - Financial Times",
       "title_vi": "",
@@ -8246,6 +9212,22 @@
         "macro"
       ],
       "first_seen_at": "2026-11-18T23:52:37+07:00",
+      "edited": false
+    },
+    {
+      "id": "a546eaff1a5aa6a14193",
+      "title": "Thị trường bất động sản TP.HCM đang đứng trước một bước chuyển quan trọng - Doanh nghiệp Cuộc sống",
+      "title_vi": "",
+      "summary": "",
+      "tag": "",
+      "source": "Doanh nghiệp Cuộc sống",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOYnJLTk93WVFDZE1DeTBlTWlEalBMTUpJWHNORWFkcURRQl9WazFQaUdYUndjd2JQVk1UZGQ1XzktMW5SbXVxbzFJNlVJNTcya3E5V2stczBESzJpY0U2b0lWYVFxM1puYlhsWlEwa0Z4bTN6VWktRTF4TC01NGNTWHBPNno0cktOckV5VFMyRFVyMkxoRnM3QnFoT0kxSFY0SmExNmF5WUUyamk1eWNPNnpBSWtJczg?oc=5",
+      "published_at": "Tue, 17 Nov 2026 06:01:11 GMT",
+      "section": "realestate",
+      "sections": [
+        "realestate"
+      ],
+      "first_seen_at": "2026-11-20T10:55:29+07:00",
       "edited": false
     },
     {
@@ -40329,1086 +41311,6 @@
         "semiconductor"
       ],
       "first_seen_at": "2026-10-21T08:25:47+07:00",
-      "edited": false
-    },
-    {
-      "id": "c8fa9fbd4cb720c103b1",
-      "title": "'Cơ hội vàng trong hợp tác đào tạo bán dẫn với Đại học Bang Arizona' - Tia Sáng",
-      "title_vi": "",
-      "summary": "",
-      "tag": "",
-      "source": "Tia Sáng",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOdGZnMjZuRllhaW5oMUVpNDRPQ1VKT09UUWZNVDk2T0FvZFBsVzkyTmNjc3ZJZGtPRXdNVmoxTFd6V0RhVGE3V2diR0NRSDhuQU11aVc3X08zaUpVX3BiQnJWaEt1SkxQdlMtWml3dkZUUkExeWRuSmVhTm5VRGZoeVUxeXB4cWZxU0FJNGlxWkh1UWExRi1oZ1JEeWVrM3VLVjR4SA?oc=5",
-      "published_at": "Fri, 06 Nov 2026 03:52:00 GMT",
-      "section": "semiconductor",
-      "sections": [
-        "semiconductor"
-      ],
-      "first_seen_at": "2026-11-06T22:32:08+07:00",
-      "edited": false
-    },
-    {
-      "id": "e0b709c988a197119292",
-      "title": "Gold drops 1% as strong US payrolls boost dollar, yields - Reuters",
-      "title_vi": "",
-      "summary": "",
-      "tag": "",
-      "source": "Reuters",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQQVNBUlY0RkQ3Vm5qcDFmbS12Nlo0Wjd4RWNEWkROOFRSX0hha1VobWJkTW82YTM1QzNMUXlzX1V5bktiSHJDYklFR2ZDUnN4aEhGM3U0UmlRT3pDcjVFRkR5ak9IZ1NVbG4wempaX1Y0R2JXb0U2THRLcE80d0l1NFppQ3l5b2M4c3RQZU1sS1RNRHdiYmFsYmw0czRoUnVJRVJLNTl0VmVNODg3NWVR?oc=5",
-      "published_at": "Fri, 06 Nov 2026 03:46:00 GMT",
-      "section": "macro",
-      "sections": [
-        "macro"
-      ],
-      "first_seen_at": "2026-11-06T22:32:08+07:00",
-      "edited": false
-    },
-    {
-      "id": "b5b588d4fbdb1f810696",
-      "title": "Biến động giá bạc 6.11: Đảo chiều sụt giảm - Laodong.vn",
-      "title_vi": "Biến động giá bạc 6.11: Đảo chiều sụt giảm",
-      "summary": "Vào ngày 6/11, giá bạc biến động, chuyển sang xu hướng sụt giảm sau một thời gian tăng.",
-      "tag": "Giá bạc",
-      "source": "Laodong.vn",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQVnpuSXFKTExlQk5ndDVZRFFmVkd6N1o0bUNCUGtLYVpkSmlGUVM3VVI2U3ZqX0lPUGFhaEY2czFsYkhYa3EtOElIRkcwZ3Y1eDhzdElTMmw2eTc4Smh0MjlLSVZiVjRIVlZGemlhM25fdmRLNlJaMTZoQi1VUUZtT2hUSkdMSHVvdHkzV2N2NA?oc=5",
-      "published_at": "Fri, 06 Nov 2026 03:41:33 GMT",
-      "section": "silver",
-      "sections": [
-        "silver"
-      ],
-      "first_seen_at": "2026-11-06T22:32:08+07:00",
-      "edited": true
-    },
-    {
-      "id": "0a8ad5978f1c5290caad",
-      "title": "Giá bạc trong nước giảm, bạc thỏi 'bốc hơi' gần 1 triệu đồng/kg - Báo VietNamNet",
-      "title_vi": "Giá bạc trong nước giảm, bạc thỏi “bốc hơi” gần 1 triệu đồng/kg",
-      "summary": "Giá bạc trong nước giảm, bạc thỏi giảm gần 1 triệu đồng mỗi kilogram, cho thấy áp lực giảm giá trên thị trường.",
-      "tag": "Giá bạc",
-      "source": "Báo VietNamNet",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOVklhdEpVZ3ktaXpNWFFyREZ4dzd0YmhoYkFxNV9Nbkt0QXVHUjMtcEdYRlRLMW9KUVBqekJkUDl0d3h1MjZaSWVHc3Y0cDJjQ2xQbDY5aVZMZXlQTDZKdmlOQzlNN3FqanhXSWZyR3JkSUtzMng1eF9PMWZzWVFQLU9LaGNHLVJvamVfU01JTEZxdGVCUTZmSmhHdw?oc=5",
-      "published_at": "Fri, 06 Nov 2026 03:33:00 GMT",
-      "section": "silver",
-      "sections": [
-        "silver"
-      ],
-      "first_seen_at": "2026-11-06T22:32:08+07:00",
-      "edited": true
-    },
-    {
-      "id": "51c3d541c4af4abc070d",
-      "title": "Giá bạc hôm nay: Giá bạc trong nước giảm nhẹ sau phiên tăng mạnh - VOV.VN",
-      "title_vi": "",
-      "summary": "",
-      "tag": "",
-      "source": "VOV.VN",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQUXRSSEJsaGVMM1B1TGdacEc2aXdFblNFenBXS1ZIN01tN3dHRElKUThJR0FfY2lNN01obzBsRzY4QWFaZXBobVEteThoRzBnYWY4bUIwT01PUm1vUlpVWUVDaVJ0YjFLdTAwN3lOMjlVZVFrLU4zUkRXa3N1NlA2blRwVEYzejI3aGVnZHVSTk1naEZ6NFExUXJ5MmkxRWZQRDBmaUFWMWY?oc=5",
-      "published_at": "Fri, 06 Nov 2026 03:30:00 GMT",
-      "section": "silver",
-      "sections": [
-        "silver"
-      ],
-      "first_seen_at": "2026-11-06T22:32:08+07:00",
-      "edited": false
-    },
-    {
-      "id": "0de58779a8adc17b91ba",
-      "title": "Diễn đàn Logistics Việt Nam 2026 - Trung tâm Nội dung số và Truyền thông",
-      "title_vi": "",
-      "summary": "",
-      "tag": "",
-      "source": "Trung tâm Nội dung số và Truyền thông",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQbG1Fa3JvcG9oeWpxX0V1WEViWWQxZXBWUEMtRl9HM0dLVzdGRnlWOEJzaU5RLUNham5TNTNBQTdkTkJqUHhIdEd5b21VSDlWaUIyVjlMVGFjVXFhdUZGdlNJV1Z3MnBtQUN4cjlHXzh0eDM3YnRyQ0ZpY2RYOTBqSkYxMWFpUQ?oc=5",
-      "published_at": "Fri, 06 Nov 2026 03:20:32 GMT",
-      "section": "logistics",
-      "sections": [
-        "logistics"
-      ],
-      "first_seen_at": "2026-11-06T22:32:08+07:00",
-      "edited": false
-    },
-    {
-      "id": "25b0990d03a58736d1b8",
-      "title": "Nâng cấp ứng dụng HTKK 5.8.2: Những thay đổi về thuế quan trọng doanh nghiệp cần biết - Tạp chí Kinh tế - Tài chính Online",
-      "title_vi": "",
-      "summary": "",
-      "tag": "",
-      "source": "Tạp chí Kinh tế - Tài chính Online",
-      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPMm1hNjVqTXNGaVBmNjNRQTB2MHlfdjZ3clBzMXFrV3lZLS0tUFpEZzhtbXhEblhHSUxEdlFuM0ZSQkR4cXhRMXc3VUx3TVVsTnZELVBBX1J4VDI3VEJYUm5WUTBWcm95eTlVaWsxcFlobm00MzVFemNaZEhScFpWeW9vYUZkamRWMFd5V3VmV2wxRGRsRl9YUlhobDZvZ0RMb1VCVlV6X1UyNHgtZ2hoVGFZUUUwUGVRVklqTXlrbEVEQlJ1QUJKckI2NDgzZ2JZcHZNNGJPdw?oc=5",
-      "published_at": "Fri, 06 Nov 2026 03:13:56 GMT",
-      "section": "trade_policy",
-      "sections": [
-        "trade_policy"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": false
-    },
-    {
-      "id": "c608c6e98b3065c60749",
-      "title": "VN-Index 'bốc hơi' 23 điểm, FPT giảm gần 4%, loạt cổ phiếu lớn bị bán mạnh - nguoiquansat.vn",
-      "title_vi": "",
-      "summary": "",
-      "tag": "",
-      "source": "nguoiquansat.vn",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQS1JTUUpVdHMta2d2cF83MDkydVAzYUx0UTlxdllKeHpMMFJZcmgxS0Z5QTY2ckVzLTlnX1dqcVdabExVNERTZTlmM0sxY2lBcWZ3UFlDamVNU2lYNlA4Yi1GTkFzdTNHcTVhNlQtb08wWUdaQWlNeXMtdWl5eGRZNDBOUHdEbEhqQ0k1ZnJnbEhMc0pnWkxwMTNncjZBTjVCSDNfTkY3OS0?oc=5",
-      "published_at": "Fri, 06 Nov 2026 03:05:01 GMT",
-      "section": "stocks",
-      "sections": [
-        "stocks",
-        "vietnam"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": false
-    },
-    {
-      "id": "f92bc923410c3068ff77",
-      "title": "Chuyển tiền qua ví điện tử rồi bị lừa, người dùng cần làm gì để bảo vệ quyền lợi? - Báo Lào Cai điện tử",
-      "title_vi": "",
-      "summary": "",
-      "tag": "",
-      "source": "Báo Lào Cai điện tử",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOeml0a29ZQURfakx4dEZIWmZpZ2IyZzhGUzFDN2g5RFR3eVc4M1VvTENZeXJFcUxzNWhDb1NOZkxTQ2xDYWF6R2Npa2ZLd0U3elBWRmdISUVEcmVueGhDZm5oVEx5WFJyQW12SW05al96MXFVSFJWeXJmUkZBcko2MWpPbjdOMEt0c2NnSERVRndGV3NCWlQtT3VIRWJxSjVCaENGRTJ0QW5hRWRESzVKRTAxSkI0SUE?oc=5",
-      "published_at": "Fri, 06 Nov 2026 03:02:13 GMT",
-      "section": "fintech_vn",
-      "sections": [
-        "fintech_vn"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": false
-    },
-    {
-      "id": "428efa20aff95da93a4b",
-      "title": "MoMo: Khi thanh toán số trở thành chiếc \"hộ chiếu tài chính\" bước ra thế giới - CafeF",
-      "title_vi": "",
-      "summary": "",
-      "tag": "",
-      "source": "CafeF",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPV3FUdTZ4cU85a1pnM200ZTZodUdCTXdPZW1ITjFQMm1wTUZDeWU4NXdnbkMtMF9MTTJHUXFWMTBhcXM5aWRPOGl5bGRvU0lkdnotcFZOd1FyYkF4cWlhRXgwTGlMdTZfYlRkamJQMjRZbXBOcURueks0U1NqLS1feXhkVU9hd1E0bVhSNTl1WnpmLTBCcl9CaWNFajZ5Smt6VTF3VEZWbUp1NHVPRzVzYTN6UnE?oc=5",
-      "published_at": "Fri, 06 Nov 2026 03:00:00 GMT",
-      "section": "fintech_vn",
-      "sections": [
-        "fintech_vn"
-      ],
-      "first_seen_at": "2026-11-07T03:01:34+07:00",
-      "edited": false
-    },
-    {
-      "id": "77e22eda1f819c652c9e",
-      "title": "Giá bạc trong nước về ngang giá bạc quốc tế - CafeF",
-      "title_vi": "Giá bạc trong nước về ngang giá bạc quốc tế",
-      "summary": "Theo tiêu đề, giá bạc trong nước đã đạt mức tương đương với giá bạc quốc tế. Bài viết so sánh mức giá nội địa và quốc tế.",
-      "tag": "Giá bạc",
-      "source": "CafeF",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOOUpzd0M0MENOeXdTdmJzbVBheXM4Uk1NaUVWY3kxYUdlZE9RRkpYaldjaTQtTmd0UV8xVkhKdGRCM1NCNUFLbGJ6TW5yQnJiUEM0YnFOYVh1MUFXVmpVTWRkMUJ1emNqd1ZwdW1YMzBjQ1hNbW1sY3NiZHpvaXY0Ui05Y0R1TlVCSDQ4?oc=5",
-      "published_at": "Fri, 06 Nov 2026 02:55:00 GMT",
-      "section": "silver",
-      "sections": [
-        "silver"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": true
-    },
-    {
-      "id": "12acb7a5fff4209d191a",
-      "title": "Góc nhìn kỹ thuật phiên giao dịch chứng khoán ngày 6/11: Nhiều khả năng tiếp tục hồi phục - Tin nhanh chứng khoán",
-      "title_vi": "",
-      "summary": "",
-      "tag": "",
-      "source": "Tin nhanh chứng khoán",
-      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQRE1Ubl9IWTBlUVNka0JQTnhlbHJPUTk5YXN6YU1GWmhmR256M0FsSzlnZ1MxWGNqMC1FYkx1RlVyMzh6RkpwSWtkNENPZ3JnV3pLZU5CZ1VsYlhxaDlhTXQ3VHctdUZ2YkJxTHU3RU5wTFpWY1NOT0VoRzhvblZWYnQ0UEtTZGIxX2xFby1qa0FGd1NoNWxvemg5djhfWUVIaUx1MlN6aXc2YkdzcVY5SmJIZXUtZG1wNVhjMEt6YnU5V1N4bi1tUjZTZDBwNGhLbTVV0gHPAUFVX3lxTE5PYldMZFNNVDlKRDlUOGZneVdTU3lsQWdFczlrMjJjMU1BSkV0OVZOZVNkTlpnMVNLd2tLTTI5Mzd5dy1OdWZsbHh0d0hENlRQQlJZd0lCS241UnhQMkZVcFVDekRDb2dCanNZemJjelpockZ5MzRtOExPcmJGSzdudHNxS3hfMXJvaEpsZGJDb0wzUDB5TVVodkN3N0lucVJvb082SjM0QXVWS0NDckx6OGk1ZlFqQWdIcTJ0ckdQbE9KSFVNcFFSd2Y1alFsUQ?oc=5",
-      "published_at": "Fri, 06 Nov 2026 02:40:44 GMT",
-      "section": "stocks",
-      "sections": [
-        "stocks",
-        "vietnam"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": false
-    },
-    {
-      "id": "01e9cb0663221f4a1dc4",
-      "title": "Giá vàng sáng 6-11 quay đầu giảm mạnh, vàng miếng mất 3,5 triệu đồng/lượng - Báo Gia Lai điện tử",
-      "title_vi": "",
-      "summary": "",
-      "tag": "",
-      "source": "Báo Gia Lai điện tử",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOUXZaWS1VbUI4eXlBZVlibzFuQ2lzRWhNUXpWQW9Ld2QyNjJwdmt3TDZwRmluZVYyWjhYTks4ZHRoN0FvVTBsRUNFODlfajdWQVl5TFJwdDRwV1J6TmNQckd6ZUNvaTFIVHdMWGNocklmalNRcUJBYTNBZTFCWkV5SkxVMENNVkw3dUp4Vkx0a2VVSVBsQlV5Nm8tMllzQ3ZyVFRqTEZDeWN0NElVaXFXMzNn?oc=5",
-      "published_at": "Fri, 06 Nov 2026 02:35:58 GMT",
-      "section": "gold",
-      "sections": [
-        "gold"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": false
-    },
-    {
-      "id": "081544be218390b38d1f",
-      "title": "Tổng thống Paraguay từ chức sau vụ sụp đổ ngân hàng số - nguoiquansat.vn",
-      "title_vi": "",
-      "summary": "",
-      "tag": "",
-      "source": "nguoiquansat.vn",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOUEtsMWVteWVDSVpyZ3U1dmJNWUZ0Y0h3QUNEX1JTNG55NTJTSGxjYUZSMko3a3JMYm9EdlZDNW42RzZxb0JWRk5OM1ZweG9CM2s4N3VxZFd3ZUhSQjlTYmZKNk0xMVJSOGZTZVNxQks3Yloxbjk1VlhVTllkY3VjUGpOQ0tmSDFPLU8xUEhBTXlqUVFK?oc=5",
-      "published_at": "Fri, 06 Nov 2026 02:30:01 GMT",
-      "section": "fintech_vn",
-      "sections": [
-        "fintech_vn"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": false
-    },
-    {
-      "id": "d98b71378790148de422",
-      "title": "Giá điện, xăng giảm, giá hàng hóa có giảm? - VTV.vn",
-      "title_vi": "",
-      "summary": "",
-      "tag": "",
-      "source": "VTV.vn",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5iUmwzX01SSGwtQjNSbUlvbXpPRF91RldlejNvRzdvSTUzUG82MHRVbmFlbDF5VzBPTFhOTFBNSkRlNHFQdmpYcjdGb3JLRDFUc0lKS1p6Y0VGV3djeUF5U2IwMG5UQnp3eTFGZTF0ek16WjQ1VHdIWUZja1daWk0?oc=5",
-      "published_at": "Fri, 06 Nov 2026 02:26:23 GMT",
-      "section": "energy",
-      "sections": [
-        "energy"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": false
-    },
-    {
-      "id": "54016cf262935483a17b",
-      "title": "Chưa xử phạt hộ kinh doanh chậm thông báo tài khoản ngân hàng, ví điện tử - baodautu",
-      "title_vi": "",
-      "summary": "",
-      "tag": "",
-      "source": "baodautu",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPbnNBdWdvZlNDRlVvWHFUdVRHeG1lRDBmUV8xdlgyRldkVmdMMTIzTzVZU0pFUTBPV3JEVDZGREd2UkVpaGtvMS1aZzdyX3NVRmRwRGdwbFBVSlpmNE9ZQThTYjE1bXdNSmM2QnA4cjk0Z1lhd3hGYmF1T0h1T0N0eVF6aURoenVPYUVXR1hjNS1HSVJWbGJGWFBkcUYxdzdoczRaZkFvXzk?oc=5",
-      "published_at": "Fri, 06 Nov 2026 02:25:00 GMT",
-      "section": "fintech_vn",
-      "sections": [
-        "fintech_vn"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": false
-    },
-    {
-      "id": "cb247660ddc9a6d0d51e",
-      "title": "Ngày 6/11: Giá bạc liên tục biến động - Thời báo Tài chính Việt Nam",
-      "title_vi": "",
-      "summary": "",
-      "tag": "",
-      "source": "Thời báo Tài chính Việt Nam",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQMk5EX1BSclBfWV96eGtTSW8yMWVLUUgyTi0wX1ZNRW5UM3NuUlhJbUVmWWNYcXBqbHdQUTktR25PcjhGUnVkVWQ3X2h1dC03WmtZUGp2cWtUdFZYb1dwcTMtU2tXc1pkX3F2NXZTaVpOMEYtcHVKTmM1bkdUc0FLV09lU09vcTR0d2c?oc=5",
-      "published_at": "Fri, 06 Nov 2026 02:24:23 GMT",
-      "section": "silver",
-      "sections": [
-        "silver"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": false
-    },
-    {
-      "id": "66a5855f8457f0f5b4d1",
-      "title": "Áp dụng mức giá điện riêng cho trạm sạc xe điện - CafeF",
-      "title_vi": "",
-      "summary": "",
-      "tag": "",
-      "source": "CafeF",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPdEVkVUNvd1Vmb2Rtb3JWX3B1WnhMV2NUU0tsMUp3MUZjYWpELUNYR1NJZHJHaDBOejVRX042WnhkYjByTjJjbmh4enlPOEVBTUVhQjFKOWxGNldnY0EwRUoyZ0lhM1F1b01LWENsbUVISmVBaG5zcWdEcnQyUWlsQmJ4YXJvUTIzYkVkQW9lOA?oc=5",
-      "published_at": "Fri, 06 Nov 2026 02:24:00 GMT",
-      "section": "energy",
-      "sections": [
-        "energy"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": false
-    },
-    {
-      "id": "a0a1feda87f34025d97a",
-      "title": "Tổng thống Paraguay từ chức sau vụ sụp đổ ngân hàng số - Kenh14.vn",
-      "title_vi": "",
-      "summary": "",
-      "tag": "",
-      "source": "Kenh14.vn",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQUnY2blpWWWJScDBDanBEM1hVblBwZURRNWt3NFdDQ0dNLUUyR3FiTmx2YURZV1lwQ0FKRFFoQUwyNno0cEh1aDV0TXdINnVGcUs4TVdaRE5TMjJYT2xCSi1NUHZhUmx5NHR1Mk11NlFhd0JiMXN0dlo0RG1Rb2lpLXhYMG9GNWJ4U082MGtNYk1ESU56cGlDU296TQ?oc=5",
-      "published_at": "Fri, 06 Nov 2026 02:24:00 GMT",
-      "section": "fintech_vn",
-      "sections": [
-        "fintech_vn"
-      ],
-      "first_seen_at": "2026-11-08T21:41:45+07:00",
-      "edited": false
-    },
-    {
-      "id": "be20f98e9b090c3e45d1",
-      "title": "EU huy động hơn 520 triệu euro phát triển ngành thiết kế chip bán dẫn - Vietnam+ (VietnamPlus)",
-      "title_vi": "",
-      "summary": "",
-      "tag": "",
-      "source": "Vietnam+ (VietnamPlus)",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOTWZBbXdCazA1ekRVU0k4MGxSWUtoUUFLdmRHMVV5czNlUW1TOTlWUWR1M29INEVCMEZFVUY1X18zOVc1dlUzTm9oaVFPMHNyUEV3ZHY5MjFmM2JfbGE3S3NRbU0wUUEyclY4ZUdGRW1fSDFPN1hJem51a2ZWbzZsS2Jta2RJa2h4OU1kV2xjNkg5bmVHSDNCQ0JYWHdXejZKRXFMb2pjZGROaWUyQlg5VEJ3?oc=5",
-      "published_at": "Fri, 06 Nov 2026 02:08:22 GMT",
-      "section": "semiconductor",
-      "sections": [
-        "semiconductor"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": false
-    },
-    {
-      "id": "7c8cd7de482a74ecb912",
-      "title": "Thặng dư thương mại của Canada với Mỹ tăng bất chấp các mức thuế quan mới - Bnews.vn",
-      "title_vi": "",
-      "summary": "",
-      "tag": "",
-      "source": "Bnews.vn",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOMHplSmZBSzVLTFp1RHFIVjE3RGZLc1JkOU5KSWsxNzFXR1ZBeEtYRlY4Q0pTUjlORmU4UTJFZW03ejh6M0owRGNsNVVCZ1pueGxtX2FuN2FIY2JFR3BET2NqOVVHb29DZjZQNmxtVlgteFVnckR5bDR4b0VPVk1ZLTZ3cHZnbnZ2eURHdEgxM25RbHRVakZ4SzZkZEZWRExDV0ltSw?oc=5",
-      "published_at": "Fri, 06 Nov 2026 02:08:00 GMT",
-      "section": "trade_policy",
-      "sections": [
-        "trade_policy"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": false
-    },
-    {
-      "id": "c136cdfea99481ab72ae",
-      "title": "Doanh nghiệp muốn gỡ hạn ngạch thuế quan tôm Việt Nam tại Hàn Quốc - Tạp chí Doanh nghiệp và Hội nhập",
-      "title_vi": "",
-      "summary": "",
-      "tag": "",
-      "source": "Tạp chí Doanh nghiệp và Hội nhập",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPci13elB5djYtVGVRUFItNzE2WnQ2YkNyMkFST1pIRXRHTng2djJ1VXRudHpILUloNkgtdVRndnYtUmE4ZVR1TDJVVlhBS0lvdEdNOXRsVkVpUlQzY2Y1YVNVZUlPNWhNSXdENG9pakl3eGliY2U3Uzl2OVY0UEpwbWZBWTRLQnhMRlNNbVU0WGVYUGhBWHVINkM4WEJxYlNINXRjd1JaN1hQZUN2?oc=5",
-      "published_at": "Fri, 06 Nov 2026 02:04:12 GMT",
-      "section": "trade_policy",
-      "sections": [
-        "trade_policy"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": false
-    },
-    {
-      "id": "0aabce3028b9671df3e4",
-      "title": "Giá vàng hôm nay 6/11: Vàng SJC giao dịch ở mức 141 triệu đồng/lượng - VOV.VN",
-      "title_vi": "Giá vàng hôm nay 6/11: Vàng SJC giao dịch ở mức 141 triệu đồng/lượng",
-      "summary": "Vào ngày 6/11, vàng SJC được giao dịch ở mức 141 triệu đồng mỗi lượng. Đây là mức giá hiện tại được báo cáo.",
-      "tag": "Giá vàng",
-      "source": "VOV.VN",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPYk9fcllQem5GTHBCV3R2SmRkY2p3cmJRbDBUNG12S01FS0otRjdSNWdxYTZXV0hwckZRalNhT1gtVVlSY25RNTI5OXpLd21RTk52M0FMaU5IcjdGOHF6QXMxaF9rb2oyUTE0VE1VdUV4OWJqaWdlSDJlSEU3OFZlc1hlS29MQ0FfX3hKLTZTWjVQV2xMcjZTbzBaTGdpQ3otUVpLdG51b3BDbWc?oc=5",
-      "published_at": "Fri, 06 Nov 2026 01:58:00 GMT",
-      "section": "gold",
-      "sections": [
-        "gold"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": true
-    },
-    {
-      "id": "5c1486b156312299cd21",
-      "title": "Lower Costs Would Cushion Gold Miners in a Drop Below US$4,000 - Crux Investor",
-      "title_vi": "",
-      "summary": "",
-      "tag": "",
-      "source": "Crux Investor",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQUkxzZ3FReVBSOW9MVG5VYmtOaGdYdk5TajdPWk1Ka0owUHEwcHZFRFBYWVdVdTU0Zm1PYlZ5ZTFrekRieUE4U2RLbzlsOFMtZGUtVVJYNnVzZ3NlcktHcXE5Q1d5bktVNDVrakJqUDBrN1ltVURlTHowamRzc3VEMXhkdGpRRm1mUVRtbjhZMW1mQ0NMUmpmRFVfVVJOUQ?oc=5",
-      "published_at": "Fri, 06 Nov 2026 01:53:08 GMT",
-      "section": "gold",
-      "sections": [
-        "gold"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": false
-    },
-    {
-      "id": "d57f8ca1d3a0dd051fb3",
-      "title": "Suez Canal Authority Tows Sanctioned Russian Tanker to Safety - The Maritime Executive",
-      "title_vi": "",
-      "summary": "",
-      "tag": "",
-      "source": "The Maritime Executive",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNbS1jSVhMRGhMOE9MX0JQdzAwLWp5eGVlZW40QnNXWU9aTU9TTkRzMTBkZkRvWGtWRUdMZEdiT09DcHdTWnVMaUM5dTZQbVFxWmFMaVFzUFVockJFTF9EMWp0djJJTF9kS1NZTjhodHdjZlR1OTdtUjZObXdZa0ZHelV2QUR6N2J0UjE4N2ZteXRva3RTR01udXlmU3JMTEN6Y1E?oc=5",
-      "published_at": "Fri, 06 Nov 2026 01:47:13 GMT",
-      "section": "logistics",
-      "sections": [
-        "logistics"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": false
-    },
-    {
-      "id": "2fbc52422e82ccbce3ba",
-      "title": "Giá vàng và ngoại tệ 6.11: Vàng nhẫn tăng mạnh - Laodong.vn",
-      "title_vi": "Giá vàng và ngoại tệ 6.11: Vàng nhẫn tăng mạnh",
-      "summary": "Vào ngày 6/11, giá vàng nhẫn đã tăng mạnh so với các mức trước. Bài viết cũng đề cập đến diễn biến của ngoại tệ trong cùng ngày.",
-      "tag": "Giá vàng",
-      "source": "Laodong.vn",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQSzdSS3BIakNuTjNxbk05bkUwMHYzSmpQY2ZFVEZlMTBUSkhORllGc0VKUUdJSl9KRTVIVExEandjTXJPbXNQMzNuUDRUeF95VFVyeWo3T3NMaUxwWDg5LWNDOC1IRmplbjlhdGdMUzUteFVRVUVuYm03aUV1T3FxYjhHUmR2R1gxUDdlMHpQYjdZQUk?oc=5",
-      "published_at": "Fri, 06 Nov 2026 01:45:25 GMT",
-      "section": "gold",
-      "sections": [
-        "gold"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": true
-    },
-    {
-      "id": "cd05c890f263d4dd518c",
-      "title": "Thúc đẩy điện mặt trời mái nhà, giảm áp lực cung ứng điện - Báo và Phát thanh, Truyền hình Quảng Ngãi",
-      "title_vi": "",
-      "summary": "",
-      "tag": "",
-      "source": "Báo và Phát thanh, Truyền hình Quảng Ngãi",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOR0diNGJ5ZXlzSGxGNWRiQWc2ME54UnlRUk9ZRFRMTGNSYWFwQk5LTWVRRGhycUNqS09TQ3N5X2pRaXZUdnp5eWduXzhXczdwN1dBYUZCMVdmLUNjTEI5azgyUG9BNkE0X3UtUXFzOEFZaWRLN2h1bF9yYXNPd3NEUVhIcFluMUxiUTk2XzBwem1EU0dGMW5r?oc=5",
-      "published_at": "Fri, 06 Nov 2026 01:44:42 GMT",
-      "section": "energy",
-      "sections": [
-        "energy"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": false
-    },
-    {
-      "id": "036ca88ac86bd1fb9d25",
-      "title": "Major tech stocks plunge as US midterms add to fears of AI slowdown - BBC",
-      "title_vi": "",
-      "summary": "",
-      "tag": "",
-      "source": "BBC",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5XdkJGRE8yWFZFWXBDYzA4WXRyM1doblZVak9PRjFMNGszT1NCSEx0UEQ1QWduQjlvZ1Bnd21qcEc5MDU3cjRxRXFtTV8xd3BPdURJaENhUDdUMms?oc=5",
-      "published_at": "Fri, 06 Nov 2026 01:44:03 GMT",
-      "section": "ai",
-      "sections": [
-        "ai"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": false
-    },
-    {
-      "id": "89656b2b9c20600aaaa7",
-      "title": "Biểu giá điện sinh hoạt 5 bậc: Phần lớn hộ gia đình được giảm tiền điện - Báo Thanh Hóa",
-      "title_vi": "",
-      "summary": "",
-      "tag": "",
-      "source": "Báo Thanh Hóa",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQbkNpTVl6RmY1Tm5UYVNYOEt3bGhOQl9jNGNlOE1qcGExNnptOHl1UnJ6M3lxVjhzcUVKSVFHMUxqTGxrSjBKUHJtNWNLNWJhOW13Njk5S2JYYnNjYTFFZWxoSjFwbjlaRWloZUotS0tFTHAxZzBwZzhDMTRjNWJPTHNxZ0pveFNHXy1LYXUzQlZTNDJMMDJRZWpFTVlWZkhRVXNCMVFxNA?oc=5",
-      "published_at": "Fri, 06 Nov 2026 01:42:00 GMT",
-      "section": "energy",
-      "sections": [
-        "energy"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": false
-    },
-    {
-      "id": "70c1b4feacee271b6d93",
-      "title": "Giá vàng hôm nay 6-11: Giá vàng thế giới phục hồi, vàng nhẫn tăng 6,2 triệu đồng sau một tuần - Báo Tuổi Trẻ",
-      "title_vi": "Giá vàng hôm nay 6-11: Giá vàng thế giới phục hồi, vàng nhẫn tăng 6,2 triệu đồng sau một tuần",
-      "summary": "Ngày 6-11, giá vàng trên thế giới đã phục hồi và vàng nhẫn tăng thêm 6,2 triệu đồng so với một tuần trước. Bài viết nêu bật xu hướng tăng này.",
-      "tag": "Giá vàng",
-      "source": "Báo Tuổi Trẻ",
-      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOUkRaWWloNFBlNjh6b040TnlVSWRta1FwTFlyVGU0OHk5ME00dGNHbFI5T3F2ZW9UYW5UTEVvTU1EcGtqcDlQa0lQc2lXQ2JTYXhtNGZzazViemp2WmdTOWRUczRpRHJuTEVNSUkxX3RfZTVQYzk4czBSSWNscWwwVnlqNThfMTRVQkF6MkVaY1J5WURVYTdVR284WHoxak5vQUd4cXJtWUR0WlQwbGJxLTQ4RTRyRkJwck16M2N2bW1DcURrX2VJYnFTRjM?oc=5",
-      "published_at": "Fri, 06 Nov 2026 01:33:00 GMT",
-      "section": "gold",
-      "sections": [
-        "gold"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": true
-    },
-    {
-      "id": "7f0673349f628ed7762a",
-      "title": "Hà Nội chi 158,76 tỷ đồng hỗ trợ người dân lắp điện mặt trời mái nhà - VnEconomy",
-      "title_vi": "",
-      "summary": "",
-      "tag": "",
-      "source": "VnEconomy",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOYkxoZlphQVVQb2dFWWE2UzRuVFA4TkZqdmhOc09hNWROTUExUHNSS1lFdlVYekRXejBMd3VxOUFyc2luQXNmVEk0NDdieXkydzYtdVFqZVFYX2FlbFlFR2FHbTlUQmh4WmR4cGZYeHI0dHE0YVd0MnkyMm1hLXZ3THRCUlduTUpDZDY3TmpBT3RQX2NUOGVJ?oc=5",
-      "published_at": "Fri, 06 Nov 2026 01:32:26 GMT",
-      "section": "energy",
-      "sections": [
-        "energy"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": false
-    },
-    {
-      "id": "aacf7412aebd2e733a4c",
-      "title": "Tổng thống Paraguay từ chức sau khi ngân hàng số sụp đổ - VTC News",
-      "title_vi": "",
-      "summary": "",
-      "tag": "",
-      "source": "VTC News",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOd0VBbjFxTTFTTExTM1dvQXNlbVJ0TUJjRmdscmVIOC0wQURGNFFRTWtZaXA1YTRnRWVvS0hJbW5obERMTzhyNDdma3RQQTk1Sy1oX2UzVFBFUEpRV0JrVTBBeHdfVFY3Y2Zsc0RHcFZuYzBCbnd3bE1DQXBRYWFMeG1pT1d6UVg2Y3JhVzUzUmRqeGc?oc=5",
-      "published_at": "Fri, 06 Nov 2026 01:32:00 GMT",
-      "section": "fintech_vn",
-      "sections": [
-        "fintech_vn"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": false
-    },
-    {
-      "id": "c469898f3bfa9adb914c",
-      "title": "Giá bạc hôm nay 6/11/2026: Giá bạc đảo chiều giảm, Phú Quý tiếp tục tăng - Tạp chí Doanh nghiệp và Hội nhập",
-      "title_vi": "Giá bạc hôm nay 6/11/2026: Giá bạc đảo chiều giảm, Phú Quý tiếp tục tăng",
-      "summary": "Vào ngày 6/11/2026, giá bạc tiếp tục giảm sau một đợt đảo chiều, trong khi giá Phú Quý lại tăng.",
-      "tag": "Giá bạc",
-      "source": "Tạp chí Doanh nghiệp và Hội nhập",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOUWZFV1BLeTJUOWlWaTZMUTlhQUtWYkJUeG9rSmREMk5GQkJtZ21BUzVNbk0wWGYyZ1BFVWZqM1IyZWVfY0xzb1A3ZFNJeXJ6bzFWVjJPNWZVdFF5cUcwSWpwaExXNzI4VldXUm5kZTBtR2RLTGpXODJ5QXBwcW50OVozdUV2aTZOZ1dlWDA5LVg0eUF1cDlGWEowMW9paGQ5V250YXN4SElNajN2UGJv?oc=5",
-      "published_at": "Fri, 06 Nov 2026 01:30:28 GMT",
-      "section": "silver",
-      "sections": [
-        "silver"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": true
-    },
-    {
-      "id": "cf3b67c0d4d12ac6e067",
-      "title": "This Nvidia-Backed AI Startup Is Helping Chip Giants Save Time And Money - Forbes",
-      "title_vi": "Startup AI được hỗ trợ bởi Nvidia giúp các ông lớn sản xuất chip tiết kiệm thời gian và chi phí",
-      "summary": "Forbes đưa tin về một startup AI được Nvidia hỗ trợ, giúp các nhà sản xuất chip tiết kiệm thời gian và chi phí. Công nghệ này hứa hẹn nâng cao hiệu quả sản xuất trong ngành bán dẫn.",
-      "tag": "Trí tuệ nhân tạo / Chip AI",
-      "source": "Forbes",
-      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQb2dfeXVDZzB6M1kybVhGNzFQUm9wSTdDZkxaX3JzTE93UHFYYXFFdjhhV0pRQkxBVDllcWowS01SX3B1QlIwWC1yOEJWSEFhdkZXYU5pWmZORi1KYU1aZkVzcEJLc0F3TEJONVBTbThjWUxrb1B1eno3NF8wUHNOcllmLVlCUnJhT2FvUE9lVUlzdXMwRGZiOWRDYldyZ21paTd3ZGdQRDk2MzhDaXZCVmtsak02TnZMT3M3NjRwNms?oc=5",
-      "published_at": "Fri, 06 Nov 2026 01:30:25 GMT",
-      "section": "ai",
-      "sections": [
-        "ai"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": true
-    },
-    {
-      "id": "64383a8d934693460b89",
-      "title": "Nền tảng Fintech MoMo thắng giải \"Giải pháp thanh toán số đáng tin cậy\" tại Better Choice Awards 2026 - CafeF",
-      "title_vi": "",
-      "summary": "",
-      "tag": "",
-      "source": "CafeF",
-      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNVG1IVmxlNjJ5Y2pEZmQzNHdLX2c4Z3Q1aS1qbGxjYWU1WHJkcm9GRS05aWYyODlsclI5WGZ2VFVCcDYzVlk3LU5VZmRSbEx1SFM5MWEyZWlTdHVOb1VqY0xSTVNHeGZINGRwRUhHRC1WX3dldnI0NjFGYVBRSlFrS05mVlc3ZDZqbElwcjJWY1RBRTZBUFBXamU5ZkVsTDVaNGRzZUlpQ2lycC12aDhoVVlucWZNZjd4a2xod0tDdTBZZHNfUUpKTy1MZ0ZlY29Bb1VTQWN3?oc=5",
-      "published_at": "Fri, 06 Nov 2026 01:30:00 GMT",
-      "section": "fintech_vn",
-      "sections": [
-        "fintech_vn"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": false
-    },
-    {
-      "id": "fd7399029ccca694e17e",
-      "title": "Tổng thống Paraguay từ chức sau cú sốc sụp đổ ngân hàng số Ueno Bank - Vietnam.vn",
-      "title_vi": "",
-      "summary": "",
-      "tag": "",
-      "source": "Vietnam.vn",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPNmVSUWZESkhJc05XYzBoZWY0cFVCNWZKa2hEVzgzRE5ELV9ObG9KWk9ESkxBMTJQUExxallJNFB4OE5WZkZNNTJkQnZSWWJFbTFXLVNKU2FDYzcyTTN0VHFBTDdxSGtQa2d6TndycUVCWkNYRGgxd2FKOXlGQ1hhVllLVHEzcHl3bWNGY3ZDdFFoNVpQSVE?oc=5",
-      "published_at": "Fri, 06 Nov 2026 01:21:39 GMT",
-      "section": "fintech_vn",
-      "sections": [
-        "fintech_vn"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": false
-    },
-    {
-      "id": "3f8217dd9dda2a07d24a",
-      "title": "Nguồn cung nhà ở TP.HCM chờ cú hích từ hàng nghìn ha đất đăng ký làm dự án - Thế giới tiếp thị",
-      "title_vi": "Nguồn cung nhà ở TP.HCM chờ cú hích từ hàng nghìn ha đất đăng ký làm dự án",
-      "summary": "Nguồn cung nhà ở tại TP.HCM dự kiến sẽ tăng mạnh nhờ hàng nghìn hecta đất được đăng ký làm dự án. Bài viết phân tích tiềm năng phát triển nhà ở.",
-      "tag": "Nhà ở",
-      "source": "Thế giới tiếp thị",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNVWlkWWZ1VXBPbnl0amVoemQ5VzZiaENqcmdoTWhhbDZQRFpvbVNYaFh6YzU5MUdjYUNYZDh0dWtYS2Z5VWJIMVNrcVpraHluaG5QVElzd0tMZWduanNYbWdPSnhNSl9BbUhYSXU2cUVPOXdSRUgyLXVGZE9WQWUySWgyUkg4NER3czFKaExIMHZYWHExTlJDRE5jZFltczMtNVhMb0xuUFVRMXk2Q1BLc3JBS2tHbUNrQ0VYT3FR?oc=5",
-      "published_at": "Fri, 06 Nov 2026 01:19:00 GMT",
-      "section": "realestate",
-      "sections": [
-        "realestate"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": true
-    },
-    {
-      "id": "37fca0824859ff6d8710",
-      "title": "Kiến nghị gỡ vướng quỹ đất cho hàng nghìn dự án nhà ở thương mại - VOV Giao Thông",
-      "title_vi": "Kiến nghị gỡ vướng quỹ đất cho hàng nghìn dự án nhà ở thương mại",
-      "summary": "VOV Giao Thông đưa ra kiến nghị gỡ vướng quỹ đất nhằm hỗ trợ hàng nghìn dự án nhà ở thương mại.",
-      "tag": "Pháp lý",
-      "source": "VOV Giao Thông",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOYlFQR2MyLXBFb3dHMl80THpfU2Y3T1hoSzZtLVdtNUJPZ05iY004dmJycVBaUGZidkxmWTFTWWExZUs2aHNUcU1vNmRtRVdhRVl5NGxwaHQyNXBHUTZKOVVLeGh0TFo0a0h2ZS1rQjF2M25RaTRaRWFtMVp6czRKN3ptTURNa1A5MWRUd2FfYTlncUtJeXI1bGJTUlpjQmh3d3dIcTRtZmdMS25sanA4?oc=5",
-      "published_at": "Fri, 06 Nov 2026 01:17:00 GMT",
-      "section": "realestate",
-      "sections": [
-        "realestate"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": true
-    },
-    {
-      "id": "69c15ab8516548eafaf3",
-      "title": "Kiến nghị gỡ vướng quỹ đất cho hàng nghìn dự án nhà ở thương mại - VOV Giao Thông",
-      "title_vi": "",
-      "summary": "",
-      "tag": "",
-      "source": "VOV Giao Thông",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNcTFrc3l1dkpFZlU5ZmZrQ2VmNDV6bFJjME9QUHZ0bUw1VDBJNjJsVkYxaHgzMElUclI1dW00T1dydml1aWxqWEVvQkJEV3F5VkEtVXFXSXZ1QUpRODkyU1JyV01TWUpJbVRMZUZ6OFNLeGNUN19INnIyVVVISEh1VUFTNXhGcTJlckRrSE9FRWtmT3VmTFZZT3l4THBDOFdaUVlaZ2hrQQ?oc=5",
-      "published_at": "Fri, 06 Nov 2026 01:17:00 GMT",
-      "section": "realestate",
-      "sections": [
-        "realestate"
-      ],
-      "first_seen_at": "2026-11-06T22:32:08+07:00",
-      "edited": false
-    },
-    {
-      "id": "41fa08dc840654f127cb",
-      "title": "Trước giờ giao dịch 6.11: Đà hồi phục của VN-Index gặp thử thách - Bloomberg Businessweek Vietnam",
-      "title_vi": "Trước giờ giao dịch 6.11: Đà hồi phục của VN-Index gặp thử thách",
-      "summary": "Trước phiên giao dịch ngày 6/11, xu hướng hồi phục của VN-Index đang đối mặt với những thách thức. Bài viết phân tích các yếu tố ảnh hưởng.",
-      "tag": "VN-Index",
-      "source": "Bloomberg Businessweek Vietnam",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQRjZ4MXJZR0s0bGQxMllmdDdXM2JFU3dmZllLMlJlR05SSzFicnllTnppWjFzX3JkS1U1QXpHOU1ldk9Xd21VZ3M5LW43Z1J0RjI3UVVDZ2JhcWVxdW90RkNjNFRlY3NBQVdOYm0yODJXUks5QWtWTnZNVUxWZEpJQmplenh3WVlreEFFZEVJSzc?oc=5",
-      "published_at": "Fri, 06 Nov 2026 01:15:00 GMT",
-      "section": "stocks",
-      "sections": [
-        "stocks",
-        "vietnam"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": true
-    },
-    {
-      "id": "ab5805876e9124da44c4",
-      "title": "Have AI Chip Stocks Bottomed Out After Wall Street’s Brutal Selloff? - NAI500",
-      "title_vi": "",
-      "summary": "",
-      "tag": "",
-      "source": "NAI500",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPNlZkWF82NVA1M0Fwc1pfUlRjeFhsdUpjX3lNbEUtcTczSHVJSDA1R2VhNmhPNUZTVDEyRk1TYnkybDdPQXBFMUxvVmc0M3JWaTNsWVNDLXJmVjVZQ1pnSHpMeTRSbWh2RkhSVktORy1DTzctYjA3d0tRNzVvYU5BLUFodW40eEpzYm9DdjFpeWd4djAwY0NpdDU5Nlp5QkxN?oc=5",
-      "published_at": "Fri, 06 Nov 2026 01:13:02 GMT",
-      "section": "ai",
-      "sections": [
-        "ai"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": false
-    },
-    {
-      "id": "3bfd34300eeff08d55db",
-      "title": "Tổng thống Paraguay từ chức sau vụ sụp đổ ngân hàng số - Báo Tiền Phong",
-      "title_vi": "",
-      "summary": "",
-      "tag": "",
-      "source": "Báo Tiền Phong",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPdW5HMDE3bG84eWhGdzdsOWpVb0lNREM4QU54SXlVZnB4d1VHYWVZTkxNRTRNYTFsMFBEa2VBOTQ3RnlKZHhINGhxaFdXRmNldFhrNF9mX2NaU3U4RjdiZ28tYXBjMzY3Z2xTZ092alZqNTlDaDZuaFNiUlRmUnMwbUJqNXdZOGgxWTdCNFMzYzJsWVNpMWc?oc=5",
-      "published_at": "Fri, 06 Nov 2026 01:00:47 GMT",
-      "section": "fintech_vn",
-      "sections": [
-        "fintech_vn"
-      ],
-      "first_seen_at": "2026-11-06T22:32:08+07:00",
-      "edited": false
-    },
-    {
-      "id": "88b6fd5d7ee1b400c36d",
-      "title": "Giá bạc hôm nay 6/11: Bạc thế giới tăng vọt 2,7 USD/ounce - Thế giới tiếp thị",
-      "title_vi": "Giá bạc hôm nay 6/11: Bạc thế giới tăng vọt 2,7 USD/ounce",
-      "summary": "Vào ngày 6/11, giá bạc trên thế giới tăng mạnh 2,7 USD mỗi ounce. Bài viết thông báo mức tăng này.",
-      "tag": "Giá bạc",
-      "source": "Thế giới tiếp thị",
-      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQN0JuMmM3MEx6M1BVXzNIbHNNaUVROGtMS1lEN0FQbl94bVhkN0VyVUpkMlVvQVNOeXFQVi0yRU1nMWstRXBzLUs1OF9YY1ZtR1NBSHFPc01SenBGcS1rTU9ZMHp1WHk5MS10VGlqb1Fsa3JtdkRMUFloYnM1bmEtaGdxenlHcGhzd2d3M083bHdoRGtfUzRhUUw4NmEzLTVFaG53RFhYd1d0TlpnZDFKeXZXZ3ZZUGhfZEZCb1RMMkdNUzQ3OFU2VnIxdW1jNHd0Sk44TnJn?oc=5",
-      "published_at": "Fri, 06 Nov 2026 00:55:00 GMT",
-      "section": "silver",
-      "sections": [
-        "silver"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": true
-    },
-    {
-      "id": "0a3e145263700bd517d0",
-      "title": "Bắt sóng thị trường 6/11: VN-Index nối đà tăng lên 1.740,73 điểm, giá vàng miếng neo cao 142,5 triệu đồng/lượng - HTV",
-      "title_vi": "Bắt sóng thị trường 6/11: VN-Index nối đà tăng lên 1.740,73 điểm, giá vàng miếng neo cao 142,5 triệu đồng/lượng",
-      "summary": "Vào ngày 6/11, VN-Index tăng lên 1.740,73 điểm và giá vàng miếng duy trì mức 142,5 triệu đồng mỗi lượng. Bài viết mô tả diễn biến thị trường.",
-      "tag": "VN-Index",
-      "source": "HTV",
-      "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOZlJiYXFpRVo3bmFxTlFadDVDUVNITjlNeU5ZdzM2VUdMa1VmSVdBS2UwZkh6a1U2TUxRa1ljRzNJYjRvUkVkamVNZ3M5RkRZMTY5Y2Q1TW5TNjJ4MFNNWG96WjI0Si1nbUNXMXN0RENLNjRRQ1ZJQXpWN05XbUt0bEh3aHpkdnBBSGtLdXdiUXF2N0tDNHRWRnhnbTlJOHpHZlFQTWM0YXFNQXpfU1JYaUlGbEJhN0tiX3NBeHdqUEhXclJELTBnYWxaS2lYNzZmSGk1ejNYeTJJS0Fod2htU2c0ZkhYNkF5d1E?oc=5",
-      "published_at": "Fri, 06 Nov 2026 00:45:00 GMT",
-      "section": "stocks",
-      "sections": [
-        "stocks",
-        "vietnam"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": true
-    },
-    {
-      "id": "c5628a8bce6bd8c28a58",
-      "title": "Chứng khoán toàn cầu giảm mạnh do làn sóng bán tháo cổ phiếu bán dẫn - Báo Tin tức và Dân tộc - TTXVN",
-      "title_vi": "",
-      "summary": "",
-      "tag": "",
-      "source": "Báo Tin tức và Dân tộc - TTXVN",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPUThhV0NJem1GZnA2a1paUm9EaFc3d01JLTdGdXlZSWN5WGdxYTI0UDRTc1BlRnBXNnFRMTQwbmxnNkZEWHlVVEw2Ni11aUtkYTJObjI0MjRITDdOTkdCX2ZQbDRhLVRVZGxnWURlVHRXSWRQREdPRDZvOEEyOWxJQzRiSmRfcjgtRzI2eW1HSDlkMkxtdGpodXpyM0VaVkpGeV9pX1FtVXpPdw?oc=5",
-      "published_at": "Fri, 06 Nov 2026 00:39:31 GMT",
-      "section": "semiconductor",
-      "sections": [
-        "semiconductor"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": false
-    },
-    {
-      "id": "9d15c6aeb7e34029348d",
-      "title": "Cập nhật bảng giá vàng hôm nay 6/11 tăng dựng đứng, làn sóng lớn trên toàn thị trường, chuyên gia nói gì về triển vọng và điểm phát lệnh mua? - Báo Thế giới và Việt Nam",
-      "title_vi": "",
-      "summary": "",
-      "tag": "",
-      "source": "Báo Thế giới và Việt Nam",
-      "url": "https://news.google.com/rss/articles/CBMigAJBVV95cUxPTmYxZXIwTjNoWGZKd2tIS1hoamFSMWJjM01FOVdBUl9ac3VtUnJJUU5fOThLN2lxelgyTUxIVHpaNkpZY0FPUUZlZGJTQXl6eFFUUDZMcUlpcFdVYklsRHd1ZURvTjVaV2lKT0I0UVd0N3VpTGtmRWFGUTBsX2JXVVZDOWRNUXNXSmJRXzVCWGdiMkV3X3lJbC0ydlp5eU5JUkhzQ215b256Z1VGRzNhSmdVUTJNTXJQWGFEQjJhYjhDLUhFTnRQOFJyZUF1WnNSWEdYTG14VXNqYnRYSVRWMTQ4UFZYaE15T0tRRnQzS0NjbWxheGlTSG9TQzFza2F2?oc=5",
-      "published_at": "Fri, 06 Nov 2026 00:35:00 GMT",
-      "section": "gold",
-      "sections": [
-        "gold"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": false
-    },
-    {
-      "id": "1c9eb89b510f4479011f",
-      "title": "Doanh thu bán dẫn toàn cầu lập kỷ lục 517,7 tỷ USD - VnEconomy",
-      "title_vi": "",
-      "summary": "",
-      "tag": "",
-      "source": "VnEconomy",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBOcHZzeHhuRmkxSHFSRDhhdWJSQXJXNGY0TVBYMFEtY2huUkNzNllsWU54d0ZiODAxRW4yQWxiUFplazctcGs0eXl4TE5pdVZiVlc2MndzWnlUNDBRazRVcDR3WWIzNTFXTm52a0Fmdzk5cEZXSVBiZDRrWkdlSUU?oc=5",
-      "published_at": "Fri, 06 Nov 2026 00:32:17 GMT",
-      "section": "semiconductor",
-      "sections": [
-        "semiconductor"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": false
-    },
-    {
-      "id": "997db9961be58ba17b71",
-      "title": "Harbor Freight Previews ICON® Mini Pry Bar Set at SEMA - Harbor Freight Newsroom",
-      "title_vi": "",
-      "summary": "",
-      "tag": "",
-      "source": "Harbor Freight Newsroom",
-      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPcERLUjllTWRTOTVDNlgxVllkXzNCOV9uNmM1WXd2SllZZEhSR1YyVnpldXBkN29hLV9RWW9DaEdtV1l1Z3N6WG9VNlhNU0tES0cxczhaRzVEdWMzWHpldVNpNTRoZnNqalRYYkdVWGlCUkZ5MlZPWVFFbV9Hb2pGbDlXVUZJYW82VFpEVnJOTkM3NlVTTlNzTXMtX29kQUFpZFJRR1BqRGNsQlZfVHFfNVVzcnhtMUXSAb8BQVVfeXFMTVBMZVMxTlIzazY2Qnd6dUxqbFBNWE1pZENzbThCanJjMDl2SXRNSGlsZlRIS1puNE55RURhUnFpYkF2ZzhHX0R5Y0pfcmY4QXFSVGF5am1kMk93aTF3V1I1TFotbDZHT0dMU3Byc3FIRTFoZTJoU1VhRnZ4bVlXWWdyZkhBOWhNRUJNVUtJNXBISkNwanUxWGw1NGtZM1prSjBONTFpMlc0WjBSRXY1M21LeTB4em1tc0FIVExTMzg?oc=5",
-      "published_at": "Fri, 06 Nov 2026 00:31:45 GMT",
-      "section": "logistics",
-      "sections": [
-        "logistics"
-      ],
-      "first_seen_at": "2026-11-08T21:41:45+07:00",
-      "edited": false
-    },
-    {
-      "id": "10815e825ae762dcce5e",
-      "title": "El Niño could push U.S. inflation higher in 2027, Federal Reserve Bank analysis finds - SILive.com",
-      "title_vi": "",
-      "summary": "",
-      "tag": "",
-      "source": "SILive.com",
-      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNSlpiQzBkbTk1OVdMTUtyN1VEV3JhX3hnSVpxM0NJUGNnVlFfM3BjTkkyMWJsc2ljMnNrZW5Qb01lSkM2SmtVYjRmZXJlZzFqLTJFd25jM1RzT1IxcEliaXNRNG8yUzhXd3Bta2JBTzA5SEhSVEpRYWVHakIwWWpTaWpxeWhaUmZfeGRUQ2pJSVd5d1hSakMya21GZ2QyRmZ2MWlYSDBPNUplSTk2MG1ZTHZPUkxhRkkwR1pfRGdoOFFYZWlH?oc=5",
-      "published_at": "Fri, 06 Nov 2026 00:31:00 GMT",
-      "section": "macro",
-      "sections": [
-        "macro"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": false
-    },
-    {
-      "id": "e026b72c97ed5d056af5",
-      "title": "Tổng quan hội thảo phát triển hạ tầng LNG: Kinh nghiệm quốc tế, hàm ý chính sách cho Việt Nam - Năng lượng Việt Nam Online",
-      "title_vi": "",
-      "summary": "",
-      "tag": "",
-      "source": "Năng lượng Việt Nam Online",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPTHRDQzluOURtdmxuYUZfbU0tVjIwRkZkeVRrOVhRVkZjYWdFLVpsemxfcHdHSjZtSG82R25lQXJNUHQwRHRXdzNLajF5cVR3Nzgyc2JlMmd3ZDBncFllUDVFLXhOeEpwa0c2MXowMFVudDJYZk1VVHpFV3BZcWhSZlAxVTA0M2ZjMjBsdGVKZF9uOWN4RDZIN3JIc2ZxWTZRZ1hDVktGQkhnZ2VDMmtvZndENDB3ZXBPQzNEQnNkLUZDT21tVGduMzN3?oc=5",
-      "published_at": "Fri, 06 Nov 2026 00:23:05 GMT",
-      "section": "energy",
-      "sections": [
-        "energy"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": false
-    },
-    {
-      "id": "843f69d76911c616cdb7",
-      "title": "Nhận diện cơ hội giao thương từ Hiệp định thương mại Việt Nam – Israel - Mekong ASEAN",
-      "title_vi": "",
-      "summary": "",
-      "tag": "",
-      "source": "Mekong ASEAN",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQODV2S3FTWnRJOFRVbDh3eWREWVRhRTdGVXdKSWtnMFJwMXRaV0dkdHF4VG9xS3ByVGhOLTFRa3VjUnZoc3VTdUY1WnlEeUhJS01qU0VMU05qSndxQVJ6MXE1MkJkamJPTDJwRTV4QTBGdnl5bFdnZHZIVWhSOG9DdmZOM3BsUkUzR2N3RzAtXzFJa1l5amdpdWRoOGhUZUNrbjRxZA?oc=5",
-      "published_at": "Fri, 06 Nov 2026 00:08:26 GMT",
-      "section": "trade_policy",
-      "sections": [
-        "trade_policy"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": false
-    },
-    {
-      "id": "c785cc48707d3114fe61",
-      "title": "VN-Index cần thêm lực đẩy để thực sự bay cao - Nhadautu.vn",
-      "title_vi": "VN-Index cần thêm lực đẩy để thực sự bay cao",
-      "summary": "Nhadautu.vn cho rằng VN-Index hiện tại cần thêm động lực để đạt mức tăng mạnh hơn. Nếu không có lực đẩy, chỉ số có thể chỉ duy trì mức hiện tại.",
-      "tag": "Việt Nam / Tỷ giá / Thị trường",
-      "source": "Nhadautu.vn",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOandXZnIyNFQ1MWxiLV9mYVFJelpJT1hsRlJsVGR6SDVCNDllZ0cxdnVQM2k2R0dDUkJIbEptLWNUSWl2SFQxWDFjQ3ZyVk9zVmdYbEY3OWczN2VQQ0pFTlNZR1ZWUW5iTTN5OGxGNWZMbExJd29hN29KR0ZncUl0N1I0aw?oc=5",
-      "published_at": "Fri, 06 Nov 2026 00:00:00 GMT",
-      "section": "stocks",
-      "sections": [
-        "stocks",
-        "vietnam"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": true
-    },
-    {
-      "id": "8bf4c454fc380ceeb12f",
-      "title": "Cảnh giác 247 | Lừa đảo qua ví điện tử - VTVgo",
-      "title_vi": "",
-      "summary": "",
-      "tag": "",
-      "source": "VTVgo",
-      "url": "https://news.google.com/rss/articles/CBMiQEFVX3lxTE1QRGRWY0pPSV83MnNSaHBjYzdMQWRWN1FDdW52MzI5R2oxOWxZT2lZR3NPa29vZHVRaGxjUGdiMXE?oc=5",
-      "published_at": "Fri, 06 Nov 2026 00:00:00 GMT",
-      "section": "fintech_vn",
-      "sections": [
-        "fintech_vn"
-      ],
-      "first_seen_at": "2026-11-06T22:32:08+07:00",
-      "edited": false
-    },
-    {
-      "id": "f9bf356f80da355b23d0",
-      "title": "$10B deal that reduces Sempra’s LNG footprint about to get signed - San Diego Union-Tribune",
-      "title_vi": "",
-      "summary": "",
-      "tag": "",
-      "source": "San Diego Union-Tribune",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOX3VLbnNkNzJya2xsQW9rWG5BTXAzcnFwUWNLZWtSR1pRRmVvaGtnWXVFbW91XzRQQkcxLWE4cjlSdzNQdEtsOVhDRXJ6aks0UEhWRDEwZm9PTjJqVTIyUGRWVFN2dWJjS3MySkFpdU9iakVMaTR4QXpQZXJMZ0VXWEpfTjNUeVdMc3NId19wbWFOajk2Sm0tRXlOc2tmb2F5UXl6TURzT1ZzZVZqanpCUk53?oc=5",
-      "published_at": "Thu, 05 Nov 2026 23:35:23 GMT",
-      "section": "energy",
-      "sections": [
-        "energy"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": false
-    },
-    {
-      "id": "a34dfa5f44a06c9be42a",
-      "title": "Shopping center near Foundry Park sells for $67.8M after healthcare revamp - Crain's Chicago Business",
-      "title_vi": "",
-      "summary": "",
-      "tag": "",
-      "source": "Crain's Chicago Business",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQRmU4RFdId2o0RVZ6aDNVVGtqajVkTmNvSjJMZkZDT2d6ZWR6MTdXTXMwcGxKSHZoel9ueXhaUXNnanBOZWFQQ3JSM21oUmUyaXF5TjhpSFItNFZleW8wN3hSWkxiMG9BT0ZTbWdFN2puQmZZbVkzb0Z2TzluNTZXUnlDNGZSWE1JaEV1MzZ5d1VQRkdCVW5HMlBZM29vQm1hd1RCcmRDd2M1dw?oc=5",
-      "published_at": "Thu, 05 Nov 2026 23:26:15 GMT",
-      "section": "semiconductor",
-      "sections": [
-        "semiconductor"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": false
-    },
-    {
-      "id": "7ea14a40c92dbdc87530",
-      "title": "Diễn đàn Logistics Việt Nam 2026: Tìm giải pháp gỡ nút thắt chi phí vận tải khu vực miền Trung-Tây Nguyên - Vietnam+ (VietnamPlus)",
-      "title_vi": "Diễn đàn Logistics Việt Nam 2026: Tìm giải pháp gỡ nút thắt chi phí vận tải khu vực miền Trung‑Tây Nguyên",
-      "summary": "Diễn đàn Logistics Việt Nam 2026 tập trung tìm giải pháp giảm chi phí vận tải ở miền Trung và Tây Nguyên. Các bên tham dự sẽ thảo luận các biện pháp giảm bớt các nút thắt hiện tại. Nếu thành công, chi phí vận chuyển cho doanh nghiệp trong khu vực sẽ được hạ thấp.",
-      "tag": "Logistics Việt Nam",
-      "source": "Vietnam+ (VietnamPlus)",
-      "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPaXZOT095dGVMTWZoVVBHQ0hrREdXU1NKem1tZG1GOHFRVWt2VldqVHlKVEJsUWNXU2NhSWdWeDVUWUljN011QjY1R3U0UEJTMWxuYi0xaGlNd3A4XzNTdnNQZ1dadnpEZ3FJR3lTSGFoeUlHQTY3Q051ZVhHTTQwWExLX1BIS2ZGanRfZGozUXUzSDVxYkV1el9wSlhDb1BFT1p2YkN2WnNIcG9vMFFXRWNtMXNjY2Z5Z2RUSXZZU1lkY2Q0ZENKWXVNU2dEbFJXVWdxeE5FdjBNVllENXJHQw?oc=5",
-      "published_at": "Thu, 05 Nov 2026 23:18:55 GMT",
-      "section": "logistics",
-      "sections": [
-        "logistics"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": true
-    },
-    {
-      "id": "ab464201856b0284c156",
-      "title": "Giá vàng hôm nay (6-11): Duy trì đà tăng - Báo Quân đội nhân dân",
-      "title_vi": "",
-      "summary": "",
-      "tag": "",
-      "source": "Báo Quân đội nhân dân",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPWi0zRTRvZFNPOVNHdHk2N2Z5OF9Na1NaY2tuZjlUYlRqUXpQaS1rNVdsRWVXQ3RXTHdQQXRySlBlSndGZmp6ajRub0JQSmNVaVFLcGpKVk9qYWEyeUVyejJ2Xy0zSG5JajNGVnN3UkV6MkZCSk1xWFJUYTJwTmktZjdTVjd4M09q?oc=5",
-      "published_at": "Thu, 05 Nov 2026 23:13:00 GMT",
-      "section": "gold",
-      "sections": [
-        "gold"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": false
-    },
-    {
-      "id": "08c7459c562d58f05d87",
-      "title": "Thị trường phiên giao dịch ngày 6/11: Tránh mua đuổi khi VN-Index tiến sát vùng cản - Thuonghieucongluan.com.vn",
-      "title_vi": "Thị trường phiên giao dịch ngày 6/11: Tránh mua đuổi khi VN-Index tiến sát vùng cản",
-      "summary": "Thuonghieucongluan.com.vn khuyên nhà đầu tư tránh mua đuổi khi VN-Index tiến gần tới vùng cản. Việc này nhằm giảm rủi ro khi chỉ số có thể gặp áp lực giảm.",
-      "tag": "Việt Nam / Tỷ giá / Thị trường",
-      "source": "Thuonghieucongluan.com.vn",
-      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNSUpzbmNQYUNQZno4NWEwT0I5QWZQWTNjNldCWVhIVHVjLXNVeDkzd0IyS25xZmtlcWVvZXpZOW50RVNuSlQxZnhZSi1yVmhhT0FxS3BXdGkzUkF5VEhtb0VLLU1uSlVtUVB4RTFqV2Z2ZDBKUmRFajN0eDBwdjdIN3VFaG90RzFwdEhwZEdITEl1d3dYSWlOY25TV0Q4bVpEVFJqODNJdS1TOEdKOFI2YVlWSElYOVZ3eUR2SDdxcVpLUnR4QXNncw?oc=5",
-      "published_at": "Thu, 05 Nov 2026 23:02:00 GMT",
-      "section": "stocks",
-      "sections": [
-        "stocks",
-        "vietnam"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": true
-    },
-    {
-      "id": "c2025c3cb96b690d2519",
-      "title": "Cathie Wood Just Sold AMD Stock and Bought This AI Chip Stock Instead - The Motley Fool",
-      "title_vi": "",
-      "summary": "",
-      "tag": "",
-      "source": "The Motley Fool",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQV0xtQkJITndvRUR4ZjBEYVBib0E0dTFGUzV0OXVHU2FLaThRVHpXX0pVSGlETUlNd1lDNzNLSFUxekdEeHFrRHNIUC1VR0syMEh4SWRBWGpLdm1pVG5CazdiYzViemVFMEs0WUlhZUxmSllNbDJvOURxSGQ2azFOZmFEajRCRnpFdXpxWFV4dF9taFd2LXZaTg?oc=5",
-      "published_at": "Thu, 05 Nov 2026 23:00:00 GMT",
-      "section": "ai",
-      "sections": [
-        "ai"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": false
-    },
-    {
-      "id": "8c7229f39221cf6eed7d",
-      "title": "Panama Canal to cap ship transits due to El Nino drought - DW.com",
-      "title_vi": "",
-      "summary": "",
-      "tag": "",
-      "source": "DW.com",
-      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE85WjRqRFlVblNta0YzX1VBNU9zTmpud2tHSjZnZnR4VnpFM3VZUWYxTThKR0c0aGtZN01QemI2eTVKSFpoSXEyYWlpZVI2amNuaWxaX2NXNGwyM2VDbUk2Mi13MA?oc=5",
-      "published_at": "Thu, 05 Nov 2026 22:54:21 GMT",
-      "section": "logistics",
-      "sections": [
-        "logistics"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": false
-    },
-    {
-      "id": "fb597549cf8926e0eda8",
-      "title": "Five Checks For … Stress-Testing Supply Chains for Tariff Shock - Foley & Lardner LLP",
-      "title_vi": "",
-      "summary": "",
-      "tag": "",
-      "source": "Foley & Lardner LLP",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNcUsyWHNycTRTRGw0SDdKeHFBeGRMcHloeW5yMENyZ0plRnAyU08xZEZPQV9PMVZkM3gzOVFXQXRBOTZKdi13LVktMHFpdjVrSkp0UThKT3hncWdwNWJ6Tlc4Tms4T0RLUW14eWc2a29CSlBfNng1ZzZpT3JnTFQ5WHBLbl9ac2lwVk9HTXpud092ZS1Rb1dOSmhhT0dKZU9zU3cwanJPci0zQXg2T2lkeWIxU2U?oc=5",
-      "published_at": "Thu, 05 Nov 2026 22:45:10 GMT",
-      "section": "trade_policy",
-      "sections": [
-        "trade_policy"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": false
-    },
-    {
-      "id": "85f00cb0b1c0d30e0d11",
-      "title": "Chứng khoán ngày 5/11: VN-Index nối dài đà hồi phục nhưng dòng tiền vẫn dè dặt - Thời báo Tài chính Việt Nam",
-      "title_vi": "Chứng khoán ngày 5/11: VN-Index nối dài đà hồi phục nhưng dòng tiền vẫn dè dặt",
-      "summary": "Ngày 5/11, VN-Index tiếp tục tăng trong xu hướng hồi phục, tuy nhiên dòng tiền vẫn còn thận trọng. Bài viết nêu ra tình hình giao dịch.",
-      "tag": "VN-Index",
-      "source": "Thời báo Tài chính Việt Nam",
-      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQaGNhM2pkOHRVT3g4WjVxZ2lfaFFmeHNucUhGYjZtVndLQm5NbkNjZU1KanJtSlFsVGdvX251YnVwZlBuYWl2cHV0UDU2TGJuMHQ3aWx3VUlMdzZhS05mVlVIa1EwNEJBMGZPRmE0bUpReEF1M2lyaVNCcUllTzRaZUROOXJ5Q1VwTGROTFB1M0h5S2hrenRHbjIwX0JqOXNVbDEzcklVRnp3SE9kTFV6STNiLWtsSG56akdlOXIyT3c?oc=5",
-      "published_at": "Thu, 05 Nov 2026 22:42:50 GMT",
-      "section": "stocks",
-      "sections": [
-        "stocks",
-        "vietnam"
-      ],
-      "first_seen_at": "2026-11-05T22:59:29+07:00",
-      "edited": true
-    },
-    {
-      "id": "fbb1b251934a0e4b0e30",
-      "title": "Mattel’s Struggles Continue. Tariff Refunds Boosted Margins. - Barron's",
-      "title_vi": "",
-      "summary": "",
-      "tag": "",
-      "source": "Barron's",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5WSVhiVGo0VHJHT1NzT1RMck84c0piYl9pbGpEcWY0VWFxNEV4NjRjTHd2YTB0aWI3bGZSUkNxQWhXV3ZvcDFfanp5NjNmaDRacW8xakVwV2VJSXNPV3VBaWpFUS1wSFN6WWVGdFRVTE9ZZzJVM1NWVg?oc=5",
-      "published_at": "Thu, 05 Nov 2026 22:35:00 GMT",
-      "section": "trade_policy",
-      "sections": [
-        "trade_policy"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": false
-    },
-    {
-      "id": "b4ea3746e9c715e4db2e",
-      "title": "Công nghệ bán dẫn và năng lực tự chủ - Báo Quân đội nhân dân",
-      "title_vi": "",
-      "summary": "",
-      "tag": "",
-      "source": "Báo Quân đội nhân dân",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQaHRUMWVCbVljeHJDQUNZSnlLT1JNNmRBdjJ0VEVPNC03NlVwM21VQzAtd1lNZ3hJaVNVUjNKa1pNdHpPV1ZfZ09aT3Z0aGlBdmtYSzlSUTB2RjNqTnRUNkoxcVBEM0dfeld6NWpKeEM5WldyWGl4WFlwcVlnMEFWNVp1WkU?oc=5",
-      "published_at": "Thu, 05 Nov 2026 22:28:07 GMT",
-      "section": "semiconductor",
-      "sections": [
-        "semiconductor"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": false
-    },
-    {
-      "id": "19f337d25db2f24bb652",
-      "title": "Giá bạc hôm nay 6/11/2026: Bật tăng trở lại - Việt Báo",
-      "title_vi": "",
-      "summary": "",
-      "tag": "",
-      "source": "Việt Báo",
-      "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE9IeWYzekxmaG1iV2ZZWVlZckFUZFN5V1BLTnFxQkJuM20tc3FURWxjUkpMaU5KQk9Nd2M1MUl0Y2R6bTFQTklLZzNEMnFwR3BCZ3lBb1I3VnFULU5rUVo5Z255b0RWU1phWk16M1U3ekZUNzU4dWV0TWlJNA?oc=5",
-      "published_at": "Thu, 05 Nov 2026 22:12:14 GMT",
-      "section": "silver",
-      "sections": [
-        "silver"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": false
-    },
-    {
-      "id": "42ff8181f14b3f7dd99b",
-      "title": "Nhận định chứng khoán 6/11: Áp lực chốt lời gia tăng, VN-Index đối mặt rung lắc - VOV.VN",
-      "title_vi": "",
-      "summary": "",
-      "tag": "",
-      "source": "VOV.VN",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPSVhBYUtlMzQ0NTlBYk5WUUVxX2dES0FfMTNkN0N0STN6dVBBbVE4YTdqc2VLTkNTdW44dnVkWUhPVlhYR0owT3V5Ml9CalZMSkJ5aHFESTh5b0FrMWhxNnRPWFdUR2RiWlN5ZXB2N2JnREstU0NyVkFzbWlGQldSZ0tBX0FidHlobWEtMm1YSXpvYlVHYWI1alNOYjJONG84bU5mUXgtbXNsU1lST0x5Z1Z1bWMyTmpT?oc=5",
-      "published_at": "Thu, 05 Nov 2026 22:00:00 GMT",
-      "section": "stocks",
-      "sections": [
-        "stocks",
-        "vietnam"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
-      "edited": false
-    },
-    {
-      "id": "79fd9c4ffb093c9f81ef",
-      "title": "Stock Market Today, Nov. 5: Nvidia Slides on AI Chip Selloff as Election Uncertainty Weighs - The Motley Fool",
-      "title_vi": "",
-      "summary": "",
-      "tag": "",
-      "source": "The Motley Fool",
-      "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQT1pnTjFIckVzNEFtOWRac1FSNC15TktITmxRVlJpTzdFMVdYN2xBOFRhNlRxMEd1dE1lRVptemo2TGFkU1E5VW4wZTFDQlJuVkJxMjNoaHR3Y2FTZ3ZRLWE4NUZxUy1PWlJBZkREeFhlOGdmNllzeXAyVks0eEtKZ0xlQnh3aE43VTdMd2sxM3NSU2d2QmRpQ1dvd3Z0Q1l5Z2FrYndlOFNtYnlNdEthN3V5RHZ6QlpORThnQXdoVDlORGpqMGhKb3BsQmMybHlpcU9NOS1kSUZlSnhkbF9tcnFUNA?oc=5",
-      "published_at": "Thu, 05 Nov 2026 21:49:00 GMT",
-      "section": "ai",
-      "sections": [
-        "ai"
-      ],
-      "first_seen_at": "2026-11-06T10:19:44+07:00",
       "edited": false
     }
   ]
